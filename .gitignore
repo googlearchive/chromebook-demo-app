@@ -1,0 +1,7 @@
+*~
+*.pem
+*.crx
+VERSION
+publish.rb
+update.xml
+main/font

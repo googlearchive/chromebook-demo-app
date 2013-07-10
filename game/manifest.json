@@ -1,0 +1,17 @@
+{
+  "name": "Demos.app Game",
+  "version": "0.0",
+  "manifest_version": 2,
+  "icons": {
+    "32": "icon32.png",
+    "128": "icon128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "game.js"
+      ]
+    }
+  },
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCkDoQKSQLMqzLVt3pkdQ2LrhpTOtHg8pDabVZydpG443VeslRRf0xxozsAZ8TjNzduVU9OZILboFUElwi4P7wK9r5tTYHMf5RTLXHe0dTlA8B9fSkSxSbH7VgLQ7uXHOFpnb9jgHc73SEJQ0zMKw6zsVR7+zsKWcW5C6gkgTvzvQIDAQAB"
+}

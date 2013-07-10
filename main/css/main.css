@@ -1,0 +1,120 @@
+/**
+ * Frame
+ */
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body > * {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+body > [active] {
+  display: -webkit-flex;
+}
+
+/**
+ * Each
+ */
+
+.app-frame {
+  background-color: white;
+}
+
+.app-frame .app-side {
+  width: 25%;
+  display: -webkit-flex;
+  -webkit-flex-flow: column;
+  border-right: solid 1px #e4e4e4;
+}
+
+.app-frame .app-side-body {
+  padding: 24px;
+  -webkit-flex: auto;
+}
+
+.app-frame .app-icon {
+  background-position: center;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+}
+
+.app-frame .app-copy,
+.app-frame .app-sub-copy,
+.app-frame .sec-header-text,
+.app-frame .app-side-footer {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.app-frame .app-copy {
+  text-align: center;
+}
+
+.app-frame .app-sub-copy {
+  font-family: 'OpenSans-Regular', sans-serif;
+  text-align: center;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.app-frame .app-description,
+.app-frame .sec-description {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #777;
+}
+
+.app-frame .app-description {
+  margin-top: 24px;
+}
+
+.app-frame .sec-header {
+  display: -webkit-flex;
+  width: 100%;
+  margin-top: 52px;
+  margin-bottom: 26px;
+
+}
+
+.app-frame .sec-header-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  -webkit-margin-end: 8px;
+}
+
+.app-frame .app-side-footer {
+  background-color: #f1f1f1;
+  height: 48px;
+  padding: 24px;
+}
+
+.app-frame .app-main {
+  width: 100%;
+  background-color: #f1f1f1;
+  display: -webkit-flex;
+  -webkit-flex-flow: column;
+  padding: 24px;
+}
+
+.app-frame .close {
+  width: 24px;
+  height: 24px;
+  border-style: none;
+  background-color: #ccc;
+  -webkit-align-self: flex-end;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Demos.app Play",
+  "version": "0.0",
+  "manifest_version": 2,
+  "icons": {
+    "32": "icon32.png",
+    "128": "icon128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "play.js"
+      ]
+    }
+  },
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9wLj242hwp9nl5Q8HWOTqtDNESCl98asEpQTq/2XS8YJOB5nkd+tK5KgZFOSCV7HPQKvQi0KzCI2GHAGAefpGROWq6jkRTh5TbLBW1Ow3YTJJQSBtuHpLWdeIL9U8g2d5444CDOET2wETDiQAxGax8ekR6QtmjEosuugwlrcUTQIDAQAB"
+}

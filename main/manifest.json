@@ -1,0 +1,19 @@
+{
+  "name": "Demos.app",
+  "version": "0.0",
+  "manifest_version": 2,
+  "permissions": [
+    "experimental",
+    "http://fonts.googleapis.com/css",
+    "http://themes.googleusercontent.com/"
+  ],
+  "app": {
+    "background": {
+      "scripts": [
+        "js/util.js",
+        "js/main.js"
+      ]
+    }
+  },
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCU+PCAcQLdLeC095QKSmPFlIjPtLCVbzON1VZzefO+OhqeYrb5ii+pAo4g+EB9gEoQEls3vzcBeZQFx9yGY8emUJx3OcgYrNgapqphiIZx1FnqJp4TT/8BSIoXI8xTSRBkmsYslkZN+fuTiNTzRiq5wvk54nbEnjb/y97B0tn6jwIDAQAB"
+}
