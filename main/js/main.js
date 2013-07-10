@@ -111,6 +111,38 @@ var HangoutsPage = function(root) {
 
 HangoutsPage.prototype = Object.create(AppPage.prototype, {});
 
+HangoutsPage.prototype.enter = function() {
+  AppPage.prototype.enter.call(this);
+  navigator.webkitGetUserMedia(
+    {video: true},
+    function(localMediaStream) {
+      if (this.videoCanvas_)
+        return;
+      var URL = this.root.mainWindow_.contentWindow.URL;
+      var url = URL.createObjectURL(localMediaStream);
+      var videoCanvas = this.element_.querySelector('.video-canvas');
+      videoCanvas.src = url;
+      videoCanvas.play();
+      this.videoCanvas_ = videoCanvas;
+      this.mediaStream_ = localMediaStream;
+    }.bind(this),
+    function(err) {
+      console.error('failed');
+      // Nothing to do when it failed.
+    }
+  );
+};
+
+HangoutsPage.prototype.leave = function() {
+  AppPage.prototype.leave.call(this);
+  if (this.videoCanvas_) {
+    this.videoCanvas_.src = null;
+    this.videoCanvas_ = null;
+    this.mediaStream_.stop();
+    this.mediaStream_ = null;
+  }
+};
+
 var PlayPage = function(root) {
   AppPage.call(this, root, 'play-app');
 };

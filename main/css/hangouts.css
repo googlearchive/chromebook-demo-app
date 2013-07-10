@@ -1,3 +1,9 @@
 #hangouts-app .app-icon {
   background-image: url('/img/hangouts_icon.png');
 }
+
+#hangouts-app .video-canvas {
+  width: 720px;
+  height: 480px;
+  background-color: #ccc;
+}

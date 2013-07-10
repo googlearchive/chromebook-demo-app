@@ -4,8 +4,7 @@
   "manifest_version": 2,
   "permissions": [
     "experimental",
-    "http://fonts.googleapis.com/css",
-    "http://themes.googleusercontent.com/"
+    "videoCapture"
   ],
   "app": {
     "background": {
