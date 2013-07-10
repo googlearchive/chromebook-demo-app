@@ -1,3 +1,79 @@
 #docs-app .app-icon {
   background-image: url('/img/docs_icon.png');
 }
+
+#docs-app .docs-main {
+  width: 720px;
+  -webkit-flex: auto;
+  margin: 0 auto;
+  display: -webkit-flex;
+  -webkit-flex-flow: column;
+}
+
+#docs-app .docs-header {
+  widht: 100%;
+  display: -webkit-flex;
+}
+
+#docs-app .docs-header-left {
+  width: 400px;
+}
+
+#docs-app .docs-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+#docs-app .docs-menu {
+  font-size: 14px;
+  display: -webkit-flex;
+  color: #777;
+}
+
+#docs-app .docs-menu > * {
+  -webkit-margin-end: 16px;
+}
+
+#docs-app .docs-header-right {
+  width: 320px;
+  display: -webkit-flex;
+  -webkit-justify-content: flex-end;
+  -webkit-align-items: center;
+}
+
+#docs-app .user-icon {
+  width: 32px;
+  height: 32px;
+  -webkit-margin-end: 4px;
+  background-color: ccc;
+  border: 1px #999 solid;
+  box-sizing: border-box;
+}
+
+#docs-app .share {
+  height: 24px;
+  width: 64px;
+  -webkit-margin-start: 16px;
+}
+
+#docs-app .docs-toolbar {
+  width: 100%;
+  height: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border: 1px #ccc solid;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+#docs-app .docs-paper {
+  background-color: white;
+  border: 1px #ccc solid;
+  border-bottom-style: none;
+  -webkit-flex: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 64px;
+  outline: none;
+}
