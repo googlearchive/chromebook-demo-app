@@ -11,17 +11,8 @@ var GAME_PAGE_INDEX = 4;
  */
 var EXTENSION_HELPER_ID = "dklepamkcpcemiendiebcmkdplnabpjp";
 
-var EventDispatcher = function() {
-  this.handlers_ = {};
-};
-
-EventDispatcher.prototype.addEventListener = function(eventName, handler) {
-  this.handlers_[eventName] = handler;
-};
-
-EventDispatcher.prototype.dispatchEvent = function(eventName) {
-//  this.
-};
+var Effects = defined.shift();
+var FaceTracker = defined.shift();
 
 var Page = function(root, id) {
   /**
@@ -107,40 +98,96 @@ DocsPage.prototype = Object.create(AppPage.prototype, {});
 
 var HangoutsPage = function(root) {
   AppPage.call(this, root, 'hangouts-app');
+  this.effectIndex_ = 0;
+  this.frame_ = 0;
+  this.renderFrameBound_ = this.renderFrame_.bind(this);
+  this.frequency_ = 8;
+  this.effects_ = new Effects();
+  this.tracker_ = new FaceTracker(ccv);
+  this.tracker_.init(0, 0, 0, 0);
 };
 
-HangoutsPage.prototype = Object.create(AppPage.prototype, {});
+HangoutsPage.prototype = {
+  __proto__: AppPage.prototype,
+  get isVideoUsing() {
+    return !!this.videoSource_;
+  }
+};
 
 HangoutsPage.prototype.enter = function() {
   AppPage.prototype.enter.call(this);
   navigator.webkitGetUserMedia(
     {video: true},
     function(localMediaStream) {
-      if (this.videoCanvas_)
+      if (this.isVideoUsing)
         return;
+      // Register the events.
+      var doc = this.root.document;
+      this.handlers.add(doc.querySelector('.prev-effect'), 'click', function() {
+        this.effectIndex_ =
+            (this.effectIndex_ + this.effects_.data.length - 1) %
+            this.effects_.data.length;
+      }.bind(this));
+      this.handlers.add(doc.querySelector('.next-effect'), 'click', function() {
+        this.effectIndex_ =
+            (this.effectIndex_ + this.effects_.data.length + 1) %
+            this.effects_.data.length;
+      }.bind(this));
+      // Initialize the video.
       var URL = this.root.mainWindow_.contentWindow.URL;
       var url = URL.createObjectURL(localMediaStream);
-      var videoCanvas = this.element_.querySelector('.video-canvas');
-      videoCanvas.src = url;
-      videoCanvas.play();
-      this.videoCanvas_ = videoCanvas;
+      var videoSource = this.element_.querySelector('.video-source');
+      videoSource.src = url;
+      videoSource.play();
+      this.videoSource_ = videoSource;
       this.mediaStream_ = localMediaStream;
+      this.canvas_ = this.element_.querySelector('.video-canvas');
+      this.canvasContext_ = this.canvas_.getContext('2d');
+      this.effectIndex_ = 0;
+      this.frame_ = 0;
+      this.track_ = {faces:[]};
+      this.effects_.init();
+      this.renderFrame_();
     }.bind(this),
     function(err) {
-      console.error('failed');
+      console.error('Failed to initialize the camera.');
       // Nothing to do when it failed.
     }
   );
 };
 
-HangoutsPage.prototype.leave = function() {
-  AppPage.prototype.leave.call(this);
-  if (this.videoCanvas_) {
-    this.videoCanvas_.src = null;
-    this.videoCanvas_ = null;
-    this.mediaStream_.stop();
-    this.mediaStream_ = null;
+HangoutsPage.prototype.renderFrame_ = function() {
+  if (!this.isVideoUsing)
+    return;
+  this.canvasContext_.drawImage(
+      this.videoSource_, 0, 0, this.canvas_.width, this.canvas_.height);
+  var effect = this.effects_.data[this.effectIndex_];
+  if (effect.tracks && this.frame_ % this.frequency_ == 0) {
+    this.track_ = this.tracker_.track(this.canvas_);
   }
+  this.effects_.advance(this.canvas_);
+  this.effects_.data[this.effectIndex_].filter(
+      this.canvas_, this.canvas_, this.frame_++, this.track_);
+  this.root.mainWindow_.contentWindow.requestAnimationFrame(
+      this.renderFrameBound_);
+};
+
+HangoutsPage.prototype.leave = function() {
+  if (!this.videoSource_)
+    return;
+  this.videoSource_.src = null;
+  this.videoSource_ = null;
+  this.mediaStream_.stop();
+  this.mediaStream_ = null;
+  this.effects_.clearBuffer();
+  this.canvas_ = null;
+  this.canvasContext_ = null;
+  this.effectIndex_ = 0;
+  this.frame_ = 0;
+  this.track_ = null;
+  // Due to browser's bug, updating css in this function does not update the
+  // view of contents.
+  setTimeout(AppPage.prototype.leave.bind(this), 0);
 };
 
 var PlayPage = function(root) {
