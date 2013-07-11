@@ -168,7 +168,7 @@ HangoutsPage.prototype.renderFrame_ = function() {
   }
   */
   this.effects_.advance(this.canvas_);
-  // effect.filter(this.canvas_, this.canvas_, this.frame_++, this.track_);
+  effect.filter(this.canvas_, this.canvas_, this.frame_++, this.track_);
   this.root.mainWindow_.contentWindow.requestAnimationFrame(
       this.renderFrameBound_);
 };
