@@ -161,6 +161,7 @@ HangoutsPage.prototype.renderFrame_ = function() {
     return;
   this.canvasContext_.drawImage(
       this.videoSource_, 0, 0, this.canvas_.width, this.canvas_.height);
+  /*
   var effect = this.effects_.data[this.effectIndex_];
   if (effect.tracks && this.frame_ % this.frequency_ == 0) {
     this.track_ = this.tracker_.track(this.canvas_);
@@ -168,6 +169,7 @@ HangoutsPage.prototype.renderFrame_ = function() {
   this.effects_.advance(this.canvas_);
   this.effects_.data[this.effectIndex_].filter(
       this.canvas_, this.canvas_, this.frame_++, this.track_);
+  */
   this.root.mainWindow_.contentWindow.requestAnimationFrame(
       this.renderFrameBound_);
 };
