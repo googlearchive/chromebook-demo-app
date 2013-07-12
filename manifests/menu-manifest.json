@@ -9,7 +9,7 @@
   "app": {
     "background": {
       "scripts": [
-        "glfx.patched.js",
+        "glfx.js",
         "ccv.js",
         "face.js",
         "define.js",
