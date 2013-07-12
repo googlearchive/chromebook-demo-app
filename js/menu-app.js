@@ -103,6 +103,7 @@ var HangoutsPage = function(root) {
   this.renderFrameBound_ = this.renderFrame_.bind(this);
   this.frequency_ = 8;
   this.effects_ = new Effects();
+  this.effects_.init();
   this.tracker_ = new FaceTracker(ccv);
   this.tracker_.init(0, 0, 0, 0);
 };
@@ -146,7 +147,6 @@ HangoutsPage.prototype.enter = function() {
       this.effectIndex_ = 0;
       this.frame_ = 0;
       this.track_ = {faces:[]};
-      this.effects_.init(this.canvas_);
       this.renderFrame_();
     }.bind(this),
     function(err) {
@@ -175,10 +175,6 @@ HangoutsPage.prototype.renderFrame_ = function() {
 HangoutsPage.prototype.leave = function() {
   if (!this.videoSource_)
     return;
-  // Take back the canvas.
-  var glCanvas = this.element_.querySelector('.video-canvas');
-  glCanvas.parentNode.appendChild(this.canvas_);
-  this.canvas_.parentNode.removeChild(glCanvas);
   // Reset others.
   this.videoSource_.src = null;
   this.videoSource_ = null;

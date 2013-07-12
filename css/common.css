@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: 'OpenSans-Light';
-  src: url('/third-party/open-sans/OpenSans-Light.ttf') format('truetype');
+  src: url('OpenSans-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'OpenSans-Regular';
-  src: url('/third-party/open-sans/OpenSans-Regular.ttf') format('truetype');
+  src: url('OpenSans-Regular.ttf') format('truetype');
 }
 
 /**

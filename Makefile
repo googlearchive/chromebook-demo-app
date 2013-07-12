@@ -79,7 +79,8 @@ packages: third-party
 
 third-party:
 	mkdir -p gen/third-party
-	cd gen/third-party && ../../third-party/glfx.js/build.py
+	cd third-party/glfx.js && ./build.py
+	mv third-party/glfx.js/glfx.js gen/third-party
 	coffee -o gen/third-party -c \
 	  third-party/chrome-cam/src/chrome/scripts/effects/effects.coffee \
 	  third-party/chrome-cam/src/chrome/scripts/face/track.coffee
