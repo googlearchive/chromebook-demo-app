@@ -25,7 +25,7 @@ MENU_FILES = \
   third-party/open-sans/OpenSans-Regular.ttf
 
 DOCS_FILES = \
-  js/menu-app.js \
+  js/docs-app.js \
   js/util.js \
   css/common.css \
   css/menu-app.css \
