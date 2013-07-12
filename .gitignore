@@ -5,3 +5,4 @@ VERSION
 publish.rb
 update.xml
 packages
+gen

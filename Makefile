@@ -16,7 +16,9 @@ MENU_FILES = \
   assets/hangouts-icon-128.png \
   assets/play-icon-128.png \
   views/main.html \
-  third-party/glfx.js/glfx.js \
+  gen/third-party/glfx.js \
+  gen/third-party/effects.js \
+  gen/third-party/track.js \
   third-party/ccv/js/ccv.js \
   third-party/ccv/js/face.js \
   third-party/open-sans/OpenSans-Light.ttf \
@@ -63,22 +65,24 @@ HELPER_FILES= \
   js/helper-extension.js \
   js/util.js
 
-packages:
+packages: third-party
 	for x in ${TARGETS}; \
 	  do mkdir -p packages/demo-$$x; \
 	  cp manifests/$$x-manifest.json packages/demo-$$x/manifest.json; \
 	done
-	third-party/glfx.js/build.py
-	mv glfx.js packages/demo-menu
-	coffee -o packages/demo-menu -c \
-	  third-party/chrome-cam/src/chrome/scripts/effects/effects.coffee \
-	  third-party/chrome-cam/src/chrome/scripts/face/track.coffee
 	cp ${MENU_FILES} packages/demo-menu
 	cp ${DOCS_FILES} packages/demo-docs
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp ${PLAY_FILES} packages/demo-play
 	cp ${GAME_FILES} packages/demo-game
 	cp ${HELPER_FILES} packages/demo-helper
+
+third-party:
+	mkdir -p gen/third-party
+	cd gen/third-party && ../../third-party/glfx.js/build.py
+	coffee -o gen/third-party -c \
+	  third-party/chrome-cam/src/chrome/scripts/effects/effects.coffee \
+	  third-party/chrome-cam/src/chrome/scripts/face/track.coffee
 
 crxs: packages
 	for x in ${TARGETS}; \
