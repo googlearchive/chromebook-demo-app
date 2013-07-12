@@ -79,8 +79,8 @@ packages: third-party
 
 third-party:
 	mkdir -p gen/third-party
-	cd third-party/glfx.js && ./build.py
-	mv third-party/glfx.js/glfx.js gen/third-party
+	cp third-party/chrome-cam/src/chrome/libs/glfx/glfx.min.js \
+	   gen/third-party/glfx.js
 	cp patches/glfx.patch gen/third-party
 	cd gen/third-party && patch -p0 < glfx.patch
 	coffee -o gen/third-party -c \
