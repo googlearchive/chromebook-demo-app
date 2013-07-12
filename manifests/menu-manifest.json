@@ -9,14 +9,14 @@
   "app": {
     "background": {
       "scripts": [
-        "/third-party/glfx/glfx.min.js",
-        "/third-party/libccv/face.js",
-        "/third-party/libccv/ccv.js",
-        "/js/define.js",
-        "/third-party/camera-app/effects.js",
-        "/third-party/camera-app/track.js",
-        "/js/util.js",
-        "/js/main.js"
+        "glfx.js",
+        "ccv.js",
+        "face.js",
+        "define.js",
+        "effects.js",
+        "track.js",
+        "util.js",
+        "menu-app.js"
       ]
     }
   },

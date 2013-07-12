@@ -3,13 +3,13 @@
   "version": "0.0",
   "manifest_version": 2,
   "icons": {
-    "32": "icon32.png",
-    "128": "icon128.png"
+    "32": "game-icon-32.png",
+    "128": "game-icon-128.png"
   },
   "app": {
     "background": {
       "scripts": [
-        "game.js"
+        "game-app.js"
       ]
     }
   },

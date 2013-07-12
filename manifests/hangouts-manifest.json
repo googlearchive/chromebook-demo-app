@@ -3,13 +3,13 @@
   "version": "0.0",
   "manifest_version": 2,
   "icons": {
-    "32": "icon32.png",
-    "128": "icon128.png"
+    "32": "hangouts-icon-32.png",
+    "128": "hangouts-icon-128.png"
   },
   "app": {
     "background": {
       "scripts": [
-        "hangouts.js"
+        "hangouts-app.js"
       ]
     }
   },

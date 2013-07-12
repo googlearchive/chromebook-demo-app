@@ -3,13 +3,13 @@
   "version": "0.0",
   "manifest_version": 2,
   "icons": {
-    "32": "icon32.png",
-    "128": "icon128.png"
+    "32": "docs-icon-32.png",
+    "128": "docs-icon-128.png"
   },
   "app": {
     "background": {
       "scripts": [
-        "docs.js"
+        "docs-app.js"
       ]
     }
   },

@@ -146,7 +146,7 @@ HangoutsPage.prototype.enter = function() {
       this.effectIndex_ = 0;
       this.frame_ = 0;
       this.track_ = {faces:[]};
-      this.effects_.init();
+      this.effects_.init(this.canvas_);
       this.renderFrame_();
     }.bind(this),
     function(err) {
@@ -166,7 +166,7 @@ HangoutsPage.prototype.renderFrame_ = function() {
     this.track_ = this.tracker_.track(this.canvas_);
   }
   this.effects_.advance(this.canvas_);
-  this.effects_.data[this.effectIndex_].filter(
+  effect.filter(
       this.canvas_, this.canvas_, this.frame_++, this.track_);
   this.root.mainWindow_.contentWindow.requestAnimationFrame(
       this.renderFrameBound_);
@@ -175,6 +175,11 @@ HangoutsPage.prototype.renderFrame_ = function() {
 HangoutsPage.prototype.leave = function() {
   if (!this.videoSource_)
     return;
+  // Take back the canvas.
+  var glCanvas = this.element_.querySelector('.video-canvas');
+  glCanvas.parentNode.appendChild(this.canvas_);
+  this.canvas_.parentNode.removeChild(glCanvas);
+  // Reset others.
   this.videoSource_.src = null;
   this.videoSource_ = null;
   this.mediaStream_.stop();
