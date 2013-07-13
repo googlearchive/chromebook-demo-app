@@ -2,7 +2,7 @@
 *.pem
 *.crx
 VERSION
-publish.rb
+publish
 update.xml
 packages
 gen
