@@ -1,0 +1,12 @@
+--- effects.js	2013-07-12 15:29:35.539889369 -0700
++++ effects.patched.js	2013-07-12 16:13:00.222520079 -0700
+@@ -333,7 +333,8 @@
+             return draw(canvas, element, effect);
+           }
+         }
+-      ]
++      ],
++      draw: draw
+     };
+   });
+ 

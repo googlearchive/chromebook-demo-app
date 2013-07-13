@@ -6,6 +6,7 @@ MENU_FILES = \
   js/menu-app.js \
   js/define.js \
   js/util.js \
+  js/additional-effects.js \
   css/common.css \
   css/menu-app.css \
   css/docs-app.css \
@@ -15,6 +16,7 @@ MENU_FILES = \
   assets/docs-icon-128.png \
   assets/hangouts-icon-128.png \
   assets/play-icon-128.png \
+  assets/glasses.png \
   views/main.html \
   gen/third-party/glfx.js \
   gen/third-party/effects.js \
@@ -81,11 +83,11 @@ third-party:
 	mkdir -p gen/third-party
 	cp third-party/chrome-cam/src/chrome/libs/glfx/glfx.min.js \
 	   gen/third-party/glfx.js
-	cp patches/glfx.patch gen/third-party
-	cd gen/third-party && patch -p0 < glfx.patch
+	cd gen/third-party && patch -p0 < ../../patches/glfx.patch
 	coffee -o gen/third-party -c \
 	  third-party/chrome-cam/src/chrome/scripts/effects/effects.coffee \
 	  third-party/chrome-cam/src/chrome/scripts/face/track.coffee
+	cd gen/third-party && patch -p0 < ../../patches/effects.patch
 
 crxs: packages
 	for x in ${TARGETS}; \

@@ -16,7 +16,8 @@
         "effects.js",
         "track.js",
         "util.js",
-        "menu-app.js"
+        "menu-app.js",
+        "additional-effects.js"
       ]
     }
   },

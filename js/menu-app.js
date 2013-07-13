@@ -103,6 +103,7 @@ var HangoutsPage = function(root) {
   this.renderFrameBound_ = this.renderFrame_.bind(this);
   this.frequency_ = 8;
   this.effects_ = new Effects();
+  Effects.defineAdditionalEffects(this.effects_);
   this.effects_.init();
   this.tracker_ = new FaceTracker(ccv);
   this.tracker_.init(0, 0, 0, 0);
