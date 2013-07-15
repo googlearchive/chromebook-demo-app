@@ -1,9 +1,6 @@
 [submodule "third-party/ccv"]
 	path = third-party/ccv
 	url = https://github.com/liuliu/ccv.git
-[submodule "chrome-cam"]
-	path = chrome-cam
-	url = https://github.com/telerik/chrome-cam.git
 [submodule "third-party/chrome-cam"]
 	path = third-party/chrome-cam
 	url = https://github.com/telerik/chrome-cam.git
