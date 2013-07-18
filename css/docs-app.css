@@ -69,14 +69,50 @@
   -webkit-flex: none;
 }
 
-#docs-app .docs-paper {
+#docs-app .paper-container {
+  -webkit-flex: auto;
+  display: -webkit-flex;
+  position: relative;
+}
+
+#docs-app .paper {
+  -webkit-flex: auto;
   background-color: white;
   border: 1px #ccc solid;
   border-bottom-style: none;
-  -webkit-flex: auto;
-  width: 100%;
   box-sizing: border-box;
   padding: 64px;
   outline: none;
   overflow: hidden;
+  white-space: pre;
+}
+
+#docs-app .cursor {
+  background-color: orange;
+  display: none;
+  width: 2px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+#docs-app .cursor.active {
+  display: block;
+}
+
+#docs-app .cursor::after {
+  content: attr(user-name);
+  display: inline;
+  font-size: 10px;
+  line-height: 12px;
+  background-color: orange;
+  position: absolute;
+  white-space: nowrap;
+  left: -4px;
+  top: -14px;
+  padding: 1px;
+  pointer-events: none;
 }

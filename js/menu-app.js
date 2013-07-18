@@ -90,11 +90,104 @@ AppPage.prototype.enter = function() {
   }.bind(this));
 };
 
-var DocsPage = function(root) {
-  AppPage.call(this, root, 'docs-app');
+var Editor = function(index, sentence, type, text, cursor) {
+  this.text_ = text;
+  this.cursor_ = cursor;
+  this.counter_ = 20;
+  this.steps_ = ['WAIT', 'SHOW_CURSOR', 'TYPE', 'WAIT', 'EXIT'];
 };
 
+Editor.prototype.step = function(paper) {
+  switch (this.steps_[0]) {
+    case 'WAIT':
+      if (this.counter_-- <= 0) {
+        this.counter_ = 10;
+        this.steps_.shift();
+        this.update_cursor_(paper);
+        this.cursor_.classList.add('active');
+      }
+      break;
+    case 'SHOW_CURSOR':
+      if (this.counter_-- <= 0) {
+        this.steps_.shift();
+      }
+      break;
+    case 'TYPE':
+      paper.innerText += this.text_[0];
+      this.text_ = this.text_.slice(1);
+      this.update_cursor_(paper);
+      if (this.text_ == '') {
+        this.counter_ = 10;
+        this.steps_.shift();
+      }
+      break;
+    default:
+      this.cursor_.classList.remove('active');
+      return false;
+  }
+  return true;
+};
+
+/**
+ * Update the positio of cursor.
+ * @private
+ */
+Editor.prototype.update_cursor_ = function(paper) {
+  var dummy = paper.ownerDocument.createElement('span');
+  dummy.innerText = 'x';
+  paper.appendChild(dummy);
+  var paperBounds = paper.getBoundingClientRect();
+  var bounds = dummy.getBoundingClientRect();
+  console.log(bounds);
+  paper.removeChild(dummy);
+  this.cursor_.style.left = (bounds.left - paperBounds.left) + 'px';
+  this.cursor_.style.top = (bounds.top - paperBounds.top) + 'px';
+};
+
+var DocsPage = function(root) {
+  AppPage.call(this, root, 'docs-app');
+  this.editors_ = [];
+};
+
+DocsPage.ANIMATION_INTERVAL = 100;
+
 DocsPage.prototype = Object.create(AppPage.prototype, {});
+
+DocsPage.prototype.enter = function() {
+  AppPage.prototype.enter.call(this);
+  var doc = this.root.document;
+  var paper = this.element_.querySelector('.paper');
+  var cursors = this.element_.querySelectorAll('.cursor');
+
+  // Init paper.
+  paper.innerText = '';
+
+  // Added editors.
+  var editor = new Editor(
+      null, null, 'WriteFirst', 'My name is Daichi Hirono.',
+      cursors[0]);
+  this.editors_.push(editor);
+
+  // Animation event for editors.
+  this.handlers.setInterval(function() {
+    for (var i = 0; i < this.editors_.length;) {
+      var editor = this.editors_[i];
+      if (!editor.step(paper))
+        this.editors_.splice(i, 1);
+      else
+        i++;
+    }
+  }.bind(this), DocsPage.ANIMATION_INTERVAL);
+
+  // Input event.
+  this.handlers.add(paper, 'input', function() {
+  }.bind(this));
+};
+
+DocsPage.prototype.leave = function() {
+  AppPage.prototype.leave.call(this);
+  this.editors_ = [];
+};
 
 var HangoutsPage = function(root) {
   AppPage.call(this, root, 'hangouts-app');
