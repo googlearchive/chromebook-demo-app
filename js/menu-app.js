@@ -181,6 +181,12 @@ DocsPage.prototype.enter = function() {
   // Input event.
   this.handlers.add(paper, 'input', function() {
   }.bind(this));
+
+  // Bold button event.
+  var boldButton = this.element_.querySelector('.bold-button');
+  this.handlers.add(boldButton, 'click', function() {
+    this.root.document.execCommand('bold');
+  }.bind(this));
 };
 
 DocsPage.prototype.leave = function() {
