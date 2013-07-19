@@ -138,7 +138,6 @@ Editor.prototype.update_cursor_ = function(paper) {
   paper.appendChild(dummy);
   var paperBounds = paper.getBoundingClientRect();
   var bounds = dummy.getBoundingClientRect();
-  console.log(bounds);
   paper.removeChild(dummy);
   this.cursor_.style.left = (bounds.left - paperBounds.left) + 'px';
   this.cursor_.style.top = (bounds.top - paperBounds.top) + 'px';
