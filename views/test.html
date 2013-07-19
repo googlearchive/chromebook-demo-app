@@ -1,0 +1,48 @@
+<style>
+body {
+  width: 480px;
+  margin: 32px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+body > div {
+  padding: 8px;
+  counter-increment: test;
+  margin-bottom: 2px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+h2::before {
+
+  content: counter(test) ". ";
+}
+
+.details {
+  font-size: 14px;
+  color: #666;
+  font-family: Arial;
+  margin: 8px 16px 8px 16px;
+  white-space: pre;
+}
+
+.succeed {
+  background-color: #99ee99;
+}
+
+.failed {
+  background-color: #ee9999;
+}
+</style>
+<script src="../js/edit-distance.js"></script>
+<script src="../js/test.js"></script>
+<script src="../js/edit-distance-test.js"></script>
+<h1>Demos.app Test</h1>
