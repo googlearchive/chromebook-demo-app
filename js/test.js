@@ -37,6 +37,12 @@ Assert.equals = function(expected, actual) {
   }
 };
 
+Assert.notEquals = function(expected, actual) {
+  if (expected == actual) {
+    throw new Error('The value is "' + expected + '".');
+  }
+};
+
 window.addEventListener('load', function() {
   Test.run(function(results) {
     var container = document.getElementsByTagName('body')[0];

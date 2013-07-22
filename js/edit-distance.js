@@ -17,11 +17,13 @@ var calcEditDistance = function(seq1,
   var matrix = [new Cell(0, null, 'Start')];
   var gurde = new Cell(0, null, 'Gurde');
   for (var j = 0; j <= seq2.length; j++) {
-    for(var i = 1; i <= seq1.length; i++) {
-      var index = j * seq1.length + i;
-      var deleteFrom = j * seq1.length + i - 1;
-      var insertFrom = (j - 1) * seq1.length + i;
-      var replaceFrom = (j - 1) * seq1.length + i - 1;
+    for(var i = 0; i <= seq1.length; i++) {
+      if (i == 0 && j == 0)
+        continue;
+      var index = j * (seq1.length + 1) + i;
+      var deleteFrom = j * (seq1.length + 1) + i - 1;
+      var insertFrom = (j - 1) * (seq1.length + 1) + i;
+      var replaceFrom = (j - 1) * (seq1.length + 1) + i - 1;
       var deleteCostHere = (matrix[deleteFrom] || gurde).cost + deleteCost;
       var insertCostHere = (matrix[insertFrom] || gurde).cost + insertCost;
       var noneCostHere = (matrix[replaceFrom] || gurde).cost;
@@ -56,5 +58,6 @@ var calcEditDistance = function(seq1,
   while (result[0].prevCell) {
     result.unshift(result[0].prevCell);
   }
+  result.shift();
   return result;
 };

@@ -7,6 +7,8 @@ MENU_FILES = \
   js/define.js \
   js/util.js \
   js/additional-effects.js \
+  js/editor.js \
+  js/edit-distance.js \
   css/common.css \
   css/menu-app.css \
   css/docs-app.css \

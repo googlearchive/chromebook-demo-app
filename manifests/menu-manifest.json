@@ -16,6 +16,8 @@
         "effects.js",
         "track.js",
         "util.js",
+        "editor.js",
+        "edit-distance.js",
         "menu-app.js",
         "additional-effects.js"
       ]

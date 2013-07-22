@@ -19,20 +19,18 @@ var Page = function(root, id) {
    * @protected
    */
   this.root = root;
+  this.element_ = root.document.getElementById(id);
   this.handlers = new HandlerList();
   this.id_ = id;
 };
 
 Page.prototype.enter = function() {
-  var doc = this.root.document;
-  this.element_ = doc.getElementById(this.id_);
   this.element_.setAttribute('active', '');
 };
 
 Page.prototype.leave = function() {
   this.handlers.reset();
   this.element_.removeAttribute('active');
-  this.element_ = null;
 };
 
 var MenuPage = function(root) {
@@ -89,14 +87,7 @@ AppPage.prototype.enter = function() {
     }
   }.bind(this));
 };
-
-var Editor = function(index, sentence, type, text, cursor) {
-  this.text_ = text;
-  this.cursor_ = cursor;
-  this.counter_ = 20;
-  this.steps_ = ['WAIT', 'SHOW_CURSOR', 'TYPE', 'WAIT', 'EXIT'];
-};
-
+/*
 Editor.prototype.step = function(paper) {
   switch (this.steps_[0]) {
     case 'WAIT':
@@ -127,11 +118,13 @@ Editor.prototype.step = function(paper) {
   }
   return true;
 };
+*/
 
 /**
- * Update the positio of cursor.
+ * Update the position of cursor.
  * @private
  */
+/*
 Editor.prototype.update_cursor_ = function(paper) {
   var dummy = paper.ownerDocument.createElement('span');
   dummy.innerText = 'x';
@@ -142,44 +135,56 @@ Editor.prototype.update_cursor_ = function(paper) {
   this.cursor_.style.left = (bounds.left - paperBounds.left) + 'px';
   this.cursor_.style.top = (bounds.top - paperBounds.top) + 'px';
 };
+*/
+
+var PaperEditAdapter = function(paper) {
+  this.paper_ = paper;
+};
 
 var DocsPage = function(root) {
   AppPage.call(this, root, 'docs-app');
   this.editors_ = [];
+  this.paper_ = this.element_.querySelector('.paper');
+  this.paper_.insertChar = function(index, ch) {
+    this.innerText = this.innerText.substr(0, index) +
+                     ch +
+                     this.innerText.substr(index);
+  };
+  this.paper_.deleteChar = function(index) {
+    this.innerText = this.innerText.substr(0, index) +
+                     this.innerText.substr(index + 1);
+  };
 };
 
 DocsPage.ANIMATION_INTERVAL = 100;
+DocsPage.EDIT_MAP = {
+  'The sun': 'The red burned sun'
+};
 
 DocsPage.prototype = Object.create(AppPage.prototype, {});
 
 DocsPage.prototype.enter = function() {
   AppPage.prototype.enter.call(this);
   var doc = this.root.document;
-  var paper = this.element_.querySelector('.paper');
-  var cursors = this.element_.querySelectorAll('.cursor');
+  this.cursors_ = this.element_.querySelectorAll('.cursor');
 
   // Init paper.
-  paper.innerText = '';
+  this.paper_.innerText = '';
 
-  // Added editors.
+  // Added first write editor.
+  /*
   var editor = new Editor(
       null, null, 'WriteFirst', 'My name is Daichi Hirono.',
       cursors[0]);
   this.editors_.push(editor);
+  */
 
   // Animation event for editors.
-  this.handlers.setInterval(function() {
-    for (var i = 0; i < this.editors_.length;) {
-      var editor = this.editors_[i];
-      if (!editor.step(paper))
-        this.editors_.splice(i, 1);
-      else
-        i++;
-    }
-  }.bind(this), DocsPage.ANIMATION_INTERVAL);
+  this.handlers.setInterval(
+      this.onStep_.bind(this), DocsPage.ANIMATION_INTERVAL);
 
   // Input event.
-  this.handlers.add(paper, 'input', function() {
+  this.handlers.add(this.paper_, 'input', function() {
   }.bind(this));
 
   // Bold button event.
@@ -187,6 +192,52 @@ DocsPage.prototype.enter = function() {
   this.handlers.add(boldButton, 'click', function() {
     this.root.document.execCommand('bold');
   }.bind(this));
+};
+
+/**
+ * The interaval callback function that is called regularly while the Docs.app
+ * is open.
+ */
+DocsPage.prototype.onStep_ = function() {
+  // Find the editable sentences and adds editors to them.
+  for (var target in DocsPage.EDIT_MAP) {
+    var index = this.paper_.innerText.indexOf(target);
+    if (index == -1)
+      continue;
+    for (var i = 0; i < this.cursors_.length; i++) {
+      if (this.cursors_[i].editor)
+        continue;
+      this.cursors_[i].editor = new Editor(index,
+                                           target,
+                                           'Type',
+                                           DocsPage.EDIT_MAP[target]);
+      break;
+    }
+  }
+  // Drive the existing editors.
+  for (var i = 0; i < this.cursors_.length; i++) {
+    var editor = this.cursors_[i].editor;
+    if (!editor)
+      continue;
+    var result = editor.step(null /* Should be the result of diff.
+                                     Not implemented yet.*/);
+    console.log(result);
+    switch (result[0]) {
+      case 'ShowCursor':
+        this.cursors_[i].classList.add('active');
+        break;
+      case 'Insert':
+        this.paper_.insertChar(result[1], result[2]);
+        break;
+      case 'Delete':
+        this.paper_.deleteChar(result[1]);
+        break;
+      case 'Exit':
+        console.log('Exit');
+        this.cursors_[i].classList.remove('active');
+        break;
+    }
+  }
 };
 
 DocsPage.prototype.leave = function() {
@@ -355,8 +406,8 @@ Root.prototype.createMainWindow = function(pageIndex) {
       });
       window.show();
       var doc = window.contentWindow.document;
-      if (doc.readyState == "interactive" ||
-          doc.readyState == "complete") {
+      if (doc.readyState == 'interactive' ||
+          doc.readyState == 'complete') {
         steps.shift()();
       } else {
         window.contentWindow.addEventListener('load', steps.shift());
