@@ -137,23 +137,64 @@ Editor.prototype.update_cursor_ = function(paper) {
 };
 */
 
-var PaperEditAdapter = function(paper) {
-  this.paper_ = paper;
+var extend = function(base, adapter) {
+  for (var name in adapter) {
+    base[name] = adapter[name];
+  }
+  return base;
+};
+
+var PaperEditAdapter = {};
+
+PaperEditAdapter.getTextNodeAt = function(index) {
+  var result = document.evaluate(
+      './/text()', this, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  for (var i = 0; i < result.snapshotLength; i++) {
+    var textNode = result.snapshotItem(i);
+    var length = textNode.nodeValue.length;
+    if (index <= length) {
+      return {textNode: textNode, subindex: index};
+    }
+    index -= length;
+  }
+  return null;
+};
+
+PaperEditAdapter.insertChar = function(index, ch) {
+  this.innerText =
+      this.innerText.substr(0, index) +
+      ch +
+      this.innerText.substr(index);
+};
+
+PaperEditAdapter.deleteChar = function(index) {
+  this.innerText = this.innerText.substr(0, index) +
+                   this.innerText.substr(index + 1);
+};
+
+PaperEditAdapter.getCursorPosition = function(index) {
+  var textNodeAt = this.getTextNodeAt(index);
+  var textNode = textNodeAt.textNode;
+  var dummy = this.ownerDocument.createElement('span');
+  var originalText = textNode.nodeValue;
+  textNode.nodeValue = originalText.substr(0, textNodeAt.subindex);
+  dummy.innerText = ' ';
+  var parentNode = textNode.parentNode;
+  parentNode.insertBefore(dummy, textNode.nextSibling);
+  var paperBounds = this.getBoundingClientRect();
+  var bounds = dummy.getBoundingClientRect();
+  textNode.nodeValue = originalText;
+  parentNode.removeChild(dummy);
+  return {
+    x: (bounds.left - paperBounds.left),
+    y: (bounds.top - paperBounds.top)
+  };
 };
 
 var DocsPage = function(root) {
   AppPage.call(this, root, 'docs-app');
   this.editors_ = [];
-  this.paper_ = this.element_.querySelector('.paper');
-  this.paper_.insertChar = function(index, ch) {
-    this.innerText = this.innerText.substr(0, index) +
-                     ch +
-                     this.innerText.substr(index);
-  };
-  this.paper_.deleteChar = function(index) {
-    this.innerText = this.innerText.substr(0, index) +
-                     this.innerText.substr(index + 1);
-  };
+  this.paper_ = extend(this.element_.querySelector('.paper'), PaperEditAdapter);
 };
 
 DocsPage.ANIMATION_INTERVAL = 100;
@@ -220,24 +261,35 @@ DocsPage.prototype.onStep_ = function() {
     if (!editor)
       continue;
     var result = editor.step(null /* Should be the result of diff.
-                                     Not implemented yet.*/);
-    console.log(result);
+                                     Not implemented yet. */);
     switch (result[0]) {
       case 'ShowCursor':
         this.cursors_[i].classList.add('active');
         break;
+      case 'MoveCursor':
+        this.setCursorPosition_(this.cursors_[i], result[1] + 1);
+        break;
       case 'Insert':
         this.paper_.insertChar(result[1], result[2]);
+        this.setCursorPosition_(this.cursors_[i], result[1] + 1);
         break;
       case 'Delete':
         this.paper_.deleteChar(result[1]);
+        this.setCursorPosition_(this.cursors_[i], result[1] + 1);
         break;
       case 'Exit':
-        console.log('Exit');
+        this.cursors_[i].editor = null;
         this.cursors_[i].classList.remove('active');
         break;
     }
   }
+};
+
+DocsPage.prototype.setCursorPosition_ = function(cursor, index) {
+  var pos = this.paper_.getCursorPosition(index);
+  console.log(pos);
+  cursor.style.left = pos.x + 'px';
+  cursor.style.top = pos.y + 'px';
 };
 
 DocsPage.prototype.leave = function() {

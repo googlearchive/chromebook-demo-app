@@ -31,7 +31,7 @@ Editor.prototype.step = function(diff) {
     this.step_ = result.next;
     return result.command;
   } else {
-    return 'Exit';
+    return ['Exit'];
   }
 };
 
