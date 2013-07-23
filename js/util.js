@@ -1,11 +1,8 @@
-var util = {
-  defineEnum: function() {
-    var result = {};
-    for (var i = 0; i < arguments.length; i++) {
-      result[arguments[i]] = arguments[i];
-    }
-    return result;
+var extend = function(base, adapter) {
+  for (var name in adapter) {
+    base[name] = adapter[name];
   }
+  return base;
 };
 
 var HandlerList = function() {

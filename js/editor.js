@@ -13,13 +13,22 @@ var Editor = function(index, originalText, type, text) {
   this.length_ = originalText.length;
   this.text_ = text;
   this.diff_ = calcEditDistance(originalText, text, 1, 1, 3);
-  console.log(originalText, text, this.diff_.slice());
   this.step_ = Async.serial(
       this.waitStep_.bind(this, 20),
       this.showCursorStep_.bind(this, 20),
       this.typeStep_.bind(this),
       this.waitStep_.bind(this, 20, null)
   );
+};
+
+/**
+ * Apply the difference that is made by a user or other editors.
+ */
+Editor.prototype.applyIndexMap = function(indexMap) {
+  console.log('apply');
+  if (indexMap.isRangeChanged(this.index_, this.length_))
+    return null;
+  return this.index_ = indexMap.map(this.index_);
 };
 
 Editor.prototype.step = function(diff) {

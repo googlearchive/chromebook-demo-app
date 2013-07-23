@@ -87,89 +87,52 @@ AppPage.prototype.enter = function() {
     }
   }.bind(this));
 };
-/*
-Editor.prototype.step = function(paper) {
-  switch (this.steps_[0]) {
-    case 'WAIT':
-      if (this.counter_-- <= 0) {
-        this.counter_ = 10;
-        this.steps_.shift();
-        this.update_cursor_(paper);
-        this.cursor_.classList.add('active');
-      }
-      break;
-    case 'SHOW_CURSOR':
-      if (this.counter_-- <= 0) {
-        this.steps_.shift();
-      }
-      break;
-    case 'TYPE':
-      paper.innerText += this.text_[0];
-      this.text_ = this.text_.slice(1);
-      this.update_cursor_(paper);
-      if (this.text_ == '') {
-        this.counter_ = 10;
-        this.steps_.shift();
-      }
-      break;
-    default:
-      this.cursor_.classList.remove('active');
-      return false;
-  }
-  return true;
-};
-*/
-
-/**
- * Update the position of cursor.
- * @private
- */
-/*
-Editor.prototype.update_cursor_ = function(paper) {
-  var dummy = paper.ownerDocument.createElement('span');
-  dummy.innerText = 'x';
-  paper.appendChild(dummy);
-  var paperBounds = paper.getBoundingClientRect();
-  var bounds = dummy.getBoundingClientRect();
-  paper.removeChild(dummy);
-  this.cursor_.style.left = (bounds.left - paperBounds.left) + 'px';
-  this.cursor_.style.top = (bounds.top - paperBounds.top) + 'px';
-};
-*/
-
-var extend = function(base, adapter) {
-  for (var name in adapter) {
-    base[name] = adapter[name];
-  }
-  return base;
-};
 
 var PaperEditAdapter = {};
 
 PaperEditAdapter.getTextNodeAt = function(index) {
   var result = document.evaluate(
-      './/text()', this, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      './/node()[self::text() or self::br]', this, null,
+      XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  var lastTextNode = null;
+  console.log(result.snapshotLength);
   for (var i = 0; i < result.snapshotLength; i++) {
     var textNode = result.snapshotItem(i);
-    var length = textNode.nodeValue.length;
-    if (index <= length) {
-      return {textNode: textNode, subindex: index};
+    if (textNode.nodeValue != null) {
+      console.log('text node');
+      // text node
+      lastTextNode = textNode;
+      var length = textNode.nodeValue.length;
+      if (index < length)
+        return {textNode: textNode, subindex: index};
+      index -= length;
+    } else {
+      console.log('br node');
+      // br node
+      index -= 1;
     }
-    index -= length;
   }
-  return null;
+  return lastTextNode ? {
+    textNode: lastTextNode,
+    subindex: lastTextNode.length
+  } : null;
 };
 
 PaperEditAdapter.insertChar = function(index, ch) {
-  this.innerText =
-      this.innerText.substr(0, index) +
+  var nodePos = this.getTextNodeAt(index);
+  var text = nodePos.textNode.nodeValue;
+  nodePos.textNode.nodeValue =
+      text.substr(0, nodePos.subindex) +
       ch +
-      this.innerText.substr(index);
+      text.substr(nodePos.subindex);
 };
 
 PaperEditAdapter.deleteChar = function(index) {
-  this.innerText = this.innerText.substr(0, index) +
-                   this.innerText.substr(index + 1);
+  var nodePos = this.getTextNodeAt(index);
+  var text = nodePos.textNode.nodeValue;
+  nodePos.textNode.nodeValue =
+      text.substr(0, nodePos.subindex) +
+      text.substr(nodePos.subindex + 1);
 };
 
 PaperEditAdapter.getCursorPosition = function(index) {
@@ -198,9 +161,6 @@ var DocsPage = function(root) {
 };
 
 DocsPage.ANIMATION_INTERVAL = 100;
-DocsPage.EDIT_MAP = {
-  'The sun': 'The red burned sun'
-};
 
 DocsPage.prototype = Object.create(AppPage.prototype, {});
 
@@ -211,6 +171,9 @@ DocsPage.prototype.enter = function() {
 
   // Init paper.
   this.paper_.innerText = '';
+  this.lastText_ = '';
+
+  this.usedKeyword_ = {};
 
   // Added first write editor.
   /*
@@ -226,6 +189,24 @@ DocsPage.prototype.enter = function() {
 
   // Input event.
   this.handlers.add(this.paper_, 'input', function() {
+    // Get difference made by input.
+    var diff = calcEditDistance(this.lastText_, this.paper_.innerText, 1, 1, 3);
+    this.lastText_ = this.paper_.innerText;
+    var indexMap = IndexMap.fromDiff(diff);
+    for (var i = 0; i < this.cursors_.length; i++) {
+      var cursor = this.cursors_[i];
+      if (cursor.editor) {
+        var index = cursor.editor.applyIndexMap(indexMap);
+        if (index != null) {
+          this.setCursorPosition_(cursor, index);
+        } else {
+          console.log(indexMap);
+          cursor.classList.remove('active');
+          cursor.classList.add('stop');
+          cursor.editor = null;
+        }
+      }
+    }
   }.bind(this));
 
   // Bold button event.
@@ -235,26 +216,58 @@ DocsPage.prototype.enter = function() {
   }.bind(this));
 };
 
+DocsPage.prototype.shiftCursors_ = function(index, amount) {
+  for (var i = 0; i < this.cursors_.length; i++) {
+
+  }
+};
+
+/**
+ * Finds the keyword from the paper which can be replaced with the other phrase.
+ * @private
+ */
+DocsPage.prototype.findBotKeyword_ = function() {
+  var paperText = this.paper_.innerText;
+  for (var i = 0; i < BOT_KEYWORD_MAP.length; i++) {
+    for (var keyword in BOT_KEYWORD_MAP[i]) {
+      if (this.usedKeyword_[keyword])
+        continue;
+      var index = paperText.indexOf(' ' + keyword + ' ');
+      if (index == -1)
+        continue;
+      return {
+        keyword: keyword,
+        index: index + 1,
+        result: BOT_KEYWORD_MAP[i][keyword]
+      };
+    }
+  }
+  return null;
+};
+
 /**
  * The interaval callback function that is called regularly while the Docs.app
  * is open.
+ * @private
  */
 DocsPage.prototype.onStep_ = function() {
-  // Find the editable sentences and adds editors to them.
-  for (var target in DocsPage.EDIT_MAP) {
-    var index = this.paper_.innerText.indexOf(target);
-    if (index == -1)
-      continue;
+  // Save the selection index.
+  var selectionStart = this.paper_.selectionStart;
+  var selectionEnd = this.paper_.selectionEnd;
+
+  // Find the editable phrases and adds editors to them.
+  var keywordAt = this.findBotKeyword_();
+  if (keywordAt) {
     for (var i = 0; i < this.cursors_.length; i++) {
       if (this.cursors_[i].editor)
         continue;
-      this.cursors_[i].editor = new Editor(index,
-                                           target,
-                                           'Type',
-                                           DocsPage.EDIT_MAP[target]);
+      this.usedKeyword_[keywordAt.keyword] = true;
+      this.cursors_[i].editor = new Editor(
+          keywordAt.index, keywordAt.keyword, 'Type', keywordAt.result);
       break;
     }
   }
+
   // Drive the existing editors.
   for (var i = 0; i < this.cursors_.length; i++) {
     var editor = this.cursors_[i].editor;
@@ -267,15 +280,20 @@ DocsPage.prototype.onStep_ = function() {
         this.cursors_[i].classList.add('active');
         break;
       case 'MoveCursor':
-        this.setCursorPosition_(this.cursors_[i], result[1] + 1);
+        this.setCursorPosition_(this.cursors_[i], result[1]);
         break;
       case 'Insert':
         this.paper_.insertChar(result[1], result[2]);
         this.setCursorPosition_(this.cursors_[i], result[1] + 1);
+        this.lastText_ = this.lastText_.substr(0, result[1]) +
+                         result[2] +
+                         this.lastText_.substr(result[1]);
         break;
       case 'Delete':
         this.paper_.deleteChar(result[1]);
-        this.setCursorPosition_(this.cursors_[i], result[1] + 1);
+        this.setCursorPosition_(this.cursors_[i], result[1]);
+        this.lastText_ = this.lastText_.substr(0, result[1]) +
+                         this.lastText_.substr(result[1] + 1);
         break;
       case 'Exit':
         this.cursors_[i].editor = null;
@@ -283,11 +301,14 @@ DocsPage.prototype.onStep_ = function() {
         break;
     }
   }
+
+  // Restore the selection index.
+  this.paper_.selectionStart = selectionStart;
+  this.paper_.selectionEnd = selectionEnd;
 };
 
 DocsPage.prototype.setCursorPosition_ = function(cursor, index) {
   var pos = this.paper_.getCursorPosition(index);
-  console.log(pos);
   cursor.style.left = pos.x + 'px';
   cursor.style.top = pos.y + 'px';
 };

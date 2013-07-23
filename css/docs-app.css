@@ -103,6 +103,11 @@
   display: block;
 }
 
+#docs-app .cursor.stop {
+  background-color: red;
+  display: block;
+}
+
 #docs-app .cursor::after {
   content: attr(user-name);
   display: inline;

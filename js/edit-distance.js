@@ -61,3 +61,96 @@ var calcEditDistance = function(seq1,
   result.shift();
   return result;
 };
+
+var IndexMap = function(blocks) {
+  this.blocks_ = blocks;
+};
+
+/**
+ * Obtain the index map from the diff that is obtained by calcEditDistance.
+ */
+IndexMap.fromDiff = function(diff) {
+  var blocks = [{index: 0, length: 0, offset: 0}];
+  var lastBlock = blocks[0];
+  diff = diff.slice();
+  diff.push({operation: 'None'});
+  for (var i = 0; i < diff.length; i++) {
+    switch (diff[i].operation) {
+      case 'None':
+      case 'Replace':
+        if (lastBlock.deleted) {
+          lastBlock = {
+            index: lastBlock.index + lastBlock.length,
+            length: 0,
+            offset: lastBlock.offset
+          };
+          blocks.push(lastBlock);
+        }
+        lastBlock.length++;
+        lastBlock.inserted = false;
+        break;
+      case 'Insert':
+        if (!lastBlock.inserted) {
+          lastBlock = {
+            index: lastBlock.index + lastBlock.length,
+            length: 0,
+            offset: lastBlock.offset,
+            inserted: true
+          };
+          blocks.push(lastBlock);
+        }
+        lastBlock.offset++;
+        break;
+      case 'Delete':
+        if (!lastBlock.deleted) {
+          lastBlock = {
+            index: lastBlock.index + lastBlock.length,
+            length: 0,
+            offset: lastBlock.offset,
+            deleted: true
+          };
+          blocks.push(lastBlock);
+        }
+        lastBlock.offset--;
+        lastBlock.length++;
+        break;
+    }
+  }
+  blocks.push({index: Number.MAX_VALUE});
+
+  // Remove unused information
+  for (var i = 0; i < blocks.length; i++) {
+    delete blocks[i].inserted;
+    delete blocks[i].length;
+    if (blocks[i].deleted)
+      delete blocks[i].offset;
+  }
+  return new IndexMap(blocks);
+};
+
+/**
+ * Map the index of the old text to the index of the new one.
+ */
+IndexMap.prototype.map = function(index) {
+  for (var i = 0; i < this.blocks_.length; i++) {
+    if (this.blocks_[i].index <= index && index < this.blocks_[i + 1].index) {
+      if (this.blocks_[i].deleted)
+        return this.blocks_[i].index + this.blocks_[i - 1].offset;
+      else
+        return index + this.blocks_[i].offset;
+    }
+  }
+  return null;
+};
+
+IndexMap.prototype.isRangeChanged = function(index, length) {
+  for (var i = 0; i < this.blocks_.length; i++) {
+    if (this.blocks_[i].index <= index && index < this.blocks_[i + 1].index) {
+      if (this.blocks_[i].deleted)
+        return true;
+      else
+        return !(index + length <= this.blocks_[i + 1].index);
+    }
+  }
+  return null;
+};

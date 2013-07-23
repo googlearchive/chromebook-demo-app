@@ -9,6 +9,7 @@ MENU_FILES = \
   js/additional-effects.js \
   js/editor.js \
   js/edit-distance.js \
+  js/words.js \
   css/common.css \
   css/menu-app.css \
   css/docs-app.css \

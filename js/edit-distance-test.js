@@ -50,3 +50,54 @@ Test.add('calcEditDistanceForArray', function() {
   Assert.equals('Delete', result[3].operation);
   console.log(result);
 });
+
+var INDEX_MAP = function() {
+  var diff_source = '_++_---_++++__';
+  // 01234567
+  // 0**15****67
+
+  var operations = {'_': 'None', '+': 'Insert', '-': 'Delete'};
+  var diff = [];
+  for (var i = 0; i < diff_source.length; i++) {
+    diff.push({operation: operations[diff_source[i]]});
+  }
+  return IndexMap.fromDiff(diff);
+}.call();
+
+Test.add('IndexMap.fromDiff', function() {
+  var indexMap = INDEX_MAP;
+
+  Assert.equals(6, indexMap.blocks_.length);
+
+  Assert.equals(0, indexMap.blocks_[0].index);
+  Assert.equals(1, indexMap.blocks_[1].index);
+  Assert.equals(2, indexMap.blocks_[2].index);
+  Assert.equals(5, indexMap.blocks_[3].index);
+  Assert.equals(6, indexMap.blocks_[4].index);
+
+  Assert.equals(0, indexMap.blocks_[0].offset);
+  Assert.equals(2, indexMap.blocks_[1].offset);
+  Assert.equals(true, indexMap.blocks_[2].deleted);
+  Assert.equals(-1, indexMap.blocks_[3].offset);
+  Assert.equals(3, indexMap.blocks_[4].offset);
+});
+
+Test.add('indexMap#map', function() {
+  var indexMap = INDEX_MAP;
+  Assert.equals(0, indexMap.map(0));
+  Assert.equals(3, indexMap.map(1));
+  Assert.equals(4, indexMap.map(2));
+  Assert.equals(4, indexMap.map(3));
+  Assert.equals(4, indexMap.map(4));
+  Assert.equals(4, indexMap.map(5));
+  Assert.equals(9, indexMap.map(6));
+});
+
+Test.add('indexMap#isRangeChanged', function() {
+  var indexMap = INDEX_MAP;
+  Assert.equals(false, indexMap.isRangeChanged(0, 1));
+  Assert.equals(false, indexMap.isRangeChanged(1, 1));
+  Assert.equals(true, indexMap.isRangeChanged(1, 2));
+  Assert.equals(true, indexMap.isRangeChanged(2, 1));
+  Assert.equals(false, indexMap.isRangeChanged(6, 2));
+});
