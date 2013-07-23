@@ -3,6 +3,7 @@ CHROME=/opt/google/chrome/chrome
 TARGETS = menu docs hangouts play game helper
 
 MENU_FILES = \
+  js/const.js \
   js/menu-app.js \
   js/define.js \
   js/util.js \
@@ -30,41 +31,54 @@ MENU_FILES = \
   third-party/open-sans/OpenSans-Regular.ttf
 
 DOCS_FILES = \
+  js/const.js \
+  js/app.js \
   js/docs-app.js \
   js/util.js \
   css/common.css \
-  css/menu-app.css \
+  css/docs-app.css \
   assets/docs-icon-32.png \
   assets/docs-icon-128.png \
   assets/arrow.png \
+  views/docs-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
 
 HANGOUTS_FILES = \
+  js/const.js \
+  js/app.js \
   js/hangouts-app.js \
   js/util.js \
   css/common.css \
   css/hangouts-app.css \
   assets/hangouts-icon-32.png \
   assets/hangouts-icon-128.png \
+  views/hangouts-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
 
 PLAY_FILES = \
+  js/const.js \
+  js/app.js \
   js/play-app.js \
   js/util.js \
   css/common.css \
   css/play-app.css \
   assets/play-icon-32.png \
   assets/play-icon-128.png \
+  views/play-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
 
 GAME_FILES= \
+  js/const.js \
+  js/app.js \
   js/game-app.js \
   js/util.js \
+  css/common.css \
   assets/game-icon-32.png \
-  assets/game-icon-128.png
+  assets/game-icon-128.png \
+  views/game-app.html
 
 HELPER_FILES= \
   js/helper-extension.js \

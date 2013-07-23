@@ -9,6 +9,8 @@
   "app": {
     "background": {
       "scripts": [
+        "const.js",
+        "app.js",
         "game-app.js"
       ]
     }

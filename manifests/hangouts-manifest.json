@@ -6,9 +6,12 @@
     "32": "hangouts-icon-32.png",
     "128": "hangouts-icon-128.png"
   },
+  "permissions": ["videoCapture"],
   "app": {
     "background": {
       "scripts": [
+        "const.js",
+        "app.js",
         "hangouts-app.js"
       ]
     }

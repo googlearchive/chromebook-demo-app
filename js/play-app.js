@@ -1,4 +1,13 @@
-var MAIN_APPS_ID = "ejpaejipmgoifefhjkmnghkpaklpeadp";
-chrome.app.runtime.onLaunched.addListener(function() {
-  chrome.runtime.sendMessage(MAIN_APPS_ID, {name: 'launchPlay'});
-});
+var PlayApp = function() {
+  App.call(this, PLAY_WINDOW_ID, 'play-app.html', false);
+};
+
+PlayApp.prototype = {
+  __proto__: App.prototype
+};
+
+PlayApp.prototype.initDocument = function() {
+  App.prototype.initDocument.call(this);
+};
+
+new PlayApp().start();

@@ -1,4 +1,3 @@
-var MAIN_WINDOW_ID = "demo.app_main";
 var MENU_PAGE_INDEX = 0;
 var DOCS_PAGE_INDEX = 1;
 var HANGOUTS_PAGE_INDEX = 2;
@@ -454,7 +453,7 @@ Root.prototype.createMainWindow = function(pageIndex) {
     // Create the main window.
     function() {
       var params = {
-        id: MAIN_WINDOW_ID,
+        id: MENU_WINDOW_ID,
         hidden: true,
         resizable: false,
         frame: 'none',

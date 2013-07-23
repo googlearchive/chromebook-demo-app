@@ -1,4 +1,13 @@
-var MAIN_APPS_ID = "ejpaejipmgoifefhjkmnghkpaklpeadp";
-chrome.app.runtime.onLaunched.addListener(function() {
-  chrome.runtime.sendMessage(MAIN_APPS_ID, {name: 'launchDocs'});
-});
+var DocsApp = function() {
+  App.call(this, DOCS_WINDOW_ID, 'docs-app.html', false);
+};
+
+DocsApp.prototype = {
+  __proto__: App.prototype
+};
+
+DocsApp.prototype.initDocument = function() {
+  App.prototype.initDocument.call(this);
+};
+
+new DocsApp().start();
