@@ -88,11 +88,9 @@ PaperEditAdapter.getTextNodeAt = function(index) {
       './/node()[self::text() or self::br]', this, null,
       XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
   var lastTextNode = null;
-  console.log(result.snapshotLength);
   for (var i = 0; i < result.snapshotLength; i++) {
     var textNode = result.snapshotItem(i);
     if (textNode.nodeValue != null) {
-      console.log('text node');
       // text node
       lastTextNode = textNode;
       var length = textNode.nodeValue.length;
@@ -100,7 +98,6 @@ PaperEditAdapter.getTextNodeAt = function(index) {
         return {textNode: textNode, subindex: index};
       index -= length;
     } else {
-      console.log('br node');
       // br node
       index -= 1;
     }
@@ -193,7 +190,6 @@ DocsPage.prototype.enter = function() {
         if (index != null) {
           this.setCursorPosition_(cursor, index);
         } else {
-          console.log(indexMap);
           cursor.classList.remove('active');
           cursor.classList.add('stop');
           cursor.editor = null;
@@ -531,7 +527,6 @@ MenuApp.prototype.initDocument = function() {
   var buttons = this.document.querySelectorAll('.button');
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(index) {
-      console.log('button clicked');
       var messageName = [
         'launchDocs',
         'launchHangouts',

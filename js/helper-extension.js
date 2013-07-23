@@ -1,6 +1,5 @@
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    console.log('message received', request);
     switch (request.name) {
       case 'launchDocs':
         chrome.management.launchApp(DOCS_APP_ID);

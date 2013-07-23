@@ -25,7 +25,6 @@ var Editor = function(index, originalText, type, text) {
  * Apply the difference that is made by a user or other editors.
  */
 Editor.prototype.applyIndexMap = function(indexMap) {
-  console.log('apply');
   if (indexMap.isRangeChanged(this.index_, this.length_))
     return null;
   return this.index_ = indexMap.map(this.index_);
