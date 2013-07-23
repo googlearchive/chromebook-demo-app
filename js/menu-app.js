@@ -4,12 +4,6 @@ var HANGOUTS_PAGE_INDEX = 2;
 var PLAY_PAGE_INDEX = 3;
 var GAME_PAGE_INDEX = 4;
 
-/**
- * The helper extension ID.
- * These IDs are fixed by the key value in the manifest of extension helper.
- */
-var EXTENSION_HELPER_ID = "dklepamkcpcemiendiebcmkdplnabpjp";
-
 var Effects = defined.shift();
 var FaceTracker = defined.shift();
 
@@ -520,4 +514,33 @@ Root.prototype.exit = function() {
   this.pages = null;
 };
 
-new Root().init();
+// new Root().init();
+
+var MenuApp = function() {
+  App.call(this, MENU_WINDOW_ID, 'menu-app.html', true);
+};
+
+MenuApp.prototype = {
+  __proto__: App.prototype
+};
+
+MenuApp.prototype.initDocument = function() {
+  App.prototype.initDocument.call(this);
+
+  // Child application buttons
+  var buttons = this.document.querySelectorAll('.button');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function(index) {
+      console.log('button clicked');
+      var messageName = [
+        'launchDocs',
+        'launchHangouts',
+        'launchPlay',
+        'launchGame'
+      ][index];
+      chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: messageName});
+    }.bind(this, i));
+  }
+};
+
+new MenuApp().start();

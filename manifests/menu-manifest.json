@@ -1,5 +1,5 @@
 {
-  "name": "Demos.app",
+  "name": "Demos.app Menu",
   "version": "0.0",
   "manifest_version": 2,
   "permissions": [
@@ -8,6 +8,8 @@
   "app": {
     "background": {
       "scripts": [
+        "const.js",
+        "app.js",
         "words.js",
         "glfx.js",
         "ccv.js",

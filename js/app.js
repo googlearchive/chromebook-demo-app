@@ -23,7 +23,6 @@ App.prototype.onWindowCreated_ = function(window) {
   if (window.initialized)
     return;
   window.initialized = true;
-  console.log('created');
   // Setup window.
   this.appWindow = window;
   this.window = window.contentWindow;

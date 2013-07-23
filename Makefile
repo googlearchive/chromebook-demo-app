@@ -4,6 +4,7 @@ TARGETS = menu docs hangouts play game helper
 
 MENU_FILES = \
   js/const.js \
+  js/app.js \
   js/menu-app.js \
   js/define.js \
   js/util.js \
@@ -21,7 +22,7 @@ MENU_FILES = \
   assets/hangouts-icon-128.png \
   assets/play-icon-128.png \
   assets/glasses.png \
-  views/main.html \
+  views/menu-app.html \
   gen/third-party/glfx.js \
   gen/third-party/effects.js \
   gen/third-party/track.js \
@@ -81,6 +82,7 @@ GAME_FILES= \
   views/game-app.html
 
 HELPER_FILES= \
+  js/const.js \
   js/helper-extension.js \
   js/util.js
 
