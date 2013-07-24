@@ -80,6 +80,7 @@ body > * {
   text-align: center;
   font-size: 13px;
   line-height: 24px;
+  color: #999;
 }
 
 .app-frame .app-description,
@@ -97,8 +98,8 @@ body > * {
 .app-frame .sec-header {
   display: -webkit-flex;
   width: 100%;
-  margin-top: 52px;
-  margin-bottom: 26px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 
 }
 
