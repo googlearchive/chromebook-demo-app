@@ -1,4 +1,16 @@
 {
+  "PLAY_COPY": {
+    "message": "Listen to music",
+    "description": "The advertising slogan of Play.app."
+  },
+  "PLAY_SUB_COPY": {
+    "message": "with Google Play Music",
+    "description": "The sub advertising slogan of Play.app."
+  },
+  "PLAY_DESCRIPTION": {
+    "message": "Enjoy an endless collection of music and movies from the web with Google Play.",
+    "description": "The description of Play.app."
+  },
   "PLAY_SECTION_UPLOAD_TITLE": {
     "message": "Free your collection",
     "description": "The title of the upload section."
@@ -22,5 +34,73 @@
   "PLAY_SECTION_UNLIMITED_DESCRIPTION": {
     "message": "With All Access, enjoy unlimited listening to millions of songs, create custom radio and skip as much as you want.",
     "description": "The description of the unlimited section."
+  },
+  "PLAY_MEESAGE_BAR": {
+    "message": "Listen Now",
+    "description": "The message placed at the top of the Play.app's main view."
+  },
+  "PLAY_SIDE_BUTTON_UPLOAD": {
+    "message": "Upload music",
+    "description": ""
+  },
+  "PLAY_BALLOON_UPLOAD": {
+    "message": "Upload up to 20,000 songs for free with Music Manager",
+    "description": ""
+  },
+  "PLAY_SIDE_BUTTON_LIBRARY": {
+    "message": "My library",
+    "description": ""
+  },
+  "PLAY_BALLOON_LIBRARY": {
+    "message": "Listen to all your purchased and uploaded music",
+    "description": ""
+  },
+  "PLAY_SIDE_BUTTON_MIXES": {
+    "message": "Instant mixes",
+    "description": ""
+  },
+  "PLAY_BALLOON_MIXES": {
+    "message": "Google recommended radio based on music you love",
+    "description": ""
+  },
+  "PLAY_SIDE_BUTTON_SHOP": {
+    "message": "Shop",
+    "description": ""
+  },
+  "PLAY_BALLOON_SHOP": {
+    "message": "Shop for and download tunes in the Play store",
+    "description": ""
+  },
+  "PLAY_SIDE_BUTTON_PLAYLISTS": {
+    "message": "Playlists",
+    "description": ""
+  },
+  "PLAY_BALLOON_PLAYLISTS": {
+    "message": "Easily create and share playlists of songs",
+    "description": ""
+  },
+  "PLAY_MAIN_MUSIC_NAME":{
+    "message": "Get Lucky - Radio edit",
+    "description": ""
+  },
+  "PLAY_MAIN_MUSIC_ARTIST":{
+    "message": "Daft Punk",
+    "description": ""
+  },
+  "PLAY_MAIN_MUSIC_NOTE":{
+    "message": "Popular on Google Play Music",
+    "description": ""
+  },
+  "PLAY_MUSIC_NAME":{
+    "message": "Random song",
+    "description": ""
+  },
+  "PLAY_MUSIC_ARTIST":{
+    "message": "Rnadon artist",
+    "description": ""
+  },
+  "PLAY_MUSIC_NOTE":{
+    "message": "Suggested",
+    "description": ""
   }
 }
