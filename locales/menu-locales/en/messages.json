@@ -1,0 +1,26 @@
+{
+  "MENU_MESSAGE": {
+    "message": "A new type of computer from Google.",
+    "description": ""
+  },
+  "MENU_DESCRIPTION": {
+    "message": "Boots in seconds. Nothing complicated to learn.\nComes with your favorite Google apps.\nBuilt for everyday use and perfect for sharing with others.",
+    "description": ""
+  },
+  "MENU_DOCS_BUTTON": {
+    "message": "Get work done",
+    "description": ""
+  },
+  "MENU_HANGOUTS_BUTTON": {
+    "message": "Keep in touch",
+    "description": ""
+  },
+  "MENU_MUSIC_BUTTON": {
+    "message": "Listen to music",
+    "description": ""
+  },
+  "MENU_STORE_BUTTON": {
+    "message": "Get more apps",
+    "description": ""
+  }
+}

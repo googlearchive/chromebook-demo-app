@@ -2,6 +2,7 @@
   "name": "Demos.app Menu",
   "version": "0.0",
   "manifest_version": 2,
+  "default_locale": "en",
   "permissions": [
     "experimental"
   ],

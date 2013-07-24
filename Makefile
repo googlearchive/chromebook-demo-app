@@ -120,7 +120,7 @@ packages: third-party
 	cp ${MUSIC_FILES} packages/demo-music
 	cp ${STORE_FILES} packages/demo-store
 	cp ${HELPER_FILES} packages/demo-helper
-	for x in music; \
+	for x in menu music; \
 	  do mkdir -p packages/demo-$$x/_locales; \
 	     cp -r locales/$$x-locales/* packages/demo-$$x/_locales; \
 	done
