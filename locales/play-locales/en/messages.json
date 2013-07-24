@@ -2,5 +2,25 @@
   "PLAY_SECTION_UPLOAD_TITLE": {
     "message": "Free your collection",
     "description": "The title of the upload section."
+  },
+  "PLAY_SECTION_UPLOAD_DESCRIPTION": {
+    "message": "Bring up to 20,000 songs from your library to Google Play for free.",
+    "description": "The description of the upload section."
+  },
+  "PLAY_SECTION_ANYWHERE_TITLE": {
+    "message": "Access anywhere",
+    "description": "The title of the anywhere section."
+  },
+  "PLAY_SECTION_ANYWHERE_DESCRIPTION": {
+    "message": "Google Play keeps your music library updated automatically across your phone, tablet, and Chromebook.",
+    "description": "The description of the anywhere section."
+  },
+  "PLAY_SECTION_UNLIMITED_TITLE": {
+    "message": "Unlimited music",
+    "description": "The title of the unlimited section."
+  },
+  "PLAY_SECTION_UNLIMITED_DESCRIPTION": {
+    "message": "With All Access, enjoy unlimited listening to millions of songs, create custom radio and skip as much as you want.",
+    "description": "The description of the unlimited section."
   }
 }

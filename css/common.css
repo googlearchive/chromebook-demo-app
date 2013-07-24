@@ -49,7 +49,7 @@ body > * {
 }
 
 .app-frame .app-side-body {
-  padding: 24px;
+  padding: 40px 20px 0 20px;
   -webkit-flex: auto;
 }
 

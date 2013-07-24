@@ -13,3 +13,7 @@
 #play-app .sec-header-icon.unlimited {
   background-image: url('play-section-unlimited-2x.png');
 }
+
+#play-app .app-side-footer {
+  background-color: #facf0c;
+}

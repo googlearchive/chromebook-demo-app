@@ -98,8 +98,6 @@ packages: third-party
 	cp ${DOCS_FILES} packages/demo-docs
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp ${PLAY_FILES} packages/demo-play
-        mkdir -p packages/demo-play/_locales
-	cp -r locals/play-locales/* 
 	cp ${GAME_FILES} packages/demo-game
 	cp ${HELPER_FILES} packages/demo-helper
 	for x in play; \
