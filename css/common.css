@@ -46,6 +46,7 @@ body > * {
   display: -webkit-flex;
   -webkit-flex-flow: column;
   border-right: solid 1px #e4e4e4;
+  -webkit-flex: none;
 }
 
 .app-frame .app-side-body {
@@ -55,8 +56,9 @@ body > * {
 
 .app-frame .app-icon {
   background-position: center;
-  width: 128px;
-  height: 128px;
+  width: 64px;
+  height: 64px;
+  background-size: contain;
   margin: auto;
 }
 
