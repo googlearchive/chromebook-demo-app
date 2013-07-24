@@ -1,5 +1,5 @@
 var StoreApp = function() {
-  App.call(this, Store_WINDOW_ID, 'store-app.html', false);
+  App.call(this, STORE_WINDOW_ID, 'store-app.html', false);
 };
 
 StoreApp.prototype = {

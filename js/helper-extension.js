@@ -7,11 +7,11 @@ chrome.runtime.onMessageExternal.addListener(
       case 'launchHangouts':
         chrome.management.launchApp(HANGOUTS_APP_ID);
         break;
-      case 'launchPlay':
-        chrome.management.launchApp(PLAY_APP_ID);
+      case 'launchMusic':
+        chrome.management.launchApp(MUSIC_APP_ID);
         break;
-      case 'launchGame':
-        chrome.management.launchApp(GAME_APP_ID);
+      case 'launchStore':
+        chrome.management.launchApp(STORE_APP_ID);
         break;
     }
   }

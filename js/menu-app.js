@@ -530,8 +530,8 @@ MenuApp.prototype.initDocument = function() {
       var messageName = [
         'launchDocs',
         'launchHangouts',
-        'launchPlay',
-        'launchGame'
+        'launchMusic',
+        'launchStore'
       ][index];
       chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: messageName});
     }.bind(this, i));
