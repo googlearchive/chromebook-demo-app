@@ -1,3 +1,21 @@
+/**
+ * Font
+ */
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: url('Roboto-ThinItalic.ttf') format('truetype');
+}
+
+/**
+ * Element
+ */
+
 #play-app .app-icon {
   background-image: url('play-icon-128.png');
 }
@@ -20,16 +38,19 @@
 
 #play-app .message-bar {
   height: 40px;
-  width: 814px;
+  width: 800px;
   background-color: white;
   -webkit-align-self: center;
+  font-family: 'OpenSans-Regular', sans-serif;
+  line-height: 40px;
+  padding: 0 12px;
+  -webkit-box-sizing: border-box;
 }
 
 #play-app .play-main-body {
   display: -webkit-flex;
   margin-top: 40px;
-  width: 814px;
-  /* background-color: #ccc; */
+  width: 800px;
   -webkit-align-self: center;
 }
 
@@ -93,20 +114,70 @@
 
 
 #play-app .music-container {
-  width: 632px;
+  width: 640px;
   -webkit-flex: none;
+}
+
+#play-app .music-container::after {
+  content: '';
+  clear: both;
 }
 
 #play-app .music {
   width: 150px;
-  height: 220px;
-  background-color: #999;
-  -webkit-margin-end: 8px;
-  margin-bottom: 8px;
+  height: 225px;
+  background-color: white;
+  -webkit-margin-end: 10px;
+  margin-bottom: 10px;
   float: left;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
 }
 
 #play-app .music.main {
-  width: 308px;
-  height: 448px;
+  width: 310px;
+  height: 460px;
+}
+
+#play-app .album-cover {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+}
+
+#play-app .music.main .album-cover {
+  width: 310px;
+  height: 310px;
+  background-color: orange;
+}
+
+#play-app .music-name {
+  font-family: 'Roboto-Light', sans-serif;
+  color: #444;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 8px;
+}
+
+#play-app .music.main .music-name {
+  margin-top: 16px;
+}
+
+#play-app .artist-name {
+  font-family: 'Roboto-Light', sans-serif;
+  color: #aaa;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 8px;
+  -webkit-flex: 1 0 auto;
+}
+
+#play-app .music-footer {
+  margin: 0 8px;
+  border-top: 1px solid #eee;
+  font-family: 'Roboto-ThinItalic', sans-serif;
+  color: #8d8d8d;
+  font-size: 18px;
+  line-height: 22px;
 }

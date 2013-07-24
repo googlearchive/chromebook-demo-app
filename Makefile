@@ -73,7 +73,9 @@ PLAY_FILES = \
   assets/balloon-triangle-left.png \
   views/play-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
-  third-party/open-sans/OpenSans-Regular.ttf
+  third-party/open-sans/OpenSans-Regular.ttf \
+  third-party/roboto/Roboto-Light.ttf \
+  third-party/roboto/Roboto-ThinItalic.ttf
 
 GAME_FILES= \
   js/const.js \
