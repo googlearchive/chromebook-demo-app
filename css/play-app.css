@@ -29,22 +29,68 @@
   display: -webkit-flex;
   margin-top: 40px;
   width: 814px;
-  background-color: #ccc;
+  /* background-color: #ccc; */
   -webkit-align-self: center;
 }
 
 #play-app .side-button-container {
-  width: 150px;
+  width: 130px;
   -webkit-margin-end: 40px;
   -webkit-flex: none;
 }
 
 .side-button {
   width: 100%;
-  height: 40px;
+  height: 45px;
   margin-bottom: 20px;
   display: block;
+  border: 1px solid #cecece;
+  background-color: #f1f1f1;
+  font-family: 'OpenSans-Regular', sans-serif;
+  color: #777;
+/*  font-weight: bold;*/
+  border-radius: 2px;
+  font-size: 14px;
+  position: relative;
+  -webkit-box-sizing: border-box;
 }
+
+.side-button:hover {
+  color: orange;
+}
+
+.side-button .balloon {
+  background-color: black;
+  position: absolute;
+  color: white;
+  display: none;
+  top: -5px;
+  right: -211px;
+  width: 200px;
+
+  line-height: 14px;
+  font-size: 12px;
+  padding: 12px;
+  height: 55px;
+
+  -webkit-box-sizing: border-box;
+}
+
+.side-button .balloon::after {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 22px;
+  background-image: url('balloon-triangle-left.png');
+  position: absolute;
+  left: -11px;
+  top: 16px;
+}
+
+.side-button:hover .balloon {
+  display: block;
+}
+
 
 #play-app .music-container {
   width: 632px;

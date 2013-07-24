@@ -70,6 +70,7 @@ PLAY_FILES = \
   assets/play-section-anywhere-2x.png \
   assets/play-section-upload-2x.png \
   assets/play-section-unlimited-2x.png \
+  assets/balloon-triangle-left.png \
   views/play-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
