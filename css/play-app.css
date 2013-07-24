@@ -69,16 +69,17 @@
   display: block;
   border: 1px solid #cecece;
   background-color: #f1f1f1;
-  font-family: 'OpenSans-Regular', sans-serif;
+  font-family: 'Roboto-Light', sans-serif;
   color: #777;
 /*  font-weight: bold;*/
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 18px;
   position: relative;
   -webkit-box-sizing: border-box;
+  text-align: left;
 }
 
-.side-button:hover {
+.side-button.selected {
   color: orange;
 }
 
@@ -90,13 +91,12 @@
   top: -5px;
   right: -211px;
   width: 200px;
-
   line-height: 14px;
   font-size: 12px;
   padding: 12px;
   height: 55px;
-
   -webkit-box-sizing: border-box;
+  text-align: left;
 }
 
 .side-button .balloon::after {
@@ -157,7 +157,7 @@
 #play-app .music-name {
   font-family: 'Roboto-Light', sans-serif;
   color: #444;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   margin: 0 8px;
 }
@@ -169,7 +169,7 @@
 #play-app .artist-name {
   font-family: 'Roboto-Light', sans-serif;
   color: #aaa;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
   margin: 0 8px;
   -webkit-flex: 1 0 auto;
@@ -180,6 +180,6 @@
   border-top: 1px solid #eee;
   font-family: 'Roboto-ThinItalic', sans-serif;
   color: #8d8d8d;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
