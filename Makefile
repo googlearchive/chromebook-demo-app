@@ -18,10 +18,15 @@ MENU_FILES = \
   css/hangouts-app.css \
   css/music-app.css \
   assets/arrow.png \
+  assets/menu-logo-2x.png \
+  assets/docs-icon-64.png \
+  assets/hangouts-icon-64.png \
+  assets/music-icon-64.png \
+  assets/store-icon-64.png \
   assets/docs-icon-128.png \
   assets/hangouts-icon-128.png \
   assets/music-icon-128.png \
-  assets/glasses.png \
+  assets/store-icon-128.png \
   views/menu-app.html \
   gen/third-party/glfx.js \
   gen/third-party/effects.js \

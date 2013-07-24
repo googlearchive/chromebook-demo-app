@@ -1,3 +1,21 @@
+/**
+ * Default rule reset.
+ */
+
+h1, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+* {
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/**
+ * Element
+ */
+
 #menu-app {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -6,96 +24,152 @@
   -webkit-align-items: center;
 }
 
-#menu-app #menu-window {
-  /*margin: 200px auto;*/
-  width: 640px;
-  height: 480px;
+#menu-window {
+  width: 800px;
+  height: 600px;
   background-color: white;
-  top: 50%;
-  left: 50%;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
 }
 
-#menu-app .message {
+.menu-header {
+  padding: 16px 32px 96px 32px;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+}
+
+.logo {
+  width: 165px;
+  height: 29px;
+  background-image: url('menu-logo-2x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-flex: none;
+}
+
+.message {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-family: 'OpenSans-Light', sans-serif;
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Arial';
+  color: #8c8c8e;
   text-align: center;
-  color: #888;
+  -webkit-flex: 1 0 auto;
 }
 
-#menu-app .discription {
-  font-size: 12px;
-  font-family: 'Arial';
-  text-align: center;
-  color: #888;
-}
-
-#menu-app .cover-image {
-  height: 198px;
+.bottom-frame {
+  background-color: #f5f5f5;
+  height: 260px;
+  border-top: 1px solid rgba(20, 20, 22, .05);
 }
 
 #menu-app .buttons-layout {
   display: -webkit-flex;
-  -webkit-flex-flow: row;
-  -webkit-justify-content: space-between;
-  height: 180px;
-  background-color: #eee;
-  padding: 8px;
+  margin-top: 32px;
 }
 
-#menu-app .button {
-  width: 150px;
-  height: 150px;
-  background-color: #f8f8f8;
+.button {
+  width: 160px;
+  height: 175px;
+  background-color: #fafafa;
+  -webkit-margin-start: 32px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-#menu-app .button:hover {
-  background-color: #f0f0f0;
-}
-
-#menu-app .button * {
+.button * {
   pointer-events: none;
 }
 
-#menu-app .icon {
-  height: 20px;
-  margin: 40px;
-  border: solid 10px #ccc;
+.button-icon {
+  width: 160px;
+  height: 125px;
+  background-size: 64px 64px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#menu-app .label-layout {
+.docs.button .button-icon {
+  background-image: -webkit-image-set(
+      url('docs-icon-64.png') 1x,
+      url('docs-icon-128.png') 2x);
+}
+
+.hangouts.button .button-icon {
+  background-image: -webkit-image-set(
+      url('hangouts-icon-64.png') 1x,
+      url('hangouts-icon-128.png') 2x);
+}
+
+.music.button .button-icon {
+  background-image: -webkit-image-set(
+      url('music-icon-64.png') 1x,
+      url('music-icon-128.png') 2x);
+}
+
+.store.button .button-icon {
+  background-image: -webkit-image-set(
+      url('store-icon-64.png') 1x,
+      url('store-icon-128.png') 2x);
+}
+
+.button-label {
+  width: 160px;
   height: 50px;
-  background-color: white;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  overflow: hidden;
+  -webkit-user-select: none;
 }
 
-#menu-app .button:hover .label-layout {
-  background-color: #f8f8f8;
+.docs.button:hover .button-label {
+  border-bottom: 3px solid #2a70e8;
 }
 
-#menu-app .application-name {
-  font-size: 16px;
-  font-family: 'Arial';
-  line-height: 30px;
+.hangouts.button:hover .button-label {
+  border-bottom: 3px solid #50aa38;
+}
+
+.music.button:hover .button-label {
+  border-bottom: 3px solid #facf0c;
+}
+
+.store.button:hover .button-label {
+  border-bottom: 3px solid #e14b40;
+}
+
+.learn-more {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 18px;
   text-align: center;
-  color: #888;
+  color: #8c8c8c;
+  -webkit-user-select: none;
+  cursor: default;
+  line-height: 54px;
 }
 
-#menu-app .application-description {
-  font-size: 12px;
-  font-family: 'Arial';
-  line-height: 20px;
-  text-align: center;
-  color: #888;
+.learn-more:hover {
+  color: black;
 }
 
 #menu-app .arrow {
-  background-image: url('arrow.png');
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 4px;
   position: absolute;
   display: none;
-  bottom: 4px;
+  bottom: 0;
 }
 
 #menu-app .button:hover ~ .arrow {
@@ -103,17 +177,21 @@
 }
 
 #menu-app .docs.button:hover ~ .arrow {
-  left: 0px;
+  left: 8px;
+  background-color: #2a70e8;
 }
 
 #menu-app .hangouts.button:hover ~ .arrow {
-  left: 52px;
+  left: 60px;
+  background-color: #50aa38;
 }
 
 #menu-app .music.button:hover ~ .arrow {
-  left: 104px;
+  left: 112px;
+  background-color: #facf0c;
 }
 
 #menu-app .store.button:hover ~ .arrow {
-  left: 156px;
+  left: 164px;
+  background-color: #e14b40;
 }
