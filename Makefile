@@ -39,6 +39,9 @@ DOCS_FILES = \
   css/common.css \
   css/docs-app.css \
   assets/docs-icon-32.png \
+  assets/docs-icon-48.png \
+  assets/docs-icon-64.png \
+  assets/docs-icon-96.png \
   assets/docs-icon-128.png \
   assets/arrow.png \
   views/docs-app.html \
@@ -53,6 +56,9 @@ HANGOUTS_FILES = \
   css/common.css \
   css/hangouts-app.css \
   assets/hangouts-icon-32.png \
+  assets/hangouts-icon-48.png \
+  assets/hangouts-icon-64.png \
+  assets/hangouts-icon-96.png \
   assets/hangouts-icon-128.png \
   views/hangouts-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
@@ -66,6 +72,9 @@ MUSIC_FILES = \
   css/common.css \
   css/music-app.css \
   assets/music-icon-32.png \
+  assets/music-icon-48.png \
+  assets/music-icon-64.png \
+  assets/music-icon-96.png \
   assets/music-icon-128.png \
   assets/music-section-anywhere-2x.png \
   assets/music-section-upload-2x.png \
@@ -84,6 +93,9 @@ STORE_FILES= \
   js/util.js \
   css/common.css \
   assets/store-icon-32.png \
+  assets/store-icon-48.png \
+  assets/store-icon-64.png \
+  assets/store-icon-96.png \
   assets/store-icon-128.png \
   views/store-app.html
 

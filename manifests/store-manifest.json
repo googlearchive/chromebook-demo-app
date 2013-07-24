@@ -1,17 +1,20 @@
 {
-  "name": "Demos.app Game",
+  "name": "Demos.app Store",
   "version": "0.0",
   "manifest_version": 2,
   "icons": {
-    "32": "game-icon-32.png",
-    "128": "game-icon-128.png"
+    "32": "store-icon-32.png",
+    "48": "store-icon-48.png",
+    "64": "store-icon-64.png",
+    "96": "store-icon-96.png",
+    "128": "store-icon-128.png"
   },
   "app": {
     "background": {
       "scripts": [
         "const.js",
         "app.js",
-        "game-app.js"
+        "store-app.js"
       ]
     }
   },

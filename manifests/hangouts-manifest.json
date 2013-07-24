@@ -4,6 +4,9 @@
   "manifest_version": 2,
   "icons": {
     "32": "hangouts-icon-32.png",
+    "48": "hangouts-icon-48.png",
+    "64": "hangouts-icon-64.png",
+    "96": "hangouts-icon-96.png",
     "128": "hangouts-icon-128.png"
   },
   "permissions": ["videoCapture"],

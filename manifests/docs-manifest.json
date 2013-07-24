@@ -4,6 +4,9 @@
   "manifest_version": 2,
   "icons": {
     "32": "docs-icon-32.png",
+    "48": "docs-icon-48.png",
+    "64": "docs-icon-64.png",
+    "96": "docs-icon-96.png",
     "128": "docs-icon-128.png"
   },
   "app": {
