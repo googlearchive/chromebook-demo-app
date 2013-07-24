@@ -40,7 +40,23 @@ App.prototype.onWindowCreated_ = function(window) {
 };
 
 App.prototype.initDocument = function(firstTime) {
-  // Close button
+  // Apply the locale messages.
+  var result = this.document.evaluate(
+      '//text()[contains(., \'__MSG_\')]',
+      this.document,
+      null,
+      XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+      null);
+  for (var i = 0; i < result.snapshotLength; i++) {
+    var textNode = result.snapshotItem(i);
+    textNode.nodeValue = textNode.nodeValue.replace(
+        /__MSG_([a-zA-Z0-9_]+)__/g,
+        function(str) {
+          return chrome.i18n.getMessage(RegExp.$1);
+        });
+  }
+
+  // Close button.
   var closeButton = this.document.querySelector('.close');
   closeButton.addEventListener('click', function() {
     this.window.close();

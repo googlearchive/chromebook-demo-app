@@ -97,6 +97,10 @@ packages: third-party
 	cp ${PLAY_FILES} packages/demo-play
 	cp ${GAME_FILES} packages/demo-game
 	cp ${HELPER_FILES} packages/demo-helper
+	for x in play; \
+	  do mkdir -p packages/demo-$$x/_locales; \
+	     cp -r locales/$$x-locales/* packages/demo-$$x/_locales; \
+	done
 
 third-party:
 	mkdir -p gen/third-party
