@@ -103,7 +103,8 @@ body > * {
 .app-frame .sec-header-icon {
   width: 24px;
   height: 24px;
-  background-color: #ccc;
+  background-size: 25px 25px;
+  -webkit-flex: none;
   -webkit-margin-end: 8px;
 }
 

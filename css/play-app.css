@@ -1,3 +1,15 @@
 #play-app .app-icon {
   background-image: url('play-icon-128.png');
 }
+
+#play-app .sec-header-icon.upload {
+  background-image: url('play-section-upload-2x.png');
+}
+
+#play-app .sec-header-icon.anywhere {
+  background-image: url('play-section-anywhere-2x.png');
+}
+
+#play-app .sec-header-icon.unlimited {
+  background-image: url('play-section-unlimited-2x.png');
+}

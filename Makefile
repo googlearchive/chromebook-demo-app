@@ -67,6 +67,9 @@ PLAY_FILES = \
   css/play-app.css \
   assets/play-icon-32.png \
   assets/play-icon-128.png \
+  assets/play-section-anywhere-2x.png \
+  assets/play-section-upload-2x.png \
+  assets/play-section-unlimited-2x.png \
   views/play-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
@@ -95,6 +98,8 @@ packages: third-party
 	cp ${DOCS_FILES} packages/demo-docs
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp ${PLAY_FILES} packages/demo-play
+        mkdir -p packages/demo-play/_locales
+	cp -r locals/play-locales/* 
 	cp ${GAME_FILES} packages/demo-game
 	cp ${HELPER_FILES} packages/demo-helper
 	for x in play; \
