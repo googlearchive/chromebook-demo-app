@@ -1,6 +1,6 @@
 CHROME=/opt/google/chrome/chrome
 
-TARGETS = menu docs hangouts play game helper
+TARGETS = menu docs hangouts music store helper
 
 MENU_FILES = \
   js/const.js \
@@ -16,11 +16,11 @@ MENU_FILES = \
   css/menu-app.css \
   css/docs-app.css \
   css/hangouts-app.css \
-  css/play-app.css \
+  css/music-app.css \
   assets/arrow.png \
   assets/docs-icon-128.png \
   assets/hangouts-icon-128.png \
-  assets/play-icon-128.png \
+  assets/music-icon-128.png \
   assets/glasses.png \
   views/menu-app.html \
   gen/third-party/glfx.js \
@@ -58,34 +58,34 @@ HANGOUTS_FILES = \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
 
-PLAY_FILES = \
+MUSIC_FILES = \
   js/const.js \
   js/app.js \
-  js/play-app.js \
+  js/music-app.js \
   js/util.js \
   css/common.css \
-  css/play-app.css \
-  assets/play-icon-32.png \
-  assets/play-icon-128.png \
-  assets/play-section-anywhere-2x.png \
-  assets/play-section-upload-2x.png \
-  assets/play-section-unlimited-2x.png \
+  css/music-app.css \
+  assets/music-icon-32.png \
+  assets/music-icon-128.png \
+  assets/music-section-anywhere-2x.png \
+  assets/music-section-upload-2x.png \
+  assets/music-section-unlimited-2x.png \
   assets/balloon-triangle-left.png \
-  views/play-app.html \
+  views/music-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
   third-party/roboto/Roboto-ThinItalic.ttf
 
-GAME_FILES= \
+STORE_FILES= \
   js/const.js \
   js/app.js \
-  js/game-app.js \
+  js/store-app.js \
   js/util.js \
   css/common.css \
-  assets/game-icon-32.png \
-  assets/game-icon-128.png \
-  views/game-app.html
+  assets/store-icon-32.png \
+  assets/store-icon-128.png \
+  views/store-app.html
 
 HELPER_FILES= \
   js/const.js \
@@ -100,10 +100,10 @@ packages: third-party
 	cp ${MENU_FILES} packages/demo-menu
 	cp ${DOCS_FILES} packages/demo-docs
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
-	cp ${PLAY_FILES} packages/demo-play
-	cp ${GAME_FILES} packages/demo-game
+	cp ${MUSIC_FILES} packages/demo-music
+	cp ${STORE_FILES} packages/demo-store
 	cp ${HELPER_FILES} packages/demo-helper
-	for x in play; \
+	for x in music; \
 	  do mkdir -p packages/demo-$$x/_locales; \
 	     cp -r locales/$$x-locales/* packages/demo-$$x/_locales; \
 	done

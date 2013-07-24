@@ -1,7 +1,7 @@
 var DOCS_APP_ID = 'hniomhdmdnlgdfieanjadkdjkihjjfpf';
 var HANGOUTS_APP_ID = 'bbfdbpldnkjjakidjnngddapfpmkpigp';
-var PLAY_APP_ID = 'kahjkkebhajdmaphhlommkhbcononjal';
-var GAME_APP_ID = 'niichfgnefmnhfkmchpjjfdelgpillkc';
+var MUSIC_APP_ID = 'kahjkkebhajdmaphhlommkhbcononjal';
+var STORE_APP_ID = 'niichfgnefmnhfkmchpjjfdelgpillkc';
 
 /**
  * The helper extension ID.
@@ -15,5 +15,5 @@ var HELPER_EXTENSION_ID = 'dklepamkcpcemiendiebcmkdplnabpjp';
 var MENU_WINDOW_ID = 'demo-menu-window';
 var DOCS_WINDOW_ID = 'demo-docs-window';
 var HANGOUTS_WINDOW_ID = 'demo-hangouts-window';
-var PLAY_WINDOW_ID = 'demo-play-window';
-var GAME_WINDOW_ID = 'demo-game-window';
+var MUSIC_WINDOW_ID = 'demo-music-window';
+var STORE_WINDOW_ID = 'demo-store-window';

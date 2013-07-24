@@ -16,27 +16,27 @@
  * Element
  */
 
-#play-app .app-icon {
-  background-image: url('play-icon-128.png');
+#music-app .app-icon {
+  background-image: url('music-icon-128.png');
 }
 
-#play-app .sec-header-icon.upload {
-  background-image: url('play-section-upload-2x.png');
+#music-app .sec-header-icon.upload {
+  background-image: url('music-section-upload-2x.png');
 }
 
-#play-app .sec-header-icon.anywhere {
-  background-image: url('play-section-anywhere-2x.png');
+#music-app .sec-header-icon.anywhere {
+  background-image: url('music-section-anywhere-2x.png');
 }
 
-#play-app .sec-header-icon.unlimited {
-  background-image: url('play-section-unlimited-2x.png');
+#music-app .sec-header-icon.unlimited {
+  background-image: url('music-section-unlimited-2x.png');
 }
 
-#play-app .app-side-footer {
+#music-app .app-side-footer {
   background-color: #facf0c;
 }
 
-#play-app .message-bar {
+#music-app .message-bar {
   height: 40px;
   width: 800px;
   background-color: white;
@@ -49,14 +49,14 @@
   -webkit-box-sizing: border-box;
 }
 
-#play-app .play-main-body {
+#music-app .music-main-body {
   display: -webkit-flex;
   margin-top: 40px;
   width: 800px;
   -webkit-align-self: center;
 }
 
-#play-app .side-button-container {
+#music-app .side-button-container {
   width: 130px;
   -webkit-margin-end: 40px;
   -webkit-flex: none;
@@ -115,17 +115,17 @@
 }
 
 
-#play-app .music-container {
+#music-app .music-container {
   width: 640px;
   -webkit-flex: none;
 }
 
-#play-app .music-container::after {
+#music-app .music-container::after {
   content: '';
   clear: both;
 }
 
-#play-app .music {
+#music-app .music {
   width: 150px;
   height: 225px;
   background-color: white;
@@ -137,24 +137,24 @@
   -webkit-flex-direction: column;
 }
 
-#play-app .music.main {
+#music-app .music.main {
   width: 310px;
   height: 460px;
 }
 
-#play-app .album-cover {
+#music-app .album-cover {
   width: 150px;
   height: 150px;
   background-color: black;
 }
 
-#play-app .music.main .album-cover {
+#music-app .music.main .album-cover {
   width: 310px;
   height: 310px;
   background-color: orange;
 }
 
-#play-app .music-name {
+#music-app .music-name {
   font-family: 'Roboto-Light', sans-serif;
   color: #444;
   font-size: 18px;
@@ -162,11 +162,11 @@
   margin: 0 8px;
 }
 
-#play-app .music.main .music-name {
+#music-app .music.main .music-name {
   margin-top: 16px;
 }
 
-#play-app .artist-name {
+#music-app .artist-name {
   font-family: 'Roboto-Light', sans-serif;
   color: #aaa;
   font-size: 16px;
@@ -175,7 +175,7 @@
   -webkit-flex: 1 0 auto;
 }
 
-#play-app .music-footer {
+#music-app .music-footer {
   margin: 0 8px;
   border-top: 1px solid #eee;
   font-family: 'Roboto-ThinItalic', sans-serif;

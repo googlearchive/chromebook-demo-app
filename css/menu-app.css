@@ -110,10 +110,10 @@
   left: 52px;
 }
 
-#menu-app .play.button:hover ~ .arrow {
+#menu-app .music.button:hover ~ .arrow {
   left: 104px;
 }
 
-#menu-app .game.button:hover ~ .arrow {
+#menu-app .store.button:hover ~ .arrow {
   left: 156px;
 }
