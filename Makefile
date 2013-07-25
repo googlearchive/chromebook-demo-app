@@ -17,7 +17,6 @@ MENU_FILES = \
   css/docs-app.css \
   css/hangouts-app.css \
   css/music-app.css \
-  assets/arrow.png \
   assets/menu-logo-2x.png \
   assets/docs-icon-64.png \
   assets/hangouts-icon-64.png \
@@ -48,7 +47,6 @@ DOCS_FILES = \
   assets/docs-icon-64.png \
   assets/docs-icon-96.png \
   assets/docs-icon-128.png \
-  assets/arrow.png \
   views/docs-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf

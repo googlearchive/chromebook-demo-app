@@ -167,7 +167,7 @@ h1, p {
   color: black;
 }
 
-#menu-app .arrow {
+#menu-app .shelf-marker {
   width: 48px;
   height: 4px;
   position: absolute;
@@ -175,26 +175,26 @@ h1, p {
   bottom: 0;
 }
 
-#menu-app .button:hover ~ .arrow {
+#menu-app .button:hover ~ .shelf-marker {
   display: block;
 }
 
-#menu-app .docs.button:hover ~ .arrow {
+#menu-app .docs.button:hover ~ .shelf-marker {
   left: 8px;
   background-color: #2a70e8;
 }
 
-#menu-app .hangouts.button:hover ~ .arrow {
+#menu-app .hangouts.button:hover ~ .shelf-marker {
   left: 60px;
   background-color: #50aa38;
 }
 
-#menu-app .music.button:hover ~ .arrow {
+#menu-app .music.button:hover ~ .shelf-marker {
   left: 112px;
   background-color: #facf0c;
 }
 
-#menu-app .store.button:hover ~ .arrow {
+#menu-app .store.button:hover ~ .shelf-marker {
   left: 164px;
   background-color: #e14b40;
 }
