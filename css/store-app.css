@@ -4,6 +4,18 @@
       url('store-icon-128.png') 2x);
 }
 
+#store-app .sec-header-icon.thousands {
+  background-image: url('store-section-thousands-2x.png');
+}
+
+#store-app .sec-header-icon.offline {
+  background-image: url('store-section-offline-2x.png');
+}
+
+#store-app .sec-header-icon.install {
+  background-image: url('store-section-install-2x.png');
+}
+
 #store-main {
   overflow: auto;
 }

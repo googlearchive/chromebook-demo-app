@@ -105,6 +105,9 @@ STORE_FILES= \
   assets/store-icon-128.png \
   assets/store-app.png \
   assets/store-app-top.png \
+  assets/store-section-thousands-2x.png \
+  assets/store-section-offline-2x.png \
+  assets/store-section-install-2x.png \
   views/store-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
