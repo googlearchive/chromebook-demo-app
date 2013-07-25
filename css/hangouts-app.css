@@ -16,9 +16,106 @@
   background-image: url('hangouts-section-fun-2x.png');
 }
 
-#hangouts-app .video-source,
-#hangouts-app .video-canvas {
-  width: 320px;
-  height: 240px;
+#hangouts-app .app-side-footer {
+  background-color: #50aa38;
+  color: white;
+}
+
+.button-container {
+  display: -webkit-flex;
+  width: 760px;
+  -webkit-align-self: center;
+}
+
+.button {
+  display: -webkit-flex;
+  -webkit-flex: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  -webkit-margin-end: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+}
+
+.effects.button {
+  background-color: white;
+}
+
+.people.button {
+  -webkit-margin-end: 0px;
+}
+
+.space {
+  -webkit-flex: 1 0 0;
+}
+
+.button-icon {
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+}
+
+.button-label {
+  margin-top: 1px;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 15px;
+  color: #8d8d8d;
+}
+
+.effects.button .button-icon {
+  backgorund-image: url('hangouts-button-effects-2x.png');
+}
+
+.screenshare.button .button-icon {
+  backgorund-image: url('hangouts-button-screenshare-2x.png');
+}
+
+.add.button .button-icon {
+  backgorund-image: url('hangouts-button-add-2x.png');
+}
+
+.people.button .button-icon {
+  backgorund-image: url('hangouts-button-people-2x.png');
+}
+
+.video-container {
+  width: 720px;
+  margin-top: 40px;
+  background-color: white;
+  box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
+  padding: 20px;
+  -webkit-align-self: center;
+}
+
+.video-source {
+  display: none;
+}
+
+.video-canvas {
   background-color: #ccc;
+  margin-bottom: -4px;
+}
+
+.people-container {
+  width: 720px;
+  margin-top: 40px;
+  display: -webkit-flex;
+  background-color: white;
+  box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
+  -webkit-align-self: center;
+  padding: 20px;
+}
+
+.people-image {
+  -webkit-flex: none;
+  background-color: #ccc;
+  width: 165px;
+  height: 82px;
+  -webkit-margin-end: 20px;
+}
+
+.people-image:last-child {
+  -webkit-margin-end: 0px;
 }

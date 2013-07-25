@@ -58,13 +58,34 @@
   </div>
   <div id="hangouts-main" class="app-main">
     <button class="close">X</button>
-    <div>
-      <button class="prev-effect">Previous Effect</button>
-      <button class="next-effect">Next Effect</button>
+    <div class="button-container">
+      <button class="effects button">
+        <div class="button-icon"></div>
+        <div class="button-label">Effects</div>
+      </button>
+      <button class="screenshare button">
+        <div class="button-icon"></div>
+        <div class="button-label">Screenshare</div>
+      </button>
+      <button class="add button">
+        <div class="button-icon"></div>
+        <div class="button-label">Add apps</div>
+      </button>
+      <div class="space"></div>
+      <button class="people button">
+        <div class="button-icon"></div>
+        <div class="button-label">Invite people</div>
+      </button>
     </div>
-    <video class="video-source">
-    </video>
-    <canvas class="video-canvas" width="320" height="240">
-    </canvas>
+    <div class="video-container">
+      <video class="video-source">
+      </video>
+      <canvas class="video-canvas" width="720" height="360"></canvas></div>
+    <div class="people-container">
+      <div class="people-image"></div>
+      <div class="people-image"></div>
+      <div class="people-image"></div>
+      <div class="people-image"></div>
+    </div>
   </div>
 </div>
