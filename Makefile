@@ -65,6 +65,9 @@ HANGOUTS_FILES = \
   assets/hangouts-icon-64.png \
   assets/hangouts-icon-96.png \
   assets/hangouts-icon-128.png \
+  assets/hangouts-section-group-2x.png \
+  assets/hangouts-section-everywhere-2x.png \
+  assets/hangouts-section-fun-2x.png \
   views/hangouts-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf

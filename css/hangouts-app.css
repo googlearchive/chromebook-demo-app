@@ -1,5 +1,19 @@
 #hangouts-app .app-icon {
-  background-image: url('hangouts-icon-128.png');
+  background-image: -webkit-image-set(
+      url('hangouts-icon-64.png') 1x,
+      url('hangouts-icon-128.png') 2x);
+}
+
+#hangouts-app .sec-header-icon.group {
+  background-image: url('hangouts-section-group-2x.png');
+}
+
+#hangouts-app .sec-header-icon.everywhere {
+  background-image: url('hangouts-section-everywhere-2x.png');
+}
+
+#hangouts-app .sec-header-icon.fun {
+  background-image: url('hangouts-section-fun-2x.png');
 }
 
 #hangouts-app .video-source,
