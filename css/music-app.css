@@ -178,7 +178,7 @@
 }
 
 #music-app .music-footer {
-  margin: 0 8px;
+  margin: 0 8px 2px 8px;
   border-top: 1px solid #eee;
   font-family: 'Roboto-ThinItalic', sans-serif;
   color: #8d8d8d;
