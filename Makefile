@@ -137,7 +137,7 @@ packages: third-party
 	cp ${MUSIC_FILES} packages/demo-music
 	cp ${STORE_FILES} packages/demo-store
 	cp ${HELPER_FILES} packages/demo-helper
-	for x in menu music store; \
+	for x in menu hangouts music store; \
 	  do mkdir -p packages/demo-$$x/_locales; \
 	     cp -r locales/$$x-locales/* packages/demo-$$x/_locales; \
 	done

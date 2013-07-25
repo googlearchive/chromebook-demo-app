@@ -9,6 +9,7 @@
     "96": "hangouts-icon-96.png",
     "128": "hangouts-icon-128.png"
   },
+  "default_locale": "en",
   "permissions": ["videoCapture"],
   "app": {
     "background": {

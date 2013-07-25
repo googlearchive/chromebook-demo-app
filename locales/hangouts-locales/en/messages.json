@@ -1,0 +1,74 @@
+{
+  "HANGOUTS_COPY": {
+    "message": "Keep in touch",
+    "description": ""
+  },
+  "HANGOUTS_SUB_COPY": {
+    "message": "with Google+ Hangouts",
+    "description": ""
+  },
+  "HANGOUTS_DESCRIPTION": {
+    "message": "Talk to your friends and family, right out of the box. No installation, no setup, no *%!#$.",
+    "description": ""
+  },
+  "HANGOUTS_SECTION_GROUP_TITLE": {
+    "message": "Group video chat",
+    "description": ""
+  },
+  "HANGOUTS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Video chat with up to 9 of your friends at the same time for free.",
+    "description": ""
+  },
+  "HANGOUTS_SECTION_EVERYWHERE_TITLE": {
+    "message": "No *%!#$",
+    "description": ""
+  },
+  "HANGOUTS_SECTION_EVERYWHERE_DESCRIPTION": {
+    "message": "Sign in to your Chromebook and you’re ready for Hangouts. No setup required.",
+    "description": ""
+  },
+  "HANGOUTS_SECTION_FUN_TITLE": {
+    "message": "It’s a party",
+    "description": ""
+  },
+  "HANGOUTS_SECTION_FUN_DESCRIPTION": {
+    "message": "Bring videoconferences to life with effects, emojis and YouTube videos.",
+    "description": ""
+  },
+  "HANGOUTS_HINT_TITLE": {
+    "message": "What if I use Skype®?",
+    "description": ""
+  },
+  "HANGOUTS_BUTTON_EFFECTS": {
+    "message": "Effects",
+    "description": ""
+  },
+  "HANGOUTS_BUTTON_SCREENSHARE": {
+    "message": "Screenshare",
+    "description": ""
+  },
+  "HANGOUTS_BALLOON_SCREENSHARE": {
+    "message": "Show others what’s on your computer screen",
+    "description": ""
+  },
+  "HANGOUTS_BUTTON_ADD": {
+    "message": "Add apps",
+    "description": ""
+  },
+  "HANGOUTS_BALLOON_ADD": {
+    "message": "Watch YouTube videos, collaborate on documents, and add fun effects to your video call",
+    "description": ""
+  },
+  "HANGOUTS_BUTTON_INVITE": {
+    "message": "Invite people",
+    "description": ""
+  },
+  "HANGOUTS_BALLOON_INVITE": {
+    "message": "Invite people to your video call with just their email",
+    "description": ""
+  },
+  "HANGOUTS_BALLOON_PEOPLE": {
+    "message": "Add up to 9 people to your video chat without installing any complicated software",
+    "description": ""
+  }
+}

@@ -57,6 +57,7 @@
   height: 25px;
   background-size: contain;
   margin: 0 8px 0 8px;
+  -webkit-flex: none;
 }
 
 .button-label {
