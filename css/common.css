@@ -132,3 +132,61 @@ body > * {
   -webkit-align-self: flex-end;
   -webkit-flex: none;
 }
+
+/**
+ * Balloon
+ */
+
+.balloon-holder {
+  position: relative;
+}
+
+.balloon {
+  display: none;
+  background-color: black;
+  position: absolute;
+  color: white;
+  line-height: 14px;
+  font-size: 12px;
+  padding: 12px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+}
+
+.balloon::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+.balloon-holder:hover .balloon {
+  display: block;
+}
+
+.balloon.triangle-top {
+  top: 100%;
+  margin-top: 12px;
+}
+
+.balloon.triangle-top::after {
+  background-image: url('balloon-triangle-top.png');
+  left: 50%;
+  margin-left: -11px;
+  width: 22px;
+  height: 11px;
+  bottom: 100%;
+}
+
+.balloon.triangle-bottom {
+  bottom: 100%;
+  margin-bottom: 12px;
+}
+
+.balloon.triangle-bottom::after {
+  background-image: url('balloon-triangle-bottom.png');
+  left: 50%;
+  margin-left: -11px;
+  width: 22px;
+  height: 11px;
+  top: 100%;
+}

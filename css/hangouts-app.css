@@ -23,6 +23,7 @@
 
 .button-container {
   display: -webkit-flex;
+  -webkit-flex: none;
   width: 760px;
   -webkit-align-self: center;
 }
@@ -43,7 +44,7 @@
   background-color: white;
 }
 
-.people.button {
+.invite.button {
   -webkit-margin-end: 0px;
 }
 
@@ -64,6 +65,11 @@
   color: #8d8d8d;
 }
 
+.button .balloon {
+  width: 350px;
+  left: -100px;
+}
+
 .effects.button .button-icon {
   backgorund-image: url('hangouts-button-effects-2x.png');
 }
@@ -76,8 +82,8 @@
   backgorund-image: url('hangouts-button-add-2x.png');
 }
 
-.people.button .button-icon {
-  backgorund-image: url('hangouts-button-people-2x.png');
+.invite.button .button-icon {
+  backgorund-image: url('hangouts-button-invite-2x.png');
 }
 
 .video-container {
@@ -87,6 +93,7 @@
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
   padding: 20px;
   -webkit-align-self: center;
+  -webkit-flex: none;
 }
 
 .video-source {
@@ -106,9 +113,10 @@
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
   -webkit-align-self: center;
   padding: 20px;
+  -webkit-flex: none;
 }
 
-.people-image {
+.people {
   -webkit-flex: none;
   background-color: #ccc;
   width: 165px;
@@ -116,6 +124,11 @@
   -webkit-margin-end: 20px;
 }
 
-.people-image:last-child {
+.people:last-child {
   -webkit-margin-end: 0px;
+}
+
+.people-container .balloon {
+  width: 350px;
+  left: 205px;
 }

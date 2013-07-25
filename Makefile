@@ -68,6 +68,8 @@ HANGOUTS_FILES = \
   assets/hangouts-section-group-2x.png \
   assets/hangouts-section-everywhere-2x.png \
   assets/hangouts-section-fun-2x.png \
+  assets/balloon-triangle-top.png \
+  assets/balloon-triangle-bottom.png \
   views/hangouts-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
