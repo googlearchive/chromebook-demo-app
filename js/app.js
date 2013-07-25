@@ -71,6 +71,10 @@ App.prototype.initDocument = function(firstTime) {
   }.bind(this));
 };
 
+App.prototype.get = function(query) {
+  return this.document.querySelector(query);
+};
+
 App.prototype.toggleWindowSize_ = function(opt_name) {
   var name;
   if (opt_name) {
