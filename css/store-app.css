@@ -32,6 +32,7 @@
   margin-bottom: -1px;
   background-image: url('store-app.png');
   background-color: #f8f8f8;
+  cursor: pointer;
 }
 
 .app.top {
