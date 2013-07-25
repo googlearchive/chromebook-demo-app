@@ -140,10 +140,16 @@ third-party:
 	  third-party/chrome-cam/src/chrome/scripts/face/track.coffee
 	cd gen/third-party && patch -p0 < ../../patches/effects.patch
 
-crxs: packages
+crx: packages
 	for x in ${TARGETS}; \
 	  do ${CHROME} --pack-extension=packages/demo-$$x \
 		       --pack-extension-key=packages/demo-$$x.pem; \
 	done
 
-.PHONY: packages crxs third-party
+zip: packages
+	for x in ${TARGETS}; \
+	  do script/remove-entry packages/demo-$$x/manifest.json key; \
+	     zip -r packages/demo-$$x.zip packages/demo-$$x; \
+	done
+
+.PHONY: packages crx zip third-party

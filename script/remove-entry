@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+# Removes the specified entry from the manifest file.
+
+require 'rubygems'
+require 'json'
+
+target_file = ARGV[0]
+key_name = ARGV[1]
+
+json = JSON.parse(File.read(target_file))
+json.delete(key_name)
+
+File.open(target_file, 'w') do |f|
+  f.print JSON.pretty_generate(json)
+end
