@@ -54,10 +54,9 @@
 }
 
 .app-title {
-    font-family: 'OpenSans-Regular', sans-serif;
+    font-family: 'OpenSans-Regular', Arial;
   font-weight: bold;
-  /*  font-family: Arial; */
-  font-size: 14px;
+  font-size: 13px;
   line-height: 100%;
   margin-bottom: 4px;
 }
