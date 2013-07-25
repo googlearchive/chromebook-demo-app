@@ -3,6 +3,7 @@
 *.crx
 VERSION
 publish
+monitor
 update.xml
 packages
 gen

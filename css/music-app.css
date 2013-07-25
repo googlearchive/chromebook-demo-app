@@ -17,7 +17,9 @@
  */
 
 #music-app .app-icon {
-  background-image: url('music-icon-128.png');
+  background-image: -webkit-image-set(
+      url('music-icon-64.png') 1x,
+      url('music-icon-128.png') 2x);
 }
 
 #music-app .sec-header-icon.upload {
