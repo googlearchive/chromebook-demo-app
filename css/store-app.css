@@ -3,3 +3,46 @@
       url('store-icon-64.png') 1x,
       url('store-icon-128.png') 2x);
 }
+
+#store-main {
+  overflow: auto;
+}
+
+.app {
+  width: 220px;
+  padding: 8px;
+  padding-top: 156px;
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+  border: 1px solid #cecece;
+  -webkit-flex: 0 0 auto;
+  -webkit-margin-end: -1px;
+  margin-bottom: -1px;
+  background-image: url('store-app.png');
+  background-color: #f8f8f8;
+}
+
+.app.top {
+  width: 700px;
+  height: 280px;
+  background-image: url('store-app-top.png');
+  margin-bottom: 40px;
+  padding-top: 8px;
+  -webkit-align-self: center;
+}
+
+.app-container {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex: 0 0 auto;
+  margin-bottom: 40px;
+  width: 949px;
+  -webkit-align-self: center;
+}
+
+.app-title {
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 14px;
+}

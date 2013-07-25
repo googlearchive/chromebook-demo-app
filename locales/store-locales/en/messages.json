@@ -1,38 +1,42 @@
 {
   "STORE_COPY": {
     "message": "Find more apps",
-    "description":""
+    "description": ""
   },
   "STORE_SUB_COPY_DESCRIPTION": {
     "message": "with Chrome web store",
-    "description":""
+    "description": ""
   },
   "STORE_DESCRIPTION": {
     "message": "Get work done, play games, or just explore something new with thousands of apps from the Chrome Web Store.",
-    "description":""
+    "description": ""
   },
   "STORE_SECTION_THOUSANDS_TITLE": {
     "message": "Thousands of apps",
-    "description":""
+    "description": ""
   },
   "STORE_SECTION_THOUSANDS_DESCRIPTION": {
     "message": "Get free apps for games, music, movies, news, photos and more.",
-    "description":""
+    "description": ""
   },
   "STORE_SECTION_OFFLINE_TITLE": {
     "message": "Online and offline apps",
-    "description":""
+    "description": ""
   },
   "STORE_SECTION_OFFLINE_DESCRIPTION": {
     "message": "Find apps that work at home and on your morning commute.",
-    "description":""
+    "description": ""
   },
   "STORE_SECTION_INSTALL_TITLE": {
     "message": "Add with a clickNo more installs",
-    "description":""
+    "description": ""
   },
   "STORE_SECTION_INSTALL_DESCRIPTION": {
     "message": "On your Chromebook, you won’t need to install complicated software. Just click ‘Add to Chrome’.",
-    "description":""
+    "description": ""
+  },
+  "STORE_APP_TITLE": {
+    "message": "Thousands applications",
+    "description": ""
   }
 }

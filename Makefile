@@ -103,6 +103,8 @@ STORE_FILES= \
   assets/store-icon-64.png \
   assets/store-icon-96.png \
   assets/store-icon-128.png \
+  assets/store-app.png \
+  assets/store-app-top.png \
   views/store-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
