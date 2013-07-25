@@ -54,8 +54,16 @@
 }
 
 .app-title {
+    font-family: 'OpenSans-Regular', sans-serif;
   font-weight: bold;
-  font-family: Arial;
+  /*  font-family: Arial; */
   font-size: 14px;
-  line-height: 14px;
+  line-height: 100%;
+  margin-bottom: 4px;
+}
+
+.app-detail {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-size: 13px;
+  line-height: 100%;
 }

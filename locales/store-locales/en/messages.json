@@ -38,5 +38,9 @@
   "STORE_APP_TITLE": {
     "message": "Thousands applications",
     "description": ""
+  },
+  "STORE_APP_DETAIL": {
+    "message": "Some details...",
+    "description": ""
   }
 }
