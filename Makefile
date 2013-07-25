@@ -68,6 +68,10 @@ HANGOUTS_FILES = \
   assets/hangouts-section-group-2x.png \
   assets/hangouts-section-everywhere-2x.png \
   assets/hangouts-section-fun-2x.png \
+  assets/hangouts-button-add-2x.png \
+  assets/hangouts-button-effects-2x.png \
+  assets/hangouts-button-invite-2x.png \
+  assets/hangouts-button-screenshare-2x.png \
   assets/balloon-triangle-top.png \
   assets/balloon-triangle-bottom.png \
   views/hangouts-app.html \
