@@ -9,6 +9,7 @@
     "96": "store-icon-96.png",
     "128": "store-icon-128.png"
   },
+  "default_locale": "en",
   "app": {
     "background": {
       "scripts": [

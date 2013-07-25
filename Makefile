@@ -97,12 +97,15 @@ STORE_FILES= \
   js/store-app.js \
   js/util.js \
   css/common.css \
+  css/store-app.css \
   assets/store-icon-32.png \
   assets/store-icon-48.png \
   assets/store-icon-64.png \
   assets/store-icon-96.png \
   assets/store-icon-128.png \
-  views/store-app.html
+  views/store-app.html \
+  third-party/open-sans/OpenSans-Light.ttf \
+  third-party/open-sans/OpenSans-Regular.ttf
 
 HELPER_FILES= \
   js/const.js \
@@ -120,7 +123,7 @@ packages: third-party
 	cp ${MUSIC_FILES} packages/demo-music
 	cp ${STORE_FILES} packages/demo-store
 	cp ${HELPER_FILES} packages/demo-helper
-	for x in menu music; \
+	for x in menu music store; \
 	  do mkdir -p packages/demo-$$x/_locales; \
 	     cp -r locales/$$x-locales/* packages/demo-$$x/_locales; \
 	done

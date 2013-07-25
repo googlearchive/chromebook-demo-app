@@ -1,0 +1,5 @@
+#store-app .app-icon {
+  background-image: -webkit-image-set(
+      url('store-icon-64.png') 1x,
+      url('store-icon-128.png') 2x);
+}
