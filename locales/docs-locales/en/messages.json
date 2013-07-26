@@ -1,10 +1,86 @@
 {
+  "DOC_COPY": {
+    "message": "Get work done",
+    "description": ""
+  },
+  "DOC_SUB_COPY": {
+    "message": "with Google Docs",
+    "description": ""
+  },
+  "DOC_DESCRIPTION": {
+    "message": "Create documents, spreadsheets and presentations that you can work on online and offline.",
+    "description": ""
+  },
+  "DOCS_SECTION_GROUP_TITLE": {
+    "message": "Collaborate",
+    "description": ""
+  },
+  "DOCS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Click ‘Share’, invite people and work together in real time. It’s that easy.",
+    "description": ""
+  },
+  "DOCS_SECTION_BACKUP_TITLE": {
+    "message": "Auto-save",
+    "description": ""
+  },
+  "DOCS_SECTION_BACKUP_DESCRIPTION": {
+    "message": "With automatic backups to Google Drive, you never have to worry about losing your work again.",
+    "description": ""
+  },
+  "DOCS_SECTION_ANYWHERE_TITLE": {
+    "message": "Access anywhere",
+    "description": ""
+  },
+  "DOCS_SECTION_ANYWHERE_DESCRIPTION": {
+    "message": "Your work is stored safely in Google Drive so you can access it from any computer, tablet or smartphone.",
+    "description": ""
+  },
   "DOCS_HINT_TITLE": {
     "message": "What if I use Microsoft Office?",
     "description": ""
   },
   "DOCS_HINT_DESCRIPTION": {
     "message": "Google Docs is built-in to every Chromebook for free. Chromebooks also work with Microsoft® Office documents so you can edit Word and Excel files even when you’re offline.",
+    "description": ""
+  },
+  "DOCS_DOCUMENT_TITLE": {
+    "message": "Welcome to Google Docs",
+    "description": ""
+  },
+  "DOCS_BUTTON_SHARE": {
+    "message": "Share",
+    "description": ""
+  },
+  "DOCS_MENU_FILE": {
+    "message": "File",
+    "description": ""
+  },
+  "DOCS_MENU_EDIT": {
+    "message": "Edit",
+    "description": ""
+  },
+  "DOCS_MENU_VIEW": {
+    "message": "View",
+    "description": ""
+  },
+  "DOCS_MENU_INSERT": {
+    "message": "Insert",
+    "description": ""
+  },
+  "DOCS_MENU_FORMAT": {
+    "message": "Format",
+    "description": ""
+  },
+  "DOCS_MENU_TOOLS": {
+    "message": "Tools",
+    "description": ""
+  },
+  "DOCS_MENU_TABLE": {
+    "message": "Table",
+    "description": ""
+  },
+  "DOCS_MENU_HELP": {
+    "message": "Help",
     "description": ""
   }
 }

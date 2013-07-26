@@ -98,30 +98,33 @@
 }
 
 #docs-app .share {
-  height: 33px;
-  width: 96px;
   -webkit-margin-start: 5px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 2px;
+  padding: 0 8px;
+  height: 33px;
+  width: 96px;
+  display: -webkit-flex;
   background-color: #f1f1f1;
-  font-family: 'Arial';
-  font-size: 13px;
-  color: #777;
-  white-space: nowrap;
-  padding: 0;
-  line-height: 33px;
 }
 
 #docs-app .share-icon {
   background-image: url('docs-share-2x.png');
   background-size: 12px 16px;
-  background-position: center;
+  background-position: center 6px;
   background-repeat: no-repeat;
-  width: 33px;
-  height: 30px;
-  display: inline-block;
-  vertical-align: top;
+  width: 12px;
+  -webkit-flex: 1 0 auto;
+}
+
+#docs-app .share-label {
+  font-family: 'Arial';
+  font-size: 13px;
+  color: #777;
+  line-height: 31px;
+  -webkit-flex: 1 0 auto;
+  text-align: center;
 }
 
 #docs-app .docs-menu {
@@ -134,11 +137,12 @@
 }
 
 #docs-app .docs-menu > * {
-  width: 23px;
+  -webkit-margin-end: 16px;
   height: 16px;
   font-family: 'Arial';
   font-size: 13px;
   text-align: center;
+  -webkit-flex: 0 0 auto;
 }
 
 #docs-app .docs-toolbar {

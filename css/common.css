@@ -102,7 +102,6 @@ body > * {
   width: 100%;
   margin-top: 50px;
   margin-bottom: 25px;
-
 }
 
 .app-frame .sec-header-icon {
@@ -135,7 +134,7 @@ body > * {
 }
 
 .app-frame .app-side-footer.double-line:hover {
-  height: 154px;
+  height: 168px;
 }
 
 .app-frame .app-hint-title {
