@@ -164,8 +164,8 @@ body > * {
   border-style: none;
   background-color: #ccc;
   position: fixed;
-  right: 24px;
-  top: 24px;
+  right: 32px;
+  top: 16px;
 }
 
 /**

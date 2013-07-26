@@ -2,16 +2,8 @@
   background-image: url('docs-icon-128.png');
 }
 
-#docs-app .docs-main {
-  width: 720px;
-  -webkit-flex: auto;
-  margin: 0 auto;
-  display: -webkit-flex;
-  -webkit-flex-flow: column;
-}
-
 #docs-app .docs-header {
-  widht: 100%;
+  width: 800px;
   display: -webkit-flex;
   -webkit-flex: none;
 }
@@ -27,17 +19,19 @@
 #docs-app .docs-title {
   font-size: 22px;
   margin-bottom: 16px;
-  color: #555;
+  font-face: 'Arial';
 }
 
 #docs-app .docs-menu {
-  font-size: 14px;
   display: -webkit-flex;
   color: #777;
 }
 
 #docs-app .docs-menu > * {
+  width: 23px;
   -webkit-margin-end: 16px;
+  font-face: 'Arial';
+  font-size: 13px;
 }
 
 #docs-app .docs-header-right {
@@ -63,7 +57,7 @@
 }
 
 #docs-app .docs-toolbar {
-  width: 100%;
+  width: 800px;
   height: 32px;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -75,6 +69,7 @@
 
 #docs-app .paper-container {
   -webkit-flex: auto;
+  width: 800px;
   display: -webkit-flex;
   position: relative;
 }
@@ -83,7 +78,6 @@
   -webkit-flex: auto;
   background-color: white;
   border: 1px #ccc solid;
-  border-bottom-style: none;
   box-sizing: border-box;
   padding: 64px;
   outline: none;

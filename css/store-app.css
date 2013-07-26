@@ -39,22 +39,19 @@
   width: 700px;
   height: 280px;
   background-image: url('store-app-top.png');
-  margin-bottom: 40px;
+  margin: 40px auto 0;
   padding-top: 8px;
-  -webkit-align-self: center;
 }
 
 .app-container {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
-  -webkit-flex: 0 0 auto;
-  margin-bottom: 40px;
+  margin: 40px auto;
   width: 711px;
-  -webkit-align-self: center;
 }
 
 .app-title {
-    font-family: 'OpenSans-Regular', Arial;
+  font-family: 'OpenSans-Regular', Arial;
   font-weight: bold;
   font-size: 13px;
   line-height: 100%;

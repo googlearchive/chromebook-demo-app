@@ -21,11 +21,14 @@
   color: white;
 }
 
+#hangouts-main {
+  overflow: auto;
+}
+
 .button-container {
   display: -webkit-flex;
-  -webkit-flex: none;
   width: 760px;
-  -webkit-align-self: center;
+  margin: 40px auto 0;
 }
 
 .button {
@@ -90,12 +93,10 @@
 
 .video-container {
   width: 720px;
-  margin-top: 40px;
+  margin: 40px auto 0;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
   padding: 20px;
-  -webkit-align-self: center;
-  -webkit-flex: none;
 }
 
 .video-source {
@@ -109,13 +110,11 @@
 
 .people-container {
   width: 720px;
-  margin-top: 40px;
+  margin: 40px auto;
   display: -webkit-flex;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
-  -webkit-align-self: center;
   padding: 20px;
-  -webkit-flex: none;
 }
 
 .people {
