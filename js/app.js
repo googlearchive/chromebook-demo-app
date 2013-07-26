@@ -64,11 +64,15 @@ App.prototype.initDocument = function(firstTime) {
   body.addEventListener('keydown', function(e) {
     // Closing
     if (e.keyCode == 27) {
-      this.window.close();
+      this.close();
     } else if (e.keyCode == 83 && e.ctrlKey) {
       this.toggleWindowSize_();
     }
   }.bind(this));
+};
+
+App.prototype.close = function() {
+  this.window.close();
 };
 
 App.prototype.get = function(query) {

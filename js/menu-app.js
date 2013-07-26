@@ -4,9 +4,6 @@ var HANGOUTS_PAGE_INDEX = 2;
 var PLAY_PAGE_INDEX = 3;
 var GAME_PAGE_INDEX = 4;
 
-var Effects = defined.shift();
-var FaceTracker = defined.shift();
-
 var Page = function(root, id) {
   /**
    * @protected

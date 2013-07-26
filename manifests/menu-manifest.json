@@ -12,17 +12,10 @@
         "const.js",
         "app.js",
         "words.js",
-        "glfx.js",
-        "ccv.js",
-        "face.js",
-        "define.js",
-        "effects.js",
-        "track.js",
         "util.js",
         "editor.js",
         "edit-distance.js",
-        "menu-app.js",
-        "additional-effects.js"
+        "menu-app.js"
       ]
     }
   },

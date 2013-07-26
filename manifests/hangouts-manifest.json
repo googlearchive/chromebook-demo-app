@@ -16,6 +16,12 @@
       "scripts": [
         "const.js",
         "app.js",
+        "glfx.js",
+        "ccv.js",
+        "face.js",
+        "effects-helper.js",
+        "effects.js",
+        "track.js",
         "hangouts-app.js"
       ]
     }

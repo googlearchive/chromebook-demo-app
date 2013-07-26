@@ -6,17 +6,12 @@ MENU_FILES = \
   js/const.js \
   js/app.js \
   js/menu-app.js \
-  js/define.js \
   js/util.js \
-  js/additional-effects.js \
   js/editor.js \
   js/edit-distance.js \
   js/words.js \
   css/common.css \
   css/menu-app.css \
-  css/docs-app.css \
-  css/hangouts-app.css \
-  css/music-app.css \
   assets/menu-logo-2x.png \
   assets/docs-icon-64.png \
   assets/hangouts-icon-64.png \
@@ -27,11 +22,6 @@ MENU_FILES = \
   assets/music-icon-128.png \
   assets/store-icon-128.png \
   views/menu-app.html \
-  gen/third-party/glfx.js \
-  gen/third-party/effects.js \
-  gen/third-party/track.js \
-  third-party/ccv/js/ccv.js \
-  third-party/ccv/js/face.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
 
@@ -54,6 +44,7 @@ DOCS_FILES = \
 HANGOUTS_FILES = \
   js/const.js \
   js/app.js \
+  js/effects-helper.js \
   js/hangouts-app.js \
   js/util.js \
   css/common.css \
@@ -72,9 +63,16 @@ HANGOUTS_FILES = \
   assets/hangouts-button-screenshare-2x.png \
   assets/balloon-triangle-top.png \
   assets/balloon-triangle-bottom.png \
+  assets/glasses.png \
+  gen/third-party/glfx.js \
+  gen/third-party/effects.js \
+  gen/third-party/track.js \
   views/hangouts-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
-  third-party/open-sans/OpenSans-Regular.ttf
+  third-party/open-sans/OpenSans-Regular.ttf \
+  third-party/ccv/js/ccv.js \
+  third-party/ccv/js/face.js
+
 
 MUSIC_FILES = \
   js/const.js \
