@@ -169,6 +169,10 @@
   opacity: 1.0;
 }
 
+.music.play .play-control {
+  background-image: url('music-pause-control-2x.png');
+}
+
 .equalizer {
   width: 24px;
   height: 24px;
