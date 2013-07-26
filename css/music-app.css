@@ -96,10 +96,6 @@
 }
 
 .side-button .balloon {
-  background-color: black;
-  position: absolute;
-  color: white;
-  display: none;
   top: -5px;
   right: -211px;
   width: 200px;
@@ -109,21 +105,6 @@
   height: 55px;
   -webkit-box-sizing: border-box;
   text-align: left;
-}
-
-.side-button .balloon::after {
-  content: '';
-  display: block;
-  width: 11px;
-  height: 22px;
-  background-image: url('balloon-triangle-left.png');
-  position: absolute;
-  left: -11px;
-  top: 16px;
-}
-
-.side-button:hover .balloon {
-  display: block;
 }
 
 #music-app .music-container {

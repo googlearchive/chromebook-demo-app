@@ -227,3 +227,17 @@ body > * {
   height: 11px;
   top: 100%;
 }
+
+.balloon.triangle-left {
+  left: 100%;
+  margin-left: 12px;
+}
+
+.balloon.triangle-left::after {
+  background-image: url('balloon-triangle-left.png');
+  top: 50%;
+  margin-top: -11px;
+  width: 11px;
+  height: 22px;
+  right: 100%;
+}
