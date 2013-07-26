@@ -38,6 +38,14 @@
   background-color: #facf0c;
 }
 
+#music-app .app-hint-title {
+  color: black;
+}
+
+#music-app .app-hint-description {
+  color: black;
+}
+
 #music-app .message-bar {
   height: 40px;
   width: 800px;
@@ -73,7 +81,6 @@
   background-color: #f1f1f1;
   font-family: 'Roboto-Light', sans-serif;
   color: #777;
-/*  font-weight: bold;*/
   border-radius: 2px;
   font-size: 18px;
   position: relative;

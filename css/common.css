@@ -64,7 +64,7 @@ body > * {
 .app-frame .app-copy,
 .app-frame .app-sub-copy,
 .app-frame .sec-header-text,
-.app-frame .app-side-footer {
+.app-frame .app-hint-title {
   font-family: 'OpenSans-Light', sans-serif;
   font-size: 22px;
   line-height: 24px;
@@ -83,7 +83,8 @@ body > * {
 }
 
 .app-frame .app-description,
-.app-frame .sec-description {
+.app-frame .sec-description,
+.app-frame .app-hint-description {
   font-family: 'OpenSans-Regular', sans-serif;
   font-size: 13px;
   line-height: 20px;
@@ -112,8 +113,43 @@ body > * {
 
 .app-frame .app-side-footer {
   background-color: #f1f1f1;
-  height: 48px;
   padding: 24px;
+  height: 24px;
+  -webkit-flex: none;
+  overflow: hidden;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1.0);
+  position: relative;
+  z-index: 1;
+}
+
+.app-frame .app-side-footer:hover {
+  height: 108px;
+}
+
+.app-frame .app-side-footer.double-line {
+  height: 48px;
+}
+
+.app-frame .app-side-footer.double-line:hover {
+  height: 154px;
+}
+
+.app-frame .app-hint-title {
+  color: white;
+  margin-bottom: 18px;
+}
+
+.app-frame .app-hint-description {
+  color: white;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+}
+
+.app-frame .app-side-footer:hover .app-hint-description {
+  opacity: 1;
 }
 
 .app-frame .app-main {

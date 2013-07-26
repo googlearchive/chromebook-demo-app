@@ -39,6 +39,10 @@
     "message": "What if I use Skype®?",
     "description": ""
   },
+  "HANGOUTS_HINT_DESCRIPTION": {
+    "message": "Hangouts is an easy alternative to Skype®. No setup required. Video chat with up to 9 people for free.",
+    "description": ""
+  },
   "HANGOUTS_BUTTON_EFFECTS": {
     "message": "Effects",
     "description": ""

@@ -20,6 +20,10 @@
   width: 400px;
 }
 
+#docs-app .app-side-footer {
+  background-color: #2a70e8;
+}
+
 #docs-app .docs-title {
   font-size: 22px;
   margin-bottom: 16px;

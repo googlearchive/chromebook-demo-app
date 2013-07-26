@@ -35,6 +35,14 @@
     "message": "With All Access, enjoy unlimited listening to millions of songs, create custom radio and skip as much as you want.",
     "description": "The description of the unlimited section."
   },
+  "MUSIC_HINT_TITLE": {
+    "message": "What if I use iTunes®?",
+    "description": ""
+  },
+  "MUSIC_HINT_DESCRIPTION": {
+    "message": "Google Play Music is a cloud based alternative to iTunes. Upload up to 20,000 songs using Google Music Manager for free.",
+    "description": ""
+  },
   "MUSIC_MEESAGE_BAR": {
     "message": "Listen Now",
     "description": "The message placed at the top of the Play.app's main view."
