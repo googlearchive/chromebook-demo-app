@@ -46,6 +46,7 @@ DOCS_FILES = \
   assets/docs-share-2x.png \
   assets/docs-toolbar-2x.png \
   assets/docs-ruler-2x.png \
+  assets/balloon-triangle-top.png \
   views/docs-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf

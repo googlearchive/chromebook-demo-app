@@ -41,6 +41,8 @@
 #docs-app .docs-title {
   font-size: 22px;
   font-face: 'Arial';
+  -webkit-user-select: none;
+  cursor: default;
 }
 
 #docs-app .space {
@@ -127,6 +129,11 @@
   text-align: center;
 }
 
+#docs-app .share .balloon {
+  width: 300px;
+  left: -102px;
+}
+
 #docs-app .docs-menu {
   display: -webkit-flex;
   color: #777;
@@ -134,15 +141,22 @@
   -webkit-justify-content: flex-start;
   width: 800px;
   margin-top: 16px;
+  -webkit-user-select: none;
+  cursor: default;
 }
 
-#docs-app .docs-menu > * {
+#docs-app .docs-menu-item {
   -webkit-margin-end: 16px;
   height: 16px;
   font-family: 'Arial';
   font-size: 13px;
   text-align: center;
   -webkit-flex: 0 0 auto;
+}
+
+#docs-app .docs-menu .balloon {
+  width: 300px;
+  left: 0px;
 }
 
 #docs-app .docs-toolbar {
@@ -152,6 +166,11 @@
   -webkit-flex: none;
   background-image: url('docs-toolbar-2x.png');
   background-size: 804px 40px;
+}
+
+#docs-app .docs-toolbar .balloon {
+  width: 300px;
+  left: 252px;
 }
 
 #docs-app .docs-ruler {

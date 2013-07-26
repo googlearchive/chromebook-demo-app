@@ -51,6 +51,10 @@
     "message": "Share",
     "description": ""
   },
+  "DOCS_BALLOON_SHARE": {
+    "message": "Work with others in real time, insert comments and track changes using revision history",
+    "description": ""
+  },
   "DOCS_MENU_FILE": {
     "message": "File",
     "description": ""
@@ -81,6 +85,14 @@
   },
   "DOCS_MENU_HELP": {
     "message": "Help",
+    "description": ""
+  },
+  "DOCS_BALLOON_MENU": {
+    "message": "Print, export, share and manage your documents in the cloud",
+    "description": ""
+  },
+  "DOCS_BALLOON_TOOLBAR": {
+    "message": "Create tables, justify text and change font colors to your heart’s content",
     "description": ""
   }
 }
