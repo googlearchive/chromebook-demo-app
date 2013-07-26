@@ -2,8 +2,8 @@
 *.pem
 *.crx
 VERSION
-script/publish
-script/monitor
+scripts/publish
+scripts/monitor
 update.xml
 packages
 gen
