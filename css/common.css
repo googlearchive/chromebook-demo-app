@@ -47,6 +47,7 @@ body > * {
   -webkit-flex-flow: column;
   border-right: solid 1px #e4e4e4;
   -webkit-flex: none;
+  overflow: hidden;
 }
 
 .app-frame .app-side-body {

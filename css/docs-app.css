@@ -20,83 +20,170 @@
   background-color: #2a70e8;
 }
 
+/**
+ * Main part
+ */
+
+#docs-main {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+}
+
 #docs-app .docs-header {
   width: 800px;
   display: -webkit-flex;
+  margin-top: 40px;
   -webkit-flex: none;
-}
-
-#docs-app .docs-header-left {
-  width: 400px;
+  -webkit-align-items: flex-start;
 }
 
 #docs-app .docs-title {
   font-size: 22px;
-  margin-bottom: 16px;
   font-face: 'Arial';
+}
+
+#docs-app .space {
+  -webkit-flex: 1 0 0;
+}
+
+#docs-app .user-icon {
+  width: 30px;
+  height: 25px;
+  -webkit-margin-end: 5px;
+  background-color: #ccc;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 8px;
+  background-size: 12px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#docs-app .user-icon::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 6px;
+  top: 27px;
+  background-color: #ccc;
+  position: absolute;
+}
+
+#docs-app .user-icon.c {
+  background-color: #13955c;
+  background-image: url('docs-user-c-2x.png');
+}
+
+#docs-app .user-icon.c::after {
+  background-color: #13955c;
+}
+
+#docs-app .user-icon.e {
+  background-color: #f4b400;
+  background-image: url('docs-user-e-2x.png');
+}
+
+#docs-app .user-icon.e::after {
+  background-color: #f4b400;
+}
+
+#docs-app .user-icon.f {
+  background-color: #9e69af;
+  background-image: url('docs-user-f-2x.png');
+}
+
+#docs-app .user-icon.f::after {
+  background-color: #9e69af;
+}
+
+#docs-app .share {
+  height: 33px;
+  width: 96px;
+  -webkit-margin-start: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  font-family: 'Arial';
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
+  padding: 0;
+  line-height: 33px;
+}
+
+#docs-app .share-icon {
+  background-image: url('docs-share-2x.png');
+  background-size: 12px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 #docs-app .docs-menu {
   display: -webkit-flex;
   color: #777;
+  -webkit-flex: none;
+  -webkit-justify-content: flex-start;
+  width: 800px;
+  margin-top: 16px;
 }
 
 #docs-app .docs-menu > * {
   width: 23px;
-  -webkit-margin-end: 16px;
-  font-face: 'Arial';
+  height: 16px;
+  font-family: 'Arial';
   font-size: 13px;
-}
-
-#docs-app .docs-header-right {
-  width: 320px;
-  display: -webkit-flex;
-  -webkit-justify-content: flex-end;
-  -webkit-align-items: center;
-}
-
-#docs-app .user-icon {
-  width: 32px;
-  height: 32px;
-  -webkit-margin-end: 4px;
-  background-color: ccc;
-  border: 1px #999 solid;
-  box-sizing: border-box;
-}
-
-#docs-app .share {
-  height: 24px;
-  width: 64px;
-  -webkit-margin-start: 16px;
+  text-align: center;
 }
 
 #docs-app .docs-toolbar {
-  width: 800px;
-  height: 32px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  border: 1px #ccc solid;
-  background-color: #f8f8f8;
-  box-sizing: border-box;
+  width: 804px;
+  height: 40px;
+  margin-top: 40px;
   -webkit-flex: none;
+  background-image: url('docs-toolbar-2x.png');
+  background-size: 804px 40px;
+}
+
+#docs-app .docs-ruler {
+  width: 800px;
+  height: 14px;
+  background-color: #f8f8f8;
+  margin-top: 20px;
+  -webkit-flex: none;
+  background-image: url('docs-ruler-2x.png');
+  background-size: 800px 14px;
 }
 
 #docs-app .paper-container {
   -webkit-flex: auto;
-  width: 800px;
-  display: -webkit-flex;
+  width: 830px;
+  margin-top: 15px;
+  margin-left: -5px;
+  margin-right: -25px;
   position: relative;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  margin-bottom: 35px;
 }
 
 #docs-app .paper {
+  width: 800px;
+  height: 1160px;
   -webkit-flex: auto;
   background-color: white;
-  border: 1px #ccc solid;
-  box-sizing: border-box;
   padding: 64px;
   outline: none;
   overflow: hidden;
   white-space: pre;
+  -webkit-box-sizing: border-box;
+  box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
+  margin: 5px;
 }
 
 #docs-app .cursor {
