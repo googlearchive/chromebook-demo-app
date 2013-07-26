@@ -1,5 +1,23 @@
 #docs-app .app-icon {
-  background-image: url('docs-icon-128.png');
+  background-image: -webkit-image-set(
+      url('docs-icon-64.png') 1x,
+      url('docs-icon-128.png') 2x);
+}
+
+#docs-app .sec-header-icon.group {
+  background-image: url('docs-section-group-2x.png');
+}
+
+#docs-app .sec-header-icon.backup {
+  background-image: url('docs-section-backup-2x.png');
+}
+
+#docs-app .sec-header-icon.anywhere {
+  background-image: url('docs-section-anywhere-2x.png');
+}
+
+#docs-app .app-side-footer {
+  background-color: #2a70e8;
 }
 
 #docs-app .docs-header {
@@ -10,10 +28,6 @@
 
 #docs-app .docs-header-left {
   width: 400px;
-}
-
-#docs-app .app-side-footer {
-  background-color: #2a70e8;
 }
 
 #docs-app .docs-title {

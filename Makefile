@@ -37,6 +37,9 @@ DOCS_FILES = \
   assets/docs-icon-64.png \
   assets/docs-icon-96.png \
   assets/docs-icon-128.png \
+  assets/docs-section-group-2x.png \
+  assets/docs-section-backup-2x.png \
+  assets/docs-section-anywhere-2x.png \
   views/docs-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
