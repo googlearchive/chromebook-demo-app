@@ -153,11 +153,9 @@ body > * {
 }
 
 .app-frame .app-main {
-  width: 100%;
+  -webkit-flex: 1 0 auto;
   background-color: #f1f1f1;
-  display: -webkit-flex;
-  -webkit-flex-flow: column;
-  padding: 24px;
+  position: relative;
 }
 
 .app-frame .close {
@@ -165,8 +163,9 @@ body > * {
   height: 24px;
   border-style: none;
   background-color: #ccc;
-  -webkit-align-self: flex-end;
-  -webkit-flex: none;
+  position: fixed;
+  right: 24px;
+  top: 24px;
 }
 
 /**
