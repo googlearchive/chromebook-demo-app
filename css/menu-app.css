@@ -50,6 +50,10 @@ h1, p {
   -webkit-flex: none;
 }
 
+#menu-window .close {
+  position: static;
+}
+
 .message {
   font-family: 'OpenSans-Light', sans-serif;
   font-size: 26px;
