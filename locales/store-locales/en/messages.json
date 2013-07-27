@@ -35,12 +35,184 @@
     "message": "On your Chromebook, you won’t need to install complicated software. Just click ‘Add to Chrome’.",
     "description": ""
   },
-  "STORE_APP_TITLE": {
-    "message": "Thousands applications",
-    "description": ""
+  "STORE_APP_BEJEWELED_TITLE": {
+    "message": "bejeweled",
+    "description": "The title of bejeweled application."
   },
-  "STORE_APP_DETAIL": {
-    "message": "Some details...",
-    "description": ""
+  "STORE_APP_BEJEWELED_DETAIL": {
+    "message": "",
+    "description": "The detailed information of bejeweled."
+  },
+  "STORE_APP_BEJEWELED_ORDER": {
+    "message": "4",
+    "description": "The order of the bejeweled application in the tile view."
+  },
+  "STORE_APP_CUBESLAM_TITLE": {
+    "message": "cubeslam",
+    "description": "The title of cubeslam application."
+  },
+  "STORE_APP_CUBESLAM_DETAIL": {
+    "message": "",
+    "description": "The detailed information of cubeslam."
+  },
+  "STORE_APP_CUBESLAM_ORDER": {
+    "message": "1",
+    "description": "The order of the cubeslam application in the tile view."
+  },
+  "STORE_APP_DEEZER_TITLE": {
+    "message": "deezer",
+    "description": "The title of deezer application."
+  },
+  "STORE_APP_DEEZER_DETAIL": {
+    "message": "",
+    "description": "The detailed information of deezer."
+  },
+  "STORE_APP_DEEZER_ORDER": {
+    "message": "12",
+    "description": "The order of the deezer application in the tile view."
+  },
+  "STORE_APP_GMAIL_TITLE": {
+    "message": "gmail",
+    "description": "The title of gmail application."
+  },
+  "STORE_APP_GMAIL_DETAIL": {
+    "message": "",
+    "description": "The detailed information of gmail."
+  },
+  "STORE_APP_GMAIL_ORDER": {
+    "message": "2",
+    "description": "The order of the gmail application in the tile view."
+  },
+  "STORE_APP_KINDLE_TITLE": {
+    "message": "kindle",
+    "description": "The title of kindle application."
+  },
+  "STORE_APP_KINDLE_DETAIL": {
+    "message": "",
+    "description": "The detailed information of kindle."
+  },
+  "STORE_APP_KINDLE_ORDER": {
+    "message": "15",
+    "description": "The order of the kindle application in the tile view."
+  },
+  "STORE_APP_NETFLIX_TITLE": {
+    "message": "netflix",
+    "description": "The title of netflix application."
+  },
+  "STORE_APP_NETFLIX_DETAIL": {
+    "message": "",
+    "description": "The detailed information of netflix."
+  },
+  "STORE_APP_NETFLIX_ORDER": {
+    "message": "3",
+    "description": "The order of the netflix application in the tile view."
+  },
+  "STORE_APP_PANDORA_TITLE": {
+    "message": "pandora",
+    "description": "The title of pandora application."
+  },
+  "STORE_APP_PANDORA_DETAIL": {
+    "message": "",
+    "description": "The detailed information of pandora."
+  },
+  "STORE_APP_PANDORA_ORDER": {
+    "message": "13",
+    "description": "The order of the pandora application in the tile view."
+  },
+  "STORE_APP_PIXLR_TITLE": {
+    "message": "pixlr",
+    "description": "The title of pixlr application."
+  },
+  "STORE_APP_PIXLR_DETAIL": {
+    "message": "",
+    "description": "The detailed information of pixlr."
+  },
+  "STORE_APP_PIXLR_ORDER": {
+    "message": "6",
+    "description": "The order of the pixlr application in the tile view."
+  },
+  "STORE_APP_PLUS_TITLE": {
+    "message": "Google+",
+    "description": "The title of plus application."
+  },
+  "STORE_APP_PLUS_DETAIL": {
+    "message": "",
+    "description": "The detailed information of plus."
+  },
+  "STORE_APP_PLUS_ORDER": {
+    "message": "11",
+    "description": "The order of the plus application in the tile view."
+  },
+  "STORE_APP_REMOTEDESKTOP_TITLE": {
+    "message": "remotedesktop",
+    "description": "The title of remotedesktop application."
+  },
+  "STORE_APP_REMOTEDESKTOP_DETAIL": {
+    "message": "",
+    "description": "The detailed information of remotedesktop."
+  },
+  "STORE_APP_REMOTEDESKTOP_ORDER": {
+    "message": "8",
+    "description": "The order of the remotedesktop application in the tile view."
+  },
+  "STORE_APP_SHEETS_TITLE": {
+    "message": "sheets",
+    "description": "The title of sheets application."
+  },
+  "STORE_APP_SHEETS_DETAIL": {
+    "message": "",
+    "description": "The detailed information of sheets."
+  },
+  "STORE_APP_SHEETS_ORDER": {
+    "message": "14",
+    "description": "The order of the sheets application in the tile view."
+  },
+  "STORE_APP_SLIDES_TITLE": {
+    "message": "slides",
+    "description": "The title of slides application."
+  },
+  "STORE_APP_SLIDES_DETAIL": {
+    "message": "",
+    "description": "The detailed information of slides."
+  },
+  "STORE_APP_SLIDES_ORDER": {
+    "message": "9",
+    "description": "The order of the slides application in the tile view."
+  },
+  "STORE_APP_SPOTIFY_TITLE": {
+    "message": "spotify",
+    "description": "The title of spotify application."
+  },
+  "STORE_APP_SPOTIFY_DETAIL": {
+    "message": "",
+    "description": "The detailed information of spotify."
+  },
+  "STORE_APP_SPOTIFY_ORDER": {
+    "message": "7",
+    "description": "The order of the spotify application in the tile view."
+  },
+  "STORE_APP_TWEETDECK_TITLE": {
+    "message": "tweetdeck",
+    "description": "The title of tweetdeck application."
+  },
+  "STORE_APP_TWEETDECK_DETAIL": {
+    "message": "",
+    "description": "The detailed information of tweetdeck."
+  },
+  "STORE_APP_TWEETDECK_ORDER": {
+    "message": "10",
+    "description": "The order of the tweetdeck application in the tile view."
+  },
+  "STORE_APP_YOUTUBE_TITLE": {
+    "message": "youtube",
+    "description": "The title of youtube application."
+  },
+  "STORE_APP_YOUTUBE_DETAIL": {
+    "message": "",
+    "description": "The detailed information of youtube."
+  },
+  "STORE_APP_YOUTUBE_ORDER": {
+    "message": "5",
+    "description": "The order of the youtube application in the tile view."
   }
 }

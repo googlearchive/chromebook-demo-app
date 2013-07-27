@@ -127,6 +127,21 @@ STORE_FILES= \
   assets/store-section-thousands-2x.png \
   assets/store-section-offline-2x.png \
   assets/store-section-install-2x.png \
+  third-party/app-tiles/store-tile-bejeweled.png \
+  third-party/app-tiles/store-tile-cubeslam.png \
+  third-party/app-tiles/store-tile-deezer.png \
+  third-party/app-tiles/store-tile-gmail.png \
+  third-party/app-tiles/store-tile-kindle.png \
+  third-party/app-tiles/store-tile-netflix.png \
+  third-party/app-tiles/store-tile-pandora.jpg \
+  third-party/app-tiles/store-tile-pixlr.png \
+  third-party/app-tiles/store-tile-plus.png \
+  third-party/app-tiles/store-tile-remotedesktop.png \
+  third-party/app-tiles/store-tile-sheets.png \
+  third-party/app-tiles/store-tile-slides.png \
+  third-party/app-tiles/store-tile-spotify.png \
+  third-party/app-tiles/store-tile-tweetdeck.png \
+  third-party/app-tiles/store-tile-youtube.png \
   views/store-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
