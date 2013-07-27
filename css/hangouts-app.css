@@ -27,7 +27,7 @@
 
 .button-container {
   display: -webkit-flex;
-  width: 760px;
+  width: 720px;
   margin: 40px auto 0;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .video-container {
-  width: 720px;
+  width: 480px;
   margin: 40px auto 0;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
@@ -104,12 +104,13 @@
 }
 
 .video-canvas {
+  display: block;
   background-color: #ccc;
-  margin-bottom: -4px;
+  margin: 0 auto;
 }
 
 .people-container {
-  width: 720px;
+  width: 680px;
   margin: 40px auto;
   display: -webkit-flex;
   background-color: white;
@@ -120,8 +121,8 @@
 .people {
   -webkit-flex: none;
   background-color: #ccc;
-  width: 165px;
-  height: 124px;
+  width: 155px;
+  height: 116px;
   -webkit-margin-end: 20px;
 }
 
