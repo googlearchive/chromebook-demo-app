@@ -218,3 +218,14 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+/**
+ * For small monitors
+ */
+
+@media all and (max-height: 780px) {
+  .app-frame .sec-header {
+    margin-top: 36px;
+    margin-bottom: 18px;
+  }
+}

@@ -2,7 +2,7 @@ var App = function(id, html, transparent) {
   this.id_ = id;
   this.html_ = html;
   this.transparent_ = transparent;
-  this.windowSizeList_ = ['fullscreen', 'screenshot'];
+  this.windowSizeList_ = ['fullscreen', 'screenshot', 'minimum'];
   this.windowSizeIndex_ = 0;
 };
 
@@ -98,6 +98,9 @@ App.prototype.toggleWindowSize_ = function(opt_name) {
       width = 1280;
       height = 800;
       break;
+    case 'minimum':
+      width = 1366;
+      height = 768;
   }
   this.appWindow.setBounds({
     left: (screen.width - width) / 2,
