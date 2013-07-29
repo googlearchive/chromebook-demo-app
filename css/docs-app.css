@@ -28,6 +28,7 @@
   display: -webkit-flex;
   -webkit-flex-direction: column;
   -webkit-align-items: center;
+  overflow: hidden;
 }
 
 #docs-app .docs-header {
@@ -185,14 +186,13 @@
 
 #docs-app .paper-container {
   -webkit-flex: auto;
-  width: 830px;
-  margin-top: 15px;
-  margin-left: -5px;
-  margin-right: -25px;
+  width: 100%;
   position: relative;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
   -webkit-box-sizing: border-box;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
+  margin-top: 15px;
 }
 
 #docs-app .paper {
@@ -206,7 +206,7 @@
   white-space: pre;
   -webkit-box-sizing: border-box;
   box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
-  margin: 5px;
+  margin: 5px auto;
 }
 
 #docs-app .cursor {
