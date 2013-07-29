@@ -134,7 +134,8 @@ STORE_FILES= \
 HELPER_FILES= \
   js/const.js \
   js/helper-extension.js \
-  js/util.js
+  js/util.js \
+  views/learn-more.html
 
 packages: third-party
 	for x in ${TARGETS}; \

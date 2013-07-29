@@ -22,5 +22,9 @@
   "MENU_STORE_BUTTON": {
     "message": "Get more apps",
     "description": ""
+  },
+  "MENU_LEARN_MORE": {
+    "message": "Learn more",
+    "description": ""
   }
 }

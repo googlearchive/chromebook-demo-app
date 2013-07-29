@@ -3,7 +3,8 @@
   "version": "0.0",
   "manifest_version": 2,
   "permissions": [
-    "management"
+    "management",
+    "tabs"
   ],
   "background": {
     "scripts": ["const.js", "helper-extension.js"],
