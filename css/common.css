@@ -157,6 +157,12 @@ body > * {
   -webkit-flex: 1 0 auto;
   background-color: #f1f1f1;
   position: relative;
+  /**
+   * Force the element to have its own layer.
+   * This prevents the browser form repainting the element when fixed elements
+   * are overlapped to the element.
+   */
+  -webkit-transform: translateZ(0);
 }
 
 .app-frame .close {
