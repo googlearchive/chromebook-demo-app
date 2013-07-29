@@ -9,9 +9,26 @@ var App = function(id, html, transparent) {
 App.prototype.start = function() {
   // Register events.
   chrome.app.runtime.onLaunched.addListener(this.onLaunched_.bind(this));
+  chrome.runtime.onMessageExternal.addListener(this.onMessage_.bind(this));
 };
 
 App.prototype.onLaunched_ = function() {
+  // If it is a child app, Close the other child apps.
+  var childAppIDs = [DOCS_APP_ID, HANGOUTS_APP_ID, MUSIC_APP_ID, STORE_APP_ID];
+  var isChildApp = false;
+  for (var i = 0; i < childAppIDs.length; i++) {
+    if (childAppIDs[i] == chrome.runtime.id) {
+      isChildApp = true;
+      childAppIDs.splice(i, 1);
+    }
+  }
+  if (isChildApp) {
+    for (var i = 0; i < childAppIDs.length; i++) {
+      chrome.runtime.sendMessage(childAppIDs[i], {name: 'close'});
+    }
+  }
+
+  // Create window.
   chrome.app.window.create(this.html_, {
     id: this.id_,
     hidden: true,
@@ -108,6 +125,13 @@ App.prototype.toggleWindowSize_ = function(opt_name) {
     width: width,
     height: height
   });
+};
+
+App.prototype.onMessage_ = function(message) {
+  if (message.name == 'close') {
+    if (this.appWindow)
+      this.appWindow.close();
+  }
 };
 
 var callAfterLoading = function(window, callback) {
