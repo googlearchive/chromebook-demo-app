@@ -46,10 +46,6 @@
   color: black;
 }
 
-#music-main {
-  overflow: auto;
-}
-
 #music-app .message-bar {
   margin: 40px auto 0;
   height: 40px;

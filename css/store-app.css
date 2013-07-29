@@ -16,10 +16,6 @@
   background-image: url('store-section-install-2x.png');
 }
 
-#store-main {
-  overflow: auto;
-}
-
 .app {
   width: 220px;
   padding: 8px;

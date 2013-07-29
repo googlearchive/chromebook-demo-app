@@ -157,6 +157,11 @@ body > * {
   -webkit-flex: 1 0 auto;
   background-color: #f1f1f1;
   position: relative;
+}
+
+.app-frame .app-main.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
   /**
    * Force the element to have its own layer.
    * This prevents the browser form repainting the element when fixed elements
