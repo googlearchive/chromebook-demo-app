@@ -164,9 +164,10 @@ body > * {
   height: 24px;
   border-style: none;
   background-color: #ccc;
-  position: fixed;
+  position: absolute;
   right: 32px;
   top: 16px;
+  z-index: 1;
 }
 
 /**
