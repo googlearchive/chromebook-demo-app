@@ -7,9 +7,6 @@ MENU_FILES = \
   js/app.js \
   js/menu-app.js \
   js/util.js \
-  js/editor.js \
-  js/edit-distance.js \
-  js/words.js \
   css/common.css \
   css/menu-app.css \
   assets/menu-logo-2x.png \
@@ -28,8 +25,12 @@ MENU_FILES = \
 DOCS_FILES = \
   js/const.js \
   js/app.js \
+  js/editor.js \
+  js/edit-distance.js \
   js/docs-app.js \
   js/util.js \
+  js/words.js \
+  js/paper-edit-adapter.js \
   css/common.css \
   css/docs-app.css \
   assets/docs-icon-32.png \

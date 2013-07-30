@@ -196,17 +196,21 @@
 }
 
 #docs-app .paper {
-  width: 800px;
-  height: 1160px;
+  -webkit-box-sizing: border-box;
   -webkit-flex: auto;
   background-color: white;
-  padding: 64px;
+  border-style: none;
+  box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
+  display: block;
+  font-family: 'Arial';
+  font-size: 16px;
+  height: 1160px;
+  margin: 5px auto;
   outline: none;
   overflow: hidden;
-  white-space: pre;
-  -webkit-box-sizing: border-box;
-  box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
-  margin: 5px auto;
+  padding: 64px;
+  resize: none;
+  width: 800px;
 }
 
 #docs-app .cursor {

@@ -15,7 +15,12 @@
     "background": {
       "scripts": [
         "const.js",
+        "util.js",
         "app.js",
+        "words.js",
+        "edit-distance.js",
+        "editor.js",
+        "paper-edit-adapter.js",
         "docs-app.js"
       ]
     }

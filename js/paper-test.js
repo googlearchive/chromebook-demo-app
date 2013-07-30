@@ -1,12 +1,15 @@
-Test.add('xpath', function() {
-  var result = document.evaluate(
-      './/node()[self::text() or self::br]',
-      document.getElementById('xpath-test-box'),
-      null,
-      XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-  var lastTextNode = null;
-  console.log(result.snapshotLength);
-  for (var i = 0; i < result.snapshotLength; i++) {
-    console.log(result.snapshotItem(i));
+Test.add('getTextNodeAt', function() {
+
+  var paper = document.getElementById('xpath-test-box');
+             paper.addEventListener('input', function(e) { console.log(e); });
+  extend(paper, PaperEditAdapter);
+  for (var i = 0; i < paper.innerText.length; i++) {
+    var result = paper.getTextNodeAt(i);
+    console.log(paper.innerText[i]);
+    if (paper.innerText[i] == '\n')
+      continue;
+    Assert.equals(
+        paper.innerText[i], result.textNode.nodeValue[result.subindex]);
   }
+
 });
