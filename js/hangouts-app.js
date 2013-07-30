@@ -21,7 +21,7 @@ HangoutsApp.prototype.initDocument = function() {
 
   // Init camera.
   navigator.webkitGetUserMedia(
-    {video: true},
+    {video: {mandatory: {maxWidth: 640, maxHeight: 360}}},
     function(localMediaStream) {
       if (this.videoInitialized_)
         return;

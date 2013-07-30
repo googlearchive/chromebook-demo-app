@@ -22,8 +22,8 @@ var defineHandlers = [
             context.scale(element.width / track.trackWidth,
                           element.width / track.trackWidth);
             context.translate(face.x + face.width / 2,
-                              face.y + face.height * 0.15);
-            context.scale(face.width * 2, face.width * 2);
+                              face.y);
+            context.scale(face.width * 3, face.width * 3);
             context.scale(track.trackWidth / element.width,
                           track.trackWidth / element.width);
             context.scale(1 / glassesImage.width, 1 / glassesImage.width);

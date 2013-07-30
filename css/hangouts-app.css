@@ -27,7 +27,7 @@
 
 .button-container {
   display: -webkit-flex;
-  width: 720px;
+  width: 680px;
   margin: 40px auto 0;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .video-container {
-  width: 480px;
+  width: 640px;
   margin: 40px auto 0;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
@@ -110,7 +110,7 @@
 }
 
 .people-container {
-  width: 680px;
+  width: 640px;
   margin: 40px auto;
   display: -webkit-flex;
   background-color: white;
@@ -121,8 +121,8 @@
 .people {
   -webkit-flex: none;
   background-color: #ccc;
-  width: 155px;
-  height: 116px;
+  width: 145px;
+  height: 82px;
   -webkit-margin-end: 20px;
 }
 
