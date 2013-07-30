@@ -6,6 +6,7 @@
     "management",
     "tabs"
   ],
+  "offline_enabled": true,
   "background": {
     "scripts": ["const.js", "helper-extension.js"],
     "persistent": false

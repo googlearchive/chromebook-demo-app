@@ -10,6 +10,7 @@
     "128": "play-icon-128.png"
   },
   "default_locale": "en",
+  "offline_enabled": true,
   "app": {
     "background": {
       "scripts": [
