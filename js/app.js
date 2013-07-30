@@ -1,9 +1,22 @@
-var App = function(id, html, transparent) {
+var makeCenterBounds = function(width, height) {
+  return {
+    left: (screen.width - width) / 2,
+    top: (screen.height - height) / 2,
+    width: width,
+    height: height
+  };
+};
+
+var App = function(id, html, opt_width, opt_height, opt_transparent) {
   this.id_ = id;
   this.html_ = html;
-  this.transparent_ = transparent;
-  this.windowSizeList_ = ['fullscreen', 'screenshot', 'minimum'];
-  this.windowSizeIndex_ = 0;
+  this.transparent_ = !!opt_transparent;
+  this.windowBoundsList_ = [
+    makeCenterBounds(opt_width || screen.width, opt_height || screen.height),
+    makeCenterBounds(1280, 800),
+    makeCenterBounds(1366, 768)
+  ];
+  this.windowBoundsIndex_ = 0;
 };
 
 App.prototype.start = function() {
@@ -45,7 +58,8 @@ App.prototype.onWindowCreated_ = function(window) {
   // Setup window.
   this.appWindow = window;
   this.window = window.contentWindow;
-  this.toggleWindowSize_('fullscreen');
+  this.windowBoundsIndex_ = 0;
+  this.toggleWindowSize_();
   window.show();
 
   // Init the document.
@@ -96,35 +110,11 @@ App.prototype.get = function(query) {
   return this.document.querySelector(query);
 };
 
-App.prototype.toggleWindowSize_ = function(opt_name) {
-  var name;
-  if (opt_name) {
-    name = opt_name;
-  } else {
-    this.windowSizeIndex_ = (this.windowSizeIndex_ + 1) %
-      this.windowSizeList_.length;
-    name = this.windowSizeList_[this.windowSizeIndex_];
-  }
-  var width, height;
-  switch (name) {
-    case 'fullscreen':
-      width = screen.width;
-      height = screen.height;
-      break;
-    case 'screenshot':
-      width = 1280;
-      height = 800;
-      break;
-    case 'minimum':
-      width = 1366;
-      height = 768;
-  }
-  this.appWindow.setBounds({
-    left: (screen.width - width) / 2,
-    top: (screen.height - height) / 2,
-    width: width,
-    height: height
-  });
+App.prototype.toggleWindowSize_ = function() {
+  this.appWindow.setBounds(
+          this.windowBoundsList_[this.windowBoundsIndex_]);
+  this.windowBoundsIndex_++;
+  this.windowBoundsIndex_ %= this.windowBoundsList_.length;
 };
 
 App.prototype.onMessage_ = function(message) {

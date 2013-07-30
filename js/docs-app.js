@@ -1,5 +1,5 @@
 var DocsApp = function() {
-  App.call(this, DOCS_WINDOW_ID, 'docs-app.html', false);
+  App.call(this, DOCS_WINDOW_ID, 'docs-app.html');
 };
 
 DocsApp.prototype = {
