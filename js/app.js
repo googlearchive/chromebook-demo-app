@@ -125,10 +125,36 @@ App.prototype.toggleWindowSize_ = function() {
 };
 
 App.prototype.toggleRTL_ = function() {
+  // Update the direction attribute.
   if (this.rtl_)
     this.get('html').setAttribute('dir', 'rtl');
   else
     this.get('html').setAttribute('dir', 'ltr');
+
+  // Force to update the CSS.
+  var result = this.document.evaluate(
+      '//*',
+      this.document,
+      null,
+      XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+      null);
+  var RTL_PROPERTIES = [
+    'webkitMarginStart',
+    'webkitMarginEnd',
+    'webkitBorderStart',
+    'webkitBorderEnd'
+  ];
+  for (var i = 0; i < result.snapshotLength; i++) {
+    var element = result.snapshotItem(i);
+    for (var j = 0; j < RTL_PROPERTIES.length; j++) {
+      var property = RTL_PROPERTIES[j];
+      if (element.style[property]) {
+        element.style[property] = element.style[property];
+      }
+    }
+  }
+
+  // Toggle the property.
   this.rtl_ = !this.rtl_;
 };
 
