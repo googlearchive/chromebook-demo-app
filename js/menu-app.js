@@ -13,13 +13,14 @@ MenuApp.prototype.initDocument = function() {
   var buttons = this.document.querySelectorAll('.button');
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(index) {
-      var messageName = [
-        'launchDocs',
-        'launchHangouts',
-        'launchMusic',
-        'launchStore'
+      var id = [
+        DOCS_APP_ID,
+        HANGOUTS_APP_ID,
+        MUSIC_APP_ID,
+        STORE_APP_ID
       ][index];
-      chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: messageName});
+      chrome.runtime.sendMessage(
+          HELPER_EXTENSION_ID, {name: 'launch', id: id});
     }.bind(this, i));
   }
 

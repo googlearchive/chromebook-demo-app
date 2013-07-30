@@ -2,6 +2,7 @@ var DOCS_APP_ID = 'hniomhdmdnlgdfieanjadkdjkihjjfpf';
 var HANGOUTS_APP_ID = 'bbfdbpldnkjjakidjnngddapfpmkpigp';
 var MUSIC_APP_ID = 'kahjkkebhajdmaphhlommkhbcononjal';
 var STORE_APP_ID = 'niichfgnefmnhfkmchpjjfdelgpillkc';
+var MENU_APP_ID = 'ejpaejipmgoifefhjkmnghkpaklpeadp';
 
 /**
  * The helper extension ID.
