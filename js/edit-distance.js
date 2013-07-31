@@ -1,7 +1,8 @@
-var Cell = function(cost, prevCell, operation) {
+var Cell = function(cost, prevCell, operation, element) {
   this.cost = cost;
   this.prevCell = prevCell;
   this.operation = operation;
+  this.element = element;
 };
 
 /**
@@ -14,8 +15,8 @@ var calcEditDistance = function(seq1,
                                 deleteCost,
                                 replaceCost) {
   // Find minimum path.
-  var matrix = [new Cell(0, null, 'Start')];
-  var gurde = new Cell(0, null, 'Gurde');
+  var matrix = [new Cell(0, null, 'Start', null)];
+  var zero = new Cell(0, null, 'Zero', null);
   for (var j = 0; j <= seq2.length; j++) {
     for(var i = 0; i <= seq1.length; i++) {
       if (i == 0 && j == 0)
@@ -24,31 +25,37 @@ var calcEditDistance = function(seq1,
       var deleteFrom = j * (seq1.length + 1) + i - 1;
       var insertFrom = (j - 1) * (seq1.length + 1) + i;
       var replaceFrom = (j - 1) * (seq1.length + 1) + i - 1;
-      var deleteCostHere = (matrix[deleteFrom] || gurde).cost + deleteCost;
-      var insertCostHere = (matrix[insertFrom] || gurde).cost + insertCost;
-      var noneCostHere = (matrix[replaceFrom] || gurde).cost;
+      var deleteCostHere = (matrix[deleteFrom] || zero).cost + deleteCost;
+      var insertCostHere = (matrix[insertFrom] || zero).cost + insertCost;
+      var noneCostHere = (matrix[replaceFrom] || zero).cost;
       var replaceCostHere = noneCostHere + replaceCost;
       if (j == 0) {
         // Delete
-        matrix[index] = new Cell(deleteCostHere, matrix[deleteFrom], 'Delete');
+        matrix[index] = new Cell(
+            deleteCostHere, matrix[deleteFrom], 'Delete', seq1[i - 1]);
       } else if (i == 0) {
         // Insert
-        matrix[index] = new Cell(insertCostHere, matrix[insertFrom], 'Insert');
+        matrix[index] = new Cell(
+            insertCostHere, matrix[insertFrom], 'Insert', seq2[j - 1]);
       } else if (seq1[i - 1] == seq2[j - 1]) {
         // None
-        matrix[index] = new Cell(noneCostHere, matrix[replaceFrom], 'None');
+        matrix[index] = new Cell(
+            noneCostHere, matrix[replaceFrom], 'None', seq1[i - 1]);
       } else if (deleteCostHere <= insertCostHere &&
                  deleteCostHere <= replaceCostHere) {
         // Delete
-        matrix[index] = new Cell(deleteCostHere, matrix[deleteFrom], 'Delete');
+        matrix[index] = new Cell(
+            deleteCostHere, matrix[deleteFrom], 'Delete', seq1[i - 1]);
       } else if (insertCostHere <= deleteCostHere &&
                  insertCostHere <= replaceCostHere) {
         // Insert
-        matrix[index] = new Cell(insertCostHere, matrix[insertFrom], 'Insert');
+        matrix[index] = new Cell(
+            insertCostHere, matrix[insertFrom], 'Insert', seq2[j - 1]);
       } else {
         // Replace
         matrix[index] = new Cell(
-            replaceCostHere, matrix[replaceFrom], 'Replace');
+            replaceCostHere, matrix[replaceFrom], 'Replace',
+            [seq1[i - 1], seq2[j - 1]]);
       }
     }
   }
