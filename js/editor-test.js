@@ -10,3 +10,10 @@ Test.add('editorTest', function() {
     if (result == 'Exit') return;
   }
 });
+
+Test.add('editorTest', function() {
+  var entireText = 'I have two pencils given by my marents.';
+  var keyword = 'two pencils';
+  var index = entireText.lastIndexOf(keyword);
+  console.log(Editor.buildCommands(index, keyword, 'two mechanical pens'));
+});

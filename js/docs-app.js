@@ -42,9 +42,10 @@ DocsApp.prototype.onInput_ = function(e) {
   for (var i = 0; i < this.cursors_.length; i++) {
     var cursor = this.cursors_[i];
     if (cursor.editor) {
-      var index = cursor.editor.applyIndexMap(indexMap);
-      if (index != null) {
-        this.setCursorPosition_(cursor, index);
+      var success = cursor.editor.applyIndexMap(indexMap);
+      if (success) {
+        if (cursor.editor.lastCommand)
+          this.setCursorPosition_(cursor, cursor.editor.lastCommand.index);
       } else {
         cursor.classList.remove('active');
         cursor.classList.add('stop');
@@ -82,37 +83,44 @@ DocsApp.prototype.onStep_ = function() {
     var editor = this.cursors_[i].editor;
     if (!editor)
       continue;
-    var result = editor.step(null /* Should be the result of diff.
-                                     Not implemented yet. */);
-    switch (result[0]) {
+    var command = editor.step();
+    if (!command) {
+      this.cursors_[i].editor = null;
+      return;
+    }
+    switch (command.name) {
+      case 'HideCursor':
+        this.cursors_[i].classList.remove('active');
+        break;
       case 'ShowCursor':
         this.cursors_[i].classList.add('active');
+        this.setCursorPosition_(this.cursors_[i], command.index);
         break;
       case 'MoveCursor':
-        this.setCursorPosition_(this.cursors_[i], result[1]);
+        this.setCursorPosition_(this.cursors_[i], command.index);
         break;
       case 'Insert':
-        this.paper_.insertChar(result[1], result[2]);
-        this.setCursorPosition_(this.cursors_[i], result[1] + 1);
-        this.lastText_ = this.lastText_.substr(0, result[1]) +
-                         result[2] +
-                         this.lastText_.substr(result[1]);
-        if (selectionStart >= result[1]) {
+        this.paper_.insertChar(command.index, command.ch);
+        this.setCursorPosition_(this.cursors_[i], command.index + 1);
+        this.lastText_ = this.lastText_.substr(0, command.index) +
+                         command.ch +
+                         this.lastText_.substr(command.index);
+        if (selectionStart >= command.index) {
           selectionStart++;
         }
-        if (selectionEnd >= result[1]) {
+        if (selectionEnd >= command.index) {
           selectionEnd++;
         }
         break;
       case 'Delete':
-        this.paper_.deleteChar(result[1]);
-        this.setCursorPosition_(this.cursors_[i], result[1]);
-        this.lastText_ = this.lastText_.substr(0, result[1]) +
-                         this.lastText_.substr(result[1] + 1);
-        if (selectionStart >= result[1]) {
+        this.paper_.deleteChar(command.index);
+        this.setCursorPosition_(this.cursors_[i], command.index);
+        this.lastText_ = this.lastText_.substr(0, command.index) +
+                         this.lastText_.substr(command.index + 1);
+        if (selectionStart >= command.index) {
           selectionStart--;
         }
-        if (selectionEnd >= result[1]) {
+        if (selectionEnd >= command.index) {
           selectionEnd--;
         }
         break;

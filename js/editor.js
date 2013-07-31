@@ -12,73 +12,95 @@ var Editor = function(index, originalText, type, text) {
   this.index_ = index;
   this.length_ = originalText.length;
   this.text_ = text;
+  this.commands_ = Editor.buildCommands(index, originalText, text);
   this.diff_ = calcEditDistance(originalText, text, 1, 1, 3);
-  this.step_ = Async.serial(
-      this.waitStep_.bind(this, 20),
-      this.showCursorStep_.bind(this, 20),
-      this.typeStep_.bind(this),
-      this.waitStep_.bind(this, 20, null)
-  );
+};
+
+Editor.calcOffset_ = function(list) {
+  var offset = 0;
+  for (var i = 0; i < list.length; i++) {
+    switch (list[i].operation) {
+      case 'None':
+        offset += list[i].element.length;
+        break;
+      case 'Delete':
+        offset += list[i].done ? 0 : list[i].element.length;
+        break;
+      case 'Insert':
+        offset += list[i].done ? list[i].element.length : 0;
+        break;
+      default:
+        console.error('Not reached.');
+        break;
+    }
+  }
+  return offset;
+};
+
+/**
+ * Builds the sequance of human-like editing commands from two text.
+ */
+Editor.buildCommands = function(index, source, result) {
+  var sourceWords = source.split(/(\s+)/);
+  var resultWords = result.split(/(\s+)/);
+  var diff = calcEditDistance(sourceWords, resultWords, 1, 1, 3);
+  var commands = [];
+  var i, j;
+
+  commands.push({name: 'HideCursor', frame: 20});
+  commands.push({name: 'ShowCursor', frame: 20, offset: source.length});
+
+  // Pick the delete operations first.
+  for (i = diff.length - 1; i >= 0; i--) {
+    var step = diff[i];
+    if (step.operation != 'Delete')
+      continue;
+    var offset = Editor.calcOffset_(diff.slice(0, i));
+    for (j = step.element.length - 1; j >= 0; j--) {
+      commands.push({name: 'Delete', offset: offset + j});
+    }
+    step.done = true;
+  }
+
+  // Then pick the insert operations.
+  for (i = 0; i < diff.length - 1; i++) {
+    var step = diff[i];
+    if (step.operation != 'Insert')
+      continue;
+    var offset = Editor.calcOffset_(diff.slice(0, i));
+    console.log('offset', offset, i);
+    for (j = 0; j < step.element.length; j++) {
+      commands.push(
+          {name: 'Insert', offset: offset + j, ch: step.element[j]});
+    }
+    step.done = true;
+  }
+
+  commands.push({name: 'HideCursor', frame: 1});
+  return commands;
 };
 
 /**
  * Apply the difference that is made by a user or other editors.
  */
 Editor.prototype.applyIndexMap = function(indexMap) {
-  if (indexMap.isRangeChanged(this.index_, this.length_))
-    return null;
-  return this.index_ = indexMap.map(this.index_);
-};
-
-Editor.prototype.step = function(diff) {
   // Ensure that the target string is not touched by a user.
   // Update the index.
   // Step.
-  if (this.step_) {
-    var result = this.step_();
-    this.step_ = result.next;
-    return result.command;
+  if (indexMap.isRangeChanged(this.index_, this.length_))
+    return false;
+  this.lastCommand.index = this.lastCommand.offset + this.index_;
+  return true;
+};
+
+Editor.prototype.step = function() {
+  if (this.commands_.length == 0)
+    return null;
+  if (--this.commands_[0].frame > 0){
+    command = this.commands_[0];
   } else {
-    return ['Exit'];
+    command = this.commands_.shift();
   }
-};
-
-Editor.prototype.waitStep_ = function(counter, next) {
-  if (counter > 1)
-    return {
-      next: this.waitStep_.bind(this, counter - 1, next),
-      command: ['None']
-    };
-  else
-    return {
-      next: next,
-      command: ['None']
-    };
-};
-
-Editor.prototype.showCursorStep_ = function(counter, next) {
-  var result = this.waitStep_(counter, next);
-  if (result)
-    result.command = ['ShowCursor'];
-  return result;
-};
-
-Editor.prototype.typeStep_ = function(next) {
-  var diffStep = this.diff_.shift();
-  var result = {};
-  result.next = this.diff_.length ? this.typeStep_.bind(this, next) : next;
-  if (diffStep.operation == 'None') {
-    this.index_++;
-    this.length_--;
-    this.text_ = this.text_.substr(1);
-    result.command = ['MoveCursor', this.index_];
-  } else if (diffStep.operation == 'Delete') {
-    this.length_--;
-    result.command = ['Delete', this.index_];
-  } else if (diffStep.operation == 'Insert') {
-    result.command = ['Insert', this.index_, this.text_[0]];
-    this.index_++;
-    this.text_ = this.text_.substr(1);
-  }
-  return result;
+  command.index = command.offset + this.index_;
+  return this.lastCommand = command;
 };
