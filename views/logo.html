@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<style>
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../third-party/open-sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.tile {
+  width: 440px;
+  height: 280px;
+  background-color: #ddd;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 40px;
+  margin: 0;
+  /* padding-top: 8px; */
+  padding-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  text-align: center;
+  padding-top: 16px;
+  color: white;
+  background-color: #2a70e8;
+  border-radius: 0 0 8px 8px;
+}
+
+.icons {
+  display: -webkit-flex;
+  padding: 0 10px;
+  margin-bottom: 4px;
+  /* background-color: #333; */
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-left: -5px;
+  margin-right: -5px;
+  background-size: 64px 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+  -webkit-filter: grayscale(100%);
+}
+
+.icon:hover {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  -webkit-filter: none;
+}
+
+.logo {
+  height: 60px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url('../assets/menu-logo-2x.png');
+  background-size: 50%;
+  text-align: right;
+  font-size: 28px;
+  line-height: 52px;
+  color: #808088;
+  font-family: 'OpenSans-Regular';
+  -webkit-flex: 0 0 auto;
+  display: inline-block;
+}
+
+.docs.icon {
+  background-image: url('../assets/docs-icon-64.png');
+  -webkit-flex: none;
+}
+
+.hangouts.icon {
+  background-image: url('../assets/hangouts-icon-64.png');
+}
+
+.music.icon {
+  background-image: url('../assets/music-icon-64.png');
+}
+
+.store.icon {
+  background-image: url('../assets/store-icon-64.png');
+}
+
+</style>
+<div class="tile">
+  <div class="header">
+    <div class="logo"></div>
+    retail demo
+  </div>
+  <div class="icons">
+    <div class="docs icon"></div>
+    <div class="docs icon"></div>
+    <div class="hangouts icon"></div>
+    <div class="music icon"></div>
+    <div class="store icon"></div>
+    <div class="docs icon"></div>
+  </div>
+</div>
+
+<button class="resize-button">Resize</button>
+<script>
+document.querySelector('.resize-button').addEventListener('click', function() {
+  w = window.open('?', '_blank', 'width=440, height=280');
+  var body = w.document.querySelector('html');
+  console.log(440 - body.clientWidth, 280 - body.clientHeight);
+  // w.resizeBy(440 - body.clientWidth, 280 - body.clientHeight);
+});
+</script>
