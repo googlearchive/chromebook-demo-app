@@ -12,7 +12,7 @@ DocsApp.prototype.initDocument = function() {
   App.prototype.initDocument.call(this);
 
   // Set padding as the smae size of scroll width.
-  var paperContainer = this.get('.paper-container');
+  var paperContainer = this.get('.paper-scroll-region');
   var scrollSize =
       this.get('#docs-main').clientWidth -
       paperContainer.clientWidth;
@@ -35,7 +35,6 @@ DocsApp.prototype.initDocument = function() {
 };
 
 DocsApp.prototype.onInput_ = function(e) {
-  console.log(e);
   // Get difference made by input.
   var diff = calcEditDistance(this.lastText_, this.paper_.value, 1, 1, 3);
   this.lastText_ = this.paper_.value;
@@ -64,8 +63,6 @@ DocsApp.prototype.onStep_ = function() {
   // Save the selection index.
   var selectionStart = this.paper_.selectionStart;
   var selectionEnd = this.paper_.selectionEnd;
-
-  console.log(selectionStart, selectionEnd);
 
   // Find the editable phrases and adds editors to them.
   var keywordAt = this.findBotKeyword_();
@@ -137,7 +134,6 @@ DocsApp.prototype.onStep_ = function() {
  */
 DocsApp.prototype.findBotKeyword_ = function() {
   var paperText = this.paper_.value;
-  console.log(paperText);
   for (var i = 0; i < BOT_KEYWORD_MAP.length; i++) {
     for (var keyword in BOT_KEYWORD_MAP[i]) {
       if (this.usedKeyword_[keyword])
@@ -156,9 +152,14 @@ DocsApp.prototype.findBotKeyword_ = function() {
 };
 
 DocsApp.prototype.setCursorPosition_ = function(cursor, index) {
-  var pos = this.paper_.getCursorPosition(index);
-  cursor.style.left = pos.x + 'px';
-  cursor.style.top = pos.y + 'px';
+  var text = this.paper_.value.substr(0, index);
+  var measureText = this.get('.measure-text');
+  measureText.innerText = text;
+  var measureCursor = this.get('.measure-cursor');
+  var paperBounds = this.paper_.getBoundingClientRect();
+  var bounds = measureCursor.getBoundingClientRect();
+  cursor.style.left = (bounds.left - paperBounds.left) + 'px';
+  cursor.style.top = (bounds.top - paperBounds.top) + 'px';
 };
 
 DocsApp.prototype.close = function() {

@@ -43,25 +43,3 @@ PaperEditAdapter.insertChar = function(index, ch) {
 PaperEditAdapter.deleteChar = function(index) {
   this.value = this.value.substr(0, index) + this.value.substr(index + 1);
 };
-
-PaperEditAdapter.getCursorPosition = function(index) {
-  return {
-    x: 0, y:0
-  };
-  var textNodeAt = this.getTextNodeAt(index);
-  var textNode = textNodeAt.textNode;
-  var dummy = this.ownerDocument.createElement('span');
-  var originalText = textNode.nodeValue;
-  textNode.nodeValue = originalText.substr(0, textNodeAt.subindex);
-  dummy.innerText = ' ';
-  var parentNode = textNode.parentNode;
-  parentNode.insertBefore(dummy, textNode.nextSibling);
-  var paperBounds = this.getBoundingClientRect();
-  var bounds = dummy.getBoundingClientRect();
-  textNode.nodeValue = originalText;
-  parentNode.removeChild(dummy);
-  return {
-    x: (bounds.left - paperBounds.left),
-    y: (bounds.top - paperBounds.top)
-  };
-};

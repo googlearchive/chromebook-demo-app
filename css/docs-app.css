@@ -184,10 +184,9 @@
   background-size: 800px 14px;
 }
 
-#docs-app .paper-container {
+#docs-app .paper-scroll-region {
   -webkit-flex: auto;
   width: 100%;
-  position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-box-sizing: border-box;
@@ -195,34 +194,56 @@
   margin-top: 15px;
 }
 
-#docs-app .paper {
+#docs-app .paper-container {
+  position: relative;
+  margin: 5px auto;
+  width: 800px;
+}
+
+#docs-app .paper,
+#docs-app .measure {
   -webkit-box-sizing: border-box;
+  font-family: 'Arial';
+  font-size: 16px;
+  height: 1160px;
+  padding: 64px;
+  width: 800px;
+}
+
+#docs-app .paper {
   -webkit-flex: auto;
   background-color: white;
   border-style: none;
   box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
   display: block;
-  font-family: 'Arial';
-  font-size: 16px;
-  height: 1160px;
-  margin: 5px auto;
   outline: none;
   overflow: hidden;
-  padding: 64px;
   resize: none;
-  width: 800px;
+}
+
+#docs-app .measure {
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+#docs-app .measure-text {
+  white-space: pre;
 }
 
 #docs-app .cursor {
   background-color: orange;
   display: none;
-  width: 2px;
   height: 24px;
-  position: absolute;
   left: 0;
+  margin-left: -5px;
+  margin-top: -2px;
+  pointer-events: none;
+  position: absolute;
   top: 0;
-  margin-top: 0;
-  margin-left: 0;
+  width: 2px;
 }
 
 #docs-app .cursor.active {
