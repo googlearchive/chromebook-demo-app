@@ -13,7 +13,7 @@ body {
 .tile {
   width: 440px;
   height: 280px;
-  background-color: #ddd;
+  background-color: #eee;
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
@@ -33,10 +33,46 @@ h1 {
   border-radius: 0 0 8px 8px;
 }
 
+.line {
+
+}
+
+.header {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex: 1 0 auto;
+}
+
+.logo {
+  margin-left: 16px;
+  margin-right: 8px;
+  height: 60px;
+  width: 230px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url('../assets/menu-logo-2x.png');
+  background-size: contain;
+}
+
+.logo-text {
+  color: #808080;
+  font-family: 'OpenSans-Regular';
+  text-align: right;
+  font-size: 30px;
+  padding-bottom: 6px;
+}
+
+.sp {
+  -webkit-flex: 1 0 auto;
+}
+
 .icons {
   display: -webkit-flex;
   padding: 0 10px;
-  margin-bottom: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #ccc;
+  /* margin-bottom: 24px; */
   /* background-color: #333; */
 }
 
@@ -50,33 +86,47 @@ h1 {
   background-repeat: no-repeat;
   border-radius: 80px;
   -webkit-filter: grayscale(100%);
+  line-height: 80px;
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Arial Black';
+  color: #666;
+  -webkit-flex: none;
+  opacity: 0.8;
 }
 
-.icon:hover {
+.icon:hover,
+.menu.tile .menu.icon,
+.docs.tile .docs.icon,
+.hangouts.tile .hangouts.icon,
+.music.tile .music.icon,
+.store.tile .store.icon,
+.helper.tile .helper.icon {
   background-color: white;
   position: relative;
   z-index: 1;
   -webkit-filter: none;
+  opacity: 1.0;
 }
 
-.logo {
-  height: 60px;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-image: url('../assets/menu-logo-2x.png');
-  background-size: 50%;
-  text-align: right;
-  font-size: 28px;
-  line-height: 52px;
-  color: #808088;
-  font-family: 'OpenSans-Regular';
-  -webkit-flex: 0 0 auto;
-  display: inline-block;
+.docs.tile .line {
+  background-color: rgba(42, 112, 232, 0.7);
+}
+
+.hangouts.tile .line {
+  background-color: rgba(80, 170, 56, 0.7);
+}
+
+.music.tile .line {
+  background-color: rgba(250, 207, 12, 0.7);
+}
+
+.store.tile .line {
+  background-color: rgba(225, 75, 64, 0.7);
 }
 
 .docs.icon {
   background-image: url('../assets/docs-icon-64.png');
-  -webkit-flex: none;
 }
 
 .hangouts.icon {
@@ -95,24 +145,29 @@ h1 {
 <div class="tile">
   <div class="header">
     <div class="logo"></div>
-    retail demo
+    <div class="logo-text">retail demo</div>
   </div>
-  <div class="icons">
-    <div class="docs icon"></div>
+  <div class="icons line">
+    <div class="menu icon">M</div>
     <div class="docs icon"></div>
     <div class="hangouts icon"></div>
     <div class="music icon"></div>
     <div class="store icon"></div>
-    <div class="docs icon"></div>
+    <div class="helper icon">H</div>
   </div>
+
 </div>
 
 <button class="resize-button">Resize</button>
 <script>
+var buttons = document.querySelectorAll('.icon');
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('mousedown', function(klass) {
+    document.querySelector('.tile').className = 'tile ' + klass;
+  }.bind(null, buttons[i].classList[0]));
+}
 document.querySelector('.resize-button').addEventListener('click', function() {
-  w = window.open('?', '_blank', 'width=440, height=280');
+  w = window.open('?', '_blank', 'width=440, height=280, location=no');
   var body = w.document.querySelector('html');
-  console.log(440 - body.clientWidth, 280 - body.clientHeight);
-  // w.resizeBy(440 - body.clientWidth, 280 - body.clientHeight);
 });
 </script>
