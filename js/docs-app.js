@@ -22,6 +22,10 @@ DocsApp.prototype.initDocument = function() {
   this.paper_ = extend(this.get('.paper'), PaperEditAdapter);
   this.cursors_ = this.document.querySelectorAll('.cursor');
 
+  // Added the start up editing.
+  this.cursors_[0].editor = new Editor(
+      0, '', 'This is the start up string.');
+
   // Init variables.
   this.paper_.innerText = '';
   this.editors_ = [];
@@ -72,7 +76,7 @@ DocsApp.prototype.onStep_ = function() {
         continue;
       this.usedKeyword_[keywordAt.keyword] = true;
       this.cursors_[i].editor = new Editor(
-          keywordAt.index, keywordAt.keyword, 'Type', keywordAt.result);
+          keywordAt.index, keywordAt.keyword, keywordAt.result);
       break;
     }
   }

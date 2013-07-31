@@ -8,7 +8,7 @@ Async.serial = function() {
   return arguments[0];
 };
 
-var Editor = function(index, originalText, type, text) {
+var Editor = function(index, originalText, text) {
   this.index_ = index;
   this.length_ = originalText.length;
   this.text_ = text;
