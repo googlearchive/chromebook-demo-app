@@ -48,7 +48,6 @@ DocsApp.prototype.onInput_ = function(e) {
           this.setCursorPosition_(cursor, cursor.editor.lastCommand.index);
       } else {
         cursor.classList.remove('active');
-        cursor.classList.add('stop');
         cursor.editor = null;
       }
     }
