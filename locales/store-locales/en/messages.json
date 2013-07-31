@@ -1,6 +1,6 @@
 {
   "STORE_COPY": {
-    "message": "Find more apps",
+    "message": "Get more apps",
     "description": ""
   },
   "STORE_SUB_COPY_DESCRIPTION": {
@@ -8,7 +8,7 @@
     "description": ""
   },
   "STORE_DESCRIPTION": {
-    "message": "Get work done, play games, or just explore something new with thousands of apps from the Chrome Web Store.",
+    "message": "Get work done, play games, or just explore something new with apps from the Chrome Web Store.",
     "description": ""
   },
   "STORE_SECTION_THOUSANDS_TITLE": {
@@ -20,7 +20,7 @@
     "description": ""
   },
   "STORE_SECTION_OFFLINE_TITLE": {
-    "message": "Online and offline apps",
+    "message": "Offline and online",
     "description": ""
   },
   "STORE_SECTION_OFFLINE_DESCRIPTION": {
@@ -28,7 +28,7 @@
     "description": ""
   },
   "STORE_SECTION_INSTALL_TITLE": {
-    "message": "Add with a clickNo more installs",
+    "message": "Add with a click",
     "description": ""
   },
   "STORE_SECTION_INSTALL_DESCRIPTION": {

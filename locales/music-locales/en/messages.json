@@ -8,7 +8,7 @@
     "description": "The sub advertising slogan of Play.app."
   },
   "MUSIC_DESCRIPTION": {
-    "message": "Enjoy an endless collection of music and movies from the web with Google Play.",
+    "message": "Enjoy an endless collection of music from the web with Google Play Music.",
     "description": "The description of Play.app."
   },
   "MUSIC_SECTION_UPLOAD_TITLE": {
@@ -16,11 +16,11 @@
     "description": "The title of the upload section."
   },
   "MUSIC_SECTION_UPLOAD_DESCRIPTION": {
-    "message": "Bring up to 20,000 songs from your library to Google Play for free.",
+    "message": "Bring up to 20,000 songs from your iTunes® library or any music folder to Google Play for free.",
     "description": "The description of the upload section."
   },
   "MUSIC_SECTION_ANYWHERE_TITLE": {
-    "message": "Access anywhere",
+    "message": "Access it anywhere",
     "description": "The title of the anywhere section."
   },
   "MUSIC_SECTION_ANYWHERE_DESCRIPTION": {
@@ -32,7 +32,7 @@
     "description": "The title of the unlimited section."
   },
   "MUSIC_SECTION_UNLIMITED_DESCRIPTION": {
-    "message": "With All Access, enjoy unlimited listening to millions of songs, create custom radio and skip as much as you want.",
+    "message": "Get Google Play Music All Access to listen to millions of songs, create custom radio and skip as much as you want.",
     "description": "The description of the unlimited section."
   },
   "MUSIC_HINT_TITLE": {
