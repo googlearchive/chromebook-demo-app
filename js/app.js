@@ -11,7 +11,6 @@ var App = function(id, html, opt_width, opt_height, opt_transparent) {
   this.id_ = id;
   this.html_ = html;
   this.transparent_ = !!opt_transparent;
-  this.rtl_ = false;
   this.windowBoundsList_ = [
     makeCenterBounds(opt_width || screen.width, opt_height || screen.height),
     makeCenterBounds(1280, 800),
@@ -86,8 +85,8 @@ App.prototype.initDocument = function(firstTime) {
   }
 
   // Apply initial DOM state.
-  this.rtl_ = false;
-  this.toggleRTL_();
+  this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
+  this.toggleDirection_(false);
 
   // Close button.
   var closeButton = this.document.querySelector('.close');
@@ -104,7 +103,7 @@ App.prototype.initDocument = function(firstTime) {
     } else if (e.ctrlKey && e.keyCode == 83) {
       this.toggleWindowSize_();
     } else if (e.ctrlKey && e.keyCode == 68) {
-      this.toggleRTL_();
+      this.toggleDirection_(true);
     }
   }.bind(this));
 };
@@ -124,12 +123,13 @@ App.prototype.toggleWindowSize_ = function() {
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
 };
 
-App.prototype.toggleRTL_ = function() {
+App.prototype.toggleDirection_ = function(toggle) {
   // Update the direction attribute.
-  if (this.rtl_)
-    this.get('html').setAttribute('dir', 'rtl');
-  else
-    this.get('html').setAttribute('dir', 'ltr');
+  if (toggle) {
+    var html = this.get('html');
+    var oppositeDirection = {rtl: 'ltr', ltr: 'rtl'};
+    html.setAttribute('dir', oppositeDirection[html.getAttribute('dir')]);
+  }
 
   // Force to update the CSS.
   var result = this.document.evaluate(
@@ -153,9 +153,6 @@ App.prototype.toggleRTL_ = function() {
       }
     }
   }
-
-  // Toggle the property.
-  this.rtl_ = !this.rtl_;
 };
 
 App.prototype.onMessage_ = function(message) {
