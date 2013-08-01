@@ -152,22 +152,30 @@ h1, p {
   overflow: hidden;
   -webkit-user-select: none;
   text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 0;
+  -webkit-transition-property: border-bottom-width;
+  -webkit-transition-duration: 200ms;
 }
 
-.docs.button:hover .button-label {
-  border-bottom: 3px solid #2a70e8;
+.docs.button .button-label {
+  border-bottom-color: #2a70e8;
 }
 
-.hangouts.button:hover .button-label {
-  border-bottom: 3px solid #50aa38;
+.hangouts.button .button-label {
+  border-bottom-color: #50aa38;
 }
 
-.music.button:hover .button-label {
-  border-bottom: 3px solid #facf0c;
+.music.button .button-label {
+  border-bottom-color: #facf0c;
 }
 
-.store.button:hover .button-label {
-  border-bottom: 3px solid #e14b40;
+.store.button .button-label {
+  border-bottom-color: #e14b40;
+}
+
+.button:hover .button-label {
+  border-bottom-width: 4px;
 }
 
 .learn-more {
@@ -184,34 +192,42 @@ h1, p {
   color: black;
 }
 
-#menu-app .shelf-marker {
+.shelf-marker {
   width: 48px;
-  height: 4px;
+  height: 0;
   position: absolute;
-  display: none;
   bottom: 0;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 200ms;
 }
 
-#menu-app.transparent .button:hover ~ .shelf-marker {
-  display: block;
+#menu-app:not(.transparent) .shelf-marker {
+  display: none;
 }
 
-#menu-app .docs.button:hover ~ .shelf-marker {
+.docs.shelf-marker {
   left: 8px;
   background-color: #2a70e8;
 }
 
-#menu-app .hangouts.button:hover ~ .shelf-marker {
+.hangouts.shelf-marker {
   left: 60px;
   background-color: #50aa38;
 }
 
-#menu-app .music.button:hover ~ .shelf-marker {
+.music.shelf-marker {
   left: 112px;
   background-color: #facf0c;
 }
 
-#menu-app .store.button:hover ~ .shelf-marker {
+.store.shelf-marker {
   left: 164px;
   background-color: #e14b40;
+}
+
+.docs.button:hover ~ .docs.shelf-marker,
+.hangouts.button:hover ~ .hangouts.shelf-marker,
+.music.button:hover ~ .music.shelf-marker,
+.store.button:hover ~ .store.shelf-marker {
+  height: 4px;
 }
