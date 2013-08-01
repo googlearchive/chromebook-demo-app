@@ -10,9 +10,6 @@ var MENU_APP_ID = 'ejpaejipmgoifefhjkmnghkpaklpeadp';
  */
 var HELPER_EXTENSION_ID = 'dklepamkcpcemiendiebcmkdplnabpjp';
 
-// var GAME_EXTENSION_ID = 'mjajejaiccbocnmmcagnpkgceebphgpe';
-
-
 var MENU_WINDOW_ID = 'demo-menu-window';
 var DOCS_WINDOW_ID = 'demo-docs-window';
 var HANGOUTS_WINDOW_ID = 'demo-hangouts-window';

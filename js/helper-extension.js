@@ -1,3 +1,9 @@
+var ensureSampleFileAdded = function() {
+  if (localStorage['sampleFileAdded'])
+    return;
+  chrome.window.create({url: ''});
+};
+
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
     if (sender.id != MENU_APP_ID &&

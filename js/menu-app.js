@@ -12,6 +12,14 @@ MenuApp.prototype = {
   __proto__: App.prototype
 };
 
+MenuApp.prototype.start = function() {
+  App.prototype.start.call(this);
+
+  chrome.app.runtime.onLaunched.addListener(
+      this.downloadSampleFiles.bind(this));
+  this.downloadSampleFiles();
+};
+
 MenuApp.prototype.initDocument = function() {
   App.prototype.initDocument.call(this);
 
@@ -40,6 +48,42 @@ MenuApp.prototype.initDocument = function() {
   this.get('.learn-more').addEventListener('click', function() {
     chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: 'visitLearnMore'});
   });
+};
+
+MenuApp.prototype.downloadSampleFiles = function() {
+  var steps = [
+    function() {
+      chrome.storage.local.get('sampleFileDownloaded', steps.shift());
+    },
+    function(storage) {
+      var flag = !!storage.sampleFileDownloaded;
+      console.log(flag);
+      if (flag)
+        return;
+      chrome.storage.local.set({sampleFileDownloaded: true}, steps.shift());
+    },
+    function() {
+      console.log(chrome.runtime.lastError);
+      if (chrome.runtime.lastError)
+        return;
+      var files = [
+        '1995 Field Notes.docx',
+        'Arches.png',
+        'Chromebook Backup.mov',
+        'Night.png',
+        'Song.mp3'
+      ];
+      for (var i = 0; i < files.length; i++) {
+        chrome.app.window.create(
+            'downloader.html?url=' + files[i] + '&filename=' + files[i], {
+               id: 'demo-download-window',
+               singleton: false,
+               hidden: true
+            });
+      }
+    }
+  ];
+  steps.shift()();
 };
 
 new MenuApp().start();

@@ -91,7 +91,7 @@ App.prototype.initDocument = function(firstTime) {
   // Close button.
   var closeButton = this.document.querySelector('.close');
   closeButton.addEventListener('click', function() {
-    this.window.close();
+    this.close();
   }.bind(this));
 
   // Close shortcut key.
@@ -104,6 +104,9 @@ App.prototype.initDocument = function(firstTime) {
       this.toggleWindowSize_();
     } else if (e.ctrlKey && e.keyCode == 68) {
       this.toggleDirection_(true);
+    } else if (e.ctrlKey && e.keyCode == 67) {
+      console.log('Clear storage.');
+      chrome.storage.local.clear();
     }
   }.bind(this));
 };

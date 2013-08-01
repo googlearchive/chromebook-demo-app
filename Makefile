@@ -7,6 +7,7 @@ MENU_FILES = \
   js/app.js \
   js/menu-app.js \
   js/util.js \
+  js/downloader.js \
   css/common.css \
   css/menu-app.css \
   assets/menu-logo-2x.png \
@@ -19,8 +20,14 @@ MENU_FILES = \
   assets/music-icon-128.png \
   assets/store-icon-128.png \
   views/menu-app.html \
+  views/downloader.html \
   third-party/open-sans/OpenSans-Light.ttf \
-  third-party/open-sans/OpenSans-Regular.ttf
+  third-party/open-sans/OpenSans-Regular.ttf \
+  "third-party/sample-files/1995 Field Notes.docx" \
+  third-party/sample-files/Arches.png \
+  "third-party/sample-files/Chromebook Backup.mov" \
+  third-party/sample-files/Night.png \
+  third-party/sample-files/Song.mp3
 
 DOCS_FILES = \
   js/const.js \
