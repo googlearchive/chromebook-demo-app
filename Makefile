@@ -19,6 +19,8 @@ MENU_FILES = \
   assets/hangouts-icon-128.png \
   assets/music-icon-128.png \
   assets/store-icon-128.png \
+  assets/close-1x.png \
+  assets/close-2x.png \
   views/menu-app.html \
   views/downloader.html \
   third-party/open-sans/OpenSans-Light.ttf \
@@ -55,6 +57,8 @@ DOCS_FILES = \
   assets/docs-toolbar-2x.png \
   assets/docs-ruler-2x.png \
   assets/balloon-triangle-top.png \
+  assets/close-1x.png \
+  assets/close-2x.png \
   views/docs-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf
@@ -82,6 +86,8 @@ HANGOUTS_FILES = \
   assets/balloon-triangle-top.png \
   assets/balloon-triangle-bottom.png \
   assets/glasses.png \
+  assets/close-1x.png \
+  assets/close-2x.png \
   gen/third-party/glfx.js \
   gen/third-party/effects.js \
   gen/third-party/track.js \
@@ -111,6 +117,8 @@ MUSIC_FILES = \
   assets/music-play-control-2x.png \
   assets/music-pause-control-2x.png \
   assets/music-equalizer-2x.gif \
+  assets/close-1x.png \
+  assets/close-2x.png \
   views/music-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
@@ -135,6 +143,8 @@ STORE_FILES= \
   assets/store-section-thousands-2x.png \
   assets/store-section-offline-2x.png \
   assets/store-section-install-2x.png \
+  assets/close-1x.png \
+  assets/close-2x.png \
   third-party/app-tiles/store-tile-bejeweled.png \
   third-party/app-tiles/store-tile-cubeslam.png \
   third-party/app-tiles/store-tile-deezer.png \
