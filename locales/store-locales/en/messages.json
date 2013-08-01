@@ -36,11 +36,11 @@
     "description": ""
   },
   "STORE_APP_BEJEWELED_TITLE": {
-    "message": "bejeweled",
+    "message": "Bejeweled",
     "description": "The title of bejeweled application."
   },
   "STORE_APP_BEJEWELED_DETAIL": {
-    "message": "",
+    "message": "4.5 stars",
     "description": "The detailed information of bejeweled."
   },
   "STORE_APP_BEJEWELED_ORDER": {
@@ -48,11 +48,11 @@
     "description": "The order of the bejeweled application in the tile view."
   },
   "STORE_APP_CUBESLAM_TITLE": {
-    "message": "cubeslam",
+    "message": "Cube Slam",
     "description": "The title of cubeslam application."
   },
   "STORE_APP_CUBESLAM_DETAIL": {
-    "message": "",
+    "message": "4.5 Stars",
     "description": "The detailed information of cubeslam."
   },
   "STORE_APP_CUBESLAM_ORDER": {
@@ -60,11 +60,11 @@
     "description": "The order of the cubeslam application in the tile view."
   },
   "STORE_APP_DEEZER_TITLE": {
-    "message": "deezer",
+    "message": "Deezer",
     "description": "The title of deezer application."
   },
   "STORE_APP_DEEZER_DETAIL": {
-    "message": "",
+    "message": "4,000,000+ users",
     "description": "The detailed information of deezer."
   },
   "STORE_APP_DEEZER_ORDER": {
@@ -72,11 +72,11 @@
     "description": "The order of the deezer application in the tile view."
   },
   "STORE_APP_GMAIL_TITLE": {
-    "message": "gmail",
+    "message": "Gmail",
     "description": "The title of gmail application."
   },
   "STORE_APP_GMAIL_DETAIL": {
-    "message": "",
+    "message": "10,000,000+ users",
     "description": "The detailed information of gmail."
   },
   "STORE_APP_GMAIL_ORDER": {
@@ -84,11 +84,11 @@
     "description": "The order of the gmail application in the tile view."
   },
   "STORE_APP_KINDLE_TITLE": {
-    "message": "kindle",
+    "message": "Kindle Cloud Reader",
     "description": "The title of kindle application."
   },
   "STORE_APP_KINDLE_DETAIL": {
-    "message": "",
+    "message": "1,000,000+ users",
     "description": "The detailed information of kindle."
   },
   "STORE_APP_KINDLE_ORDER": {
@@ -96,11 +96,11 @@
     "description": "The order of the kindle application in the tile view."
   },
   "STORE_APP_NETFLIX_TITLE": {
-    "message": "netflix",
+    "message": "Netflix",
     "description": "The title of netflix application."
   },
   "STORE_APP_NETFLIX_DETAIL": {
-    "message": "",
+    "message": "500,000+ users",
     "description": "The detailed information of netflix."
   },
   "STORE_APP_NETFLIX_ORDER": {
@@ -108,11 +108,11 @@
     "description": "The order of the netflix application in the tile view."
   },
   "STORE_APP_PANDORA_TITLE": {
-    "message": "pandora",
+    "message": "Pandora",
     "description": "The title of pandora application."
   },
   "STORE_APP_PANDORA_DETAIL": {
-    "message": "",
+    "message": "4 stars",
     "description": "The detailed information of pandora."
   },
   "STORE_APP_PANDORA_ORDER": {
@@ -120,11 +120,11 @@
     "description": "The order of the pandora application in the tile view."
   },
   "STORE_APP_PIXLR_TITLE": {
-    "message": "pixlr",
+    "message": "Pixlr",
     "description": "The title of pixlr application."
   },
   "STORE_APP_PIXLR_DETAIL": {
-    "message": "",
+    "message": "4.5 stars",
     "description": "The detailed information of pixlr."
   },
   "STORE_APP_PIXLR_ORDER": {
@@ -136,7 +136,7 @@
     "description": "The title of plus application."
   },
   "STORE_APP_PLUS_DETAIL": {
-    "message": "",
+    "message": "1,000,000+ users",
     "description": "The detailed information of plus."
   },
   "STORE_APP_PLUS_ORDER": {
@@ -144,11 +144,11 @@
     "description": "The order of the plus application in the tile view."
   },
   "STORE_APP_REMOTEDESKTOP_TITLE": {
-    "message": "remotedesktop",
+    "message": "Chrome Remote Desktop",
     "description": "The title of remotedesktop application."
   },
   "STORE_APP_REMOTEDESKTOP_DETAIL": {
-    "message": "",
+    "message": "1,000,000+ users",
     "description": "The detailed information of remotedesktop."
   },
   "STORE_APP_REMOTEDESKTOP_ORDER": {
@@ -156,11 +156,11 @@
     "description": "The order of the remotedesktop application in the tile view."
   },
   "STORE_APP_SHEETS_TITLE": {
-    "message": "sheets",
+    "message": "Sheets in Google Drive",
     "description": "The title of sheets application."
   },
   "STORE_APP_SHEETS_DETAIL": {
-    "message": "",
+    "message": "4 stars",
     "description": "The detailed information of sheets."
   },
   "STORE_APP_SHEETS_ORDER": {
@@ -168,11 +168,11 @@
     "description": "The order of the sheets application in the tile view."
   },
   "STORE_APP_SLIDES_TITLE": {
-    "message": "slides",
+    "message": "Slides in Google Drive",
     "description": "The title of slides application."
   },
   "STORE_APP_SLIDES_DETAIL": {
-    "message": "",
+    "message": "4 stars",
     "description": "The detailed information of slides."
   },
   "STORE_APP_SLIDES_ORDER": {
@@ -180,11 +180,11 @@
     "description": "The order of the slides application in the tile view."
   },
   "STORE_APP_SPOTIFY_TITLE": {
-    "message": "spotify",
+    "message": "Spotify",
     "description": "The title of spotify application."
   },
   "STORE_APP_SPOTIFY_DETAIL": {
-    "message": "",
+    "message": "4.5 stars",
     "description": "The detailed information of spotify."
   },
   "STORE_APP_SPOTIFY_ORDER": {
@@ -192,11 +192,11 @@
     "description": "The order of the spotify application in the tile view."
   },
   "STORE_APP_TWEETDECK_TITLE": {
-    "message": "tweetdeck",
+    "message": "TweetDeck",
     "description": "The title of tweetdeck application."
   },
   "STORE_APP_TWEETDECK_DETAIL": {
-    "message": "",
+    "message": "4 stars",
     "description": "The detailed information of tweetdeck."
   },
   "STORE_APP_TWEETDECK_ORDER": {
@@ -204,11 +204,11 @@
     "description": "The order of the tweetdeck application in the tile view."
   },
   "STORE_APP_YOUTUBE_TITLE": {
-    "message": "youtube",
+    "message": "YouTube",
     "description": "The title of youtube application."
   },
   "STORE_APP_YOUTUBE_DETAIL": {
-    "message": "",
+    "message": "10,000,000+ users",
     "description": "The detailed information of youtube."
   },
   "STORE_APP_YOUTUBE_ORDER": {
