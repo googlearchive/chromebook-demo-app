@@ -4,6 +4,11 @@
   "manifest_version": 2,
   "default_locale": "en",
   "offline_enabled": true,
+  "icons": {
+    "16": "menu-icon-16.png",
+    "48": "menu-icon-48.png",
+    "128": "menu-icon-128.png"
+  },
   "permissions": [
     "storage",
     "experimental"

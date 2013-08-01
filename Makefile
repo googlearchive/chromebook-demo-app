@@ -10,6 +10,9 @@ MENU_FILES = \
   js/downloader.js \
   css/common.css \
   css/menu-app.css \
+  assets/menu-icon-16.png \
+  assets/menu-icon-48.png \
+  assets/menu-icon-128.png \
   assets/menu-logo-2x.png \
   assets/docs-icon-64.png \
   assets/hangouts-icon-64.png \
