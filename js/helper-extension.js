@@ -11,7 +11,11 @@ chrome.runtime.onMessageExternal.addListener(
       return;
     switch (request.name) {
       case 'launch':
-        chrome.management.launchApp(request.id);
+        chrome.management.launchApp(request.id, function() {
+          if (!chrome.runtime.lastError) return;
+          chrome.tabs.create({url:
+              'https://chrome.google.com/webstore/detail/' + request.id});
+        });
         break;
       case 'visitLearnMore':
         var params = {url: 'learn-more.html'};
