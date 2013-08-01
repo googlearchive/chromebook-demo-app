@@ -174,7 +174,8 @@ h1, p {
   border-bottom-color: #e14b40;
 }
 
-.button:hover .button-label {
+.button:hover .button-label,
+.button.rotated .button-label {
   border-bottom-width: 4px;
 }
 
@@ -226,8 +227,12 @@ h1, p {
 }
 
 .docs.button:hover ~ .docs.shelf-marker,
+.docs.button.rotated ~ .docs.shelf-marker,
 .hangouts.button:hover ~ .hangouts.shelf-marker,
+.hangouts.button.rotated ~ .hangouts.shelf-marker,
 .music.button:hover ~ .music.shelf-marker,
-.store.button:hover ~ .store.shelf-marker {
+.music.button.rotated ~ .music.shelf-marker,
+.store.button:hover ~ .store.shelf-marker,
+.store.button.rotated ~ .store.shelf-marker {
   height: 4px;
 }

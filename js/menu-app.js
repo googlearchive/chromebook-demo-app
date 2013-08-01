@@ -23,15 +23,22 @@ MenuApp.prototype.start = function() {
 MenuApp.prototype.initDocument = function() {
   App.prototype.initDocument.call(this);
 
-  // Update the CSS class
+  // Init rotation.
+  this.inHover_ = 0;
+  this.rotationCounter_ = 0;
+  this.rotationID_ = setInterval(this.onStep_.bind(this), 500);
+  this.onStep_();
+
+  // Update the CSS class.
   var appFrame = this.get('.app-frame');
   if (this.isTransparent_)
     appFrame.classList.add('transparent');
   appFrame.classList.remove('loading');
 
-  // Child application buttons
+  // Child application buttons.
   var buttons = this.document.querySelectorAll('.button');
   for (var i = 0; i < buttons.length; i++) {
+    // Click - launch the child applications.
     buttons[i].addEventListener('click', function(index) {
       var id = [
         DOCS_APP_ID,
@@ -42,12 +49,46 @@ MenuApp.prototype.initDocument = function() {
       chrome.runtime.sendMessage(
           HELPER_EXTENSION_ID, {name: 'launch', id: id});
     }.bind(this, i));
+
+    // Hover - reset rotation counter.
+    buttons[i].addEventListener('mouseover', this.onHover_.bind(this, true));
+    buttons[i].addEventListener('mouseout', this.onHover_.bind(this, false));
   }
 
-  // Learn more link
+  // Learn more link.
   this.get('.learn-more').addEventListener('click', function() {
     chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: 'visitLearnMore'});
   });
+};
+
+MenuApp.prototype.close = function() {
+  if (this.rotationID_) {
+    clearInterval(this.rotationID_);
+    this.rotationID_ = null;
+  }
+  App.prototype.close.call(this);
+};
+
+MenuApp.prototype.onHover_ = function(f) {
+  this.inHover_ = f;
+  this.rotationCounter_ = 0;
+  this.onStep_();
+};
+
+MenuApp.prototype.onStep_ = function() {
+  // Rotate the highlight bars.
+  var buttons = [
+    '.docs.button',
+    '.hangouts.button',
+    '.music.button',
+    '.store.button'
+  ];
+  var step = ~~(this.rotationCounter_ / 2) - 2;
+  var target = step < 0 || (step % 3) == 2 ? -1 : ~~(step / 3) % buttons.length;
+  for (var i = 0; i < buttons.length; i++) {
+    this.get(buttons[i]).classList.toggle('rotated', target == i);
+  }
+  this.rotationCounter_ = this.inHover_ ? 0 : this.rotationCounter_ + 1;
 };
 
 MenuApp.prototype.downloadSampleFiles = function() {
