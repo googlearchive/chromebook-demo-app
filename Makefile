@@ -187,7 +187,7 @@ crx: packages
 
 zip: packages
 	for x in ${TARGETS}; \
-	  do script/remove-entry packages/demo-$$x/manifest.json key; \
+	  do scripts/remove-entry packages/demo-$$x/manifest.json key; \
 	     zip -r packages/demo-$$x.zip packages/demo-$$x; \
 	done
 
