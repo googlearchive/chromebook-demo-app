@@ -33,6 +33,7 @@ h1, p {
   background-color: white;
   display: -webkit-flex;
   -webkit-flex-direction: column;
+  overflow: hidden;
 }
 
 #menu-app.loading #menu-window {
@@ -96,6 +97,21 @@ h1, p {
   margin-top: 32px;
 }
 
+@-webkit-keyframes pop-in {
+  from {
+    top: 200px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.button, .learn-more {
+  position: relative;
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation: pop-in 0.8s cubic-bezier(0.130, 0.250, 0.515, 2.50);
+}
+
 .button {
   width: 160px;
   height: 175px;
@@ -103,6 +119,31 @@ h1, p {
   -webkit-margin-start: 32px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+.docs.button {
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.5s;
+}
+
+.hangouts.button {
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.7s;
+}
+
+.music.button {
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.9s;
+}
+
+.store.button {
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-delay: 1.1s;
+}
+
+.learn-more {
+  -webkit-animation-fill-mode: backwards;
+  -webkit-animation-delay: 1.3s;
 }
 
 .button * {
