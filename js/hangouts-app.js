@@ -19,6 +19,41 @@ HangoutsApp.prototype = {
 HangoutsApp.prototype.initDocument = function() {
   App.prototype.initDocument.call(this);
 
+  // Get elements.
+  this.canvas_ = this.get('.video-canvas');
+  this.canvasContext_ = this.canvas_.getContext('2d');
+  this.videoSource_ = this.get('.video-source');
+
+  // Reset variables.
+  var effects = this.effects_.data;
+  this.effectIndex_ = 0;
+  this.frame_ = 0;
+  this.track_ = {faces:[]};
+  for (var i = 0; i < effects.length; i++) {
+    effects[i].index = i;
+    effects[i].count = 0;
+  }
+  effects[effects.length - 1].count = -1;
+
+  // Register the events.
+  this.get('.effects.button').addEventListener('click', function() {
+    var counts = [];
+    for (var i = 0; i < effects.length; i++) {
+      var effect = effects[i];
+      if (!counts[effect.count])
+        counts[effect.count] = [];
+      counts[effect.count].push(effects[i]);
+    }
+    for (var i = -1; i < effects.length; i++) {
+      if (!counts[i])
+        continue;
+      var target = counts[i][~~(Math.random() * counts[i].length)];
+      target.count++;
+      this.effectIndex_ = target.index;
+      break;
+    }
+  }.bind(this));
+
   // Init camera.
   navigator.webkitGetUserMedia(
     {video: {mandatory: {maxWidth: 640, maxHeight: 360}}},
@@ -26,28 +61,11 @@ HangoutsApp.prototype.initDocument = function() {
       if (this.videoInitialized_)
         return;
 
-      // Register the events.
-      this.get('.effects.button').addEventListener('click', function() {
-        var nextEffextIndex;
-        do {
-          nextEffextIndex = ~~(Math.random() * this.effects_.data.length);
-        } while (nextEffextIndex == this.effectsIndex_);
-        this.effectIndex_ = nextEffextIndex;
-      }.bind(this));
-
       // Initialize the video.
-      var URL = this.window.URL;
-      var url = URL.createObjectURL(localMediaStream);
-      var videoSource = this.get('.video-source');
-      videoSource.src = url;
-      videoSource.play();
-      this.videoSource_ = videoSource;
+      this.videoSource_.src =
+          this.window.URL.createObjectURL(localMediaStream);
+      this.videoSource_.play();
       this.mediaStream_ = localMediaStream;
-      this.canvas_ = this.get('.video-canvas');
-      this.canvasContext_ = this.canvas_.getContext('2d');
-      this.effectIndex_ = 0;
-      this.frame_ = 0;
-      this.track_ = {faces:[]};
       this.videoInitialized_ = true;
       this.renderFrame_();
     }.bind(this),
