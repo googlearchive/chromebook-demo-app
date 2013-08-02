@@ -57,7 +57,6 @@ App.prototype.onWindowCreated_ = function(window) {
   this.window = window.contentWindow;
   this.windowBoundsIndex_ = 0;
   this.toggleWindowSize_();
-  window.show();
 
   // Init the document.
   this.document = window.contentWindow.document;
@@ -91,7 +90,7 @@ App.prototype.initDocument = function(firstTime) {
     this.close();
   }.bind(this));
 
-  // Close shortcut key.
+  // Define shortcut key.
   var body = this.document.getElementsByTagName('body')[0];
   body.addEventListener('keydown', function(e) {
     // Closing
@@ -106,6 +105,9 @@ App.prototype.initDocument = function(firstTime) {
       chrome.storage.local.clear();
     }
   }.bind(this));
+
+  // Show window.
+  this.appWindow.show();
 };
 
 App.prototype.close = function() {
