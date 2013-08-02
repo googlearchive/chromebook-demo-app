@@ -14,8 +14,10 @@ StoreApp.prototype.initDocument = function() {
   for (var i = 0; i < apps.length; i++) {
     apps[i].addEventListener('click', function(app) {
       var id = app.getAttribute('data-id');
-      console.log(id);
-      chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: 'launch', id: id});
+      for (var j = 0; j < HELPER_EXTENSION_ID_LIST.length; j++) {
+        chrome.runtime.sendMessage(
+            HELPER_EXTENSION_ID_LIST[j], {name: 'launch', id: id});
+      }
     }.bind(this, apps[i]));
   }
 };

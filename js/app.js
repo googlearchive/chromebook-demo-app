@@ -27,15 +27,12 @@ App.prototype.start = function() {
 
 App.prototype.onLaunched_ = function() {
   // If it is a child app, Close the other child apps.
-  var childAppIDs = [DOCS_APP_ID, HANGOUTS_APP_ID, MUSIC_APP_ID, STORE_APP_ID];
-  var isChildApp = false;
-  for (var i = 0; i < childAppIDs.length; i++) {
-    if (childAppIDs[i] == chrome.runtime.id) {
-      isChildApp = true;
-      childAppIDs.splice(i, 1);
-    }
-  }
-  if (isChildApp) {
+  var childAppIDs = [].concat(
+      DOCS_APP_ID_LIST, HANGOUTS_APP_ID_LIST,
+      MUSIC_APP_ID_LIST, STORE_APP_ID_LIST);
+  var idIndex = childAppIDs.indexOf(chrome.runtime.id);
+  if (idIndex != -1) {
+    childAppIDs.splice(idIndex, 1);
     for (var i = 0; i < childAppIDs.length; i++) {
       chrome.runtime.sendMessage(childAppIDs[i], {name: 'close'});
     }

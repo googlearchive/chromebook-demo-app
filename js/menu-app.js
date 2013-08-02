@@ -41,13 +41,15 @@ MenuApp.prototype.initDocument = function() {
     // Click - launch the child applications.
     buttons[i].addEventListener('click', function(index) {
       var id = [
-        DOCS_APP_ID,
-        HANGOUTS_APP_ID,
-        MUSIC_APP_ID,
-        STORE_APP_ID
+        DOCS_APP_ID_LIST,
+        HANGOUTS_APP_ID_LIST,
+        MUSIC_APP_ID_LIST,
+        STORE_APP_ID_LIST
       ][index];
-      chrome.runtime.sendMessage(
-          HELPER_EXTENSION_ID, {name: 'launch', id: id});
+      for (var j = 0; j < HELPER_EXTENSION_ID_LIST.length; j++) {
+        chrome.runtime.sendMessage(
+            HELPER_EXTENSION_ID_LIST[j], {name: 'launch', id: id});
+      }
     }.bind(this, i));
 
     // Hover - reset rotation counter.
@@ -57,7 +59,10 @@ MenuApp.prototype.initDocument = function() {
 
   // Learn more link.
   this.get('.learn-more').addEventListener('click', function() {
-    chrome.runtime.sendMessage(HELPER_EXTENSION_ID, {name: 'visitLearnMore'});
+    for (var i = 0; i < HELPER_EXTENSION_ID_LIST.length; i++) {
+      chrome.runtime.sendMessage(
+          HELPER_EXTENSION_ID_LIST[i], {name: 'visitLearnMore'});
+    }
   });
 };
 
@@ -98,13 +103,11 @@ MenuApp.prototype.downloadSampleFiles = function() {
     },
     function(storage) {
       var flag = !!storage.sampleFileDownloaded;
-      console.log(flag);
       if (flag)
         return;
       chrome.storage.local.set({sampleFileDownloaded: true}, steps.shift());
     },
     function() {
-      console.log(chrome.runtime.lastError);
       if (chrome.runtime.lastError)
         return;
       var files = [

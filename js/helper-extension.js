@@ -6,17 +6,18 @@ var ensureSampleFileAdded = function() {
 
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    if (sender.id != MENU_APP_ID &&
-        sender.id != STORE_APP_ID)
+    if ([].concat(MENU_APP_ID_LIST, STORE_APP_ID_LIST).indexOf(sender.id) == -1)
       return;
     switch (request.name) {
       case 'launch':
-        chrome.management.launchApp(request.id, function() {
-          if (!chrome.runtime.lastError) return;
-          chrome.tabs.create({url:
-              'https://chrome.google.com/webstore/detail/' + request.id});
-        });
+        var ids = request.id;
+        if (!(ids instanceof Array))
+          ids = [ids];
+        for (var i = 0; i < ids.length; i++) {
+          chrome.management.launchApp(ids[i]);
+        }
         break;
+
       case 'visitLearnMore':
         var params = {url: 'learn-more.html'};
         chrome.tabs.create(params, function(tab) {
