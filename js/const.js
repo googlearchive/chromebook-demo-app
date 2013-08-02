@@ -1,8 +1,23 @@
-var DOCS_APP_ID_LIST = ['hniomhdmdnlgdfieanjadkdjkihjjfpf'];
-var HANGOUTS_APP_ID_LIST = ['bbfdbpldnkjjakidjnngddapfpmkpigp'];
-var MUSIC_APP_ID_LIST = ['kahjkkebhajdmaphhlommkhbcononjal'];
-var STORE_APP_ID_LIST = ['niichfgnefmnhfkmchpjjfdelgpillkc'];
-var MENU_APP_ID_LIST = ['ejpaejipmgoifefhjkmnghkpaklpeadp'];
+var DOCS_APP_ID_LIST = [
+    'hniomhdmdnlgdfieanjadkdjkihjjfpf',
+    'npnjdccdffhdndcbeappiamcehbhjibf'
+];
+var HANGOUTS_APP_ID_LIST = [
+    'bbfdbpldnkjjakidjnngddapfpmkpigp',
+    'cgmlfbhkckbedohgdepgbkflommbfkep'
+];
+var MUSIC_APP_ID_LIST = [
+    'kahjkkebhajdmaphhlommkhbcononjal',
+    'onbhgdmifjebcabplolilidlpgeknifi'
+];
+var STORE_APP_ID_LIST = [
+    'niichfgnefmnhfkmchpjjfdelgpillkc',
+    'dhmdaeekeihmajjnmichlhiffffdbpde'
+];
+var MENU_APP_ID_LIST = [
+    'ejpaejipmgoifefhjkmnghkpaklpeadp',
+    'nhpmmldpbfjofkipjaieeomhnmcgihfm'
+];
 
 /**
  * The helper extension ID list.
