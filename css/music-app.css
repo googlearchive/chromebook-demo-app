@@ -184,7 +184,6 @@
   background-image: url('music-equalizer-2x.gif');
   background-size: 24px 24px;
   position: absolute;
-  right: 10px;
   bottom: 10px;
   display: none;
   pointer-events: none;
@@ -192,6 +191,14 @@
 
 .music.play .equalizer {
   display: block;
+}
+
+[dir=ltr] .equalizer {
+  right: 10px;
+}
+
+[dir=rtl] .equalizer {
+  left: 10px;
 }
 
 #music-app .music-name {
