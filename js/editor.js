@@ -75,7 +75,11 @@ Editor.buildCommands = function(index, source, result) {
     step.done = true;
   }
 
-  commands.push({name: 'HideCursor', frame: 1});
+  var lastOffset = commands[commands.length - 1].offset;
+  if (commands[commands.length - 1].name == 'Insert')
+    lastOffset++;
+  commands.push({name: 'ShowCursor', frame: 10, offset: lastOffset});
+  commands.push({name: 'Exit'});
   return commands;
 };
 

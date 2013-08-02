@@ -93,10 +93,10 @@ DocsApp.prototype.onStep_ = function() {
     }
     switch (command.name) {
       case 'HideCursor':
-        this.cursors_[i].classList.remove('active');
+        this.cursors_[i].classList.remove('active', 'typing');
         break;
       case 'ShowCursor':
-        this.cursors_[i].classList.add('active');
+        this.cursors_[i].classList.add('active', 'typing');
         this.setCursorPosition_(this.cursors_[i], command.index);
         break;
       case 'MoveCursor':
@@ -129,7 +129,7 @@ DocsApp.prototype.onStep_ = function() {
         break;
       case 'Exit':
         this.cursors_[i].editor = null;
-        this.cursors_[i].classList.remove('active');
+        this.cursors_[i].classList.remove('typing');
         break;
     }
   }

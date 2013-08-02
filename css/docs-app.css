@@ -256,6 +256,7 @@
   -webkit-margin-start: -4px;
   -webkit-background-clip: content-box;
   padding: 0 4px;
+  cursor: text;
 }
 
 #docs-app .cursor.active {
@@ -272,6 +273,7 @@
   display: block;
   height: 6px;
   left: 2px;
+  pointer-events: none;
   position: absolute;
   width: 6px;
 }
@@ -294,9 +296,12 @@
   pointer-events: none;
   position: absolute;
   white-space: nowrap;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 200ms;
 }
 
-#docs-app .cursor:hover::after {
+#docs-app .cursor:hover::after,
+#docs-app .cursor.typing::after {
   opacity: 1;
 }
 
