@@ -257,16 +257,29 @@ body {
   top: 100%;
 }
 
-.balloon.triangle-left {
+[dir=ltr] .balloon.triangle-left {
   left: 100%;
   margin-left: 12px;
 }
 
+[dir=rtl] .balloon.triangle-left {
+  right: 100%;
+  margin-right: 12px;
+}
+
 .balloon.triangle-left::after {
-  background-image: url('balloon-triangle-left.png');
   top: 50%;
   margin-top: -11px;
   width: 11px;
   height: 22px;
+}
+
+[dir=ltr] .balloon.triangle-left::after {
+  background-image: url('balloon-triangle-left.png');
   right: 100%;
+}
+
+[dir=rtl] .balloon.triangle-left::after {
+  background-image: url('balloon-triangle-right.png');
+  left: 100%;
 }

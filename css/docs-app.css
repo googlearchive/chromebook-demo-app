@@ -159,7 +159,14 @@
 
 #docs-app .docs-menu .balloon {
   width: 300px;
+}
+
+[dir=ltr] #docs-app .docs-menu .balloon {
   left: 0px;
+}
+
+[dir=rtl] #docs-app .docs-menu .balloon {
+  right: 0px;
 }
 
 #docs-app .docs-toolbar {

@@ -95,7 +95,6 @@
 
 .side-button .balloon {
   top: -5px;
-  right: -211px;
   width: 200px;
   line-height: 14px;
   font-size: 12px;
@@ -103,6 +102,14 @@
   height: 55px;
   -webkit-box-sizing: border-box;
   text-align: left;
+}
+
+[dir=ltr] .side-button .balloon {
+  right: -211px;
+}
+
+[dir=rtl] .side-button .balloon {
+  left: -211px;
 }
 
 #music-app .music-container {

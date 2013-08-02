@@ -117,6 +117,7 @@ MUSIC_FILES = \
   assets/music-section-upload-2x.png \
   assets/music-section-unlimited-2x.png \
   assets/balloon-triangle-left.png \
+  assets/balloon-triangle-right.png \
   assets/music-play-control-2x.png \
   assets/music-pause-control-2x.png \
   assets/music-equalizer-2x.gif \
