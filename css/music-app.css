@@ -188,31 +188,48 @@
 #music-app .music-name {
   font-family: 'Roboto-Light', sans-serif;
   color: #444;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
   margin: 0 8px;
+  height: 20px;
+  box-sizing: border-box;
+  line-height: 16px;
+  box-sizing: border-box;
+  padding-top: 4px;
 }
 
 #music-app .music.main .music-name {
-  margin-top: 16px;
+  margin: 16px 16px 0;
 }
 
 #music-app .artist-name {
   font-family: 'Roboto-Light', sans-serif;
   color: #aaa;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
+  height: 20px;
   margin: 0 8px;
   -webkit-flex: 1 0 auto;
 }
 
+#music-app .music.main .artist-name {
+  margin: 0 16px;
+}
+
 #music-app .music-footer {
-  margin: 0 8px 2px 8px;
+  margin: 2px 8px;
   border-top: 1px solid #eee;
   font-family: 'Roboto-ThinItalic', sans-serif;
   color: #8d8d8d;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 15px;
+  height: 30px;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+}
+
+#music-app .music.main .music-footer {
+  /* margin: 2px 16px; */
 }
 
 /**
