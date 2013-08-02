@@ -89,6 +89,7 @@ Editor.prototype.applyIndexMap = function(indexMap) {
   // Step.
   if (indexMap.isRangeChanged(this.index_, this.length_))
     return false;
+  this.index_ = indexMap.map(this.index_);
   this.lastCommand.index = this.lastCommand.offset + this.index_;
   return true;
 };
