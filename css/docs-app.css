@@ -248,33 +248,56 @@
   background-color: orange;
   display: none;
   height: 24px;
-  left: 0;
   margin-top: 0;
-  pointer-events: none;
   position: absolute;
-  top: 0;
-  width: 1px;
-  height: 18px;
+  width: 2px;
+  height: 24px;
+  margin-top: -3px;
+  -webkit-margin-start: -4px;
+  -webkit-background-clip: content-box;
+  padding: 0 4px;
 }
 
 #docs-app .cursor.active {
   display: block;
 }
 
+/**
+ * Small box at the top of cursor.
+ */
+#docs-app .cursor::before {
+  background-color: orange;
+  bottom: 24px;
+  content: '';
+  display: block;
+  height: 6px;
+  left: 2px;
+  position: absolute;
+  width: 6px;
+}
+
+/**
+ * Name box at the top of cursor.
+ */
 #docs-app .cursor::after {
+  background-color: orange;
+  bottom: 24px;
+  color: white;
   content: attr(data-user-name);
   display: inline;
-  font-size: 13px;
   font-family: 'Arial', sans-serif;
-  line-height: 12px;
-  background-color: orange;
+  font-size: 10px;
+  left: 2px;
+  line-height: 10px;
+  opacity: 0;
+  padding: 4px;
+  pointer-events: none;
   position: absolute;
   white-space: nowrap;
-  left: -8px;
-  top: -23px;
-  line-height: 13px;
-  padding: 5px 10px;
-  pointer-events: none;
+}
+
+#docs-app .cursor:hover::after {
+  opacity: 1;
 }
 
 /**
