@@ -94,5 +94,13 @@
   "DOCS_BALLOON_TOOLBAR": {
     "message": "Create tables, justify text and change font colors to your heart’s content",
     "description": ""
+  },
+  "DOCS_STARTING_MESSAGE": {
+    "message": "Roses are.....",
+    "description": ""
+  },
+  "DOCS_USER_CHARLES": {
+    "message": "Charles",
+    "description": ""
   }
 }

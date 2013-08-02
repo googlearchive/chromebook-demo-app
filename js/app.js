@@ -63,17 +63,25 @@ App.prototype.onWindowCreated_ = function(window) {
   callAfterLoading(window.contentWindow, this.initDocument.bind(this));
 };
 
+App.queryXPath = function(doc, xpath) {
+  var xPathResult = doc.evaluate(
+      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+  var results = [];
+  for (var i = 0; i < xPathResult.snapshotLength; i++) {
+    var node = xPathResult.snapshotItem(i);
+    results.push(node);
+  }
+  return results;
+};
+
 App.prototype.initDocument = function(firstTime) {
-  // Apply the locale messages.
-  var result = this.document.evaluate(
-      '//text()[contains(., \'__MSG_\')]',
-      this.document,
-      null,
-      XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
-      null);
-  for (var i = 0; i < result.snapshotLength; i++) {
-    var textNode = result.snapshotItem(i);
-    textNode.nodeValue = textNode.nodeValue.replace(
+  var textNodes = App.queryXPath(
+      this.document, '//text()[contains(., \'__MSG_\')]');
+  var attrNodes = App.queryXPath(
+      this.document, '//@*[contains(., \'__MSG_\')]');
+  var nodes = [].concat(textNodes, attrNodes);
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].nodeValue = nodes[i].nodeValue.replace(
         /__MSG_([a-zA-Z0-9_]+)__/g,
         function(str) {
           return chrome.i18n.getMessage(RegExp.$1);
