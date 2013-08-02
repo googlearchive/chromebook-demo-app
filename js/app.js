@@ -101,8 +101,9 @@ App.prototype.initDocument = function(firstTime) {
     } else if (e.ctrlKey && e.keyCode == 68) {
       this.toggleDirection_(true);
     } else if (e.ctrlKey && e.keyCode == 67) {
-      console.log('Clear storage.');
       chrome.storage.local.clear();
+    } else if (e.ctrlKey && e.keyCode == 82) {
+      chrome.runtime.reload();
     }
   }.bind(this));
 
