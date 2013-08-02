@@ -174,13 +174,20 @@ body {
   height: 24px;
   border-style: none;
   position: absolute;
-  right: 32px;
   top: 16px;
   z-index: 1;
   opacity: 0.8;
   background-color: transparent;
   background-image:
       -webkit-image-set(url('close-1x.png') 1x, url('close-2x.png') 2x);
+}
+
+[dir=ltr] .app-frame .close {
+  right: 32px;
+}
+
+[dir=rtl] .app-frame .close {
+  left: 32px;
 }
 
 .app-frame .close:hover {
