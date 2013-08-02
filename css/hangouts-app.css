@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 #hangouts-app .app-icon {
   background-image: -webkit-image-set(
       url('hangouts-icon-64.png') 1x,

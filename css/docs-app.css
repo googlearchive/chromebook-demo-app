@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 #docs-app .app-icon {
   background-image: -webkit-image-set(
       url('docs-icon-64.png') 1x,
