@@ -68,7 +68,6 @@ Editor.buildCommands = function(index, source, result) {
     if (step.operation != 'Insert')
       continue;
     var offset = Editor.calcOffset_(diff.slice(0, i));
-    console.log('offset', offset, i);
     for (j = 0; j < step.element.length; j++) {
       commands.push(
           {name: 'Insert', offset: offset + j, ch: step.element[j]});

@@ -75,30 +75,30 @@
   position: absolute;
 }
 
-#docs-app .user-icon.c {
+#docs-app .user-icon.charles {
   background-color: #13955c;
-  background-image: url('docs-user-c-2x.png');
+  background-image: url('docs-user-charles-2x.png');
 }
 
-#docs-app .user-icon.c::after {
+#docs-app .user-icon.charles::after {
   background-color: #13955c;
 }
 
-#docs-app .user-icon.e {
+#docs-app .user-icon.edgar {
   background-color: #f4b400;
-  background-image: url('docs-user-e-2x.png');
+  background-image: url('docs-user-edgar-2x.png');
 }
 
-#docs-app .user-icon.e::after {
+#docs-app .user-icon.edgar::after {
   background-color: #f4b400;
 }
 
-#docs-app .user-icon.f {
+#docs-app .user-icon.fredrick {
   background-color: #9e69af;
-  background-image: url('docs-user-f-2x.png');
+  background-image: url('docs-user-fredrick-2x.png');
 }
 
-#docs-app .user-icon.f::after {
+#docs-app .user-icon.fredrick::after {
   background-color: #9e69af;
 }
 
@@ -214,6 +214,7 @@
   -webkit-box-sizing: border-box;
   font-family: 'Arial';
   font-size: 16px;
+  line-height: 18px;
   height: 1160px;
   padding: 64px;
   width: 800px;
@@ -238,7 +239,8 @@
   visibility: hidden;
 }
 
-#docs-app .measure-text {
+#docs-app .measure-text,
+#docs-app .measure-cursor {
   white-space: pre;
 }
 
@@ -247,34 +249,31 @@
   display: none;
   height: 24px;
   left: 0;
-  margin-left: -5px;
-  margin-top: -2px;
+  margin-top: 0;
   pointer-events: none;
   position: absolute;
   top: 0;
-  width: 2px;
+  width: 1px;
+  height: 18px;
 }
 
 #docs-app .cursor.active {
   display: block;
 }
 
-#docs-app .cursor.stop {
-  background-color: red;
-  display: block;
-}
-
 #docs-app .cursor::after {
-  content: attr(user-name);
+  content: attr(data-user-name);
   display: inline;
-  font-size: 10px;
+  font-size: 13px;
+  font-family: 'Arial', sans-serif;
   line-height: 12px;
   background-color: orange;
   position: absolute;
   white-space: nowrap;
-  left: -4px;
-  top: -14px;
-  padding: 1px;
+  left: -8px;
+  top: -23px;
+  line-height: 13px;
+  padding: 5px 10px;
   pointer-events: none;
 }
 

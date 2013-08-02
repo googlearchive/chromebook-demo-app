@@ -23,8 +23,7 @@ DocsApp.prototype.initDocument = function() {
   this.cursors_ = this.document.querySelectorAll('.cursor');
 
   // Added the start up editing.
-  this.cursors_[0].editor = new Editor(
-      0, '', 'This is the start up string.');
+  this.cursors_[0].editor = new Editor(0, '', 'Roses are.....');
 
   // Init variables.
   this.paper_.innerText = '';

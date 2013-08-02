@@ -53,9 +53,9 @@ DOCS_FILES = \
   assets/docs-section-group-2x.png \
   assets/docs-section-backup-2x.png \
   assets/docs-section-anywhere-2x.png \
-  assets/docs-user-c-2x.png \
-  assets/docs-user-e-2x.png \
-  assets/docs-user-f-2x.png \
+  assets/docs-user-charles-2x.png \
+  assets/docs-user-edgar-2x.png \
+  assets/docs-user-fredrick-2x.png \
   assets/docs-share-2x.png \
   assets/docs-toolbar-2x.png \
   assets/docs-ruler-2x.png \
