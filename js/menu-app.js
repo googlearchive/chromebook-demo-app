@@ -5,7 +5,7 @@ var MenuApp = function() {
   var width = this.isTransparent_ ? 0 : 800;
   var height = this.isTransparent_ ? 0 : 600;
   App.call(this, MENU_WINDOW_ID, 'menu-app.html',
-           width, height, this.isTransparentUsing_);
+           width, height, this.isTransparent_);
 };
 
 MenuApp.prototype = {
