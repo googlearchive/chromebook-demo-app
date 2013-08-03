@@ -102,5 +102,13 @@
   "DOCS_USER_CHARLES": {
     "message": "Charles",
     "description": ""
+  },
+  "DOCS_USER_EDGAR": {
+    "message": "Edgar",
+    "description": ""
+  },
+  "DOCS_USER_FREDRICK": {
+    "message": "Fredrick",
+    "description": ""
   }
 }

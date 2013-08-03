@@ -31,6 +31,8 @@ DocsApp.prototype.initDocument = function() {
   this.editors_ = [];
   this.lastText_ = '';
   this.usedKeyword_ = {};
+  this.nextCursorIndex_ = 1;
+  this.editingCounter_ = 0;
 
   // Register events.
   this.paper_.addEventListener('input', this.onInput_.bind(this));
@@ -53,15 +55,37 @@ DocsApp.prototype.onInput_ = function(e) {
  */
 DocsApp.prototype.onStep_ = function() {
   // Find the editable phrases and adds editors to them.
-  var keywordAt = this.findBotKeyword_();
-  if (keywordAt) {
-    for (var i = 0; i < this.cursors_.length; i++) {
-      if (this.cursors_[i].editor)
-        continue;
-      this.usedKeyword_[keywordAt.keyword] = true;
-      this.cursors_[i].editor = new Editor(
-          keywordAt.index, keywordAt.keyword, keywordAt.result);
-      break;
+  if (this.editingCounter_ > 0) {
+    this.editingCounter_--;
+  } else {
+    var keywordAt = this.findBotKeyword_();
+    if (keywordAt) {
+      // Check if no other editors are editing around the keyword.
+      var conflict = false;
+      for (var j = 0; j < this.cursors_.length; j++) {
+        var editor = this.cursors_[j].editor;
+        if (!editor)
+          continue;
+        if (!(keywordAt.index + keywordAt.keyword.length < editor.index ||
+              editor.index + editor.length < keywordAt.index)) {
+          keywordAt = null;
+          break;
+        }
+      }
+    }
+    if (keywordAt) {
+      for (var i = 0; i < this.cursors_.length; i++) {
+        var cursor = this.cursors_[
+            (i + this.nextCursorIndex_) % this.cursors_.length];
+        if (cursor.editor)
+          continue;
+        this.usedKeyword_[keywordAt.keyword] = true;
+        cursor.editor = new Editor(
+            keywordAt.index, keywordAt.keyword, keywordAt.result);
+        this.nextCursorIndex_++;
+        this.editingCounter_ = ~~(Math.random() * 100);
+        break;
+      }
     }
   }
 
