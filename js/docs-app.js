@@ -92,8 +92,11 @@ DocsApp.prototype.onStep_ = function() {
   // Drive the existing editors.
   for (var i = 0; i < this.cursors_.length; i++) {
     var editor = this.cursors_[i].editor;
-    if (!editor)
+    if (!editor) {
+      if (this.cursors_[i].index === 0)
+        this.cursors_[i].classList.remove('active', 'typing');
       continue;
+    }
     var selectionStart = this.paper_.selectionStart;
     var selectionEnd = this.paper_.selectionEnd;
     var command = editor.step();
@@ -174,7 +177,17 @@ DocsApp.prototype.findBotKeyword_ = function() {
     for (var keyword in BOT_KEYWORD_MAP[i]) {
       if (this.usedKeyword_[keyword])
         continue;
-      var index = paperText.indexOf(' ' + keyword + ' ');
+      var candidates = [
+        ' ' + keyword + ' ',
+        ' ' + keyword + '.',
+        ' ' + keyword + ','
+      ];
+      var index = -1;
+      for (var j = 0; j < candidates.length; j++) {
+        index = paperText.indexOf(candidates[j]);
+        if (index != -1)
+          break;
+      }
       if (index == -1)
         continue;
       return {

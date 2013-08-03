@@ -99,7 +99,7 @@ IndexMap.fromDiff = function(diff) {
       case 'Insert':
         if (!lastBlock.inserted) {
           lastBlock = {
-            index: lastBlock.index + lastBlock.length,
+            index: lastBlock.index + lastBlock.length + 1,
             length: 0,
             offset: lastBlock.offset,
             inserted: true
