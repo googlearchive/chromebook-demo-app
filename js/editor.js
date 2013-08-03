@@ -1,16 +1,6 @@
-var Async = {};
-Async.serial = function() {
-  while (arguments.length > 1) {
-    var next = Array.prototype.pop.call(arguments);
-    arguments[arguments.length - 1] =
-      arguments[arguments.length - 1].bind(null, next);
-  }
-  return arguments[0];
-};
-
 var Editor = function(index, originalText, text) {
-  this.index_ = index;
-  this.length_ = originalText.length;
+  this.index = index;
+  this.length = originalText.length;
   this.text_ = text;
   this.commands_ = Editor.buildCommands(index, originalText, text);
   this.diff_ = calcEditDistance(originalText, text, 1, 1, 3);
@@ -87,8 +77,8 @@ Editor.prototype.applyIndexMap = function(indexMap) {
   // Ensure that the target string is not touched by a user.
   // Update the index.
   // Step.
-  var changed = indexMap.isRangeChanged(this.index_, this.length_);
-  this.index_ = indexMap.map(this.index_);
+  var changed = indexMap.isRangeChanged(this.index, this.length);
+  this.index = indexMap.map(this.index);
   if (changed)
     this.commands_ = [{name: 'Exit'}];
 };
@@ -101,18 +91,18 @@ Editor.prototype.step = function() {
   else
     command = this.commands_.shift();
   if (command.name == 'Insert')
-    this.length_++;
+    this.length++;
   else if (command.name == 'Delete')
-    this.length_--;
+    this.length--;
   return this.addIndexProperty_(command);
 };
 
 Editor.prototype.addIndexProperty_ = function(command) {
   if (typeof command.offset == 'number') {
-    command.index = command.offset + this.index_;
+    command.index = command.offset + this.index;
     command.cursorOffset =
         command.name == 'Insert' ? command.offset + 1 : command.offset;
-    command.cursorIndex = command.cursorOffset + this.index_;
+    command.cursorIndex = command.cursorOffset + this.index;
   }
   return command;
 };
