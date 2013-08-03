@@ -43,19 +43,7 @@ DocsApp.prototype.onInput_ = function(e) {
   var diff = calcEditDistance(this.lastText_, this.paper_.value, 1, 1, 3);
   this.lastText_ = this.paper_.value;
   var indexMap = IndexMap.fromDiff(diff);
-  for (var i = 0; i < this.cursors_.length; i++) {
-    var cursor = this.cursors_[i];
-    if (cursor.editor) {
-      var success = cursor.editor.applyIndexMap(indexMap);
-      if (success) {
-        if (cursor.editor.lastCommand)
-          this.setCursorPosition_(cursor, cursor.editor.lastCommand.index);
-      } else {
-        cursor.classList.remove('active');
-        cursor.editor = null;
-      }
-    }
-  }
+  this.updateCursorPosition_(indexMap);
 };
 
 /**
@@ -64,10 +52,6 @@ DocsApp.prototype.onInput_ = function(e) {
  * @private
  */
 DocsApp.prototype.onStep_ = function() {
-  // Save the selection index.
-  var selectionStart = this.paper_.selectionStart;
-  var selectionEnd = this.paper_.selectionEnd;
-
   // Find the editable phrases and adds editors to them.
   var keywordAt = this.findBotKeyword_();
   if (keywordAt) {
@@ -86,57 +70,74 @@ DocsApp.prototype.onStep_ = function() {
     var editor = this.cursors_[i].editor;
     if (!editor)
       continue;
+    var selectionStart = this.paper_.selectionStart;
+    var selectionEnd = this.paper_.selectionEnd;
     var command = editor.step();
-    if (!command) {
-      this.cursors_[i].editor = null;
-      return;
-    }
     switch (command.name) {
       case 'HideCursor':
         this.cursors_[i].classList.remove('active', 'typing');
         break;
       case 'ShowCursor':
         this.cursors_[i].classList.add('active', 'typing');
-        this.setCursorPosition_(this.cursors_[i], command.index);
-        break;
-      case 'MoveCursor':
-        this.setCursorPosition_(this.cursors_[i], command.index);
         break;
       case 'Insert':
         this.paper_.insertChar(command.index, command.ch);
-        this.setCursorPosition_(this.cursors_[i], command.index + 1);
         this.lastText_ = this.lastText_.substr(0, command.index) +
                          command.ch +
                          this.lastText_.substr(command.index);
-        if (selectionStart >= command.index) {
-          selectionStart++;
-        }
-        if (selectionEnd >= command.index) {
-          selectionEnd++;
-        }
         break;
       case 'Delete':
         this.paper_.deleteChar(command.index);
-        this.setCursorPosition_(this.cursors_[i], command.index);
         this.lastText_ = this.lastText_.substr(0, command.index) +
                          this.lastText_.substr(command.index + 1);
-        if (selectionStart >= command.index) {
-          selectionStart--;
-        }
-        if (selectionEnd >= command.index) {
-          selectionEnd--;
-        }
         break;
       case 'Exit':
-        this.cursors_[i].editor = null;
         this.cursors_[i].classList.remove('typing');
+        this.cursors_[i].editor = null;
         break;
     }
-  }
 
-  // Restore the selection index.
-  this.paper_.selectionStart = selectionStart;
-  this.paper_.selectionEnd = selectionEnd;
+    if (typeof command.cursorIndex == 'number')
+      this.setCursorPosition_(this.cursors_[i], command.cursorIndex);
+
+    var indexMap = IndexMap.fromCommand(command);
+    if (indexMap)
+      this.updateCursorPosition_(indexMap, editor,
+                                 selectionStart, selectionEnd);
+  }
+};
+
+/**
+ * Update the cursors position on the paper.
+ *
+ * @param {IndexMap} indexMap Index map used to obtain the new cursor
+ *     position.
+ * @param {Editor} editor Editor that create the change. It should be null if
+ *     the change is created by a user.
+ * @param {number?} selectionStart Original selection start position on the
+ *     paper. It should be null if the change is created by a user.
+ * @param {number?} selectionEnd Original selection end position on the paper.
+ *     It should be null if the change is created by a user.
+ */
+DocsApp.prototype.updateCursorPosition_ =
+    function(indexMap, editor, selectionStart, selectionEnd) {
+  // Update the real cursor.
+  if (selectionStart != null)
+    this.paper_.selectionStart = indexMap.map(selectionStart);
+  if (selectionEnd != null)
+    this.paper_.selectionEnd = indexMap.map(selectionEnd);
+
+  // Update the fake cursors and editros.
+  for (var i = 0; i < this.cursors_.length; i++) {
+    var cursor = this.cursors_[i];
+    if (cursor.editor) {
+      if (cursor.editor == editor)
+        continue;
+      cursor.editor.applyIndexMap(indexMap);
+    }
+    if (typeof cursor.index == 'number')
+      this.setCursorPosition_(cursor, indexMap.map(cursor.index));
+  }
 };
 
 /**
@@ -163,6 +164,7 @@ DocsApp.prototype.findBotKeyword_ = function() {
 };
 
 DocsApp.prototype.setCursorPosition_ = function(cursor, index) {
+  cursor.index = index;
   var text = this.paper_.value.substr(0, index);
   var measureText = this.get('.measure-text');
   measureText.innerText = text;

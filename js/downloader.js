@@ -9,7 +9,6 @@ for (var i = 0; i < pairs.length; i++) {
 }
 
 // Download file.
-console.log(params);
 var a = document.createElement('a');
 a.setAttribute('href', params.url);
 a.setAttribute('download', params.filename);

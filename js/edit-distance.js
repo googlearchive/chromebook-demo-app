@@ -135,28 +135,55 @@ IndexMap.fromDiff = function(diff) {
   return new IndexMap(blocks);
 };
 
+IndexMap.fromCommand = function(command) {
+  var offset = 0;
+  if (command.name == 'Insert')
+    offset = 1;
+  else if (command.name == 'Delete')
+    offset = -1;
+  else
+    return null;
+  return new IndexMap([
+    {index: 0, offset: 0},
+    {index: command.index, offset: offset},
+    {index: Number.MAX_VALUE}
+  ]);
+};
+
 /**
  * Map the index of the old text to the index of the new one.
  */
 IndexMap.prototype.map = function(index) {
-  for (var i = 0; i < this.blocks_.length; i++) {
-    if (this.blocks_[i].index <= index && index < this.blocks_[i + 1].index) {
-      if (this.blocks_[i].deleted)
-        return this.blocks_[i].index + this.blocks_[i - 1].offset;
-      else
-        return index + this.blocks_[i].offset;
-    }
+  var block = this.getBlockAt_(index);
+  if (!block)
+    return null;
+  if (block.deleted) {
+    return block.index +
+        (this.blocks_[block.i - 1] ? this.blocks_[block.i - 1].offset : 0);
   }
-  return null;
+  else
+    return index + block.offset;
 };
 
 IndexMap.prototype.isRangeChanged = function(index, length) {
+  var block = this.getBlockAt_(index);
+  if (!block)
+    return null;
+  if (block.deleted)
+    return true;
+  else
+    return !(index + length <= this.blocks_[block.i + 1].index);
+};
+
+IndexMap.prototype.isDeleted = function(index) {
+  return this.getBlockAt_(index).deleted;
+};
+
+IndexMap.prototype.getBlockAt_ = function(index) {
   for (var i = 0; i < this.blocks_.length; i++) {
     if (this.blocks_[i].index <= index && index < this.blocks_[i + 1].index) {
-      if (this.blocks_[i].deleted)
-        return true;
-      else
-        return !(index + length <= this.blocks_[i + 1].index);
+      this.blocks_[i].i = i;
+      return this.blocks_[i];
     }
   }
   return null;

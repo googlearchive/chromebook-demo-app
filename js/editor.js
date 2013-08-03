@@ -75,10 +75,7 @@ Editor.buildCommands = function(index, source, result) {
     step.done = true;
   }
 
-  var lastOffset = commands[commands.length - 1].offset;
-  if (commands[commands.length - 1].name == 'Insert')
-    lastOffset++;
-  commands.push({name: 'ShowCursor', frame: 10, offset: lastOffset});
+  commands.push({name: 'ShowCursor', frame: 10});
   commands.push({name: 'Exit'});
   return commands;
 };
@@ -90,21 +87,32 @@ Editor.prototype.applyIndexMap = function(indexMap) {
   // Ensure that the target string is not touched by a user.
   // Update the index.
   // Step.
-  if (indexMap.isRangeChanged(this.index_, this.length_))
-    return false;
+  var changed = indexMap.isRangeChanged(this.index_, this.length_);
   this.index_ = indexMap.map(this.index_);
-  this.lastCommand.index = this.lastCommand.offset + this.index_;
-  return true;
+  if (changed)
+    this.commands_ = [{name: 'Exit'}];
 };
 
 Editor.prototype.step = function() {
   if (this.commands_.length == 0)
     return null;
-  if (--this.commands_[0].frame > 0){
+  if (--this.commands_[0].frame > 0)
     command = this.commands_[0];
-  } else {
+  else
     command = this.commands_.shift();
+  if (command.name == 'Insert')
+    this.length_++;
+  else if (command.name == 'Delete')
+    this.length_--;
+  return this.addIndexProperty_(command);
+};
+
+Editor.prototype.addIndexProperty_ = function(command) {
+  if (typeof command.offset == 'number') {
+    command.index = command.offset + this.index_;
+    command.cursorOffset =
+        command.name == 'Insert' ? command.offset + 1 : command.offset;
+    command.cursorIndex = command.cursorOffset + this.index_;
   }
-  command.index = command.offset + this.index_;
-  return this.lastCommand = command;
+  return command;
 };
