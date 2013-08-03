@@ -241,11 +241,10 @@
 
 #docs-app .measure-text,
 #docs-app .measure-cursor {
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 #docs-app .cursor {
-  background-color: orange;
   display: none;
   height: 24px;
   margin-top: 0;
@@ -267,7 +266,6 @@
  * Small box at the top of cursor.
  */
 #docs-app .cursor::before {
-  background-color: orange;
   bottom: 24px;
   content: '';
   display: block;
@@ -282,7 +280,6 @@
  * Name box at the top of cursor.
  */
 #docs-app .cursor::after {
-  background-color: orange;
   bottom: 24px;
   color: white;
   content: attr(data-user-name);
@@ -303,6 +300,24 @@
 #docs-app .cursor:hover::after,
 #docs-app .cursor.typing::after {
   opacity: 1;
+}
+
+#docs-app .cursor.charles,
+#docs-app .cursor.charles::before,
+#docs-app .cursor.charles::after {
+  background-color: #13955c;
+}
+
+#docs-app .cursor.edgar,
+#docs-app .cursor.edgar::before,
+#docs-app .cursor.edgar::after {
+  background-color: #f4b400;
+}
+
+#docs-app .cursor.fredrick,
+#docs-app .cursor.fredrick::before,
+#docs-app .cursor.fredrick::after {
+  background-color: #9e69af;
 }
 
 /**
