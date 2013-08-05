@@ -132,7 +132,23 @@
 }
 
 .app-detail {
-  font-family: 'OpenSans-Regular', sans-serif;
-  font-size: 13px;
-  line-height: 100%;
+  font: 13px/100% 'OpenSans-Regular', sans-serif;
+}
+
+.app-detail.star-XXXXx {
+  height: 13px;
+  background: url('store-star-black.png') no-repeat 0 1px,
+              url('store-star-black.png') no-repeat 11px 1px,
+              url('store-star-black.png') no-repeat 22px 1px,
+              url('store-star-black.png') no-repeat 33px 1px,
+              url('store-star-half.png') no-repeat 44px 1px;
+}
+
+.app-detail.star-XXXX {
+  height: 13px;
+  background: url('store-star-black.png') no-repeat 0 1px,
+              url('store-star-black.png') no-repeat 11px 1px,
+              url('store-star-black.png') no-repeat 22px 1px,
+              url('store-star-black.png') no-repeat 33px 1px,
+              url('store-star-white.png') no-repeat 44px 1px;
 }

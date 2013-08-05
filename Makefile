@@ -153,6 +153,9 @@ STORE_FILES= \
   assets/store-section-install-2x.png \
   assets/close-1x.png \
   assets/close-2x.png \
+  assets/store-star-black.png \
+  assets/store-star-white.png \
+  assets/store-star-half.png \
   third-party/app-tiles/store-tile-bejeweled.png \
   third-party/app-tiles/store-tile-cubeslam.png \
   third-party/app-tiles/store-tile-deezer.png \
