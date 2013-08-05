@@ -7,5 +7,5 @@ scripts/monitor
 update.xml
 packages
 gen
-js/words.js
 third-party/music
+third-party/docs-bot-words

@@ -41,7 +41,6 @@ DOCS_FILES = \
   js/edit-distance.js \
   js/docs-app.js \
   js/util.js \
-  js/words.js \
   js/paper-edit-adapter.js \
   css/common.css \
   css/docs-app.css \
@@ -65,7 +64,8 @@ DOCS_FILES = \
   assets/close-2x.png \
   views/docs-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
-  third-party/open-sans/OpenSans-Regular.ttf
+  third-party/open-sans/OpenSans-Regular.ttf \
+  third-party/docs-bot-words/words.js
 
 HANGOUTS_FILES = \
   js/const.js \
