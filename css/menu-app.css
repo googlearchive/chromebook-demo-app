@@ -101,7 +101,7 @@ h1, p {
 
 @-webkit-keyframes pop-in {
   from {
-    top: 200px;
+    top: 30px;
   }
   to {
     top: 0px;
@@ -111,7 +111,7 @@ h1, p {
 .button, .learn-more {
   position: relative;
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation: pop-in 0.8s cubic-bezier(0.130, 0.250, 0.515, 2.50);
+  -webkit-animation: pop-in 0.2s cubic-bezier(.130, .25, .515, 1.4);
 }
 
 .button {
@@ -125,27 +125,27 @@ h1, p {
 
 .docs.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.5s;
+  -webkit-animation-delay: .3s;
 }
 
 .hangouts.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.7s;
+  -webkit-animation-delay: .4s;
 }
 
 .music.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.9s;
+  -webkit-animation-delay: .5s;
 }
 
 .store.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: 1.1s;
+  -webkit-animation-delay: .6s;
 }
 
 .learn-more {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: 1.3s;
+  -webkit-animation-delay: .8s;
 }
 
 .button * {
