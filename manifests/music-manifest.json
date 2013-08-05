@@ -15,6 +15,7 @@
     "background": {
       "scripts": [
         "const.js",
+        "util.js",
         "app.js",
         "music-app.js"
       ]
