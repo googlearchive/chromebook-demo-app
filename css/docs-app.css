@@ -42,10 +42,9 @@
 }
 
 #docs-app .docs-title {
-  font-size: 22px;
-  font-face: 'Arial';
   -webkit-user-select: none;
   cursor: default;
+  font: 22px/33px 'Arial';
 }
 
 #docs-app .space {
@@ -108,17 +107,15 @@
   border: 1px solid #ccc;
   border-radius: 2px;
   padding: 0 8px;
-  height: 33px;
+  height: 35px;
+  margin: -1px 0;
   width: 96px;
   display: -webkit-flex;
   background-color: #f1f1f1;
 }
 
 #docs-app .share-icon {
-  background-image: url('docs-share-2x.png');
-  background-size: 12px 16px;
-  background-position: center 6px;
-  background-repeat: no-repeat;
+  background: url(docs-share-2x.png) no-repeat center 7px / 12px 16px;
   width: 12px;
   -webkit-flex: 1 0 auto;
 }
@@ -133,8 +130,8 @@
 }
 
 #docs-app .share .balloon {
-  width: 300px;
-  left: -102px;
+  width: 250px;
+  left: -77px;
 }
 
 #docs-app .docs-menu {
@@ -143,7 +140,6 @@
   -webkit-flex: none;
   -webkit-justify-content: flex-start;
   width: 800px;
-  margin-top: 16px;
   -webkit-user-select: none;
   cursor: default;
 }
