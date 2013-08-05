@@ -23,6 +23,7 @@
         "effects-helper.js",
         "effects.js",
         "track.js",
+        "util.js",
         "hangouts-app.js"
       ]
     }

@@ -16,6 +16,7 @@
       "scripts": [
         "const.js",
         "app.js",
+        "util.js",
         "store-app.js"
       ]
     }

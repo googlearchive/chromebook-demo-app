@@ -103,7 +103,6 @@ HANGOUTS_FILES = \
   third-party/ccv/js/ccv.js \
   third-party/ccv/js/face.js
 
-
 MUSIC_FILES = \
   js/const.js \
   js/app.js \
