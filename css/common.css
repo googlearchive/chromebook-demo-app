@@ -203,20 +203,19 @@ body {
 }
 
 .balloon {
-  display: block;
-  background-color: black;
-  position: absolute;
-  color: white;
-  line-height: 14px;
-  font-size: 12px;
-  padding: 12px;
-  text-align: left;
   -webkit-box-sizing: border-box;
-  z-index: 1;
-  opacity: 0;
-  pointer-events: none;
   -webkit-transition-duration: 200ms;
   -webkit-transition-property: opacity;
+  background-color: black;
+  color: white;
+  display: block;
+  font: 13px/20px 'OpenSans-regular', sans-serif;
+  opacity: 0;
+  padding: 12px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
 }
 
 .balloon::after {

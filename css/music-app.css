@@ -94,14 +94,8 @@
 }
 
 .side-button .balloon {
-  top: -5px;
+  top: -10px;
   width: 200px;
-  line-height: 14px;
-  font-size: 12px;
-  padding: 12px;
-  height: 55px;
-  -webkit-box-sizing: border-box;
-  text-align: left;
 }
 
 [dir=ltr] .side-button .balloon {
