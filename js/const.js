@@ -1,22 +1,17 @@
 var DOCS_APP_ID_LIST = [
-    'hniomhdmdnlgdfieanjadkdjkihjjfpf',
-    'npnjdccdffhdndcbeappiamcehbhjibf'
+    'hniomhdmdnlgdfieanjadkdjkihjjfpf'
 ];
 var HANGOUTS_APP_ID_LIST = [
-    'bbfdbpldnkjjakidjnngddapfpmkpigp',
-    'cgmlfbhkckbedohgdepgbkflommbfkep'
+    'bbfdbpldnkjjakidjnngddapfpmkpigp'
 ];
 var MUSIC_APP_ID_LIST = [
-    'kahjkkebhajdmaphhlommkhbcononjal',
-    'onbhgdmifjebcabplolilidlpgeknifi'
+    'kahjkkebhajdmaphhlommkhbcononjal'
 ];
 var STORE_APP_ID_LIST = [
-    'niichfgnefmnhfkmchpjjfdelgpillkc',
-    'dhmdaeekeihmajjnmichlhiffffdbpde'
+    'niichfgnefmnhfkmchpjjfdelgpillkc'
 ];
 var MENU_APP_ID_LIST = [
-    'ejpaejipmgoifefhjkmnghkpaklpeadp',
-    'nhpmmldpbfjofkipjaieeomhnmcgihfm'
+    'ejpaejipmgoifefhjkmnghkpaklpeadp'
 ];
 
 /**
