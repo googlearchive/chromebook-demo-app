@@ -4,3 +4,6 @@
 [submodule "third-party/chrome-cam"]
 	path = third-party/chrome-cam
 	url = https://github.com/telerik/chrome-cam.git
+[submodule "third-party/platform-analytics"]
+	path = third-party/platform-analytics
+	url = https://github.com/GoogleChrome/chrome-platform-analytics.git

@@ -1,12 +1,20 @@
-var ensureSampleFileAdded = function() {
-  if (localStorage['sampleFileAdded'])
-    return;
-  chrome.window.create({url: ''});
-};
+var service;
+var tracker;
 
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    if ([].concat(MENU_APP_ID_LIST, STORE_APP_ID_LIST).indexOf(sender.id) == -1)
+    var senderName;
+    if (MENU_APP_ID_LIST.indexOf(sender.id) != -1)
+      senderName = 'Menu';
+    else if (DOCS_APP_ID_LIST.indexOf(sender.id) != -1)
+      senderName = 'Docs';
+    else if (HANGOUTS_APP_ID_LIST.indexOf(sender.id) != -1)
+      senderName = 'Hangouts';
+    else if (MUSIC_APP_ID_LIST.indexOf(sender.id) != -1)
+      senderName = 'Music';
+    else if (STORE_APP_ID_LIST.indexOf(sender.id) != -1)
+      senderName = 'Store';
+    else
       return;
     switch (request.name) {
       case 'launch':
@@ -26,6 +34,12 @@ chrome.runtime.onMessageExternal.addListener(
           // Fallback for the case that there is no window.
           chrome.windows.create(params);
         });
+        break;
+
+      case 'trackView':
+        service = service || analytics.getService('Chromebook Retail Demo');
+        tracker = tracker || service.getTracker('UA-42807255-1'/*'UA-42968273-1'*/);
+        tracker.sendAppView(senderName);
         break;
     }
   }

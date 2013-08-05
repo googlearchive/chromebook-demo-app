@@ -4,3 +4,9 @@ var extend = function(base, adapter) {
   }
   return base;
 };
+
+var sendMessage = function(ids, message) {
+  for (var i = 0; i < ids.length; i++) {
+    chrome.runtime.sendMessage(ids[i], message);
+  }
+};

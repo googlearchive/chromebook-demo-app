@@ -75,6 +75,7 @@ App.queryXPath = function(doc, xpath) {
 };
 
 App.prototype.initDocument = function(firstTime) {
+  // Replace i18n strings.
   var textNodes = App.queryXPath(
       this.document, '//text()[contains(., \'__MSG_\')]');
   var attrNodes = App.queryXPath(
@@ -91,6 +92,9 @@ App.prototype.initDocument = function(firstTime) {
   // Apply initial DOM state.
   this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
   this.toggleDirection_(false);
+
+  // Track page view.
+  sendMessage(HELPER_EXTENSION_ID_LIST, {name: 'trackView'});
 
   // Close button.
   var closeButton = this.document.querySelector('.close');

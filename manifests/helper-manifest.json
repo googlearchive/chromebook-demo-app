@@ -4,11 +4,17 @@
   "manifest_version": 2,
   "permissions": [
     "management",
-    "tabs"
+    "tabs",
+    "storage",
+    "https://www.google-analytics.com/"
   ],
   "offline_enabled": true,
   "background": {
-    "scripts": ["const.js", "helper-extension.js"],
+    "scripts": [
+      "const.js",
+      "google-analytics-bundle.js",
+      "helper-extension.js"
+    ],
     "persistent": false
   },
   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDVTgLm5GUdC+3px+Mn/54evONySG0mA5APl/b9NZvn5ttM8qdp0Mts07llbge4XULJyHROW2zODzbQq95tgMQJZIaQ5eoQaz/UCBuSXfbOcccygSe9bylR7R2cns2yNPGmjpd4inR/M+w4Uw/hnZ3X59BJE4N0BPDTt1BiAGvgDwIDAQAB"

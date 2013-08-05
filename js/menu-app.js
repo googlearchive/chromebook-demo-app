@@ -46,10 +46,7 @@ MenuApp.prototype.initDocument = function() {
         MUSIC_APP_ID_LIST,
         STORE_APP_ID_LIST
       ][index];
-      for (var j = 0; j < HELPER_EXTENSION_ID_LIST.length; j++) {
-        chrome.runtime.sendMessage(
-            HELPER_EXTENSION_ID_LIST[j], {name: 'launch', id: id});
-      }
+      sendMessage(HELPER_EXTENSION_ID_LIST, {name: 'launch', id: id});
     }.bind(this, i));
 
     // Hover - reset rotation counter.
@@ -59,10 +56,7 @@ MenuApp.prototype.initDocument = function() {
 
   // Learn more link.
   this.get('.learn-more').addEventListener('click', function() {
-    for (var i = 0; i < HELPER_EXTENSION_ID_LIST.length; i++) {
-      chrome.runtime.sendMessage(
-          HELPER_EXTENSION_ID_LIST[i], {name: 'visitLearnMore'});
-    }
+    sendMessage(HELPER_EXTENSION_ID_LIST, {name: 'visitLearnMore'});
   });
 };
 

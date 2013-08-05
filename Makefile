@@ -177,7 +177,8 @@ HELPER_FILES= \
   js/const.js \
   js/helper-extension.js \
   js/util.js \
-  views/learn-more.html
+  views/learn-more.html \
+  third-party/platform-analytics/google-analytics-bundle.js
 
 packages: third-party
 	for x in ${TARGETS}; \
