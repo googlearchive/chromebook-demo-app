@@ -38,7 +38,7 @@ chrome.runtime.onMessageExternal.addListener(
 
       case 'trackView':
         service = service || analytics.getService('Chromebook Retail Demo');
-        tracker = tracker || service.getTracker('UA-42807255-1'/*'UA-42968273-1'*/);
+        tracker = tracker || service.getTracker('UA-42807255-2');
         tracker.sendAppView(senderName);
         break;
     }
