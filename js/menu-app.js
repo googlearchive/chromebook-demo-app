@@ -82,8 +82,8 @@ MenuApp.prototype.onStep_ = function() {
     '.music.button',
     '.store.button'
   ];
-  var step = ~~(this.rotationCounter_ / 2) - 2;
-  var target = step < 0 || (step % 3) == 2 ? -1 : ~~(step / 3) % buttons.length;
+  var step = ~~(this.rotationCounter_ / 2) - 5;
+  var target = step < 0 || (step % 5) >= 3 ? -1 : ~~(step / 5) % buttons.length;
   for (var i = 0; i < buttons.length; i++) {
     this.get(buttons[i]).classList.toggle('rotated', target == i);
   }
