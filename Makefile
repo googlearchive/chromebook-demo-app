@@ -59,7 +59,8 @@ DOCS_FILES = \
   assets/docs-share-2x.png \
   assets/docs-toolbar-2x.png \
   assets/docs-ruler-2x.png \
-  assets/balloon-triangle-top.png \
+  assets/balloon-triangle-top-1x.png \
+  assets/balloon-triangle-top-2x.png \
   assets/close-1x.png \
   assets/close-2x.png \
   views/docs-app.html \
@@ -86,8 +87,10 @@ HANGOUTS_FILES = \
   assets/hangouts-button-effects-2x.png \
   assets/hangouts-button-invite-2x.png \
   assets/hangouts-button-screenshare-2x.png \
-  assets/balloon-triangle-top.png \
-  assets/balloon-triangle-bottom.png \
+  assets/balloon-triangle-top-1x.png \
+  assets/balloon-triangle-top-2x.png \
+  assets/balloon-triangle-bottom-1x.png \
+  assets/balloon-triangle-bottom-2x.png \
   assets/glasses.png \
   assets/close-1x.png \
   assets/close-2x.png \
@@ -116,8 +119,10 @@ MUSIC_FILES = \
   assets/music-section-anywhere-2x.png \
   assets/music-section-upload-2x.png \
   assets/music-section-unlimited-2x.png \
-  assets/balloon-triangle-left.png \
-  assets/balloon-triangle-right.png \
+  assets/balloon-triangle-left-1x.png \
+  assets/balloon-triangle-left-2x.png \
+  assets/balloon-triangle-right-1x.png \
+  assets/balloon-triangle-right-2x.png \
   assets/music-play-control-2x.png \
   assets/music-pause-control-2x.png \
   assets/music-equalizer-2x.gif \
