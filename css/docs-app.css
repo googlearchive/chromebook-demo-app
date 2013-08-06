@@ -258,6 +258,16 @@
   display: block;
 }
 
+[dir=ltr] #docs-app .cursor::before,
+[dir=ltr] #docs-app .cursor::after {
+  left: 2px;
+}
+
+[dir=rtl] #docs-app .cursor::before,
+[dir=rtl] #docs-app .cursor::after {
+  right: 2px;
+}
+
 /**
  * Small box at the top of cursor.
  */
@@ -266,7 +276,6 @@
   content: '';
   display: block;
   height: 6px;
-  left: 2px;
   pointer-events: none;
   position: absolute;
   width: 6px;
@@ -282,7 +291,6 @@
   display: inline;
   font-family: 'Arial', sans-serif;
   font-size: 10px;
-  left: 2px;
   line-height: 10px;
   opacity: 0;
   padding: 4px;
