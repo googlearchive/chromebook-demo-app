@@ -14,18 +14,7 @@
   "permissions": ["videoCapture"],
   "app": {
     "background": {
-      "scripts": [
-        "const.js",
-        "app.js",
-        "glfx.js",
-        "ccv.js",
-        "face.js",
-        "effects-helper.js",
-        "effects.js",
-        "track.js",
-        "util.js",
-        "hangouts-app.js"
-      ]
+      "scripts": ["util.js", "background.js"]
     }
   },
   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC05jD+iygthlFpNfC+Pu8oqv/Nj1OeNWPn3O6NE9qHtZiygkWmcdS/hszJGjEhW6iwKJG6V+G+mmRuFWA84daEtb59bb6ZemMie9pCkL32ILJXFrpLdnNEWmWjGKngkwbVeK4LEwpxNfsDhR192lSwe4wd3KdIvuOMt7MwHVXTdQIDAQAB"

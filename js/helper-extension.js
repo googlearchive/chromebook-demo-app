@@ -3,19 +3,11 @@ var tracker;
 
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    var senderName;
-    if (MENU_APP_ID_LIST.indexOf(sender.id) != -1)
-      senderName = 'Menu';
-    else if (DOCS_APP_ID_LIST.indexOf(sender.id) != -1)
-      senderName = 'Docs';
-    else if (HANGOUTS_APP_ID_LIST.indexOf(sender.id) != -1)
-      senderName = 'Hangouts';
-    else if (MUSIC_APP_ID_LIST.indexOf(sender.id) != -1)
-      senderName = 'Music';
-    else if (STORE_APP_ID_LIST.indexOf(sender.id) != -1)
-      senderName = 'Store';
-    else
+    // If the message comes from an unknown extension, just ignore it.
+    var senderComponent = Component.get(sender.id);
+    if (!senderComponent)
       return;
+    var senderName = senderComponent.name;
     switch (request.name) {
       case 'launch':
         var ids = request.id;

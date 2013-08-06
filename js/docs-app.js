@@ -1,5 +1,5 @@
 var DocsApp = function() {
-  App.call(this, DOCS_WINDOW_ID, 'docs-app.html');
+  App.call(this);
 };
 
 DocsApp.ANIMATION_INTERVAL = 100;

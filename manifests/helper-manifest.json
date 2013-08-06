@@ -11,7 +11,7 @@
   "offline_enabled": true,
   "background": {
     "scripts": [
-      "const.js",
+      "util.js",
       "google-analytics-bundle.js",
       "helper-extension.js"
     ],

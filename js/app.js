@@ -7,9 +7,7 @@ var makeCenterBounds = function(width, height) {
   };
 };
 
-var App = function(id, html, opt_width, opt_height, opt_transparent) {
-  this.id_ = id;
-  this.html_ = html;
+var App = function(opt_width, opt_height, opt_transparent) {
   this.transparent_ = !!opt_transparent;
   this.windowBoundsList_ = [
     makeCenterBounds(opt_width || screen.width, opt_height || screen.height),
@@ -20,38 +18,17 @@ var App = function(id, html, opt_width, opt_height, opt_transparent) {
 };
 
 App.prototype.start = function() {
-  // Register events.
-  chrome.app.runtime.onLaunched.addListener(this.onLaunched_.bind(this));
-  chrome.runtime.onMessageExternal.addListener(this.onMessage_.bind(this));
-};
-
-App.prototype.onLaunched_ = function() {
-  // If it is a child app, Close the other child apps.
-  var childAppIDs = [].concat(
-      DOCS_APP_ID_LIST, HANGOUTS_APP_ID_LIST,
-      MUSIC_APP_ID_LIST, STORE_APP_ID_LIST);
-  var idIndex = childAppIDs.indexOf(chrome.runtime.id);
-  if (idIndex != -1) {
-    childAppIDs.splice(idIndex, 1);
-    for (var i = 0; i < childAppIDs.length; i++) {
-      chrome.runtime.sendMessage(childAppIDs[i], {name: 'close'});
-    }
-  }
-
-  // Create window.
-  chrome.app.window.create(this.html_, {
-    id: this.id_,
-    hidden: true,
-    resizable: false,
-    frame: 'none',
-    transparentBackground: this.transparent_
-  }, this.onWindowCreated_.bind(this));
-};
-
-App.prototype.onWindowCreated_ = function(window) {
+  var window = chrome.app.window.current();
   if (window.initialized)
     return;
   window.initialized = true;
+
+  // Register window events.
+  chrome.runtime.onMessageExternal.addListener(this.onMessage_.bind(this));
+
+  // Track page view.
+  Component.ENTRIES.Helper.sendMessage({name: 'trackView'});
+
   // Setup window.
   this.appWindow = window;
   this.window = window.contentWindow;
@@ -92,9 +69,6 @@ App.prototype.initDocument = function(firstTime) {
   // Apply initial DOM state.
   this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
   this.toggleDirection_(false);
-
-  // Track page view.
-  sendMessage(HELPER_EXTENSION_ID_LIST, {name: 'trackView'});
 
   // Close button.
   var closeButton = this.document.querySelector('.close');

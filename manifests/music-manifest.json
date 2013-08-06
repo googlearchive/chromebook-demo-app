@@ -13,12 +13,7 @@
   "offline_enabled": true,
   "app": {
     "background": {
-      "scripts": [
-        "const.js",
-        "util.js",
-        "app.js",
-        "music-app.js"
-      ]
+      "scripts": ["util.js", "background.js"]
     }
   },
   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9wLj242hwp9nl5Q8HWOTqtDNESCl98asEpQTq/2XS8YJOB5nkd+tK5KgZFOSCV7HPQKvQi0KzCI2GHAGAefpGROWq6jkRTh5TbLBW1Ow3YTJJQSBtuHpLWdeIL9U8g2d5444CDOET2wETDiQAxGax8ekR6QtmjEosuugwlrcUTQIDAQAB"

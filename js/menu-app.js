@@ -4,8 +4,7 @@ var MenuApp = function() {
   this.isTransparent_ = this.chromeVersion_ >= 28;
   var width = this.isTransparent_ ? 0 : 800;
   var height = this.isTransparent_ ? 0 : 600;
-  App.call(this, MENU_WINDOW_ID, 'menu-app.html',
-           width, height, this.isTransparent_);
+  App.call(this, width, height, this.isTransparent_);
 };
 
 MenuApp.prototype = {
@@ -14,10 +13,6 @@ MenuApp.prototype = {
 
 MenuApp.prototype.start = function() {
   App.prototype.start.call(this);
-
-  chrome.app.runtime.onLaunched.addListener(
-      this.downloadSampleFiles.bind(this));
-  this.downloadSampleFiles();
 };
 
 MenuApp.prototype.initDocument = function() {
@@ -41,12 +36,12 @@ MenuApp.prototype.initDocument = function() {
     // Click - launch the child applications.
     buttons[i].addEventListener('click', function(index) {
       var id = [
-        DOCS_APP_ID_LIST,
-        HANGOUTS_APP_ID_LIST,
-        MUSIC_APP_ID_LIST,
-        STORE_APP_ID_LIST
+        Component.ENTRIES.Docs.idList,
+        Component.ENTRIES.Hangouts.idList,
+        Component.ENTRIES.Music.idList,
+        Component.ENTRIES.Store.idList
       ][index];
-      sendMessage(HELPER_EXTENSION_ID_LIST, {name: 'launch', id: id});
+      Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
     }.bind(this, i));
 
     // Hover - reset rotation counter.
@@ -56,7 +51,7 @@ MenuApp.prototype.initDocument = function() {
 
   // Learn more link.
   this.get('.learn-more').addEventListener('click', function() {
-    sendMessage(HELPER_EXTENSION_ID_LIST, {name: 'visitLearnMore'});
+    Component.ENTRIES.Helper.sendMessage({name: 'visitLearnMore'});
   });
 };
 
@@ -88,40 +83,6 @@ MenuApp.prototype.onStep_ = function() {
     this.get(buttons[i]).classList.toggle('rotated', target == i);
   }
   this.rotationCounter_ = this.inHover_ ? 0 : this.rotationCounter_ + 1;
-};
-
-MenuApp.prototype.downloadSampleFiles = function() {
-  var steps = [
-    function() {
-      chrome.storage.local.get('sampleFileDownloaded', steps.shift());
-    },
-    function(storage) {
-      var flag = !!storage.sampleFileDownloaded;
-      if (flag)
-        return;
-      chrome.storage.local.set({sampleFileDownloaded: true}, steps.shift());
-    },
-    function() {
-      if (chrome.runtime.lastError)
-        return;
-      var files = [
-        '1995 Field Notes.docx',
-        'Arches.png',
-        'Chromebook Backup.mov',
-        'Night.png',
-        'Song.mp3'
-      ];
-      for (var i = 0; i < files.length; i++) {
-        chrome.app.window.create(
-            'downloader.html?url=' + files[i] + '&filename=' + files[i], {
-               id: 'demo-download-window',
-               singleton: false,
-               hidden: true
-            });
-      }
-    }
-  ];
-  steps.shift()();
 };
 
 new MenuApp().start();

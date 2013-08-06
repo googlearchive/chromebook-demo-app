@@ -13,16 +13,7 @@
   "offline_enabled": true,
   "app": {
     "background": {
-      "scripts": [
-        "const.js",
-        "util.js",
-        "app.js",
-        "words.js",
-        "edit-distance.js",
-        "editor.js",
-        "paper-edit-adapter.js",
-        "docs-app.js"
-      ]
+      "scripts": ["util.js", "background.js"]
     }
   },
   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCzVhr/3t4UED6cMhVJ0Ce+Lwx+tfoOL9Sl0qzojGJ4Xpci2DSWydz5mLncXXo9gDPZSU23pliu8RV7rN5DjnPLahyG8+20gPYjp4hTHt4IJ6l4CApcFj6ukT6FpL+0HaHOcAktbJVJ1UQwYNP9nMpEebRHBoUjofaD8aBNakdALQIDAQAB"

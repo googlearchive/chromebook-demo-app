@@ -3,9 +3,9 @@ CHROME=/opt/google/chrome/chrome
 TARGETS = menu docs hangouts music store helper
 
 MENU_FILES = \
-  js/const.js \
   js/app.js \
   js/menu-app.js \
+  js/background.js \
   js/util.js \
   js/downloader.js \
   css/common.css \
@@ -35,13 +35,13 @@ MENU_FILES = \
   third-party/sample-files/Song.mp3
 
 DOCS_FILES = \
-  js/const.js \
   js/app.js \
   js/editor.js \
   js/edit-distance.js \
   js/docs-app.js \
   js/util.js \
   js/paper-edit-adapter.js \
+  js/background.js \
   css/common.css \
   css/docs-app.css \
   assets/docs-icon-32.png \
@@ -68,11 +68,11 @@ DOCS_FILES = \
   third-party/docs-bot-words/words.js
 
 HANGOUTS_FILES = \
-  js/const.js \
   js/app.js \
   js/effects-helper.js \
   js/hangouts-app.js \
   js/util.js \
+  js/background.js \
   css/common.css \
   css/hangouts-app.css \
   assets/hangouts-icon-32.png \
@@ -104,10 +104,10 @@ HANGOUTS_FILES = \
   third-party/ccv/js/face.js
 
 MUSIC_FILES = \
-  js/const.js \
   js/app.js \
   js/music-app.js \
   js/util.js \
+  js/background.js \
   css/common.css \
   css/music-app.css \
   assets/music-icon-32.png \
@@ -135,10 +135,10 @@ MUSIC_FILES = \
   third-party/music/sample-song.mp3
 
 STORE_FILES= \
-  js/const.js \
   js/app.js \
   js/store-app.js \
   js/util.js \
+  js/background.js \
   css/common.css \
   css/store-app.css \
   assets/store-icon-32.png \
@@ -176,7 +176,6 @@ STORE_FILES= \
   third-party/open-sans/OpenSans-Regular.ttf
 
 HELPER_FILES= \
-  js/const.js \
   js/helper-extension.js \
   js/util.js \
   views/learn-more.html \

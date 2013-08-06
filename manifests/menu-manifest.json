@@ -16,13 +16,9 @@
   "app": {
     "background": {
       "scripts": [
-        "const.js",
-        "app.js",
-        "words.js",
         "util.js",
-        "editor.js",
-        "edit-distance.js",
-        "menu-app.js"
+        "background.js",
+        "downloader.js"
       ]
     }
   },

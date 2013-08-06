@@ -1,5 +1,5 @@
 var HangoutsApp = function() {
-  App.call(this, HANGOUTS_WINDOW_ID, 'hangouts-app.html');
+  App.call(this);
   this.videoInitialized_ = false;
   this.effectIndex_ = 0;
   this.frame_ = 0;

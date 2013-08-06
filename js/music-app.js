@@ -1,5 +1,5 @@
 var MusicApp = function() {
-  App.call(this, MUSIC_WINDOW_ID, 'music-app.html');
+  App.call(this);
 };
 
 MusicApp.prototype = {
