@@ -6,16 +6,29 @@ var Cell = function(cost, prevCell, operation, element) {
 };
 
 /**
- * Calcs the edit distance and between two sequences (Array, String) and
+ * Calcs the difference of two sequences (Array, String) and
  * returnes operations that changes seq1 to seq2.
+ * @param {string|Array} seq1 Original sequence.
+ * @param {string|Array} seq2 Edited sequence.
+ * @param {number} insertCost Cost for inserting element.
+ * @param {number} deleteCost Cost for deleting element.
+ * @param {number} replaceCost Cost for replacing element.
+ * @param {number?} opt_maxInsert Maximum number of inserting operation
+ *     times. For example, 1 means the result must not contains more than 1
+ *     inserting operation. 0 means the result never includes the operation. If
+ *     it is not specified, there is no limit.
+ * @param {number?} opt_maxDelete Maximum number of deleting operation times.
+ * @param {number?} opt_maxReplace Maximum number of replacing operation times.
  */
 var calcEditDistance = function(seq1,
                                 seq2,
                                 insertCost,
                                 deleteCost,
-                                replaceCost) {
-  // Find minimum path.
+                                replaceCost,
+                                opt_maxOperation) {
+  // Prepare the matrix and find the minimum cost path by using DP.
   var matrix = [new Cell(0, null, 'Start', null)];
+  // The zero is a psuade element used to simplify null check.
   var zero = new Cell(0, null, 'Zero', null);
   for (var j = 0; j <= seq2.length; j++) {
     for(var i = 0; i <= seq1.length; i++) {
@@ -65,6 +78,8 @@ var calcEditDistance = function(seq1,
   while (result[0].prevCell) {
     result.unshift(result[0].prevCell);
   }
+
+  // Remove the psuade "Start" elemente.
   result.shift();
   return result;
 };
