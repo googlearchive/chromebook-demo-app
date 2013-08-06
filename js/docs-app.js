@@ -162,8 +162,15 @@ DocsApp.prototype.updateCursorPosition_ =
         continue;
       cursor.editor.applyIndexMap(indexMap);
     }
-    if (typeof cursor.index == 'number')
-      this.setCursorPosition_(cursor, indexMap.map(cursor.index));
+    if (typeof cursor.index == 'number') {
+      if (cursor.index == 0)
+        continue;
+      var nextBackIndex = indexMap.map(cursor.index - 1);
+      if (indexMap.isDeleted(cursor.index - 1))
+        this.setCursorPosition_(cursor, nextBackIndex);
+      else
+        this.setCursorPosition_(cursor, nextBackIndex + 1);
+    }
   }
 };
 
