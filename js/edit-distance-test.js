@@ -5,7 +5,6 @@ Test.add('calcEditDistanceForString', function() {
   Assert.equals('None', result[1].operation);
   Assert.equals('None', result[2].operation);
   Assert.equals('None', result[5].operation);
-  console.log(result);
 });
 
 Test.add('calcEditDistanceForTheSun', function() {
@@ -30,14 +29,6 @@ Test.add('calcEditDistanceForTheSun', function() {
       str1 = str1.substr(1);
     }
   }
-  /*
-  Assert.notNull(result);
-  Assert.equals('Delete', result[0].operation);
-  Assert.equals('None', result[1].operation);
-  Assert.equals('None', result[2].operation);
-  Assert.equals('None', result[5].operation);
-  */
-  console.log([log1, log2].join("\n"));
 });
 
 Test.add('calcEditDistanceForArray', function() {
