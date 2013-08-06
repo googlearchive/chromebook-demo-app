@@ -101,17 +101,17 @@ h1, p {
 
 @-webkit-keyframes pop-in {
   from {
-    top: 30px;
+    left: 800px;
   }
   to {
-    top: 0px;
+    left: 0px;
   }
 }
 
 .button, .learn-more {
   position: relative;
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation: pop-in 0.2s cubic-bezier(.130, .25, .515, 1.4);
+  -webkit-animation: pop-in 1.0s ease-in-out;
 }
 
 .button {
@@ -125,22 +125,22 @@ h1, p {
 
 .docs.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: .3s;
+  -webkit-animation-delay: .4s;
 }
 
 .hangouts.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: .4s;
+  -webkit-animation-delay: .5s;
 }
 
 .music.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: .5s;
+  -webkit-animation-delay: .6s;
 }
 
 .store.button {
   -webkit-animation-fill-mode: backwards;
-  -webkit-animation-delay: .6s;
+  -webkit-animation-delay: .7s;
 }
 
 .learn-more {
