@@ -21,6 +21,11 @@ DocsApp.prototype.initDocument = function() {
   // Obtains the elements.
   this.paper_ = extend(this.get('.paper'), PaperEditAdapter);
   this.cursors_ = this.document.querySelectorAll('.cursor');
+  for (var i = 0; i < this.cursors_.length; i++) {
+    this.cursors_[i].addEventListener('click', function(cursor) {
+      this.paper_.selectionStart = this.paper_.selectionEnd = cursor.index;
+    }.bind(this, this.cursors_[i]));
+  }
 
   // Added the start up editing.
   this.cursors_[0].editor =
