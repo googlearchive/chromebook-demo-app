@@ -47,9 +47,8 @@ DocsApp.prototype.initDocument = function() {
 
 DocsApp.prototype.onInput_ = function(e) {
   // Get difference made by input.
-  var diff = calcEditDistance(this.lastText_, this.paper_.value, 1, 1, 3);
+  var indexMap = calcSimpleIndexMap(this.lastText_, this.paper_.value);
   this.lastText_ = this.paper_.value;
-  var indexMap = IndexMap.fromDiff(diff);
   this.updateCursorPosition_(indexMap);
 };
 
@@ -114,14 +113,11 @@ DocsApp.prototype.onStep_ = function() {
         break;
       case 'Insert':
         this.paper_.insertChar(command.index, command.ch);
-        this.lastText_ = this.lastText_.substr(0, command.index) +
-                         command.ch +
-                         this.lastText_.substr(command.index);
+        this.lastText_ = this.paper_.value;
         break;
       case 'Delete':
         this.paper_.deleteChar(command.index);
-        this.lastText_ = this.lastText_.substr(0, command.index) +
-                         this.lastText_.substr(command.index + 1);
+        this.lastText_ = this.paper_.value;
         break;
       case 'Exit':
         this.cursors_[i].classList.remove('typing');
@@ -168,6 +164,10 @@ DocsApp.prototype.updateCursorPosition_ =
       cursor.editor.applyIndexMap(indexMap);
     }
     if (typeof cursor.index == 'number') {
+      if (cursor.editor) {
+        this.setCursorPosition_(cursor, indexMap.map(cursor.index));
+        continue;
+      }
       if (cursor.index == 0)
         continue;
       var nextBackIndex = indexMap.map(cursor.index - 1);
@@ -213,6 +213,9 @@ DocsApp.prototype.findBotKeyword_ = function() {
 };
 
 DocsApp.prototype.setCursorPosition_ = function(cursor, index) {
+  if (this.lastText_.length < index) {
+    console.error('Invalid set cursor.');
+  }
   cursor.index = index;
   var text = this.paper_.value.substr(0, index);
   var measureText = this.get('.measure-text');

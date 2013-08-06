@@ -5,6 +5,24 @@ var Cell = function(cost, prevCell, operation, element) {
   this.element = element;
 };
 
+var calcSimpleIndexMap = function(seq1, seq2) {
+  var start = 0;
+  while (seq1[start] == seq2[start] &&
+         start < seq1.length &&
+         start < seq2.length)
+    start++;
+  var end = 0;
+  while (seq1[seq1.length - end - 1] == seq2[seq2.length - end - 1] &&
+         start + end < seq1.length &&
+         start + end < seq2.length)
+    end++;
+  return new IndexMap([
+    {index: 0, offset: 0},
+    {index: start, offset: 0, deleted: true},
+    {index: seq1.length - end, offset: seq2.length - seq1.length}
+  ]);
+};
+
 /**
  * Calcs the difference of two sequences (Array, String) and
  * returnes operations that changes seq1 to seq2.
@@ -13,19 +31,12 @@ var Cell = function(cost, prevCell, operation, element) {
  * @param {number} insertCost Cost for inserting element.
  * @param {number} deleteCost Cost for deleting element.
  * @param {number} replaceCost Cost for replacing element.
- * @param {number?} opt_maxInsert Maximum number of inserting operation
- *     times. For example, 1 means the result must not contains more than 1
- *     inserting operation. 0 means the result never includes the operation. If
- *     it is not specified, there is no limit.
- * @param {number?} opt_maxDelete Maximum number of deleting operation times.
- * @param {number?} opt_maxReplace Maximum number of replacing operation times.
  */
 var calcEditDistance = function(seq1,
                                 seq2,
                                 insertCost,
                                 deleteCost,
-                                replaceCost,
-                                opt_maxOperation) {
+                                replaceCost) {
   // Prepare the matrix and find the minimum cost path by using DP.
   var matrix = [new Cell(0, null, 'Start', null)];
   // The zero is a psuade element used to simplify null check.
@@ -86,6 +97,13 @@ var calcEditDistance = function(seq1,
 
 var IndexMap = function(blocks) {
   this.blocks_ = blocks;
+  this.blocks_.push({index: Number.MAX_VALUE});
+  for (var i = 0; i < this.blocks_.length - 1;) {
+    if (this.blocks_[i + 1].index - this.blocks_[i].index == 0)
+      this.blocks_.splice(i, 1);
+    else
+      i++;
+  }
 };
 
 /**
@@ -138,7 +156,6 @@ IndexMap.fromDiff = function(diff) {
         break;
     }
   }
-  blocks.push({index: Number.MAX_VALUE});
 
   // Remove unused information
   for (var i = 0; i < blocks.length; i++) {
@@ -160,8 +177,7 @@ IndexMap.fromCommand = function(command) {
     return null;
   return new IndexMap([
     {index: 0, offset: 0},
-    {index: command.index, offset: offset},
-    {index: Number.MAX_VALUE}
+    {index: command.index, offset: offset}
   ]);
 };
 

@@ -81,9 +81,12 @@ Editor.prototype.applyIndexMap = function(indexMap) {
   this.index = indexMap.map(this.index);
   if (changed)
     this.commands_ = [{name: 'Exit'}];
+  return this.lastCommand_ ?
+      this.addIndexProperty_(this.lastCommand_).cursorIndex : this.index;
 };
 
 Editor.prototype.step = function() {
+  var command;
   if (this.commands_.length == 0)
     return null;
   if (--this.commands_[0].frame > 0)
@@ -94,7 +97,9 @@ Editor.prototype.step = function() {
     this.length++;
   else if (command.name == 'Delete')
     this.length--;
-  return this.addIndexProperty_(command);
+  this.addIndexProperty_(command);
+  this.lastCommand_ = command;
+  return command;
 };
 
 Editor.prototype.addIndexProperty_ = function(command) {

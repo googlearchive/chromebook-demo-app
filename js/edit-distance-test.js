@@ -92,3 +92,7 @@ Test.add('indexMap#isRangeChanged', function() {
   Assert.equals(true, indexMap.isRangeChanged(2, 1));
   Assert.equals(false, indexMap.isRangeChanged(6, 2));
 });
+
+Test.add('calcSimpleIndexMap', function() {
+  var result = calcSimpleIndexMap('AAACBBB', 'AAAABBBB');
+});
