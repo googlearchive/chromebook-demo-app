@@ -78,7 +78,6 @@ HANGOUTS_FILES = \
   assets/balloon-triangle-top-2x.png \
   assets/close-1x.png \
   assets/close-2x.png \
-  assets/glasses.png \
   assets/hangouts-button-add-2x.png \
   assets/hangouts-button-effects-2x.png \
   assets/hangouts-button-invite-2x.png \
@@ -110,6 +109,7 @@ HANGOUTS_FILES = \
   js/util.js \
   third-party/ccv/js/ccv.js \
   third-party/ccv/js/face.js \
+  third-party/google-plus/scuba-mask.png \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/hangouts-app.html
