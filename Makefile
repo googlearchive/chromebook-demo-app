@@ -141,7 +141,7 @@ MUSIC_FILES = \
   js/background.js \
   js/music-app.js \
   js/util.js \
-  third-party/music/sample-song.mp3 \
+  third-party/music/music-lumineers.mp3 \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
