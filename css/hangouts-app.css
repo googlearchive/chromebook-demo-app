@@ -49,10 +49,16 @@
   background-color: #f1f1f1;
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
+  outline: none;
 }
 
 .effects.button {
   background-color: white;
+}
+
+.effects.button:focus,
+.effects.button:hover {
+  outline: 5px auto #50aa38;
 }
 
 .invite.button {
