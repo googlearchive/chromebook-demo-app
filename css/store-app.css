@@ -39,14 +39,6 @@
   cursor: pointer;
 }
 
-.app.top {
-  width: 700px;
-  height: 280px;
-  background-image: url(store-app-top.png);
-  margin: 40px auto 0;
-  padding-top: 8px;
-}
-
 .app.bejeweled {
   -webkit-order: __MSG_STORE_APP_BEJEWELED_ORDER__;
   background-image: url(store-tile-bejeweled.png);

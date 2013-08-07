@@ -147,8 +147,6 @@ MUSIC_FILES = \
 STORE_FILES= \
   assets/close-1x.png \
   assets/close-2x.png \
-  assets/store-app-top.png \
-  assets/store-app.png \
   assets/store-icon-128.png \
   assets/store-icon-32.png \
   assets/store-icon-48.png \
