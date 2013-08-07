@@ -250,22 +250,22 @@ h1, p {
 }
 
 .docs.shelf-marker {
-  left: 8px;
+  left: 60px;
   background-color: #2a70e8;
 }
 
 .hangouts.shelf-marker {
-  left: 60px;
+  left: 112px;
   background-color: #50aa38;
 }
 
 .music.shelf-marker {
-  left: 112px;
+  left: 164px;
   background-color: #facf0c;
 }
 
 .store.shelf-marker {
-  left: 164px;
+  left: 216px;
   background-color: #e14b40;
 }
 
