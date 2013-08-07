@@ -2,20 +2,26 @@
 
 #docs-app .app-icon {
   background-image: -webkit-image-set(
-      url('docs-icon-64.png') 1x,
-      url('docs-icon-128.png') 2x);
+      url(docs-icon-64.png) 1x,
+      url(docs-icon-128.png) 2x);
 }
 
 #docs-app .sec-header-icon.group {
-  background-image: url('docs-section-group-2x.png');
+  background-image: -webkit-image-set(
+     url(docs-section-group-1x.png) 1x,
+     url(docs-section-group-2x.png) 2x);
 }
 
 #docs-app .sec-header-icon.backup {
-  background-image: url('docs-section-backup-2x.png');
+  background-image: -webkit-image-set(
+      url(docs-section-backup-1x.png) 1x,
+      url(docs-section-backup-2x.png) 2x);
 }
 
 #docs-app .sec-header-icon.anywhere {
-  background-image: url('docs-section-anywhere-2x.png');
+  background-image: -webkit-image-set(
+      url(docs-section-anywhere-1x.png) 1x,
+      url(docs-section-anywhere-2x.png) 2x);
 }
 
 #docs-app .app-side-footer {
@@ -76,7 +82,7 @@
 
 #docs-app .user-icon.charles {
   background-color: #13955c;
-  background-image: url('docs-user-charles-2x.png');
+  background-image: url(docs-user-charles-2x.png);
 }
 
 #docs-app .user-icon.charles::after {
@@ -85,7 +91,7 @@
 
 #docs-app .user-icon.edgar {
   background-color: #f4b400;
-  background-image: url('docs-user-edgar-2x.png');
+  background-image: url(docs-user-edgar-2x.png);
 }
 
 #docs-app .user-icon.edgar::after {
@@ -94,7 +100,7 @@
 
 #docs-app .user-icon.fredrick {
   background-color: #9e69af;
-  background-image: url('docs-user-fredrick-2x.png');
+  background-image: url(docs-user-fredrick-2x.png);
 }
 
 #docs-app .user-icon.fredrick::after {
@@ -170,7 +176,7 @@
   height: 40px;
   margin-top: 40px;
   -webkit-flex: none;
-  background-image: url('docs-toolbar-2x.png');
+  background-image: url(docs-toolbar-2x.png);
   background-size: 804px 40px;
 }
 
@@ -185,7 +191,7 @@
   background-color: #f8f8f8;
   margin-top: 20px;
   -webkit-flex: none;
-  background-image: url('docs-ruler-2x.png');
+  background-image: url(docs-ruler-2x.png);
   background-size: 800px 14px;
 }
 

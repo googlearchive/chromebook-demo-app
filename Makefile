@@ -36,37 +36,40 @@ MENU_FILES = \
   third-party/sample-files/Song.mp3
 
 DOCS_FILES = \
-  js/app.js \
-  js/editor.js \
-  js/edit-distance.js \
-  js/docs-app.js \
-  js/util.js \
-  js/paper-edit-adapter.js \
-  js/background.js \
-  css/common.css \
-  css/docs-app.css \
-  assets/docs-icon-32.png \
-  assets/docs-icon-48.png \
-  assets/docs-icon-64.png \
-  assets/docs-icon-96.png \
-  assets/docs-icon-128.png \
-  assets/docs-section-group-2x.png \
-  assets/docs-section-backup-2x.png \
-  assets/docs-section-anywhere-2x.png \
-  assets/docs-user-charles-2x.png \
-  assets/docs-user-edgar-2x.png \
-  assets/docs-user-fredrick-2x.png \
-  assets/docs-share-2x.png \
-  assets/docs-toolbar-2x.png \
-  assets/docs-ruler-2x.png \
   assets/balloon-triangle-top-1x.png \
   assets/balloon-triangle-top-2x.png \
   assets/close-1x.png \
   assets/close-2x.png \
-  views/docs-app.html \
+  assets/docs-icon-128.png \
+  assets/docs-icon-32.png \
+  assets/docs-icon-48.png \
+  assets/docs-icon-64.png \
+  assets/docs-icon-96.png \
+  assets/docs-ruler-2x.png \
+  assets/docs-section-anywhere-1x.png \
+  assets/docs-section-anywhere-2x.png \
+  assets/docs-section-backup-1x.png \
+  assets/docs-section-backup-2x.png \
+  assets/docs-section-group-1x.png \
+  assets/docs-section-group-2x.png \
+  assets/docs-share-2x.png \
+  assets/docs-toolbar-2x.png \
+  assets/docs-user-charles-2x.png \
+  assets/docs-user-edgar-2x.png \
+  assets/docs-user-fredrick-2x.png \
+  css/common.css \
+  css/docs-app.css \
+  js/app.js \
+  js/background.js \
+  js/docs-app.js \
+  js/edit-distance.js \
+  js/editor.js \
+  js/paper-edit-adapter.js \
+  js/util.js \
+  third-party/docs-bot-words/words.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
-  third-party/docs-bot-words/words.js
+  views/docs-app.html
 
 HANGOUTS_FILES = \
   assets/balloon-triangle-bottom-1x.png \
