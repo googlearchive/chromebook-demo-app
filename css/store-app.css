@@ -12,10 +12,10 @@
       url(store-section-thousands-2x.png) 2x);
 }
 
-#store-app .sec-header-icon.offline {
+#store-app .sec-header-icon.stability {
   background-image: -webkit-image-set(
-      url(store-section-offline-1x.png) 1x,
-      url(store-section-offline-2x.png) 2x);
+      url(store-section-stability-1x.png) 1x,
+      url(store-section-stability-2x.png) 2x);
 }
 
 #store-app .sec-header-icon.install {

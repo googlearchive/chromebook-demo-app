@@ -145,27 +145,30 @@ MUSIC_FILES = \
   views/music-app.html
 
 STORE_FILES= \
-  js/app.js \
-  js/store-app.js \
-  js/util.js \
-  js/background.js \
-  css/common.css \
-  css/store-app.css \
+  assets/close-1x.png \
+  assets/close-2x.png \
+  assets/store-app-top.png \
+  assets/store-app.png \
+  assets/store-icon-128.png \
   assets/store-icon-32.png \
   assets/store-icon-48.png \
   assets/store-icon-64.png \
   assets/store-icon-96.png \
-  assets/store-icon-128.png \
-  assets/store-app.png \
-  assets/store-app-top.png \
-  assets/store-section-thousands-2x.png \
-  assets/store-section-offline-2x.png \
+  assets/store-section-install-1x.png \
   assets/store-section-install-2x.png \
-  assets/close-1x.png \
-  assets/close-2x.png \
+  assets/store-section-stability-1x.png \
+  assets/store-section-stability-2x.png \
+  assets/store-section-thousands-1x.png \
+  assets/store-section-thousands-2x.png \
   assets/store-star-black.png \
-  assets/store-star-white.png \
   assets/store-star-half.png \
+  assets/store-star-white.png \
+  css/common.css \
+  css/store-app.css \
+  js/app.js \
+  js/background.js \
+  js/store-app.js \
+  js/util.js \
   third-party/app-tiles/store-tile-bejeweled.png \
   third-party/app-tiles/store-tile-cubeslam.png \
   third-party/app-tiles/store-tile-deezer.png \
@@ -181,9 +184,9 @@ STORE_FILES= \
   third-party/app-tiles/store-tile-spotify.png \
   third-party/app-tiles/store-tile-tweetdeck.png \
   third-party/app-tiles/store-tile-youtube.png \
-  views/store-app.html \
   third-party/open-sans/OpenSans-Light.ttf \
-  third-party/open-sans/OpenSans-Regular.ttf
+  third-party/open-sans/OpenSans-Regular.ttf \
+  views/store-app.html
 
 HELPER_FILES= \
   js/helper-extension.js \
