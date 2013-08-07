@@ -60,7 +60,8 @@
 }
 
 .effects.button:focus,
-.effects.button:hover {
+.effects.button:hover,
+.effects.button.waiting {
   box-shadow: 0 0 2px 0 rgba(80,150,56,0.75);
 }
 

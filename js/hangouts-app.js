@@ -12,6 +12,8 @@ var HangoutsApp = function() {
   this.tracker_.init(0, 0, 0, 0);
 };
 
+HangoutsApp.EFFECT_BUTTON_WAITING_SECONDS = 5;
+
 HangoutsApp.prototype = {
   __proto__: App.prototype
 };
@@ -36,7 +38,8 @@ HangoutsApp.prototype.initDocument = function() {
   effects[effects.length - 1].count = -1;
 
   // Register the events.
-  this.get('.effects.button').addEventListener('click', function() {
+  this.effectButton_ = this.get('.effects.button');
+  this.effectButton_.addEventListener('click', function() {
     var counts = [];
     for (var i = 0; i < effects.length; i++) {
       var effect = effects[i];
@@ -53,6 +56,24 @@ HangoutsApp.prototype.initDocument = function() {
       break;
     }
   }.bind(this));
+
+  this.effectButton_.addEventListener('mouseover', function() {
+    this.timeCounter_ = 0;
+    this.updateEffectButtonFocus_();
+  }.bind(this));
+
+  this.effectButton_.addEventListener('mouseout', function() {
+    this.timeCounter_ = HangoutsApp.EFFECT_BUTTON_WAITING_SECONDS;
+    this.updateEffectButtonFocus_();
+  }.bind(this));
+
+  this.timeCounter_ = HangoutsApp.EFFECT_BUTTON_WAITING_SECONDS;
+  if (!('intervalID_' in this)) {
+    this.intervalID_ = setInterval(function() {
+      this.timeCounter_--;
+      this.updateEffectButtonFocus_();
+    }.bind(this), 1000);
+  }
 
   // Init camera.
   navigator.webkitGetUserMedia(
@@ -77,6 +98,10 @@ HangoutsApp.prototype.initDocument = function() {
   );
 };
 
+HangoutsApp.prototype.updateEffectButtonFocus_ = function() {
+  this.effectButton_.classList.toggle('waiting', this.timeCounter_ <= 0);
+};
+
 HangoutsApp.prototype.renderFrame_ = function() {
   if (!this.videoInitialized_)
     return;
@@ -95,6 +120,10 @@ HangoutsApp.prototype.close = function() {
     this.videoSource_.pause();
     this.mediaStream_.stop();
     this.videoInitialized_ = false;
+  }
+  if ('intervalID_' in this) {
+    clearInterval(this.intervalID_);
+    delete this.intervalID_;
   }
   App.prototype.close.call(this);
 };
