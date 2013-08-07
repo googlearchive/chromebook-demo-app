@@ -111,35 +111,38 @@ HANGOUTS_FILES = \
   views/hangouts-app.html
 
 MUSIC_FILES = \
-  js/app.js \
-  js/music-app.js \
-  js/util.js \
-  js/background.js \
-  css/common.css \
-  css/music-app.css \
-  assets/music-icon-32.png \
-  assets/music-icon-48.png \
-  assets/music-icon-64.png \
-  assets/music-icon-96.png \
-  assets/music-icon-128.png \
-  assets/music-section-anywhere-2x.png \
-  assets/music-section-upload-2x.png \
-  assets/music-section-unlimited-2x.png \
   assets/balloon-triangle-left-1x.png \
   assets/balloon-triangle-left-2x.png \
   assets/balloon-triangle-right-1x.png \
   assets/balloon-triangle-right-2x.png \
-  assets/music-play-control-2x.png \
-  assets/music-pause-control-2x.png \
-  assets/music-equalizer-2x.gif \
   assets/close-1x.png \
   assets/close-2x.png \
-  views/music-app.html \
+  assets/music-equalizer-2x.gif \
+  assets/music-icon-128.png \
+  assets/music-icon-32.png \
+  assets/music-icon-48.png \
+  assets/music-icon-64.png \
+  assets/music-icon-96.png \
+  assets/music-pause-control-2x.png \
+  assets/music-play-control-2x.png \
+  assets/music-section-anywhere-1x.png \
+  assets/music-section-anywhere-2x.png \
+  assets/music-section-unlimited-1x.png \
+  assets/music-section-unlimited-2x.png \
+  assets/music-section-upload-1x.png \
+  assets/music-section-upload-2x.png \
+  css/common.css \
+  css/music-app.css \
+  js/app.js \
+  js/background.js \
+  js/music-app.js \
+  js/util.js \
+  third-party/music/sample-song.mp3 \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
   third-party/roboto/Roboto-ThinItalic.ttf \
-  third-party/music/sample-song.mp3
+  views/music-app.html
 
 STORE_FILES= \
   js/app.js \

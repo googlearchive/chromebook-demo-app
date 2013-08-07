@@ -2,20 +2,26 @@
 
 #store-app .app-icon {
   background-image: -webkit-image-set(
-      url('store-icon-64.png') 1x,
-      url('store-icon-128.png') 2x);
+      url(store-icon-64.png) 1x,
+      url(store-icon-128.png) 2x);
 }
 
 #store-app .sec-header-icon.thousands {
-  background-image: url('store-section-thousands-2x.png');
+  background-image: -webkit-image-set(
+      url(store-section-thousands-1x.png) 1x,
+      url(store-section-thousands-2x.png) 2x);
 }
 
 #store-app .sec-header-icon.offline {
-  background-image: url('store-section-offline-2x.png');
+  background-image: -webkit-image-set(
+      url(store-section-offline-1x.png) 1x,
+      url(store-section-offline-2x.png) 2x);
 }
 
 #store-app .sec-header-icon.install {
-  background-image: url('store-section-install-2x.png');
+  background-image: -webkit-image-set(
+      url(store-section-install-1x.png) 1x,
+      url(store-section-install-2x.png) 2x);
 }
 
 .app {
@@ -28,7 +34,7 @@
   -webkit-flex: 0 0 auto;
   -webkit-margin-end: -1px;
   margin-bottom: -1px;
-  background-image: url('store-app.png');
+  background-image: url(store-app.png);
   background-color: #f8f8f8;
   cursor: pointer;
 }
@@ -36,84 +42,84 @@
 .app.top {
   width: 700px;
   height: 280px;
-  background-image: url('store-app-top.png');
+  background-image: url(store-app-top.png);
   margin: 40px auto 0;
   padding-top: 8px;
 }
 
 .app.bejeweled {
   -webkit-order: __MSG_STORE_APP_BEJEWELED_ORDER__;
-  background-image: url('store-tile-bejeweled.png');
+  background-image: url(store-tile-bejeweled.png);
 }
 
 .app.cubeslam {
   -webkit-order: __MSG_STORE_APP_CUBESLAM_ORDER__;
-  background-image: url('store-tile-cubeslam.png');
+  background-image: url(store-tile-cubeslam.png);
 }
 
 .app.deezer {
   -webkit-order: __MSG_STORE_APP_DEEZER_ORDER__;
-  background-image: url('store-tile-deezer.png');
+  background-image: url(store-tile-deezer.png);
 }
 
 .app.gmail {
   -webkit-order: __MSG_STORE_APP_GMAIL_ORDER__;
-  background-image: url('store-tile-gmail.png');
+  background-image: url(store-tile-gmail.png);
 }
 
 .app.kindle {
   -webkit-order: __MSG_STORE_APP_KINDLE_ORDER__;
-  background-image: url('store-tile-kindle.png');
+  background-image: url(store-tile-kindle.png);
 }
 
 .app.netflix {
   -webkit-order: __MSG_STORE_APP_NETFLIX_ORDER__;
-  background-image: url('store-tile-netflix.png');
+  background-image: url(store-tile-netflix.png);
 }
 
 .app.pandora {
   -webkit-order: __MSG_STORE_APP_PANDORA_ORDER__;
-  background-image: url('store-tile-pandora.jpg');
+  background-image: url(store-tile-pandora.jpg);
 }
 
 .app.pixlr {
   -webkit-order: __MSG_STORE_APP_PIXLR_ORDER__;
-  background-image: url('store-tile-pixlr.png');
+  background-image: url(store-tile-pixlr.png);
 }
 
 .app.plus {
   -webkit-order: __MSG_STORE_APP_PLUS_ORDER__;
-  background-image: url('store-tile-plus.png');
+  background-image: url(store-tile-plus.png);
 }
 
 .app.remotedesktop {
   -webkit-order: __MSG_STORE_APP_REMOTEDESKTOP_ORDER__;
-  background-image: url('store-tile-remotedesktop.png');
+  background-image: url(store-tile-remotedesktop.png);
 }
 
 .app.sheets {
   -webkit-order: __MSG_STORE_APP_SHEETS_ORDER__;
-  background-image: url('store-tile-sheets.png');
+  background-image: url(store-tile-sheets.png);
 }
 
 .app.slides {
   -webkit-order: __MSG_STORE_APP_SLIDES_ORDER__;
-  background-image: url('store-tile-slides.png');
+  background-image: url(store-tile-slides.png);
 }
 
 .app.spotify {
   -webkit-order: __MSG_STORE_APP_SPOTIFY_ORDER__;
-  background-image: url('store-tile-spotify.png');
+  background-image: url(store-tile-spotify.png);
 }
 
 .app.tweetdeck {
   -webkit-order: __MSG_STORE_APP_TWEETDECK_ORDER__;
-  background-image: url('store-tile-tweetdeck.png');
+  background-image: url(store-tile-tweetdeck.png);
 }
 
 .app.youtube {
   -webkit-order: __MSG_STORE_APP_YOUTUBE_ORDER__;
-  background-image: url('store-tile-youtube.png');
+  background-image: url(store-tile-youtube.png);
 }
 
 .app-container {
@@ -137,18 +143,18 @@
 
 .app-detail.star-XXXXx {
   height: 13px;
-  background: url('store-star-black.png') no-repeat 0 1px,
-              url('store-star-black.png') no-repeat 11px 1px,
-              url('store-star-black.png') no-repeat 22px 1px,
-              url('store-star-black.png') no-repeat 33px 1px,
-              url('store-star-half.png') no-repeat 44px 1px;
+  background: url(store-star-black.png) no-repeat 0 1px,
+              url(store-star-black.png) no-repeat 11px 1px,
+              url(store-star-black.png) no-repeat 22px 1px,
+              url(store-star-black.png) no-repeat 33px 1px,
+              url(store-star-half.png) no-repeat 44px 1px;
 }
 
 .app-detail.star-XXXX {
   height: 13px;
-  background: url('store-star-black.png') no-repeat 0 1px,
-              url('store-star-black.png') no-repeat 11px 1px,
-              url('store-star-black.png') no-repeat 22px 1px,
-              url('store-star-black.png') no-repeat 33px 1px,
-              url('store-star-white.png') no-repeat 44px 1px;
+  background: url(store-star-black.png) no-repeat 0 1px,
+              url(store-star-black.png) no-repeat 11px 1px,
+              url(store-star-black.png) no-repeat 22px 1px,
+              url(store-star-black.png) no-repeat 33px 1px,
+              url(store-star-white.png) no-repeat 44px 1px;
 }
