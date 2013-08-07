@@ -16,7 +16,7 @@
     "description": "The title of the upload section."
   },
   "MUSIC_SECTION_UPLOAD_DESCRIPTION": {
-    "message": "Bring up to 20,000 songs from your iTunes® library or any music folder to Google Play for free.",
+    "message": "Bring up to 20,000 songs from your iTunes<sup>®</sup> library or any music folder to Google Play for free.",
     "description": "The description of the upload section."
   },
   "MUSIC_SECTION_ANYWHERE_TITLE": {
@@ -36,7 +36,7 @@
     "description": "The description of the unlimited section."
   },
   "MUSIC_HINT_TITLE": {
-    "message": "What if I use iTunes®?",
+    "message": "What if I use iTunes<sup>®</sup>?",
     "description": ""
   },
   "MUSIC_HINT_DESCRIPTION": {

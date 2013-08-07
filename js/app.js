@@ -53,13 +53,19 @@ App.queryXPath = function(doc, xpath) {
 
 App.prototype.initDocument = function(firstTime) {
   // Replace i18n strings.
-  var textNodes = App.queryXPath(
-      this.document, '//text()[contains(., \'__MSG_\')]');
-  var attrNodes = App.queryXPath(
-      this.document, '//@*[contains(., \'__MSG_\')]');
-  var nodes = [].concat(textNodes, attrNodes);
+  var nodes = App.queryXPath(
+      this.document, '//*[contains(./text(), \'__MSG_\')]');
   for (var i = 0; i < nodes.length; i++) {
-    nodes[i].nodeValue = nodes[i].nodeValue.replace(
+    nodes[i].innerHTML = nodes[i].innerHTML.replace(
+        /__MSG_([a-zA-Z0-9_]+)__/g,
+        function(str) {
+          return chrome.i18n.getMessage(RegExp.$1);
+        });
+  }
+  var attributes = App.queryXPath(
+      this.document, '//@*[contains(., \'__MSG_\')]');
+  for (var i = 0; i < attributes.length; i++) {
+    attributes[i].nodeValue = attributes[i].nodeValue.replace(
         /__MSG_([a-zA-Z0-9_]+)__/g,
         function(str) {
           return chrome.i18n.getMessage(RegExp.$1);
