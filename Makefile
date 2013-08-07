@@ -94,6 +94,10 @@ HANGOUTS_FILES = \
   assets/hangouts-section-group-2x.png \
   assets/hangouts-section-nohassle-1x.png \
   assets/hangouts-section-nohassle-2x.png \
+  assets/hangouts-people-robertdo.png \
+  assets/hangouts-people-erican.png \
+  assets/hangouts-people-mikefox.png \
+  assets/hangouts-people-nicholasritz.png \
   css/common.css \
   css/hangouts-app.css \
   gen/third-party/effects.js \

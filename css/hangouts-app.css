@@ -134,7 +134,7 @@
 
 .people {
   -webkit-flex: none;
-  background-color: #ccc;
+  background: no-repeat center/contain;
   width: 145px;
   height: 82px;
   -webkit-margin-end: 20px;
@@ -142,6 +142,22 @@
 
 .people:last-child {
   -webkit-margin-end: 0px;
+}
+
+.people.robertdo {
+  background-image: url(hangouts-people-robertdo.png);
+}
+
+.people.erican {
+  background-image: url(hangouts-people-erican.png);
+}
+
+.people.mikefox {
+  background-image: url(hangouts-people-mikefox.png);
+}
+
+.people.nicholasritz {
+  background-image: url(hangouts-people-nicholasritz.png);
 }
 
 .people-container .balloon {
