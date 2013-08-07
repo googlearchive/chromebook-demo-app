@@ -35,30 +35,33 @@
 
 .button-container {
   display: -webkit-flex;
-  width: 680px;
+  width: 840px;
   margin: 40px auto 0;
 }
 
 .button {
-  display: -webkit-flex;
+  -webkit-box-sizing: border-box;
   -webkit-flex: none;
-  width: 150px;
-  height: 50px;
-  border-radius: 2px;
   -webkit-margin-end: 10px;
   background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  -webkit-box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid rgba(206,206,206,0.3);
+  display: -webkit-flex;
+  height: 50px;
   outline: none;
+  width: 150px;
 }
 
 .effects.button {
   background-color: white;
+  border: none;
+  box-shadow: 0 0 2px 0 rgba(206,206,206,0.75);
+  cursor: pointer;
 }
 
 .effects.button:focus,
 .effects.button:hover {
-  outline: 5px auto #50aa38;
+  box-shadow: 0 0 2px 0 rgba(80,150,56,0.75);
 }
 
 .invite.button {
@@ -106,11 +109,13 @@
 }
 
 .video-container {
-  width: 640px;
+  width: 800px;
+  height: 450px;
   margin: 40px auto 0;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
   padding: 20px;
+  position: relative;
 }
 
 .video-source {
@@ -123,8 +128,17 @@
   margin: 0 auto;
 }
 
+.video-shadow {
+  box-shadow: inset 0 0 2px 0 rgba(0,0,0,0.6);
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
 .people-container {
-  width: 640px;
+  width: 800px;
   margin: 40px auto;
   display: -webkit-flex;
   background-color: white;
@@ -135,8 +149,8 @@
 .people {
   -webkit-flex: none;
   background: no-repeat center/contain;
-  width: 145px;
-  height: 82px;
+  width: 185px;
+  height: 104px;
   -webkit-margin-end: 20px;
 }
 
@@ -163,4 +177,18 @@
 .people-container .balloon {
   width: 350px;
   left: 165px;
+}
+
+/**
+ * For small monitors
+ */
+
+@media all and (max-height: 844px) {
+  .button-container,
+  .video-container {
+    margin-top: 20px;
+  }
+  .people-container {
+    margin: 20px auto;
+  }
 }
