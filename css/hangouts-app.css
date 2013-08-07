@@ -30,12 +30,12 @@
 }
 
 #hangouts-main {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .button-container {
   display: -webkit-flex;
-  width: 840px;
+  width: 820px;
   margin: 40px auto 0;
 }
 
@@ -115,7 +115,7 @@
   margin: 40px auto 0;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
-  padding: 20px;
+  padding: 10px;
   position: relative;
 }
 
@@ -134,8 +134,8 @@
   width: 800px;
   height: 450px;
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 10px;
+  top: 10px;
 }
 
 .people-container {
@@ -144,19 +144,15 @@
   display: -webkit-flex;
   background-color: white;
   box-shadow: 0 0 2px 0 rgba(206, 206, 206, 0.75);
-  padding: 20px;
+  padding: 10px;
+  -webkit-justify-content: space-between;
 }
 
 .people {
   -webkit-flex: none;
   background: no-repeat center/contain;
-  width: 185px;
-  height: 104px;
-  -webkit-margin-end: 20px;
-}
-
-.people:last-child {
-  -webkit-margin-end: 0px;
+  width: 192px;
+  height: 109px;
 }
 
 .people.robertdo {
@@ -187,9 +183,13 @@
 @media all and (max-height: 844px) {
   .button-container,
   .video-container {
-    margin-top: 20px;
+    margin-top: 16px;
   }
   .people-container {
-    margin: 20px auto;
+    margin: 16px auto 10px;
+  }
+  .app-frame .sec-header {
+    margin-top: 36px;
+    margin-bottom: 18px;
   }
 }

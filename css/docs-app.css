@@ -25,7 +25,12 @@
 }
 
 #docs-app .app-side-footer {
+  height: 48px;
   background-color: #2a70e8;
+}
+
+#docs-app .app-side-footer:hover {
+  height: 168px;
 }
 
 /**
@@ -334,7 +339,7 @@
 
 @media all and (max-height: 820px) {
   .app-frame .sec-header {
-    margin-top: 36px;
-    margin-bottom: 18px;
+    margin-top: 24px;
+    margin-bottom: 12px;
   }
 }

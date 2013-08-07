@@ -112,7 +112,7 @@ body {
 .app-frame .app-side-footer {
   background-color: #f1f1f1;
   padding: 24px;
-  height: 24px;
+  height: 26px;
   -webkit-flex: none;
   overflow: hidden;
   -webkit-transition-property: height;
@@ -126,17 +126,15 @@ body {
   height: 108px;
 }
 
-.app-frame .app-side-footer.double-line {
-  height: 48px;
-}
-
-.app-frame .app-side-footer.double-line:hover {
-  height: 168px;
-}
-
 .app-frame .app-hint-title {
   color: white;
   margin-bottom: 18px;
+}
+
+.app-frame .app-hint-title sup {
+  vertical-align: baseline;
+  position: relative;
+  bottom: 5px;
 }
 
 .app-frame .app-hint-description {
@@ -148,6 +146,10 @@ body {
 
 .app-frame .app-side-footer:hover .app-hint-description {
   opacity: 1;
+}
+
+.app-frame .app-side-footer sup {
+  margin-top: -20px;
 }
 
 .app-frame .app-main {
