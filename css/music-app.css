@@ -57,7 +57,7 @@
 #music-app .message-bar {
   margin: 40px auto 0;
   height: 40px;
-  width: 800px;
+  width: 840px;
   background-color: white;
   font-family: 'Roboto-Light', sans-serif;
   font-size: 18px;
@@ -70,7 +70,7 @@
 #music-app .music-main-body {
   display: -webkit-flex;
   margin: 40px auto;
-  width: 800px;
+  width: 840px;
 }
 
 #music-app .side-button-container {
@@ -113,7 +113,7 @@
 }
 
 #music-app .music-container {
-  width: 640px;
+  width: 680px;
   -webkit-flex: none;
   margin-bottom: -10px;
 }
@@ -124,33 +124,86 @@
 }
 
 #music-app .music {
-  width: 150px;
-  height: 225px;
+  width: 160px;
+  height: 245px;
   background-color: white;
   -webkit-margin-end: 10px;
   margin-bottom: 10px;
   float: left;
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
 
 #music-app .music.main {
-  width: 310px;
-  height: 460px;
+  width: 330px;
+  height: 500px;
 }
 
 #music-app .album-cover {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   background-color: black;
+  -webkit-flex: none;
 }
 
 #music-app .music.main .album-cover {
-  width: 310px;
-  height: 310px;
+  width: 330px;
+  height: 330px;
   background-color: orange;
   position: relative;
+}
+
+.music.lumineers .album-cover {
+  background-image: url(music-cover-lumineers.jpg);
+}
+
+.music.maroon5 .album-cover {
+  background-image: url(music-cover-maroon5.jpg);
+}
+
+.music.florence .album-cover {
+  background-image: url(music-cover-florence.jpg);
+}
+
+.music.blake-shelton .album-cover {
+  background-image: url(music-cover-blake-shelton.jpg);
+}
+
+.music.tiesto .album-cover {
+  background-image: url(music-cover-tiesto.jpg);
+}
+
+.music.mika .album-cover {
+  background-image: url(music-cover-mika.jpg);
+}
+
+.music.one-republic .album-cover {
+  background-image: url(music-cover-one-republic.jpg);
+}
+
+.music.muse .album-cover {
+  background-image: url(music-cover-muse.png);
+}
+
+.music.frank-ocean .album-cover {
+  background-image: url(music-cover-frank-ocean.jpg);
+}
+
+.music.imagine-dragons .album-cover {
+  background-image: url(music-cover-imagine-dragons.jpg);
+}
+
+.music.the-doors .album-cover {
+  background-image: url(music-cover-the-doors.tif);
+}
+
+.music.tegan-and-sara .album-cover {
+  background-image: url(music-cover-tegan-and-sara.png);
+}
+
+.music.ellie-goulding .album-cover {
+  background-image: url(music-cover-ellie-goulding.jpg);
 }
 
 .play-control {
@@ -202,50 +255,48 @@
 }
 
 #music-app .music-name {
-  font-family: 'Roboto-Light', sans-serif;
+  font: 16px/16px 'Roboto-Light', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #444;
-  font-size: 16px;
-  margin: 0 8px;
-  height: 20px;
-  box-sizing: border-box;
-  line-height: 16px;
-  box-sizing: border-box;
-  padding-top: 4px;
+  margin: 7px 10px 0;
+  -webkit-flex: none;
 }
 
 #music-app .music.main .music-name {
-  margin: 16px 16px 0;
+  font-size: 20px;
+  line-height: 23px;
 }
 
 #music-app .artist-name {
-  font-family: 'Roboto-Light', sans-serif;
+  font: 13px/16px 'Roboto-Light', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #aaa;
-  font-size: 14px;
-  line-height: 20px;
-  height: 20px;
-  margin: 0 8px;
+  margin: 0 10px;
   -webkit-flex: 1 0 auto;
 }
 
 #music-app .music.main .artist-name {
-  margin: 0 16px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 #music-app .music-footer {
-  margin: 2px 8px;
+  margin: 0 10px;
   border-top: 1px solid #eee;
-  font-family: 'Roboto-ThinItalic', sans-serif;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font: 12px/14px 'Roboto-ThinItalic', sans-serif;
   color: #8d8d8d;
-  font-size: 14px;
-  line-height: 15px;
-  height: 30px;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  -webkit-justify-content: center;
+  height: 28px;
+  -webkit-flex: none;
 }
 
 #music-app .music.main .music-footer {
-  /* margin: 2px 16px; */
+  font-size: 13px;
 }
 
 /**

@@ -110,5 +110,161 @@
   "MUSIC_RANDOM_MUSIC_NOTE":{
     "message": "Suggested",
     "description": ""
+  },
+  "MUSIC_LUMINEERS_ALBUM_NAME": {
+    "message": "Lumineers",
+    "description": ""
+  },
+  "MUSIC_LUMINEERS_ARTIST_NAME": {
+    "message": "Flowers in your hair",
+    "description": ""
+  },
+  "MUSIC_LUMINEERS_FOOTER_MESSAGE": {
+    "message": "Recently played",
+    "description": ""
+  },
+  "MUSIC_MAROON5_ALBUM_NAME": {
+    "message": "Maroon 5",
+    "description": ""
+  },
+  "MUSIC_MAROON5_ARTIST_NAME": {
+    "message": " Overexposed",
+    "description": ""
+  },
+  "MUSIC_MAROON5_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
+  },
+  "MUSIC_FLORENCE_ALBUM_NAME": {
+    "message": "Florence + the Machine",
+    "description": ""
+  },
+  "MUSIC_FLORENCE_ARTIST_NAME": {
+    "message": "Ceremonials",
+    "description": ""
+  },
+  "MUSIC_FLORENCE_FOOTER_MESSAGE": {
+    "message": "Recently played",
+    "description": ""
+  },
+  "MUSIC_BLAKE_SHELTON_ALBUM_NAME": {
+    "message": "Blake Shelton",
+    "description": ""
+  },
+  "MUSIC_BLAKE_SHELTON_ARTIST_NAME": {
+    "message": "Based on a True Story",
+    "description": ""
+  },
+  "MUSIC_BLAKE_SHELTON_FOOTER_MESSAGE": {
+    "message": "Recently added to My Library",
+    "description": ""
+  },
+  "MUSIC_TIESTO_ALBUM_NAME": {
+    "message": "Tiësto",
+    "description": ""
+  },
+  "MUSIC_TIESTO_ARTIST_NAME": {
+    "message": "Club Life Miami",
+    "description": ""
+  },
+  "MUSIC_TIESTO_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
+  },
+  "MUSIC_MIKA_ALBUM_NAME": {
+    "message": "Mika",
+    "description": ""
+  },
+  "MUSIC_MIKA_ARTIST_NAME": {
+    "message": "The Origin of Love",
+    "description": ""
+  },
+  "MUSIC_MIKA_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
+  },
+  "MUSIC_ONE_REPUBLIC_ALBUM_NAME": {
+    "message": "One Republic",
+    "description": ""
+  },
+  "MUSIC_ONE_REPUBLIC_ARTIST_NAME": {
+    "message": "Native",
+    "description": ""
+  },
+  "MUSIC_ONE_REPUBLIC_FOOTER_MESSAGE": {
+    "message": "Suggested new release",
+    "description": ""
+  },
+  "MUSIC_MUSE_ALBUM_NAME": {
+    "message": "Muse",
+    "description": ""
+  },
+  "MUSIC_MUSE_ARTIST_NAME": {
+    "message": "The 2nd Law",
+    "description": ""
+  },
+  "MUSIC_MUSE_FOOTER_MESSAGE": {
+    "message": "Based on your listening history",
+    "description": ""
+  },
+  "MUSIC_FRANK_OCEAN_ALBUM_NAME": {
+    "message": "Frank Ocean",
+    "description": ""
+  },
+  "MUSIC_FRANK_OCEAN_ARTIST_NAME": {
+    "message": "Channel Orange",
+    "description": ""
+  },
+  "MUSIC_FRANK_OCEAN_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
+  },
+  "MUSIC_IMAGINE_DRAGONS_ALBUM_NAME": {
+    "message": "Imagine Dragons",
+    "description": ""
+  },
+  "MUSIC_IMAGINE_DRAGONS_ARTIST_NAME": {
+    "message": "Night Visions",
+    "description": ""
+  },
+  "MUSIC_IMAGINE_DRAGONS_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
+  },
+  "MUSIC_THE_DOORS_ALBUM_NAME": {
+    "message": "The doors",
+    "description": ""
+  },
+  "MUSIC_THE_DOORS_ARTIST_NAME": {
+    "message": "The Doors",
+    "description": ""
+  },
+  "MUSIC_THE_DOORS_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
+  },
+  "MUSIC_TEGAN_AND_SARA_ALBUM_NAME": {
+    "message": "Tegan + Sara",
+    "description": ""
+  },
+  "MUSIC_TEGAN_AND_SARA_ARTIST_NAME": {
+    "message": "Heartthrob",
+    "description": ""
+  },
+  "MUSIC_TEGAN_AND_SARA_FOOTER_MESSAGE": {
+    "message": "Based on your listening history",
+    "description": ""
+  },
+  "MUSIC_ELLIE_GOULDING_ALBUM_NAME": {
+    "message": "Ellie Goulding",
+    "description": ""
+  },
+  "MUSIC_ELLIE_GOULDING_ARTIST_NAME": {
+    "message": "Halcyon",
+    "description": ""
+  },
+  "MUSIC_ELLIE_GOULDING_FOOTER_MESSAGE": {
+    "message": "Recommended for you",
+    "description": ""
   }
 }

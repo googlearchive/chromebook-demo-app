@@ -146,6 +146,19 @@ MUSIC_FILES = \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
   third-party/roboto/Roboto-ThinItalic.ttf \
+  third-party/music-covers/music-cover-lumineers.jpg \
+  third-party/music-covers/music-cover-maroon5.jpg \
+  third-party/music-covers/music-cover-florence.jpg \
+  third-party/music-covers/music-cover-blake-shelton.jpg \
+  third-party/music-covers/music-cover-tiesto.jpg \
+  third-party/music-covers/music-cover-mika.jpg \
+  third-party/music-covers/music-cover-one-republic.jpg \
+  third-party/music-covers/music-cover-muse.png \
+  third-party/music-covers/music-cover-frank-ocean.jpg \
+  third-party/music-covers/music-cover-imagine-dragons.jpg \
+  third-party/music-covers/music-cover-the-doors.tif \
+  third-party/music-covers/music-cover-tegan-and-sara.png \
+  third-party/music-covers/music-cover-ellie-goulding.jpg \
   views/music-app.html
 
 STORE_FILES= \
