@@ -11,8 +11,7 @@ var App = function(opt_width, opt_height, opt_transparent) {
   this.transparent_ = !!opt_transparent;
   this.windowBoundsList_ = [
     makeCenterBounds(opt_width || screen.width, opt_height || screen.height),
-    makeCenterBounds(1280, 800),
-    makeCenterBounds(1366, 768)
+    makeCenterBounds(1366, 720)
   ];
   this.windowBoundsIndex_ = 0;
 };
