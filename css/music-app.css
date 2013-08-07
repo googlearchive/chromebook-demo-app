@@ -80,19 +80,19 @@
 }
 
 .side-button {
-  width: 100%;
+  -webkit-box-sizing: border-box;
+  background-color: #f1f1f1;
+  border-radius: 2px;
+  border: 1px solid rgba(206,206,206,0.3);
+  color: #777;
+  display: block;
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 18px;
   height: 45px;
   margin-bottom: 20px;
-  display: block;
-  border: 1px solid #cecece;
-  background-color: #f1f1f1;
-  font-family: 'Roboto-Light', sans-serif;
-  color: #777;
-  border-radius: 2px;
-  font-size: 18px;
   position: relative;
-  -webkit-box-sizing: border-box;
   text-align: left;
+  width: 100%;
 }
 
 .side-button.selected {
