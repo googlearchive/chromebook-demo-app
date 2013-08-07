@@ -13,6 +13,7 @@ MENU_FILES = \
   assets/menu-icon-16.png \
   assets/menu-icon-48.png \
   assets/menu-icon-128.png \
+  assets/menu-logo-1x.png \
   assets/menu-logo-2x.png \
   assets/docs-icon-64.png \
   assets/hangouts-icon-64.png \

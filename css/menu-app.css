@@ -59,9 +59,9 @@ h1, p {
 .logo {
   width: 165px;
   height: 29px;
-  background-image: url('menu-logo-2x.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background:
+      -webkit-image-set(url(menu-logo-1x.png) 1x, url(menu-logo-2x.png) 2x),
+      no-repeat;
   -webkit-flex: none;
 }
 
