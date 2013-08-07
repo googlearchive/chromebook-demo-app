@@ -66,9 +66,7 @@ body {
 .app-frame .app-sub-copy,
 .app-frame .sec-header-text,
 .app-frame .app-hint-title {
-  font-family: 'OpenSans-Light', sans-serif;
-  font-size: 22px;
-  line-height: 24px;
+  font: 22px/24px 'OpenSans-Light', sans-serif;
 }
 
 .app-frame .app-copy {
@@ -104,8 +102,8 @@ body {
 }
 
 .app-frame .sec-header-icon {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   background-size: 25px 25px;
   -webkit-flex: none;
   -webkit-margin-end: 8px;

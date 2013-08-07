@@ -2,20 +2,26 @@
 
 #hangouts-app .app-icon {
   background-image: -webkit-image-set(
-      url('hangouts-icon-64.png') 1x,
-      url('hangouts-icon-128.png') 2x);
+      url(hangouts-icon-64.png) 1x,
+      url(hangouts-icon-128.png) 2x);
 }
 
 #hangouts-app .sec-header-icon.group {
-  background-image: url('hangouts-section-group-2x.png');
+  background-image: -webkit-image-set(
+      url(hangouts-section-group-1x.png) 1x,
+      url(hangouts-section-group-2x.png) 2x);
 }
 
-#hangouts-app .sec-header-icon.everywhere {
-  background-image: url('hangouts-section-everywhere-2x.png');
+#hangouts-app .sec-header-icon.nohassle {
+  background-image: -webkit-image-set(
+      url(hangouts-section-nohassle-1x.png) 1x,
+      url(hangouts-section-nohassle-2x.png) 2x);
 }
 
 #hangouts-app .sec-header-icon.fun {
-  background-image: url('hangouts-section-fun-2x.png');
+  background-image: -webkit-image-set(
+      url(hangouts-section-fun-1x.png) 1x,
+      url(hangouts-section-fun-2x.png) 2x);
 }
 
 #hangouts-app .app-side-footer {
@@ -78,19 +84,19 @@
 }
 
 .effects.button .button-icon {
-  background-image: url('hangouts-button-effects-2x.png');
+  background-image: url(hangouts-button-effects-2x.png);
 }
 
 .screenshare.button .button-icon {
-  background-image: url('hangouts-button-screenshare-2x.png');
+  background-image: url(hangouts-button-screenshare-2x.png);
 }
 
 .add.button .button-icon {
-  background-image: url('hangouts-button-add-2x.png');
+  background-image: url(hangouts-button-add-2x.png);
 }
 
 .invite.button .button-icon {
-  background-image: url('hangouts-button-invite-2x.png');
+  background-image: url(hangouts-button-invite-2x.png);
 }
 
 .video-container {

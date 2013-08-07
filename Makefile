@@ -69,40 +69,43 @@ DOCS_FILES = \
   third-party/docs-bot-words/words.js
 
 HANGOUTS_FILES = \
-  js/app.js \
-  js/effects-helper.js \
-  js/hangouts-app.js \
-  js/util.js \
-  js/background.js \
-  css/common.css \
-  css/hangouts-app.css \
-  assets/hangouts-icon-32.png \
-  assets/hangouts-icon-48.png \
-  assets/hangouts-icon-64.png \
-  assets/hangouts-icon-96.png \
-  assets/hangouts-icon-128.png \
-  assets/hangouts-section-group-2x.png \
-  assets/hangouts-section-everywhere-2x.png \
-  assets/hangouts-section-fun-2x.png \
+  assets/balloon-triangle-bottom-1x.png \
+  assets/balloon-triangle-bottom-2x.png \
+  assets/balloon-triangle-top-1x.png \
+  assets/balloon-triangle-top-2x.png \
+  assets/close-1x.png \
+  assets/close-2x.png \
+  assets/glasses.png \
   assets/hangouts-button-add-2x.png \
   assets/hangouts-button-effects-2x.png \
   assets/hangouts-button-invite-2x.png \
   assets/hangouts-button-screenshare-2x.png \
-  assets/balloon-triangle-top-1x.png \
-  assets/balloon-triangle-top-2x.png \
-  assets/balloon-triangle-bottom-1x.png \
-  assets/balloon-triangle-bottom-2x.png \
-  assets/glasses.png \
-  assets/close-1x.png \
-  assets/close-2x.png \
-  gen/third-party/glfx.js \
+  assets/hangouts-icon-128.png \
+  assets/hangouts-icon-32.png \
+  assets/hangouts-icon-48.png \
+  assets/hangouts-icon-64.png \
+  assets/hangouts-icon-96.png \
+  assets/hangouts-section-fun-1x.png \
+  assets/hangouts-section-fun-2x.png \
+  assets/hangouts-section-group-1x.png \
+  assets/hangouts-section-group-2x.png \
+  assets/hangouts-section-nohassle-1x.png \
+  assets/hangouts-section-nohassle-2x.png \
+  css/common.css \
+  css/hangouts-app.css \
   gen/third-party/effects.js \
+  gen/third-party/glfx.js \
   gen/third-party/track.js \
-  views/hangouts-app.html \
+  js/app.js \
+  js/background.js \
+  js/effects-helper.js \
+  js/hangouts-app.js \
+  js/util.js \
+  third-party/ccv/js/ccv.js \
+  third-party/ccv/js/face.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
-  third-party/ccv/js/ccv.js \
-  third-party/ccv/js/face.js
+  views/hangouts-app.html
 
 MUSIC_FILES = \
   js/app.js \
