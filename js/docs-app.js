@@ -3,6 +3,7 @@ var DocsApp = function() {
 };
 
 DocsApp.ANIMATION_INTERVAL = 100;
+DocsApp.STARTUP_WAITING_SECONDS = 14;
 
 DocsApp.prototype = {
   __proto__: App.prototype
@@ -38,10 +39,12 @@ DocsApp.prototype.initDocument = function() {
   this.usedKeyword_ = {};
   this.nextCursorIndex_ = 1;
   this.editingCounter_ = 0;
+  this.isStartupWaiting_ =
+      DocsApp.STARTUP_WAITING_SECONDS * 1000 / DocsApp.ANIMATION_INTERVAL;
 
   // Register events.
   this.paper_.addEventListener('input', this.onInput_.bind(this));
-  this.intervalID_ = this.window.setInterval(
+  this.intervalID_ = setInterval(
       this.onStep_.bind(this), DocsApp.ANIMATION_INTERVAL);
 };
 
@@ -50,6 +53,9 @@ DocsApp.prototype.onInput_ = function(e) {
   var indexMap = calcSimpleIndexMap(this.lastText_, this.paper_.value);
   this.lastText_ = this.paper_.value;
   this.updateCursorPosition_(indexMap);
+
+  // Cancel startup waiting.
+  this.isStartupWaiting_ = 0;
 };
 
 /**
@@ -59,8 +65,9 @@ DocsApp.prototype.onInput_ = function(e) {
  */
 DocsApp.prototype.onStep_ = function() {
   // Find the editable phrases and adds editors to them.
-  if (this.editingCounter_ > 0) {
+  if (this.editingCounter_ > 0 || this.isStartupWaiting_ > 0) {
     this.editingCounter_--;
+    this.isStartupWaiting_--;
   } else {
     var keywordAt = this.findBotKeyword_();
     if (keywordAt) {
