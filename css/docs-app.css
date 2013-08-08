@@ -115,7 +115,7 @@
 #docs-app .share {
   -webkit-margin-start: 5px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(206,206,206,0.3);
   border-radius: 2px;
   padding: 0 8px;
   height: 35px;
@@ -179,7 +179,7 @@
 #docs-app .docs-toolbar {
   width: 804px;
   height: 40px;
-  margin-top: 40px;
+  margin-top: 30px;
   -webkit-flex: none;
   background-image: url(docs-toolbar-2x.png);
   background-size: 804px 40px;
