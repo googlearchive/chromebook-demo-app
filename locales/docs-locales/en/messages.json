@@ -36,11 +36,11 @@
     "description": ""
   },
   "DOCS_HINT_TITLE": {
-    "message": "What if I use Microsoft Office?",
+    "message": "What if I use Microsoft Office<sup>®</sup>?",
     "description": ""
   },
   "DOCS_HINT_DESCRIPTION": {
-    "message": "Google Docs is built-in to every Chromebook for free. Chromebooks also work with Microsoft<sup>®</sup> Office documents so you can edit Word and Excel files even when you’re offline.",
+    "message": "Google Docs is built-in to every Chromebook for free. Chromebooks also work with Microsoft Office<sup>®</sup> documents so you can edit Word and Excel files even when you’re offline.",
     "description": ""
   },
   "DOCS_DOCUMENT_TITLE": {
