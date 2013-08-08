@@ -45,17 +45,21 @@ DOCS_FILES = \
   assets/docs-icon-48.png \
   assets/docs-icon-64.png \
   assets/docs-icon-96.png \
-  assets/docs-ruler-2x.png \
+  assets/docs-ruler.png \
   assets/docs-section-anywhere-1x.png \
   assets/docs-section-anywhere-2x.png \
   assets/docs-section-backup-1x.png \
   assets/docs-section-backup-2x.png \
   assets/docs-section-group-1x.png \
   assets/docs-section-group-2x.png \
+  assets/docs-share-1x.png \
   assets/docs-share-2x.png \
-  assets/docs-toolbar-2x.png \
+  assets/docs-toolbar.png \
+  assets/docs-user-charles-1x.png \
   assets/docs-user-charles-2x.png \
+  assets/docs-user-edgar-1x.png \
   assets/docs-user-edgar-2x.png \
+  assets/docs-user-fredrick-1x.png \
   assets/docs-user-fredrick-2x.png \
   css/common.css \
   css/docs-app.css \

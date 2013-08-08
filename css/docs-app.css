@@ -45,7 +45,7 @@
 }
 
 #docs-app .docs-header {
-  width: 800px;
+  width: 818px;
   display: -webkit-flex;
   margin-top: 40px;
   -webkit-flex: none;
@@ -70,9 +70,7 @@
   box-sizing: border-box;
   position: relative;
   margin-bottom: 8px;
-  background-size: 12px 16px;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: no-repeat center;
 }
 
 #docs-app .user-icon::after {
@@ -87,7 +85,9 @@
 
 #docs-app .user-icon.charles {
   background-color: #13955c;
-  background-image: url(docs-user-charles-2x.png);
+  background-image: -webkit-image-set(
+      url(docs-user-charles-1x.png) 1x,
+      url(docs-user-charles-2x.png) 2x);
 }
 
 #docs-app .user-icon.charles::after {
@@ -96,7 +96,9 @@
 
 #docs-app .user-icon.edgar {
   background-color: #f4b400;
-  background-image: url(docs-user-edgar-2x.png);
+  background-image: -webkit-image-set(
+      url(docs-user-edgar-1x.png) 1x,
+      url(docs-user-edgar-2x.png) 2x);
 }
 
 #docs-app .user-icon.edgar::after {
@@ -105,7 +107,9 @@
 
 #docs-app .user-icon.fredrick {
   background-color: #9e69af;
-  background-image: url(docs-user-fredrick-2x.png);
+  background-image: -webkit-image-set(
+      url(docs-user-fredrick-1x.png) 1x,
+      url(docs-user-fredrick-2x.png) 2x);
 }
 
 #docs-app .user-icon.fredrick::after {
@@ -119,16 +123,21 @@
   border-radius: 2px;
   padding: 0 8px;
   height: 35px;
-  margin: -1px 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
   width: 96px;
   display: -webkit-flex;
   background-color: #f1f1f1;
 }
 
 #docs-app .share-icon {
-  background: url(docs-share-2x.png) no-repeat center 7px / 12px 16px;
-  width: 12px;
-  -webkit-flex: 1 0 auto;
+  background-image: -webkit-image-set(
+      url(docs-share-1x.png) 1x,
+      url(docs-share-2x.png) 2x);
+  width: 32px;
+  height: 32px;
+  -webkit-flex: none;
+  -webkit-margin-end: 2px;
 }
 
 #docs-app .share-label {
@@ -136,8 +145,8 @@
   font-size: 13px;
   color: #777;
   line-height: 31px;
-  -webkit-flex: 1 0 auto;
   text-align: center;
+  -webkit-flex: none;
 }
 
 #docs-app .share .balloon {
@@ -150,7 +159,7 @@
   color: #777;
   -webkit-flex: none;
   -webkit-justify-content: flex-start;
-  width: 800px;
+  width: 818px;
   -webkit-user-select: none;
   cursor: default;
 }
@@ -177,12 +186,11 @@
 }
 
 #docs-app .docs-toolbar {
-  width: 804px;
+  width: 818px;
   height: 40px;
   margin-top: 30px;
   -webkit-flex: none;
-  background-image: url(docs-toolbar-2x.png);
-  background-size: 804px 40px;
+  background-image: url(docs-toolbar.png);
 }
 
 #docs-app .docs-toolbar .balloon {
@@ -191,13 +199,12 @@
 }
 
 #docs-app .docs-ruler {
-  width: 800px;
+  width: 824px;
   height: 14px;
   background-color: #f8f8f8;
-  margin-top: 20px;
+  margin: 20px -3px 0;
   -webkit-flex: none;
-  background-image: url(docs-ruler-2x.png);
-  background-size: 800px 14px;
+  background-image: url(docs-ruler.png);
 }
 
 #docs-app .paper-scroll-region {
@@ -213,7 +220,7 @@
 #docs-app .paper-container {
   position: relative;
   margin: 5px auto;
-  width: 800px;
+  width: 818px;
 }
 
 #docs-app .paper,
@@ -223,8 +230,8 @@
   font-size: 16px;
   line-height: 18px;
   height: 1160px;
-  padding: 64px;
-  width: 800px;
+  padding: 96px;
+  width: 818px;
 }
 
 #docs-app .paper {
