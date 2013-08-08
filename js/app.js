@@ -1,7 +1,7 @@
 var makeCenterBounds = function(width, height) {
   return {
-    left: (screen.width - width) / 2,
-    top: (screen.height - height) / 2,
+    left: ~~((screen.availWidth - width) / 2 + screen.availLeft),
+    top: ~~((screen.availHeight - height) / 2 + screen.availTop),
     width: width,
     height: height
   };
@@ -10,7 +10,8 @@ var makeCenterBounds = function(width, height) {
 var App = function(opt_width, opt_height, opt_transparent) {
   this.transparent_ = !!opt_transparent;
   this.windowBoundsList_ = [
-    makeCenterBounds(opt_width || screen.width, opt_height || screen.height),
+    makeCenterBounds(opt_width || screen.availWidth,
+                     opt_height || screen.availHeight),
     makeCenterBounds(1366, 720),
     makeCenterBounds(1280, 802)
   ];
@@ -112,8 +113,12 @@ App.prototype.get = function(query) {
 };
 
 App.prototype.toggleWindowSize_ = function() {
-  this.appWindow.setBounds(
-          this.windowBoundsList_[this.windowBoundsIndex_]);
+  var bounds = this.windowBoundsList_[this.windowBoundsIndex_];
+  this.appWindow.resizeTo(bounds.width, bounds.height);
+  // Avoid the bug.
+  setTimeout(function() {
+    this.appWindow.moveTo(bounds.left, bounds.top);
+  }.bind(this), 100);
   this.windowBoundsIndex_++;
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
 };
