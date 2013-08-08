@@ -134,7 +134,8 @@ body {
 .app-frame .app-hint-title sup {
   vertical-align: baseline;
   position: relative;
-  bottom: 5px;
+  bottom: 6px;
+  font-size: 14px;
 }
 
 .app-frame .app-hint-description {
