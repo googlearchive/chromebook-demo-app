@@ -114,11 +114,7 @@ App.prototype.get = function(query) {
 
 App.prototype.toggleWindowSize_ = function() {
   var bounds = this.windowBoundsList_[this.windowBoundsIndex_];
-  this.appWindow.resizeTo(bounds.width, bounds.height);
-  // Avoid the bug.
-  setTimeout(function() {
-    this.appWindow.moveTo(bounds.left, bounds.top);
-  }.bind(this), 100);
+  this.appWindow.setBounds(bounds);
   this.windowBoundsIndex_++;
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
 };
