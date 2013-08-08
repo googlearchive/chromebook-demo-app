@@ -125,13 +125,16 @@ MUSIC_FILES = \
   assets/balloon-triangle-right-2x.png \
   assets/close-1x.png \
   assets/close-2x.png \
+  assets/music-equalizer-1x.gif \
   assets/music-equalizer-2x.gif \
   assets/music-icon-128.png \
   assets/music-icon-32.png \
   assets/music-icon-48.png \
   assets/music-icon-64.png \
   assets/music-icon-96.png \
+  assets/music-pause-control-1x.png \
   assets/music-pause-control-2x.png \
+  assets/music-play-control-1x.png \
   assets/music-play-control-2x.png \
   assets/music-section-anywhere-1x.png \
   assets/music-section-anywhere-2x.png \
