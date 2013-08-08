@@ -78,9 +78,13 @@ HANGOUTS_FILES = \
   assets/balloon-triangle-top-2x.png \
   assets/close-1x.png \
   assets/close-2x.png \
+  assets/hangouts-button-add-1x.png \
   assets/hangouts-button-add-2x.png \
+  assets/hangouts-button-effects-1x.png \
   assets/hangouts-button-effects-2x.png \
+  assets/hangouts-button-invite-1x.png \
   assets/hangouts-button-invite-2x.png \
+  assets/hangouts-button-screenshare-1x.png \
   assets/hangouts-button-screenshare-2x.png \
   assets/hangouts-icon-128.png \
   assets/hangouts-icon-32.png \

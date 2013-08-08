@@ -74,18 +74,18 @@
 }
 
 .button-icon {
-  width: 25px;
-  height: 25px;
-  background-size: contain;
-  margin: 0 8px 0 8px;
+  width: 32px;
+  height: 32px;
+  margin: 0 6px;
   -webkit-flex: none;
 }
 
 .button-label {
-  margin-top: 1px;
-  font-family: 'OpenSans-Light', sans-serif;
-  font-size: 15px;
   color: #8d8d8d;
+  font: 15px/15px 'OpenSans-Light', sans-serif;
+  height: 15px;
+  margin-top: 1px;
+  -webkit-align-self: center;
 }
 
 .button .balloon {
@@ -94,19 +94,27 @@
 }
 
 .effects.button .button-icon {
-  background-image: url(hangouts-button-effects-2x.png);
+  background-image: -webkit-image-set(
+      url(hangouts-button-effects-1x.png) 1x,
+      url(hangouts-button-effects-2x.png) 2x);
 }
 
 .screenshare.button .button-icon {
-  background-image: url(hangouts-button-screenshare-2x.png);
+  background-image: -webkit-image-set(
+      url(hangouts-button-screenshare-1x.png) 1x,
+      url(hangouts-button-screenshare-2x.png) 2x);
 }
 
 .add.button .button-icon {
-  background-image: url(hangouts-button-add-2x.png);
+  background-image: -webkit-image-set(
+      url(hangouts-button-add-1x.png) 1x,
+      url(hangouts-button-add-2x.png) 2x);
 }
 
 .invite.button .button-icon {
-  background-image: url(hangouts-button-invite-2x.png);
+  background-image: -webkit-image-set(
+      url(hangouts-button-invite-1x.png) 1x,
+      url(hangouts-button-invite-2x.png) 2x);
 }
 
 .video-container {
