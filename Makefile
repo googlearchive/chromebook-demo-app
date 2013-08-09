@@ -217,9 +217,20 @@ STORE_FILES= \
 HELPER_FILES= \
   js/helper-extension.js \
   js/util.js \
-  views/learn-more.html \
   views/licence.html \
-  third-party/platform-analytics/google-analytics-bundle.js
+  third-party/platform-analytics/google-analytics-bundle.js \
+  third-party/open-sans/OpenSans-Light.ttf \
+  third-party/open-sans/OpenSans-Regular.ttf \
+  third-party/open-sans/OpenSans-Semibold.ttf \
+  third-party/open-sans/OpenSans-Bold.ttf \
+  third-party/learn-more/chrome-32.png \
+  third-party/learn-more/chromebook-retailer.min.js \
+  third-party/learn-more/learn-more.js \
+  third-party/learn-more/chrome-retailers.min.css \
+  third-party/learn-more/dot.png \
+  third-party/learn-more/open-sans.css \
+  third-party/learn-more/chrome_logo_2x.png \
+  third-party/learn-more/learn-more.html
 
 packages: third-party
 	for x in ${TARGETS}; \

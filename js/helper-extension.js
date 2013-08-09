@@ -19,7 +19,7 @@ chrome.runtime.onMessageExternal.addListener(
         break;
 
       case 'visitLearnMore':
-        var params = {url: 'https://docs.google.com/a/google.com/presentation/d/1r2O49jn7iE6Fc05sX66Ih_pMWR_Z0HRk8ZGOokFoJS4/edit#slide=id.p'};
+        var params = {url: 'learn-more.html'};
         chrome.tabs.create(params, function(tab) {
           if (tab)
             return;
