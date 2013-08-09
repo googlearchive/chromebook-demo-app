@@ -302,3 +302,36 @@ sup {
   font-size: 80%;
   bottom: 3px;
 }
+
+/**
+ * Context menu
+ */
+
+#context-menu {
+  position: absolute;
+  display: none;
+  background-color: white;
+  z-index: 2;
+}
+
+#context-menu.active {
+  display: block;
+}
+
+.context-menu-item {
+  display: block;
+  font: 13px/13px 'OpenSans-Regular', sans-serif;
+  color: #666;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  white-space: pre;
+}
+
+.context-menu-item:hover {
+  color: black;
+}
+
+.context-menu-item:active {
+  background-color: #ccc;
+}

@@ -218,6 +218,7 @@ HELPER_FILES= \
   js/helper-extension.js \
   js/util.js \
   views/learn-more.html \
+  views/licence.html \
   third-party/platform-analytics/google-analytics-bundle.js
 
 packages: third-party

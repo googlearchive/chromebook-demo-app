@@ -74,5 +74,9 @@
   "HANGOUTS_BALLOON_PEOPLE": {
     "message": "Add up to 9 people to your video chat without installing any complicated software",
     "description": ""
+  },
+  "HANGOUTS_SHOW_LICENCE": {
+    "message": "Show licence information",
+    "description": ""
   }
 }

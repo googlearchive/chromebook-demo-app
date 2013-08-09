@@ -33,6 +33,12 @@ chrome.runtime.onMessageExternal.addListener(
         tracker = tracker || service.getTracker('UA-42807255-2');
         tracker.sendAppView(senderName);
         break;
+
+      case 'showLicencePage':
+        chrome.windows.create({url: 'licence.html',
+                               type: 'popup',
+                               width: 290, height: 120});
+        break;
     }
   }
 );

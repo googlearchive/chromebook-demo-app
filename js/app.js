@@ -85,8 +85,23 @@ App.prototype.initDocument = function(firstTime) {
     this.close();
   }.bind(this));
 
-  // Define shortcut key.
   var body = this.document.getElementsByTagName('body')[0];
+
+  // Licence page.
+  var menu = this.get('#context-menu');
+  if (menu) {
+    body.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+      menu.classList.toggle('active', true);
+      menu.style.left = (event.clientX + 2) + 'px';
+      menu.style.top = (event.clientY + 2) + 'px';
+    });
+    body.addEventListener('click', function(event) {
+      menu.classList.toggle('active', false);
+    });
+  }
+
+  // Define shortcut key.
   body.addEventListener('keydown', function(e) {
     // Closing
     if (e.keyCode == 27) {
@@ -99,6 +114,10 @@ App.prototype.initDocument = function(firstTime) {
       chrome.storage.local.clear();
     } else if (e.ctrlKey && e.keyCode == 82) {
       chrome.runtime.reload();
+    } else if (e.ctrlKey && e.keyCode == 77) {
+      this.appWindow.maximize();
+    } else if (e.ctrlKey && e.keyCode == 73) {
+      // Debug tool
     }
   }.bind(this));
 

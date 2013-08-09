@@ -37,7 +37,7 @@ HangoutsApp.prototype.initDocument = function() {
   }
   effects[effects.length - 1].count = -1;
 
-  // Register the events.
+  // Effect button.
   this.effectButton_ = this.get('.effects.button');
   this.effectButton_.addEventListener('click', function() {
     var counts = [];
@@ -74,6 +74,11 @@ HangoutsApp.prototype.initDocument = function() {
       this.updateEffectButtonFocus_();
     }.bind(this), 1000);
   }
+
+  // Licence page.
+  this.get('.licence.context-menu-item').addEventListener('click', function() {
+    Component.ENTRIES.Helper.sendMessage({name: 'showLicencePage'});
+  });
 
   // Init camera.
   navigator.webkitGetUserMedia(
