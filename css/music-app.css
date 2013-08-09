@@ -217,14 +217,10 @@
       url(music-play-control-1x.png) 1x,
       url(music-play-control-2x.png) 2x)
       no-repeat center;
-  opacity: 0;
+  opacity: 0.7;
   background-color: rgba(0, 0, 0, 0);
   border-style: none;
   cursor: pointer;
-}
-
-.play-control:hover {
-  opacity: 0.7;
 }
 
 .play-control:active {
