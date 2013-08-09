@@ -101,7 +101,16 @@ App.prototype.initDocument = function(firstTime) {
   }.bind(this));
 
   // Show window.
-  this.appWindow.show();
+  var sizeChecker = function() {
+    var bounds = this.appWindow.getBounds();
+    if (bounds.width == this.lastBounds_.width &&
+        bounds.height == this.lastBounds_.height) {
+      this.appWindow.show();
+    } else {
+      setTimeout(sizeChecker, 100);
+    }
+  }.bind(this);
+  sizeChecker();
 };
 
 App.prototype.close = function() {
@@ -115,6 +124,7 @@ App.prototype.get = function(query) {
 App.prototype.toggleWindowSize_ = function() {
   var bounds = this.windowBoundsList_[this.windowBoundsIndex_];
   this.appWindow.setBounds(bounds);
+  this.lastBounds_ = bounds;
   this.windowBoundsIndex_++;
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
 };
