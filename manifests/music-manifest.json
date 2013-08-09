@@ -3,11 +3,11 @@
   "version": "0.0",
   "manifest_version": 2,
   "icons": {
-    "32": "play-icon-32.png",
+    "32": "music-icon-32.png",
     "48": "music-icon-48.png",
     "64": "music-icon-64.png",
     "96": "music-icon-96.png",
-    "128": "play-icon-128.png"
+    "128": "music-icon-128.png"
   },
   "default_locale": "en",
   "offline_enabled": true,
