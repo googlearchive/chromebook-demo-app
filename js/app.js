@@ -13,7 +13,8 @@ var App = function(opt_width, opt_height, opt_transparent) {
     makeCenterBounds(opt_width || screen.availWidth,
                      opt_height || screen.availHeight),
     makeCenterBounds(1366, 720),
-    makeCenterBounds(1280, 802)
+    makeCenterBounds(1280, 802),
+    makeCenterBounds(300, 300)
   ];
   this.windowBoundsIndex_ = 0;
 };
@@ -34,7 +35,8 @@ App.prototype.start = function() {
   this.appWindow = window;
   this.window = window.contentWindow;
   this.windowBoundsIndex_ = 0;
-  this.toggleWindowSize_();
+  if (!Component.current().isChild)
+    this.toggleWindowSize_();
 
   // Init the document.
   this.document = window.contentWindow.document;
@@ -101,16 +103,7 @@ App.prototype.initDocument = function(firstTime) {
   }.bind(this));
 
   // Show window.
-  var sizeChecker = function() {
-    var bounds = this.appWindow.getBounds();
-    if (bounds.width == this.lastBounds_.width &&
-        bounds.height == this.lastBounds_.height) {
-      this.appWindow.show();
-    } else {
-      setTimeout(sizeChecker, 100);
-    }
-  }.bind(this);
-  sizeChecker();
+  this.appWindow.show();
 };
 
 App.prototype.close = function() {
@@ -123,6 +116,7 @@ App.prototype.get = function(query) {
 
 App.prototype.toggleWindowSize_ = function() {
   var bounds = this.windowBoundsList_[this.windowBoundsIndex_];
+  this.appWindow.restore();
   this.appWindow.setBounds(bounds);
   this.lastBounds_ = bounds;
   this.windowBoundsIndex_++;
