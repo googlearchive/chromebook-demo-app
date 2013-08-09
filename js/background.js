@@ -1,5 +1,3 @@
-var launched = false;
-
 chrome.app.runtime.onLaunched.addListener(function(event) {
   // If it is a child app, Close the other child apps.
   var transparent;
