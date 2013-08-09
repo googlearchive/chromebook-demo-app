@@ -131,13 +131,6 @@ body {
   margin-bottom: 18px;
 }
 
-.app-frame .app-hint-title sup {
-  vertical-align: baseline;
-  position: relative;
-  bottom: 6px;
-  font-size: 14px;
-}
-
 .app-frame .app-hint-description {
   color: white;
   opacity: 0;
@@ -147,10 +140,6 @@ body {
 
 .app-frame .app-side-footer:hover .app-hint-description {
   opacity: 1;
-}
-
-.app-frame .app-side-footer sup {
-  margin-top: -20px;
 }
 
 .app-frame .app-main {
@@ -291,4 +280,25 @@ body {
       url(balloon-triangle-right-1x.png) 1x,
       url(balloon-triangle-right-2x.png) 2x);
   left: 100%;
+}
+
+/**
+ * Sup
+ * This is for preventing that the line height is changed by the sup tag.
+ */
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+}
+
+.app-hint-title sup {
+  font-size: 70%;
+  bottom: 5px;
+}
+
+.sec-description sup,
+.app-hint-description sup {
+  font-size: 80%;
+  bottom: 3px;
 }
