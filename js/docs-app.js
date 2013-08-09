@@ -44,6 +44,12 @@ DocsApp.prototype.initDocument = function() {
 
   // Register events.
   this.paper_.addEventListener('input', this.onInput_.bind(this));
+  this.paper_.addEventListener('compositionstart', function(e) {
+    this.inComposition_ = true;
+  }.bind(this));
+  this.paper_.addEventListener('compositionend', function(e) {
+    this.inComposition_ = false;
+  }.bind(this));
   this.intervalID_ = setInterval(
       this.onStep_.bind(this), DocsApp.ANIMATION_INTERVAL);
 };
@@ -64,6 +70,8 @@ DocsApp.prototype.onInput_ = function(e) {
  * @private
  */
 DocsApp.prototype.onStep_ = function() {
+  if (this.inComposition_)
+    return;
   // Find the editable phrases and adds editors to them.
   if (this.editingCounter_ > 0 || this.isStartupWaiting_ > 0) {
     this.editingCounter_--;
