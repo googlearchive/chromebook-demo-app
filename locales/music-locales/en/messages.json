@@ -40,7 +40,7 @@
     "description": "Question headline: Addresses concenrs for iTunes users"
   },
   "MUSIC_HINT_DESCRIPTION": {
-    "message": "Google Play Music is a cloud based alternative to iTunes<sup>®</sup>. Upload up to 20,000 songs using Google Music Manager for free.",
+    "message": "Google Play Music is a cloud-based alternative to iTunes<sup>®</sup>. Upload up to 20,000 songs using Google Music Manager for free.",
     "description": "Question description: Describes google play music as an alternate to iTunes and says you can upload songs to it via music manager"
   },
   "MUSIC_MEESAGE_BAR": {
@@ -76,7 +76,7 @@
     "description": "Shop button"
   },
   "MUSIC_BALLOON_SHOP": {
-    "message": "Shop for and download tunes in the Play store",
+    "message": "Find new music and buy it directly from the Play store",
     "description": "Shop tooltip: describes buying music from the play store"
   },
   "MUSIC_SIDE_BUTTON_PLAYLISTS": {

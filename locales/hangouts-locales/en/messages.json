@@ -8,7 +8,7 @@
     "description": "A subtitle for Hangouts: supports the headline by giving the app name"
   },
   "HANGOUTS_DESCRIPTION": {
-    "message": "Talk to your friends and family, right out of the box. No installation, no setup, no *%!#$.",
+    "message": "Talk to your friends and family, right out of the box. No installation, no setup, no hassles.",
     "description": "Description of Hangouts: Its very easy to talk to people using hangouts, doesn't even need an install"
   },
   "HANGOUTS_SECTION_GROUP_TITLE": {
@@ -20,7 +20,7 @@
     "description": "Feature description: group video chat for free"
   },
   "HANGOUTS_SECTION_NOHASSLE_TITLE": {
-    "message": "No *%!#$",
+    "message": "No setup required",
     "description": "Feature headline: No hassles with Hangouts"
   },
   "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
