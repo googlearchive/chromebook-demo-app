@@ -40,7 +40,7 @@
     "description": "Question headline: Addresses user concerns if they are Microsoft Office users"
   },
   "DOCS_HINT_DESCRIPTION": {
-    "message": "Google Docs is built-in to every Chromebook for free. Chromebooks also work with Microsoft Office<sup>®</sup> documents so you can edit Word and Excel files even when you’re offline.",
+    "message": "Google Docs is built into every Chromebook for free. Chromebooks also work with Microsoft Office<sup>®</sup> documents so you can edit Word and Excel files even when you’re offline.",
     "description": "Question description: Answers users concerns about Office by describing that Docs is free and built in as well as describing Quickoffice as having the ability to edit Office files even when Offline"
   },
   "DOCS_DOCUMENT_TITLE": {
