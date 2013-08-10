@@ -1,114 +1,114 @@
 {
   "DOC_COPY": {
     "message": "Get work done",
-    "description": ""
+    "description": "App headline for Docs: You can do all your work with Google Docs"
   },
   "DOC_SUB_COPY": {
     "message": "with Google Docs",
-    "description": ""
+    "description": "Subtitle for Docs: supports the headline by giving the app"
   },
   "DOC_DESCRIPTION": {
     "message": "Create documents, spreadsheets and presentations that you can work on online and offline.",
-    "description": ""
+    "description": "Description for docs: High level overview of what google docs is"
   },
   "DOCS_SECTION_GROUP_TITLE": {
     "message": "Collaborate",
-    "description": ""
+    "description": "Feature headline 1: Headline for working with other people in real time"
   },
   "DOCS_SECTION_GROUP_DESCRIPTION": {
     "message": "Click ‘Share’, invite people and work together in real time. It’s that easy.",
-    "description": ""
+    "description": "Feature description 1: Description describing that to collaborate you would just click share to invite people to the document "
   },
   "DOCS_SECTION_BACKUP_TITLE": {
     "message": "Auto-save",
-    "description": ""
+    "description": "Feature headline 2: Headline for Google Docs automatically saving your document"
   },
   "DOCS_SECTION_BACKUP_DESCRIPTION": {
     "message": "With automatic backups to Google Drive, you never have to worry about losing your work again.",
-    "description": ""
+    "description": "Feature description 2: Description describing that with Google Docs auto saving you never have to save or worry about saving"
   },
   "DOCS_SECTION_ANYWHERE_TITLE": {
     "message": "Access anywhere",
-    "description": ""
+    "description": "Feature headline 3: Headline for being able to see your Google Docs on any device"
   },
   "DOCS_SECTION_ANYWHERE_DESCRIPTION": {
     "message": "Your work is stored safely in Google Drive so you can access it from any computer, tablet or smartphone.",
-    "description": ""
+    "description": "Subtitle headline 3: Descrption that describes that through Google Drive you can see you documents on a phone, computer or tablet device"
   },
   "DOCS_HINT_TITLE": {
     "message": "What if I use Microsoft Office<sup>®</sup>?",
-    "description": ""
+    "description": "Question headline: Addresses user concerns if they are Microsoft Office users"
   },
   "DOCS_HINT_DESCRIPTION": {
     "message": "Google Docs is built-in to every Chromebook for free. Chromebooks also work with Microsoft Office<sup>®</sup> documents so you can edit Word and Excel files even when you’re offline.",
-    "description": ""
+    "description": "Question description: Answers users concerns about Office by describing that Docs is free and built in as well as describing Quickoffice as having the ability to edit Office files even when Offline"
   },
   "DOCS_DOCUMENT_TITLE": {
     "message": "Welcome to Google Docs",
-    "description": ""
+    "description": "Fake document name: The name of the fake document welcomes the user to Google docs in a friendly manner"
   },
   "DOCS_BUTTON_SHARE": {
     "message": "Share",
-    "description": ""
+    "description": "Share button: Same as docs UI"
   },
   "DOCS_BALLOON_SHARE": {
     "message": "Work with others in real time, insert comments and track changes using revision history",
-    "description": ""
+    "description": "Share tooltp: Describes sharing features for Google Docs "
   },
   "DOCS_MENU_FILE": {
     "message": "File",
-    "description": ""
+    "description": "UI Element: File (dropdown for Save As.., etc)"
   },
   "DOCS_MENU_EDIT": {
     "message": "Edit",
-    "description": ""
+    "description": "UI Element: Edit (dropdown for  copy, paste, ..etc)"
   },
   "DOCS_MENU_VIEW": {
     "message": "View",
-    "description": ""
+    "description": "UI Element: View (dropdown for  full screen, print layout, etc..)"
   },
   "DOCS_MENU_INSERT": {
     "message": "Insert",
-    "description": ""
+    "description": "UI Element: Insert (dropdown for  images, drawings, etc)"
   },
   "DOCS_MENU_FORMAT": {
     "message": "Format",
-    "description": ""
+    "description": "UI Element: Format (dropdown for bold, italic, underline, etc)"
   },
   "DOCS_MENU_TOOLS": {
     "message": "Tools",
-    "description": ""
+    "description": "UI Element: Tools (dropdown for Spelling, research, scripts, etc)"
   },
   "DOCS_MENU_TABLE": {
     "message": "Table",
-    "description": ""
+    "description": "UI Element: Table (dropdown for table options)"
   },
   "DOCS_MENU_HELP": {
     "message": "Help",
-    "description": ""
+    "description": "UI Element: Help (dropdown for help) "
   },
   "DOCS_BALLOON_MENU": {
     "message": "Print, export, share and manage your documents in the cloud",
-    "description": ""
+    "description": "Main menu tooltip: Explains how you can manage your document with docs"
   },
   "DOCS_BALLOON_TOOLBAR": {
     "message": "Create tables, justify text and change font colors to your heart’s content",
-    "description": ""
+    "description": "Toolbar tooltip: Explains toolbar options"
   },
   "DOCS_STARTING_MESSAGE": {
-    "message": "up, up, and....",
-    "description": ""
+    "message": "Up, up and away....",
+    "description": "Starting string is meant to be something playful that the user would like to complete. Like a common phrase (eg: Roses are...red)"
   },
   "DOCS_USER_CHARLES": {
     "message": "Charles",
-    "description": ""
+    "description": "Meant to be Charles Dickens"
   },
   "DOCS_USER_EDGAR": {
     "message": "Edgar",
-    "description": ""
+    "description": "Meant to be Edgar Alan Poe"
   },
   "DOCS_USER_FREDRICK": {
     "message": "Fredrick",
-    "description": ""
+    "description": "Meant to be Fredrick Nietsche"
   }
 }

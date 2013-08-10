@@ -1,30 +1,30 @@
 {
   "MENU_MESSAGE": {
     "message": "Meet Chromebook, a new type of computer from Google",
-    "description": ""
+    "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
   },
   "MENU_DESCRIPTION": {
     "message": "Boots in seconds. Nothing complicated to learn. Comes with your favorite Google apps.\nBuilt for everyday use and perfect for sharing with others.",
-    "description": ""
+    "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
   },
   "MENU_DOCS_BUTTON": {
     "message": "Get work done",
-    "description": ""
+    "description": "App headline for Docs: You can do all your work with Google Docs (link to Docs app)"
   },
   "MENU_HANGOUTS_BUTTON": {
     "message": "Keep in touch",
-    "description": ""
+    "description": "App headline for Hangouts: You can stay connected to all your friends with Google+ Hangouts (link to Hangouts app)"
   },
   "MENU_MUSIC_BUTTON": {
     "message": "Listen to music",
-    "description": ""
+    "description": "App headline for Google Play: You can listen to music with Google Play Music (link to Google Play Music app)"
   },
   "MENU_STORE_BUTTON": {
     "message": "Get more apps",
-    "description": ""
+    "description": "App headline for Webstore: You can get more applications (and do more things) through the Chrome web store (link to Chrome Web store app)"
   },
   "MENU_LEARN_MORE": {
     "message": "Learn more",
-    "description": ""
+    "description": "Subtitle for learning more about Chrome: this is a link to an offline HTML page with more content about Chromebook features (link to Chrome with HTML page preloaded)"
   }
 }

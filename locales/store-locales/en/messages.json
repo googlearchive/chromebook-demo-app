@@ -1,39 +1,39 @@
 {
   "STORE_COPY": {
     "message": "Get more apps",
-    "description": ""
+    "description": "App headline for Chrome web store"
   },
   "STORE_SUB_COPY_DESCRIPTION": {
     "message": "with Chrome Web Store",
-    "description": ""
+    "description": "App subtitle for chrome web store with app name"
   },
   "STORE_DESCRIPTION": {
     "message": "Get work done, play games, or just explore something new with apps from the Chrome Web Store.",
-    "description": ""
+    "description": "App description for Chrome web store"
   },
   "STORE_SECTION_THOUSANDS_TITLE": {
     "message": "Thousands of apps",
-    "description": ""
+    "description": "Feature headline: large number of apps"
   },
   "STORE_SECTION_THOUSANDS_DESCRIPTION": {
     "message": "Get free apps for games, music, movies, news, photos and more.",
-    "description": ""
+    "description": "Feature subtitle: description for large number and variety of apps"
   },
   "STORE_SECTION_STABILITY_TITLE": {
     "message": "Offline and online",
-    "description": ""
+    "description": "Feature headline: you can get offline and online apps"
   },
   "STORE_SECTION_STABILITY_DESCRIPTION": {
     "message": "Find apps that work at home and on your morning commute.",
-    "description": ""
+    "description": "Feature subtitle: describing the offline and online app functionalities and where you can use them"
   },
   "STORE_SECTION_INSTALL_TITLE": {
     "message": "Add with a click",
-    "description": ""
+    "description": "Feature headline: one click install"
   },
   "STORE_SECTION_INSTALL_DESCRIPTION": {
     "message": "On your Chromebook, you won’t need to install complicated software. Just click ‘Add to Chrome’.",
-    "description": ""
+    "description": "Feature subtitle: the description of the one click install feature"
   },
   "STORE_APP_BEJEWELED_TITLE": {
     "message": "Bejeweled",
