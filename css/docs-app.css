@@ -45,7 +45,7 @@
 }
 
 #docs-app .docs-header {
-  width: 818px;
+  width: 800px;
   display: -webkit-flex;
   margin-top: 40px;
   -webkit-flex: none;
@@ -159,7 +159,7 @@
   color: #777;
   -webkit-flex: none;
   -webkit-justify-content: flex-start;
-  width: 818px;
+  width: 800px;
   -webkit-user-select: none;
   cursor: default;
 }
@@ -186,11 +186,15 @@
 }
 
 #docs-app .docs-toolbar {
-  width: 818px;
+  width: 800px;
   height: 40px;
   margin-top: 30px;
   -webkit-flex: none;
-  background-image: url(docs-toolbar.png);
+  background-image: -webkit-image-set(
+      url(docs-toolbar-1x.png) 1x,
+      url(docs-toolbar-2x.png) 2x);
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
 }
 
 #docs-app .docs-toolbar .balloon {
@@ -199,7 +203,7 @@
 }
 
 #docs-app .docs-ruler {
-  width: 824px;
+  width: 800px;
   height: 14px;
   background-color: #f8f8f8;
   margin: 20px -3px 0;
@@ -220,7 +224,7 @@
 #docs-app .paper-container {
   position: relative;
   margin: 5px auto;
-  width: 818px;
+  width: 800px;
 }
 
 #docs-app .paper,
@@ -230,8 +234,8 @@
   font-size: 16px;
   line-height: 18px;
   height: 1160px;
-  padding: 96px;
-  width: 818px;
+  padding: 90px;
+  width: 800px;
 }
 
 #docs-app .paper {
