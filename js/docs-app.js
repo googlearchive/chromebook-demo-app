@@ -204,22 +204,20 @@ DocsApp.prototype.findBotKeyword_ = function() {
     for (var keyword in BOT_KEYWORD_MAP[i]) {
       if (this.usedKeyword_[keyword])
         continue;
-      var candidates = [
-        ' ' + keyword + ' ',
-        ' ' + keyword + '.',
-        ' ' + keyword + ','
-      ];
-      var index = -1;
-      for (var j = 0; j < candidates.length; j++) {
-        index = paperText.indexOf(candidates[j]);
-        if (index != -1)
-          break;
-      }
+      // Make regexp to search the word.
+      var expression = keyword.replace(
+          /[\[\]\.\+\*\(\)\?\\\^\$]/g, function(ch) { return "\\" + ch;  });
+      var regexp =
+        new RegExp('(?:^|\\s)(' + expression + ')(?=\\s|[\.\,\!\?\:])');
+      var result = regexp.exec(paperText);
+      if (!result)
+        continue;
+      var index = paperText.indexOf(keyword, result.index);
       if (index == -1)
         continue;
       return {
         keyword: keyword,
-        index: index + 1,
+        index: index,
         result: BOT_KEYWORD_MAP[i][keyword]
       };
     }
