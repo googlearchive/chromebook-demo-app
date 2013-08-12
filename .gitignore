@@ -1,5 +1,6 @@
 *~
 *.pem
+pem
 *.crx
 VERSION
 scripts/publish

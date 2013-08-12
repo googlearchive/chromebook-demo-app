@@ -234,20 +234,40 @@ HELPER_FILES= \
   third-party/learn-more/learn-more.html
 
 packages: third-party
-	for x in ${TARGETS}; \
-	  do mkdir -p packages/demo-$$x; \
-	  cp manifests/$$x-manifest.json packages/demo-$$x/manifest.json; \
-	done
-	cp ${MENU_FILES} packages/demo-menu
+	# Menu.app Play version.
+	mkdir -p packages/demo-menu-play/_locales
+	cp manifests/menu-manifest.json packages/demo-menu-play/manifest.json
+	cp ${MENU_FILES} packages/demo-menu-play
+	cp -r locales/menu-locales/* packages/demo-menu-play/_locales
+	# Menu.app YouTube version.
+	mkdir -p packages/demo-menu-youtube/_locales
+	cp manifests/menu-manifest.json packages/demo-menu-youtube/manifest.json
+	cp ${MENU_FILES} packages/demo-menu-youtube
+	cp -r locales/menu-locales/* packages/demo-menu-youtube/_locales
+	# Docs.app
+	mkdir -p packages/demo-docs/_locales
+	cp manifests/docs-manifest.json packages/demo-docs/manifest.json
 	cp ${DOCS_FILES} packages/demo-docs
+	cp -r locales/docs-locales/* packages/demo-docs/_locales
+	# Hangouts.app
+	mkdir -p packages/demo-hangouts/_locales
+	cp manifests/hangouts-manifest.json packages/demo-hangouts/manifest.json
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
+	cp -r locales/hangouts-locales/* packages/demo-hangouts/_locales
+	# Music.app
+	mkdir -p packages/demo-music/_locales
+	cp manifests/music-manifest.json packages/demo-music/manifest.json
 	cp ${MUSIC_FILES} packages/demo-music
+	cp -r locales/music-locales/* packages/demo-music/_locales
+	# Store.app
+	mkdir -p packages/demo-store/_locales
+	cp manifests/store-manifest.json packages/demo-store/manifest.json
 	cp ${STORE_FILES} packages/demo-store
+	cp -r locales/store-locales/* packages/demo-store/_locales
+	# Helper.app
+	mkdir -p packages/demo-helper
+	cp manifests/helper-manifest.json packages/demo-helper/manifest.json
 	cp ${HELPER_FILES} packages/demo-helper
-	for x in menu docs hangouts music store; \
-	  do mkdir -p packages/demo-$$x/_locales; \
-	     cp -r locales/$$x-locales/* packages/demo-$$x/_locales; \
-	done
 
 third-party:
 	mkdir -p gen/third-party
@@ -260,15 +280,39 @@ third-party:
 	cd gen/third-party && patch -p0 < ../../patches/effects.patch
 
 crx: packages
-	for x in ${TARGETS}; \
-	  do ${CHROME} --pack-extension=packages/demo-$$x \
-		       --pack-extension-key=packages/demo-$$x.pem; \
-	done
+	${CHROME} --pack-extension=packages/demo-menu-play \
+		  --pack-extension-key=pem/demo-menu.pem
+	${CHROME} --pack-extension=packages/demo-menu-youtube \
+		  --pack-extension-key=pem/demo-menu.pem
+	${CHROME} --pack-extension=packages/demo-docs \
+		  --pack-extension-key=pem/demo-docs.pem
+	${CHROME} --pack-extension=packages/demo-hangouts \
+		  --pack-extension-key=pem/demo-hangouts.pem
+	${CHROME} --pack-extension=packages/demo-music \
+		  --pack-extension-key=pem/demo-music.pem
+	${CHROME} --pack-extension=packages/demo-store \
+		  --pack-extension-key=pem/demo-store.pem
+	${CHROME} --pack-extension=packages/demo-helper \
+		  --pack-extension-key=pem/demo-helper.pem
 
 zip: packages
-	for x in ${TARGETS}; \
-	  do scripts/remove-entry packages/demo-$$x/manifest.json key; \
-	     zip -r packages/demo-$$x.zip packages/demo-$$x; \
-	done
+	scripts/remove-entry packages/demo-menu-play/manifest.json key
+	zip -r packages/demo-menu-play.zip packages/demo-menu-play
+	scripts/remove-entry packages/demo-menu-youtube/manifest.json key
+	zip -r packages/demo-menu-youtube.zip packages/demo-menu-youtube
+	scripts/remove-entry packages/demo-docs/manifest.json key
+	zip -r packages/demo-docs.zip packages/demo-docs
+	scripts/remove-entry packages/demo-hangouts/manifest.json key
+	zip -r packages/demo-hangouts.zip packages/demo-hangouts
+	scripts/remove-entry packages/demo-music/manifest.json key
+	zip -r packages/demo-music.zip packages/demo-music
+	scripts/remove-entry packages/demo-store/manifest.json key
+	zip -r packages/demo-store.zip packages/demo-store
+	scripts/remove-entry packages/demo-helper/manifest.json key
+	zip -r packages/demo-helper.zip packages/demo-helper
 
-.PHONY: packages crx zip third-party
+clean:
+	rm -r gen
+	rm -r packages
+
+.PHONY: packages crx zip third-party clean
