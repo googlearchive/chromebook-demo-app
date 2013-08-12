@@ -174,7 +174,7 @@ MUSIC_FILES = \
   third-party/music-covers/music-cover-muse.png \
   third-party/music-covers/music-cover-frank-ocean.jpg \
   third-party/music-covers/music-cover-imagine-dragons.jpg \
-  third-party/music-covers/music-cover-the-doors.tif \
+  third-party/music-covers/music-cover-the-doors.png \
   third-party/music-covers/music-cover-tegan-and-sara.png \
   third-party/music-covers/music-cover-ellie-goulding.jpg \
   views/music-app.html
