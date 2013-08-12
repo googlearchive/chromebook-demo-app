@@ -3,37 +3,43 @@ CHROME=/opt/google/chrome/chrome
 TARGETS = menu docs hangouts music store helper
 
 MENU_FILES = \
-  js/app.js \
-  js/menu-app.js \
-  js/background.js \
-  js/util.js \
-  js/downloader.js \
-  css/common.css \
-  css/menu-app.css \
-  assets/menu-icon-16.png \
-  assets/menu-icon-48.png \
-  assets/menu-icon-128.png \
-  assets/menu-logo-1x.png \
-  assets/menu-logo-2x.png \
-  assets/docs-icon-64.png \
-  assets/hangouts-icon-64.png \
-  assets/music-icon-64.png \
-  assets/store-icon-64.png \
-  assets/docs-icon-128.png \
-  assets/hangouts-icon-128.png \
-  assets/music-icon-128.png \
-  assets/store-icon-128.png \
   assets/close-1x.png \
   assets/close-2x.png \
-  views/menu-app.html \
-  views/downloader.html \
+  assets/docs-icon-128.png \
+  assets/docs-icon-64.png \
+  assets/hangouts-icon-128.png \
+  assets/hangouts-icon-64.png \
+  assets/menu-icon-128.png \
+  assets/menu-icon-16.png \
+  assets/menu-icon-48.png \
+  assets/menu-logo-1x.png \
+  assets/menu-logo-2x.png \
+  assets/store-icon-128.png \
+  assets/store-icon-64.png \
+  css/common.css \
+  css/menu-app.css \
+  js/app.js \
+  js/background.js \
+  js/downloader.js \
+  js/menu-app.js \
+  js/util.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
-  "third-party/sample-files/1995 Field Notes.docx" \
+  third-party/sample-files/"1995 Field Notes.docx" \
+  third-party/sample-files/"Chromebook Backup.mov" \
   third-party/sample-files/Arches.png \
-  "third-party/sample-files/Chromebook Backup.mov" \
   third-party/sample-files/Night.png \
-  third-party/sample-files/Song.mp3
+  third-party/sample-files/Song.mp3 \
+  views/downloader.html \
+  views/menu-app.html
+
+MENU_PLAY_FILES = \
+  assets/music-icon-128.png \
+  assets/music-icon-64.png
+
+MENU_YOUTUBE_FILES = \
+  assets/youtube-icon-128.png \
+  assets/youtube-icon-64.png
 
 DOCS_FILES = \
   assets/balloon-triangle-top-1x.png \
@@ -238,12 +244,18 @@ packages: third-party
 	mkdir -p packages/demo-menu-play/_locales
 	cp manifests/menu-manifest.json packages/demo-menu-play/manifest.json
 	cp ${MENU_FILES} packages/demo-menu-play
+	cp ${MENU_PLAY_FILES} packages/demo-menu-play
 	cp -r locales/menu-locales/* packages/demo-menu-play/_locales
+	echo "Component.ENTRIES.Menu.variation = 'play';" >> \
+	     packages/demo-menu-play/util.js
 	# Menu.app YouTube version.
 	mkdir -p packages/demo-menu-youtube/_locales
 	cp manifests/menu-manifest.json packages/demo-menu-youtube/manifest.json
 	cp ${MENU_FILES} packages/demo-menu-youtube
+	cp ${MENU_YOUTUBE_FILES} packages/demo-menu-youtube
 	cp -r locales/menu-locales/* packages/demo-menu-youtube/_locales
+	echo "Component.ENTRIES.Menu.variation = 'youtube';" >> \
+	     packages/demo-menu-youtube/util.js
 	# Docs.app
 	mkdir -p packages/demo-docs/_locales
 	cp manifests/docs-manifest.json packages/demo-docs/manifest.json

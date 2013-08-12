@@ -19,6 +19,10 @@
     "message": "Listen to music",
     "description": "App headline for Google Play: You can listen to music with Google Play Music (link to Google Play Music app)"
   },
+  "MENU_YOUTUBE_BUTTON": {
+    "message": "Videos and Music",
+    "description": "App headline for Youtube (alternative to Google Play): You can enjoy videos and music with YouTube (link to YouTube app)"
+  },
   "MENU_STORE_BUTTON": {
     "message": "Get more apps",
     "description": "App headline for Webstore: You can get more applications (and do more things) through the Chrome web store (link to Chrome Web store app)"

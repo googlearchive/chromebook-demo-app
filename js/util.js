@@ -70,6 +70,11 @@ Component.prototype.sendMessage = function(message) {
   }
 };
 
+Apps = {};
+Apps.YouTube = {
+  idList: ['pbdihpaifchmclcmkfdgffnnpfbobefh']
+};
+
 var extend = function(base, adapter) {
   for (var name in adapter) {
     base[name] = adapter[name];

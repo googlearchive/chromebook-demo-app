@@ -133,7 +133,7 @@ h1, p {
   -webkit-animation-delay: .5s;
 }
 
-.music.button {
+.third.button {
   -webkit-animation-fill-mode: backwards;
   -webkit-animation-delay: .6s;
 }
@@ -172,10 +172,16 @@ h1, p {
       url('hangouts-icon-128.png') 2x);
 }
 
-.music.button .button-icon {
+.play .third.button .button-icon {
   background-image: -webkit-image-set(
       url('music-icon-64.png') 1x,
       url('music-icon-128.png') 2x);
+}
+
+.youtube .third.button .button-icon {
+  background-image: -webkit-image-set(
+      url('youtube-icon-64.png') 1x,
+      url('youtube-icon-128.png') 2x);
 }
 
 .store.button .button-icon {
@@ -209,12 +215,20 @@ h1, p {
   border-bottom-color: #50aa38;
 }
 
-.music.button .button-label {
+.play .third.button .button-label {
   border-bottom-color: #facf0c;
 }
 
-.store.button .button-label {
+.youtube .third.button .button-label {
   border-bottom-color: #e14b40;
+}
+
+.play .store.button .button-label {
+  border-bottom-color: #e14b40;
+}
+
+.youtube .store.button .button-label {
+  border-bottom-color: #facf0c;
 }
 
 .button:hover .button-label,
@@ -259,22 +273,32 @@ h1, p {
   background-color: #50aa38;
 }
 
-.music.shelf-marker {
+.play .third.shelf-marker {
   left: 164px;
   background-color: #facf0c;
 }
 
-.store.shelf-marker {
+.youtube .third.shelf-marker {
+  left: 164px;
+  background-color: #e14b40;
+}
+
+.play .store.shelf-marker {
   left: 216px;
   background-color: #e14b40;
+}
+
+.youtube .store.shelf-marker {
+  left: 216px;
+  background-color: #facf0c;
 }
 
 .docs.button:hover ~ .docs.shelf-marker,
 .docs.button.rotated ~ .docs.shelf-marker,
 .hangouts.button:hover ~ .hangouts.shelf-marker,
 .hangouts.button.rotated ~ .hangouts.shelf-marker,
-.music.button:hover ~ .music.shelf-marker,
-.music.button.rotated ~ .music.shelf-marker,
+.third.button:hover ~ .third.shelf-marker,
+.third.button.rotated ~ .third.shelf-marker,
 .store.button:hover ~ .store.shelf-marker,
 .store.button.rotated ~ .store.shelf-marker {
   height: 4px;
