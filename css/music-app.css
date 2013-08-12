@@ -147,19 +147,25 @@
 #music-app .album-cover {
   width: 160px;
   height: 160px;
-  background-color: black;
   -webkit-flex: none;
 }
 
 #music-app .music.main .album-cover {
   width: 330px;
   height: 330px;
-  background-color: orange;
   position: relative;
 }
 
 .music.lumineers .album-cover {
   background-image: url(music-cover-lumineers.jpg);
+}
+
+.music.war .album-cover {
+  background-image: url(music-cover-war.gif);
+}
+
+.music.vivaldi .album-cover {
+  background-image: url(music-cover-vivaldi.png);
 }
 
 .music.maroon5 .album-cover {
@@ -257,7 +263,7 @@
   left: 10px;
 }
 
-#music-app .music-name {
+#music-app .song-name {
   font: 16px/16px 'Roboto-Light', sans-serif;
   white-space: nowrap;
   overflow: hidden;
@@ -267,7 +273,7 @@
   -webkit-flex: none;
 }
 
-#music-app .music.main .music-name {
+#music-app .music.main .song-name {
   font-size: 20px;
   line-height: 23px;
 }

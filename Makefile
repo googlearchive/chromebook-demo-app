@@ -159,12 +159,10 @@ MUSIC_FILES = \
   js/background.js \
   js/music-app.js \
   js/util.js \
-  third-party/music/music-lumineers.mp3 \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
   third-party/roboto/Roboto-ThinItalic.ttf \
-  third-party/music-covers/music-cover-lumineers.jpg \
   third-party/music-covers/music-cover-maroon5.jpg \
   third-party/music-covers/music-cover-florence.jpg \
   third-party/music-covers/music-cover-blake-shelton.jpg \
@@ -178,6 +176,18 @@ MUSIC_FILES = \
   third-party/music-covers/music-cover-tegan-and-sara.png \
   third-party/music-covers/music-cover-ellie-goulding.jpg \
   views/music-app.html
+
+MUSIC_FILES_LUMINEERS = \
+  third-party/music/music-lumineers.mp3 \
+  third-party/music-covers/music-cover-lumineers.jpg
+
+MUSIC_FILES_WAR = \
+  third-party/music/music-war.mp3 \
+  third-party/music-covers/music-cover-war.gif
+
+MUSIC_FILES_VIVALDI = \
+  third-party/music/music-vivaldi.mp3 \
+  third-party/music-covers/music-cover-vivaldi.png
 
 STORE_FILES= \
   assets/close-1x.png \
@@ -240,7 +250,7 @@ HELPER_FILES= \
   third-party/learn-more/learn-more.html
 
 packages: third-party
-	# Menu.app Play version.
+	# Menu.app Play variation.
 	mkdir -p packages/demo-menu-play/_locales
 	cp manifests/menu-manifest.json packages/demo-menu-play/manifest.json
 	cp ${MENU_FILES} packages/demo-menu-play
@@ -248,7 +258,7 @@ packages: third-party
 	cp -r locales/menu-locales/* packages/demo-menu-play/_locales
 	echo "Component.ENTRIES.Menu.variation = 'play';" >> \
 	     packages/demo-menu-play/util.js
-	# Menu.app YouTube version.
+	# Menu.app YouTube variation.
 	mkdir -p packages/demo-menu-youtube/_locales
 	cp manifests/menu-manifest.json packages/demo-menu-youtube/manifest.json
 	cp ${MENU_FILES} packages/demo-menu-youtube
@@ -266,11 +276,33 @@ packages: third-party
 	cp manifests/hangouts-manifest.json packages/demo-hangouts/manifest.json
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp -r locales/hangouts-locales/* packages/demo-hangouts/_locales
-	# Music.app
-	mkdir -p packages/demo-music/_locales
-	cp manifests/music-manifest.json packages/demo-music/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music
-	cp -r locales/music-locales/* packages/demo-music/_locales
+	# Music.app Lumineers variation.
+	mkdir -p packages/demo-music-lumineers/_locales
+	cp manifests/music-manifest.json \
+	   packages/demo-music-lumineers/manifest.json
+	cp ${MUSIC_FILES} packages/demo-music-lumineers
+	cp ${MUSIC_FILES_LUMINEERS} packages/demo-music-lumineers
+	cp -r locales/music-locales/* packages/demo-music-lumineers/_locales
+	echo "Component.ENTRIES.Music.variation = 'lumineers';" >> \
+	     packages/demo-music-lumineers/util.js
+	# Music.app War variation.
+	mkdir -p packages/demo-music-war/_locales
+	cp manifests/music-manifest.json \
+	   packages/demo-music-war/manifest.json
+	cp ${MUSIC_FILES} packages/demo-music-war
+	cp ${MUSIC_FILES_WAR} packages/demo-music-war
+	cp -r locales/music-locales/* packages/demo-music-war/_locales
+	echo "Component.ENTRIES.Music.variation = 'war';" >> \
+	     packages/demo-music-war/util.js
+	# Music.app Vivaldi variation.
+	mkdir -p packages/demo-music-vivaldi/_locales
+	cp manifests/music-manifest.json \
+	   packages/demo-music-vivaldi/manifest.json
+	cp ${MUSIC_FILES} packages/demo-music-vivaldi
+	cp ${MUSIC_FILES_VIVALDI} packages/demo-music-vivaldi
+	cp -r locales/music-locales/* packages/demo-music-vivaldi/_locales
+	echo "Component.ENTRIES.Music.variation = 'vivaldi';" >> \
+	     packages/demo-music-vivaldi/util.js
 	# Store.app
 	mkdir -p packages/demo-store/_locales
 	cp manifests/store-manifest.json packages/demo-store/manifest.json

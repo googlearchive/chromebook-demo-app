@@ -99,6 +99,30 @@
     "message": "Recently played",
     "description": "Subtitle for a recently played song"
   },
+  "MUSIC_WAR_ARTIST_NAME": {
+    "message": "Good old war",
+    "description": "Artist name."
+  },
+  "MUSIC_WAR_SONG_NAME": {
+    "message": "Calling me names",
+    "description": "Song name"
+  },
+  "MUSIC_WAR_FOOTER_MESSAGE": {
+    "message": "Recently played",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_VIVALDI_ARTIST_NAME": {
+    "message": "Vivaldi",
+    "description": "Artist name."
+  },
+  "MUSIC_VIVALDI_SONG_NAME": {
+    "message": "I. Allegro",
+    "description": "Song name"
+  },
+  "MUSIC_VIVALDI_FOOTER_MESSAGE": {
+    "message": "Recently played",
+    "description": "Subtitle for a recently played song"
+  },
   "MUSIC_MAROON5_ARTIST_NAME": {
     "message": "Maroon 5",
     "description": "Artist name."
