@@ -217,7 +217,7 @@ var updateSubPage = function(page) {
       getLocale(page.description);
 
   // Cover
-  var covers = document.querySelectorAll('#hero-carousel .marquee');
+  var covers = document.querySelectorAll('#hero-carousel .marquee .cover');
   for (i = 0; i < covers.length; i++) {
     covers[i].classList.toggle(
         'active', covers[i].classList.contains(page.id));
