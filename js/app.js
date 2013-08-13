@@ -42,9 +42,16 @@ App.prototype.start = function() {
   // Track page view.
   Component.ENTRIES.Helper.sendMessage({name: 'trackView'});
 
+  // Loads locale strings.
+  load('/_locales/en/messages.json', function(text) {
+    LOCALES.en.messages = JSON.parse(text);
+    this.localeLoaded_ = true;
+    this.checkDocumentReady_();
+  }.bind(this));
+
   // Get current locale.
   Component.ENTRIES.Helper.sendMessage({name: 'getLocale'}, function(localeID) {
-    this.locale = LOCALES.get(localeID);
+    this.locale_ = LOCALES.get(localeID);
     this.checkDocumentReady_();
   }.bind(this));
 
@@ -64,7 +71,8 @@ App.prototype.start = function() {
 App.prototype.checkDocumentReady_ = function() {
   if ((window.document.readyState == 'interactive' ||
        window.document.readyState == 'complete') &&
-      this.locale &&
+      this.localeLoaded_ &&
+      this.locale_ &&
       !this.documentInitialized_) {
     this.documentInitialized_ = true;
     this.initDocument();
@@ -75,29 +83,8 @@ App.prototype.checkDocumentReady_ = function() {
 };
 
 App.prototype.initDocument = function(firstTime) {
-  // Replace i18n strings.
-  var nodes = App.queryXPath(
-      this.document, '//*[contains(./text(), \'__MSG_\')]');
-  for (var i = 0; i < nodes.length; i++) {
-    nodes[i].innerHTML = nodes[i].innerHTML.replace(
-        /__MSG_([a-zA-Z0-9_]+)__/g,
-        function(str) {
-          return chrome.i18n.getMessage(RegExp.$1);
-        });
-  }
-  var attributes = App.queryXPath(
-      this.document, '//@*[contains(., \'__MSG_\')]');
-  for (var i = 0; i < attributes.length; i++) {
-    attributes[i].nodeValue = attributes[i].nodeValue.replace(
-        /__MSG_([a-zA-Z0-9_]+)__/g,
-        function(str) {
-          return chrome.i18n.getMessage(RegExp.$1);
-        });
-  }
-
-  // Apply initial DOM state.
-  this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
-  this.toggleDirection_(false);
+  // Locale
+  this.applyLocale(this.locale_);
 
   // Close button.
   var closeButton = this.document.querySelector('.close');
@@ -154,7 +141,29 @@ App.prototype.get = function(query) {
 };
 
 App.prototype.applyLocale = function(locale) {
+  // Replace i18n strings.
+  var nodes = App.queryXPath(
+      this.document, '//*[contains(./text(), \'__MSG_\')]');
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].innerHTML = nodes[i].innerHTML.replace(
+        /__MSG_([a-zA-Z0-9_]+)__/g,
+        function(str) {
+          return chrome.i18n.getMessage(RegExp.$1);
+        });
+  }
+  var attributes = App.queryXPath(
+      this.document, '//@*[contains(., \'__MSG_\')]');
+  for (var i = 0; i < attributes.length; i++) {
+    attributes[i].nodeValue = attributes[i].nodeValue.replace(
+        /__MSG_([a-zA-Z0-9_]+)__/g,
+        function(str) {
+          return chrome.i18n.getMessage(RegExp.$1);
+        });
+  }
 
+  // Apply initial DOM state.
+  this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
+  this.toggleDirection_(false);
 };
 
 App.prototype.toggleWindowSize_ = function() {

@@ -16,28 +16,6 @@ MenuApp.prototype.start = function() {
 };
 
 MenuApp.prototype.initDocument = function() {
-  // Update the third button.
-  var appFrame = this.get('.app-frame');
-  var button = this.get('.button.third');
-  var thirdButtonIDList;
-  switch (Component.ENTRIES.Menu.variation) {
-    case 'play':
-      appFrame.classList.add('play');
-      button.querySelector('.button-label').innerText =
-          '__MSG_MENU_MUSIC_BUTTON__';
-      thirdButtonIDList = Component.ENTRIES.Music.idList;
-      break;
-    case 'youtube':
-      appFrame.classList.add('youtube');
-      button.querySelector('.button-label').innerText =
-          '__MSG_MENU_YOUTUBE_BUTTON__';
-      thirdButtonIDList = Apps.YouTube.idList;
-      break;
-    default:
-      console.error('Invalid variation.', Component.ENTRIES.Menu.variation);
-      break;
-  }
-
   App.prototype.initDocument.call(this);
 
   // Init rotation.
@@ -47,6 +25,7 @@ MenuApp.prototype.initDocument = function() {
   this.onStep_();
 
   // Update the CSS class.
+  var appFrame = this.get('.app-frame');
   if (this.isTransparent_)
     appFrame.classList.add('transparent');
   appFrame.classList.remove('loading');
@@ -59,7 +38,7 @@ MenuApp.prototype.initDocument = function() {
       var id = [
         Component.ENTRIES.Docs.idList,
         Component.ENTRIES.Hangouts.idList,
-        thirdButtonIDList,
+        buttons[2].idList,
         Component.ENTRIES.Store.idList
       ][index];
       Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
@@ -74,6 +53,30 @@ MenuApp.prototype.initDocument = function() {
   this.get('.learn-more').addEventListener('click', function() {
     Component.ENTRIES.Helper.sendMessage({name: 'visitLearnMore'});
   });
+};
+
+MenuApp.prototype.applyLocale = function(locale) {
+  App.prototype.applyLocale.call(this, locale);
+  // Update the third button.
+  var appFrame = this.get('.app-frame');
+  var button = this.get('.button.third');
+  switch (locale.menuThirdButton) {
+    case 'play':
+      appFrame.classList.add('play');
+      button.querySelector('.button-label').innerText =
+          locale.getMessage('MENU_MUSIC_BUTTON');
+      button.idList = Component.ENTRIES.Music.idList;
+      break;
+    case 'youtube':
+      appFrame.classList.add('youtube');
+      button.querySelector('.button-label').innerText =
+          locale.getMessage('MENU_YOUTUBE_BUTTON');
+      button.idList = Apps.YouTube.idList;
+      break;
+    default:
+      console.error('Invalid variation.', Component.ENTRIES.Menu.variation);
+      break;
+  }
 };
 
 MenuApp.prototype.close = function() {

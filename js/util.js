@@ -79,17 +79,42 @@ Apps.YouTube = {
   idList: ['pbdihpaifchmclcmkfdgffnnpfbobefh']
 };
 
-LOCALES = {
-  en: {}
+var extend = function(base, adapter) {
+  for (var name in adapter) {
+    base[name] = adapter[name];
+  }
+  return base;
+};
+
+LOCALES = function(prop) {
+  extend(this, prop);
 };
 
 LOCALES.get = function(id) {
   return LOCALES[id] || LOCALES.en;
 };
 
-var extend = function(base, adapter) {
-  for (var name in adapter) {
-    base[name] = adapter[name];
-  }
-  return base;
+LOCALES.prototype = {
+  menuThirdButton: 'play'
+};
+
+LOCALES.prototype.getMessage = function(id) {
+  return this.messages[id].message;
+};
+
+LOCALES.en = new LOCALES({
+});
+
+var load = function(url, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState != 4)
+      return;
+    if (xhr.status == 200)
+      callback(xhr.responseText);
+    else
+      callback(null);
+  };
+  xhr.open('GET', url);
+  xhr.send();
 };
