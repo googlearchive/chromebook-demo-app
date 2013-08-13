@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="js" lang="en" id="cros">
+<html class="js" id="cros">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
@@ -56,6 +56,11 @@
     height: 100%;
     margin-top: 20px;
     display: none;
+    text-align: center;
+  }
+
+  .cover.printing img {
+    height: 400px;
   }
 
   .cover.active {
@@ -71,7 +76,13 @@
     <div class="compact" id="header">
       <div class="g-section g-tpl-160 g-split">
         <div class="g-unit g-first" id="header-logo">
-          <img alt="Chrome" data-g-event="nav-logo" data-g-label="-home" id="logo" src="chrome_logo_2x.png" style="-webkit-mask: -webkit-gradient(radial, 17 17, 123, 17 17, 138, from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)));">
+          <img alt="Chrome" data-g-event="nav-logo" data-g-label="-home"
+               id="logo" src="chrome_logo_2x.png"
+               style="-webkit-mask: -webkit-gradient(
+                          radial, 17 17, 123, 17 17, 138,
+                          from(rgb(0, 0, 0)),
+                          color-stop(0.5, rgba(0, 0, 0, 0.2)),
+                          to(rgb(0, 0, 0)));">
         </div>
         <ul class="g-unit g-section g-tpl-nest" id="nav" role="menubar">
           <li class="g-first g-unit features">
@@ -111,10 +122,18 @@
           <div class="marquee-carousel">
             <div class="marquee" style="opacity: 1;">
               <div class="marquee-copy"><h1></h1><p></p></div>
-              <div class="cover features-speed"><img src="learn-more-features-speed.jpg"></div>
-              <div class="cover features"></div>
-              <div class="cover features"></div>
-              <div class="cover features"></div>
+              <div class="cover features-speed">
+                <img src="learn-more-features-speed.jpg">
+              </div>
+              <div class="cover features-apps">
+                <img src="learn-more-features-apps.jpg">
+              </div>
+              <div class="cover features-security">
+                <img src="learn-more-features-security.jpg">
+              </div>
+              <div class="cover printing">
+                <img src="learn-more-printing.png">
+              </div>
             </div>
           </div>
         </div>
@@ -123,43 +142,9 @@
           <div class="g-unit"><div class="g-content"><h2></h2><p></p></div></div>
           <div class="g-unit"><div class="g-content"><h2></h2><p></p></div></div>
         </div>
-        <p class="back">
-          <a class="scroll" href="#header">Back to Top</a>
-        </p>
       </div>
     </div>
-    <div id="footer">
-      <div class="compact">
-        <div class="g-section g-tpl-50-50 g-split" id="sub-footer">
-          <div class="g-unit g-first">
-            <!--ul id="chrome-footer-global">
-              <li>
-                <a href="https://chrome-offline-retailers.googlegoro.com/">Google</a>
-              </li>
-              <li>
-                <a data-g-event="nav-subfooter" data-g-label="about" href="http://www.google.com/intl/en/about/">About Google</a>
-              </li>
-              <li>
-                <a data-g-event="nav-subfooter" data-g-label="privacy" href="http://www.google.com/chrome/intl/en/privacy.html">Chrome Privacy</a>
-              </li>
-              <li>
-                <a data-g-event="nav-subfooter" data-g-label="help" href="https://support.google.com/chrome/?p=mktg_help">Help</a>
-              </li>
-            </ul-->
-          </div>
-          <div class="g-unit">
-            <div id="locale-switcher">
-              <select onchange="var href=this[this.selectedIndex].value;if(href!=&#39;&#39;){window.location.href=href};">
-                <option selected="" value="//www.google.com/intl/en/chrome/">
-                  English – United States
-                </option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-<script src="chromebook-retailer.min.js"></script>
-<script src="learn-more.js"></script>
-<input id="history_state" type="hidden" style="display: none;">
-</body></html>
+    <script src="chromebook-retailer.min.js"></script>
+    <script src="learn-more.js"></script>
+  </body>
+</html>
