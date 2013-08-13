@@ -268,14 +268,14 @@ packages: third-party
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp -r locales/hangouts-locales/* packages/demo-hangouts/_locales
 	# Music.app Lumineers variation.
-	mkdir -p packages/demo-music-lumineers/_locales
+	mkdir -p packages/demo-music/_locales
 	cp manifests/music-manifest.json \
-	   packages/demo-music-lumineers/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music-lumineers
-	cp ${MUSIC_FILES_LUMINEERS} packages/demo-music-lumineers
-	cp -r locales/music-locales/* packages/demo-music-lumineers/_locales
+	   packages/demo-music/manifest.json
+	cp ${MUSIC_FILES} packages/demo-music
+	cp ${MUSIC_FILES_LUMINEERS} packages/demo-music
+	cp -r locales/music-locales/* packages/demo-music/_locales
 	echo "Component.ENTRIES.Music.variation = 'lumineers';" >> \
-	     packages/demo-music-lumineers/util.js
+	     packages/demo-music/util.js
 	# Music.app War variation.
 	mkdir -p packages/demo-music-war/_locales
 	cp manifests/music-manifest.json \
@@ -316,9 +316,7 @@ third-party:
 	cd gen/third-party && patch -p0 < ../../patches/effects.patch
 
 crx: packages
-	${CHROME} --pack-extension=packages/demo-menu-play \
-		  --pack-extension-key=pem/demo-menu.pem
-	${CHROME} --pack-extension=packages/demo-menu-youtube \
+	${CHROME} --pack-extension=packages/demo-menu \
 		  --pack-extension-key=pem/demo-menu.pem
 	${CHROME} --pack-extension=packages/demo-docs \
 		  --pack-extension-key=pem/demo-docs.pem
