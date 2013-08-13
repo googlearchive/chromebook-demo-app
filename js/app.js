@@ -19,17 +19,6 @@ var App = function(opt_width, opt_height, opt_transparent) {
   this.windowBoundsIndex_ = 0;
 };
 
-App.queryXPath = function(doc, xpath) {
-  var xPathResult = doc.evaluate(
-      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
-  var results = [];
-  for (var i = 0; i < xPathResult.snapshotLength; i++) {
-    var node = xPathResult.snapshotItem(i);
-    results.push(node);
-  }
-  return results;
-};
-
 App.prototype.start = function() {
   var window = chrome.app.window.current();
   if (window.initialized)
@@ -138,7 +127,7 @@ App.prototype.get = function(query) {
 
 App.prototype.applyLocale = function(locale) {
   // Replace i18n strings.
-  var nodes = App.queryXPath(
+  var nodes = queryXPath(
       this.document, '//*[contains(./text(), \'__MSG_\')]');
   for (var i = 0; i < nodes.length; i++) {
     nodes[i].innerHTML = nodes[i].innerHTML.replace(
@@ -147,7 +136,7 @@ App.prototype.applyLocale = function(locale) {
           return chrome.i18n.getMessage(RegExp.$1);
         });
   }
-  var attributes = App.queryXPath(
+  var attributes = queryXPath(
       this.document, '//@*[contains(., \'__MSG_\')]');
   for (var i = 0; i < attributes.length; i++) {
     attributes[i].nodeValue = attributes[i].nodeValue.replace(

@@ -86,6 +86,17 @@ var extend = function(base, adapter) {
   return base;
 };
 
+var queryXPath = function(doc, xpath) {
+  var xPathResult = doc.evaluate(
+      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+  var results = [];
+  for (var i = 0; i < xPathResult.snapshotLength; i++) {
+    var node = xPathResult.snapshotItem(i);
+    results.push(node);
+  }
+  return results;
+};
+
 Locale = {loaded: false, messages_: {}};
 
 Locale.LIST = ['en'];
@@ -104,23 +115,29 @@ Locale.load = function(callback) {
 Locale.onXHRStateChange_ = function(xhr, id, callback) {
   if (xhr.readyState != 4)
     return;
-  if (xhr.status == 200)
+  if (xhr.status == 200) {
     this.messages_[id] = JSON.parse(xhr.responseText);
-  else if (xhr.status == 404)
+  } else if (xhr.status == 404)
     this.messages_[id] = {};
   else
     this.messages_[id] = null;
   for (var i = 0; i < Locale.LIST.length; i++) {
     var inID = Locale.LIST[i];
-    console.log(inID, !this.messages_[inID]);
     if (!this.messages_[inID])
       return;
   }
-  console.log('locale is loaded.');
   Locale.loaded = true;
   callback();
 };
 
 Locale.get = function(id, messageName) {
   return this.messages_[id][messageName].message;
+};
+
+Locale.apply = function(document, id) {
+  var nodes = queryXPath(document, '//*[@i18n-content]');
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].innerHTML = nodes[i].innerHTML =
+        this.get(id, nodes[i].getAttribute('i18n-content'));
+  }
 };

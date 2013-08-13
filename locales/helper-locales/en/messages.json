@@ -1,4 +1,20 @@
 {
+  "LEARN_MORE_NAV_FEATURES": {
+    "message": "FEATURES",
+    "description": ""
+  },
+  "LEARN_MORE_NAV_OFFLINE": {
+    "message": "OFFLINE",
+    "description": ""
+  },
+  "LEARN_MORE_NAV_PRINTING": {
+    "message": "PRINTING",
+    "description": ""
+  },
+  "LEARN_MORE_NAV_DO_MORE": {
+    "message": "DO MORE",
+    "description": ""
+  },
   "LEARN_MORE_FEATURES_SPEED_TITLE": {
     "message": "Ready when you are",
     "description": ""
@@ -16,132 +32,132 @@
     "description": ""
   },
   "LEARN_MORE_FEATURES_SPEED_SECTION2_TITLE": {
-    message: "Browse faster",
-    description: ""
+    "message": "Browse faster",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SPEED_SECTION2_DESCRIPTION": {
-    message: "With features like Chrome Instant built-in, browse the web at lightning speed.",
-    description: ""
+    "message": "With features like Chrome Instant built-in, browse the web at lightning speed.",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_APPS_TITLE": {
-    message: "Less #$%!, more :)",
-    description: ""
+    "message": "Less #$%!, more :)",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
-    message: "Chromebook has apps built in, so it works right out of the box.",
-    description: ""
+    "message": "Chromebook has apps built in, so it works right out of the box.",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
-    message: "No complicated software",
-    description: ""
+    "message": "No complicated software",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
-    message: "Docs, Hangouts and Play Music come free with your Chromebook. Add new apps directly from the Chrome Web Store.",
-    description: ""
+    "message": "Docs, Hangouts and Play Music come free with your Chromebook. Add new apps directly from the Chrome Web Store.",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
-    message: "Stays fresh by itself",
-    description: ""
+    "message": "Stays fresh by itself",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
-    message: "Chromebook updates itself automatically so there’s no annoying pop-ups.",
-    description: ""
+    "message": "Chromebook updates itself automatically so there’s no annoying pop-ups.",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SECURITY_TITLE": {
-    message: "Gives you peace of mind",
-    description: ""
+    "message": "Gives you peace of mind",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SECURITY_DESCRIPTION": {
-    message: "Virus protection is built in, and your files are safely backed up online.",
-    description: ""
+    "message": "Virus protection is built in, and your files are safely backed up online.",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SECURITY_SECTION1_TITLE": {
-    message: "Multiple layers of security",
-    description: ""
+    "message": "Multiple layers of security",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SECURITY_SECTION1_DESCRIPTION": {
-    message: "Virus protection and other security features keep you safe from viruses, malware and other computer nasties.",
-    description: ""
+    "message": "Virus protection and other security features keep you safe from viruses, malware and other computer nasties.",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SECURITY_SECTION2_TITLE": {
-    message: "Keeps your files safe",
-    description: ""
+    "message": "Keeps your files safe",
+    "description": ""
   },
   "LEARN_MORE_FEATURES_SECURITY_SECTION2_DESCRIPTION": {
-    message: "With Google Drive, an online file storage service, you can backup your files and access them from anywhere.",
-    description: ""
+    "message": "With Google Drive, an online file storage service, you can backup your files and access them from anywhere.",
+    "description": ""
   },
   "LEARN_MORE_OFFLINE_TITLE": {
-    message: "Works offline",
-    description: ""
+    "message": "Works offline",
+    "description": ""
   },
   "LEARN_MORE_OFFLINE_DESCRIPTION": {
-    message: "Chromebook helps you get stuff done even if you are not connected to the web.",
-    description: ""
+    "message": "Chromebook helps you get stuff done even if you are not connected to the web.",
+    "description": ""
   },
   "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
-    message: "Your favorite apps built-in",
-    description: ""
+    "message": "Your favorite apps built-in",
+    "description": ""
   },
   "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
-    message: "Apps like Google Docs, Offline Gmail, a media player and a photo editor keep you productive on the go.",
-    description: ""
+    "message": "Apps like Google Docs, Offline Gmail, a media player and a photo editor keep you productive on the go.",
+    "description": ""
   },
   "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
-    message: "Get more in the Chrome Web Store",
-    description: ""
+    "message": "Get more in the Chrome Web Store",
+    "description": ""
   },
   "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
-    message: "You can find many more free offline apps in the Chrome Web Store.",
-    description: ""
+    "message": "You can find many more free offline apps in the Chrome Web Store.",
+    "description": ""
   },
   "LEARN_MORE_PRINTING_TITLE": {
-    message: "Print without cords",
-    description: ""
+    "message": "Print without cords",
+    "description": ""
   },
   "LEARN_MORE_PRINTING_DESCRIPTION": {
-    message: "Your Chromebook can print wirelessly to any cloud-connected printer.",
-    description: ""
+    "message": "Your Chromebook can print wirelessly to any cloud-connected printer.",
+    "description": ""
   },
   "LEARN_MORE_PRINTING_SECTION1_TITLE": {
-    message: "Google Cloud Print",
-    description: ""
+    "message": "Google Cloud Print",
+    "description": ""
   },
   "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
-    message: "Cloud Print runs over the web so your Chromebook can print whether you’re in the same room as your printer, or on the go.",
-    description: ""
+    "message": "Cloud Print runs over the web so your Chromebook can print whether you’re in the same room as your printer, or on the go.",
+    "description": ""
   },
   "LEARN_MORE_PRINTING_SECTION2_TITLE": {
-    message: "Works with conventional printers",
-    description: ""
+    "message": "Works with conventional printers",
+    "description": ""
   },
   "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
-    message: "Cloud Ready printers work right out of the box, but if you own a PC or Mac and a conventional printer, you can connect it to work with your Chromebook.",
-    description: ""
+    "message": "Cloud Ready printers work right out of the box, but if you own a PC or Mac and a conventional printer, you can connect it to work with your Chromebook.",
+    "description": ""
   },
 
   "LEARN_MORE_DO_MORE_TITLE": {
-    message: "Chromecast",
-    description: ""
+    "message": "Chromecast",
+    "description": ""
   },
   "LEARN_MORE_DO_MORE_DESCRIPTION": {
-    message: "Send your favorite online entertainment from your Chromebook to your TV. For $35.",
-    description: ""
+    "message": "Send your favorite online entertainment from your Chromebook to your TV. For $35.",
+    "description": ""
   },
   "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
-    message: "Sit back, watch together",
-    description: ""
+    "message": "Sit back, watch together",
+    "description": ""
   },
   "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
-    message: "Enjoy online movies, music, and more on your TV.",
-    description: ""
+    "message": "Enjoy online movies, music, and more on your TV.",
+    "description": ""
   },
   "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
-    message: "Cast the web to your TV",
-    description: ""
+    "message": "Cast the web to your TV",
+    "description": ""
   },
   "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
-    message: "Cast a Chrome browser tab from your Chromebook to your TV at home (beta).",
-    description: ""
+    "message": "Cast a Chrome browser tab from your Chromebook to your TV at home (beta).",
+    "description": ""
   }
 }
