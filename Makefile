@@ -300,9 +300,10 @@ packages: third-party
 	cp ${STORE_FILES} packages/demo-store
 	cp -r locales/store-locales/* packages/demo-store/_locales
 	# Helper.app
-	mkdir -p packages/demo-helper
+	mkdir -p packages/demo-helper/_locales
 	cp manifests/helper-manifest.json packages/demo-helper/manifest.json
 	cp ${HELPER_FILES} packages/demo-helper
+	cp -r locales/helper-locales/* packages/demo-helper/_locales
 
 third-party:
 	mkdir -p gen/third-party
