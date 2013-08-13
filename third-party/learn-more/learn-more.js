@@ -35,8 +35,8 @@ var makePage = function(id, numSections) {
 var PAGES = {
   'features': [
     makePage('features-speed', 2),
-    makePage('features-security', 3),
-    makePage('features-sharing', 2)
+    makePage('features-apps', 2),
+    makePage('features-security', 2)
   ],
   'offline': [makePage('offline', 2)],
   'printing': [makePage('printing', 2)],
@@ -94,6 +94,30 @@ var LOCALES = {
     message: "With features like Chrome Instant built-in, browse the web at lightning speed.",
     description: ""
   },
+  "LEARN_MORE_FEATURES_APPS_TITLE": {
+    message: "Less #$%!, more :)",
+    description: ""
+  },
+  "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
+    message: "Chromebook has apps built in, so it works right out of the box.",
+    description: ""
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
+    message: "No complicated software",
+    description: ""
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
+    message: "Docs, Hangouts and Play Music come free with your Chromebook. Add new apps directly from the Chrome Web Store.",
+    description: ""
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
+    message: "Stays fresh by itself",
+    description: ""
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
+    message: "Chromebook updates itself automatically so there’s no annoying pop-ups.",
+    description: ""
+  },
   "LEARN_MORE_FEATURES_SECURITY_TITLE": {
     message: "Gives you peace of mind",
     description: ""
@@ -118,76 +142,44 @@ var LOCALES = {
     message: "With Google Drive, an online file storage service, you can backup your files and access them from anywhere.",
     description: ""
   },
-  "LEARN_MORE_FEATURES_SECURITY_SECTION3_TITLE": {
-    message: "Stays fresh by itself",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SECURITY_SECTION3_DESCRIPTION": {
-    message: "Chromebook updates itself automatically, for free. No need to install upgrades manually.",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SHARING_TITLE": {
-    message: "Easy to share",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SHARING_DESCRIPTION": {
-    message: "Switch between accounts in a snap. Everyone has their own files, apps and settings.",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SHARING_SECTION1_TITLE": {
-    message: "Squabble free",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SHARING_SECTION1_DESCRIPTION": {
-    message: "Multiple logins help you safely share your Chromebook. Everyone gets their own apps and wallpaper.",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SHARING_SECTION2_TITLE": {
-    message: "Guest mode",
-    description: ""
-  },
-  "LEARN_MORE_FEATURES_SHARING_SECTION2_DESCRIPTION": {
-    message: "Guest Mode allows you to safely lend your Chromebook without giving others access to your information.",
-    description: ""
-  },
   "LEARN_MORE_OFFLINE_TITLE": {
     message: "Works offline",
     description: ""
   },
   "LEARN_MORE_OFFLINE_DESCRIPTION": {
-    message: "Get work done, play games, watch movies and more when you’re offline.",
+    message: "Chromebook helps you get stuff done even if you are not connected to the web.",
     description: ""
   },
   "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
-    message: "Built-in on your Chromebook",
+    message: "Your favorite apps built-in",
     description: ""
   },
   "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
-    message: "Your Chromebook comes with Offline Gmail, Calendar, Drive, Docs, Media player and more.",
+    message: "Apps like Google Docs, Offline Gmail, a media player and a photo editor keep you productive on the go.",
     description: ""
   },
   "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
-    message: "Offline apps on the Chrome Web Store",
+    message: "Get more in the Chrome Web Store",
     description: ""
   },
   "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
-    message: "",
+    message: "You can find many more free offline apps in the Chrome Web Store.",
     description: ""
   },
   "LEARN_MORE_PRINTING_TITLE": {
-    message: "Google Cloud Print",
+    message: "Print without cords",
     description: ""
   },
   "LEARN_MORE_PRINTING_DESCRIPTION": {
-    message: "Print to any cloud-connected printer wirelessly.",
+    message: "Your Chromebook can print wirelessly to any cloud-connected printer.",
     description: ""
   },
   "LEARN_MORE_PRINTING_SECTION1_TITLE": {
-    message: "Print anywhere",
+    message: "Google Cloud Print",
     description: ""
   },
   "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
-    message: "Cloud Print runs over the web so it works whether you’re in the same room as your printer, or on another continent.",
+    message: "Cloud Print runs over the web so your Chromebook can print whether you’re in the same room as your printer, or on the go.",
     description: ""
   },
   "LEARN_MORE_PRINTING_SECTION2_TITLE": {
@@ -195,7 +187,32 @@ var LOCALES = {
     description: ""
   },
   "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
-    message: "If you already have a Windows PC or a Mac, connect it to your printer to enable Google Cloud Print.",
+    message: "Cloud Ready printers work right out of the box, but if you own a PC or Mac and a conventional printer, you can connect it to work with your Chromebook.",
+    description: ""
+  },
+
+  "LEARN_MORE_DO_MORE_TITLE": {
+    message: "Chromecast",
+    description: ""
+  },
+  "LEARN_MORE_DO_MORE_DESCRIPTION": {
+    message: "Send your favorite online entertainment from your Chromebook to your TV. For $35.",
+    description: ""
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
+    message: "Sit back, watch together",
+    description: ""
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
+    message: "Enjoy online movies, music, and more on your TV.",
+    description: ""
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
+    message: "Cast the web to your TV",
+    description: ""
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
+    message: "Cast a Chrome browser tab from your Chromebook to your TV at home (beta).",
     description: ""
   }
 };
