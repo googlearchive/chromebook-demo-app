@@ -30,5 +30,9 @@
   "MENU_LEARN_MORE": {
     "message": "Learn more",
     "description": "Subtitle for learning more about Chrome: this is a link to an offline HTML page with more content about Chromebook features (link to Chrome with HTML page preloaded)"
+  },
+  "MENU_THIRD_BUTTON_TYPE": {
+    "message": "play",
+    "description": "This is used by the script. This will not be translated."
   }
 }

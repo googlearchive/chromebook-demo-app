@@ -57,10 +57,11 @@ MenuApp.prototype.initDocument = function() {
 
 MenuApp.prototype.applyLocale = function(locale) {
   App.prototype.applyLocale.call(this, locale);
+  var buttonType = Locale.get(locale, 'MENU_THIRD_BUTTON_TYPE');
   // Update the third button.
   var appFrame = this.get('.app-frame');
   var button = this.get('.button.third');
-  switch (locale.menuThirdButton) {
+  switch (buttonType) {
     case 'play':
       appFrame.classList.add('play');
       button.querySelector('.button-label').innerText =

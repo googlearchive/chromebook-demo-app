@@ -131,7 +131,7 @@ Locale.onXHRStateChange_ = function(xhr, id, callback) {
 };
 
 Locale.get = function(id, messageName) {
-  return this.messages_[id][messageName].message;
+  return (this.messages_[id] || this.messages_.en)[messageName].message;
 };
 
 Locale.apply = function(document, id) {

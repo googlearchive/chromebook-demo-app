@@ -127,6 +127,7 @@ App.prototype.get = function(query) {
 
 App.prototype.applyLocale = function(locale) {
   // Replace i18n strings.
+  Locale.apply(this.document, locale);
   var nodes = queryXPath(
       this.document, '//*[contains(./text(), \'__MSG_\')]');
   for (var i = 0; i < nodes.length; i++) {
