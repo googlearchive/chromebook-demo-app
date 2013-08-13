@@ -64,13 +64,13 @@ MenuApp.prototype.applyLocale = function(locale) {
     case 'play':
       appFrame.classList.add('play');
       button.querySelector('.button-label').innerText =
-          locale.getMessage('MENU_MUSIC_BUTTON');
+          Locale.get(locale, 'MENU_MUSIC_BUTTON');
       button.idList = Component.ENTRIES.Music.idList;
       break;
     case 'youtube':
       appFrame.classList.add('youtube');
       button.querySelector('.button-label').innerText =
-          locale.getMessage('MENU_YOUTUBE_BUTTON');
+          Locale.get(locale, 'MENU_YOUTUBE_BUTTON');
       button.idList = Apps.YouTube.idList;
       break;
     default:

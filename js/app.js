@@ -43,15 +43,11 @@ App.prototype.start = function() {
   Component.ENTRIES.Helper.sendMessage({name: 'trackView'});
 
   // Loads locale strings.
-  load('/_locales/en/messages.json', function(text) {
-    LOCALES.en.messages = JSON.parse(text);
-    this.localeLoaded_ = true;
-    this.checkDocumentReady_();
-  }.bind(this));
+  Locale.load(this.checkDocumentReady_.bind(this));
 
   // Get current locale.
   Component.ENTRIES.Helper.sendMessage({name: 'getLocale'}, function(localeID) {
-    this.locale_ = LOCALES.get(localeID);
+    this.locale_ = localeID;
     this.checkDocumentReady_();
   }.bind(this));
 
@@ -71,7 +67,7 @@ App.prototype.start = function() {
 App.prototype.checkDocumentReady_ = function() {
   if ((window.document.readyState == 'interactive' ||
        window.document.readyState == 'complete') &&
-      this.localeLoaded_ &&
+      Locale.loaded &&
       this.locale_ &&
       !this.documentInitialized_) {
     this.documentInitialized_ = true;
