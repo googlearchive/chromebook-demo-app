@@ -19,6 +19,17 @@ var App = function(opt_width, opt_height, opt_transparent) {
   this.windowBoundsIndex_ = 0;
 };
 
+App.queryXPath = function(doc, xpath) {
+  var xPathResult = doc.evaluate(
+      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+  var results = [];
+  for (var i = 0; i < xPathResult.snapshotLength; i++) {
+    var node = xPathResult.snapshotItem(i);
+    results.push(node);
+  }
+  return results;
+};
+
 App.prototype.start = function() {
   var window = chrome.app.window.current();
   if (window.initialized)
@@ -31,6 +42,12 @@ App.prototype.start = function() {
   // Track page view.
   Component.ENTRIES.Helper.sendMessage({name: 'trackView'});
 
+  // Get current locale.
+  Component.ENTRIES.Helper.sendMessage({name: 'getLocale'}, function(localeID) {
+    this.locale = LOCALES.get(localeID);
+    this.checkDocumentReady_();
+  }.bind(this));
+
   // Setup window.
   this.appWindow = window;
   this.window = window.contentWindow;
@@ -40,18 +57,21 @@ App.prototype.start = function() {
 
   // Init the document.
   this.document = window.contentWindow.document;
-  callAfterLoading(window.contentWindow, this.initDocument.bind(this));
+  if (!this.checkDocumentReady_())
+    this.window.addEventListener('load', this.checkDocumentReady_.bind(this));
 };
 
-App.queryXPath = function(doc, xpath) {
-  var xPathResult = doc.evaluate(
-      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
-  var results = [];
-  for (var i = 0; i < xPathResult.snapshotLength; i++) {
-    var node = xPathResult.snapshotItem(i);
-    results.push(node);
+App.prototype.checkDocumentReady_ = function() {
+  if ((window.document.readyState == 'interactive' ||
+       window.document.readyState == 'complete') &&
+      this.locale &&
+      !this.documentInitialized_) {
+    this.documentInitialized_ = true;
+    this.initDocument();
+    return true;
+  } else {
+    return false;
   }
-  return results;
 };
 
 App.prototype.initDocument = function(firstTime) {
@@ -133,6 +153,10 @@ App.prototype.get = function(query) {
   return this.document.querySelector(query);
 };
 
+App.prototype.applyLocale = function(locale) {
+
+};
+
 App.prototype.toggleWindowSize_ = function() {
   var bounds = this.windowBoundsList_[this.windowBoundsIndex_];
   this.appWindow.restore();
@@ -178,14 +202,5 @@ App.prototype.onMessage_ = function(message) {
   if (message.name == 'close') {
     if (this.appWindow)
       this.appWindow.close();
-  }
-};
-
-var callAfterLoading = function(window, callback) {
-  if (window.document.readyState == 'interactive' ||
-      window.document.readyState == 'complete') {
-    callback();
-  } else {
-    window.addEventListener('load', callback);
   }
 };

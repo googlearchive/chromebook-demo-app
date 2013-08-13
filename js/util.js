@@ -64,15 +64,27 @@ Component.current = function() {
   return Component.get(chrome.runtime.id);
 };
 
-Component.prototype.sendMessage = function(message) {
+Component.prototype.sendMessage = function(message, responseHandler) {
   for (var i = 0; i < this.idList.length; i++) {
-    chrome.runtime.sendMessage(this.idList[i], message);
+    if (responseHandler) {
+      chrome.runtime.sendMessage(this.idList[i], message, responseHandler);
+    } else {
+      chrome.runtime.sendMessage(this.idList[i], message);
+    }
   }
 };
 
 Apps = {};
 Apps.YouTube = {
   idList: ['pbdihpaifchmclcmkfdgffnnpfbobefh']
+};
+
+LOCALES = {
+  en: {}
+};
+
+LOCALES.get = function(id) {
+  return LOCALES[id] || LOCALES.en;
 };
 
 var extend = function(base, adapter) {

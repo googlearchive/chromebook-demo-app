@@ -6,7 +6,7 @@ chrome.runtime.onMessageExternal.addListener(
     // If the message comes from an unknown extension, just ignore it.
     var senderComponent = Component.get(sender.id);
     if (!senderComponent)
-      return;
+      return false;
     var senderName = senderComponent.name;
     switch (request.name) {
       case 'launch':
@@ -39,6 +39,12 @@ chrome.runtime.onMessageExternal.addListener(
                                type: 'popup',
                                width: 290, height: 120});
         break;
+
+      case 'getLocale':
+        sendResponse(chrome.i18n.getMessage('@@ui_locale') ||
+                     window.navigator.language);
+        break;
     }
+    return false;
   }
 );

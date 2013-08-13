@@ -14,8 +14,12 @@ MENU_FILES = \
   assets/menu-icon-48.png \
   assets/menu-logo-1x.png \
   assets/menu-logo-2x.png \
+  assets/music-icon-128.png \
+  assets/music-icon-64.png \
   assets/store-icon-128.png \
   assets/store-icon-64.png \
+  assets/youtube-icon-128.png \
+  assets/youtube-icon-64.png \
   css/common.css \
   css/menu-app.css \
   js/app.js \
@@ -32,14 +36,6 @@ MENU_FILES = \
   third-party/sample-files/Song.mp3 \
   views/downloader.html \
   views/menu-app.html
-
-MENU_PLAY_FILES = \
-  assets/music-icon-128.png \
-  assets/music-icon-64.png
-
-MENU_YOUTUBE_FILES = \
-  assets/youtube-icon-128.png \
-  assets/youtube-icon-64.png
 
 DOCS_FILES = \
   assets/balloon-triangle-top-1x.png \
@@ -250,22 +246,11 @@ HELPER_FILES= \
   third-party/learn-more/learn-more.html
 
 packages: third-party
-	# Menu.app Play variation.
-	mkdir -p packages/demo-menu-play/_locales
-	cp manifests/menu-manifest.json packages/demo-menu-play/manifest.json
-	cp ${MENU_FILES} packages/demo-menu-play
-	cp ${MENU_PLAY_FILES} packages/demo-menu-play
-	cp -r locales/menu-locales/* packages/demo-menu-play/_locales
-	echo "Component.ENTRIES.Menu.variation = 'play';" >> \
-	     packages/demo-menu-play/util.js
-	# Menu.app YouTube variation.
-	mkdir -p packages/demo-menu-youtube/_locales
-	cp manifests/menu-manifest.json packages/demo-menu-youtube/manifest.json
-	cp ${MENU_FILES} packages/demo-menu-youtube
-	cp ${MENU_YOUTUBE_FILES} packages/demo-menu-youtube
-	cp -r locales/menu-locales/* packages/demo-menu-youtube/_locales
-	echo "Component.ENTRIES.Menu.variation = 'youtube';" >> \
-	     packages/demo-menu-youtube/util.js
+	# Menu.app
+	mkdir -p packages/demo-menu/_locales
+	cp manifests/menu-manifest.json packages/demo-menu/manifest.json
+	cp ${MENU_FILES} packages/demo-menu
+	cp -r locales/menu-locales/* packages/demo-menu/_locales
 	# Docs.app
 	mkdir -p packages/demo-docs/_locales
 	cp manifests/docs-manifest.json packages/demo-docs/manifest.json
