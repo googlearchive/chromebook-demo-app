@@ -110,7 +110,7 @@ Locale.load = function(callback) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange =
         this.onXHRStateChange_.bind(this, xhr, id, callback);
-    xhr.open('GET', '_locales/' + id + '/messages.json');
+    xhr.open('GET', '../../locales/helper-locales/' + id + '/messages.json');
     xhr.send();
   }
 };
