@@ -12,20 +12,6 @@ MusicApp.prototype.initDocument = function() {
   this.mainMusic_ = this.get('.main.music');
   this.mainMusicAudio_ = this.get('.main-music-audio');
 
-  // Apply the variation.
-  var variation = Component.ENTRIES.Music.variation;
-  this.mainMusic_.classList.add(variation);
-  this.mainMusic_.querySelector('.song-name').innerText =
-      chrome.i18n.getMessage(
-          'MUSIC_' + variation.toUpperCase() + '_SONG_NAME');
-  this.mainMusic_.querySelector('.artist-name').innerText =
-      chrome.i18n.getMessage(
-          'MUSIC_' + variation.toUpperCase() + '_ARTIST_NAME');
-  this.mainMusic_.querySelector('.music-footer').innerText =
-      chrome.i18n.getMessage(
-          'MUSIC_' + variation.toUpperCase() + '_FOOTER_MESSAGE');
-  this.mainMusicAudio_.src = 'music-' + variation + '.mp3';
-
   // Play control button.
   this.get('.play-control').addEventListener('click', function() {
     if (this.mainMusicAudio_.paused)
@@ -40,6 +26,28 @@ MusicApp.prototype.initDocument = function() {
   this.mainMusicAudio_.addEventListener('paused', this.updateView_.bind(this));
   this.mainMusicAudio_.addEventListener('ended', this.updateView_.bind(this));
   this.mainMusicAudio_.addEventListener('error', this.updateView_.bind(this));
+};
+
+MusicApp.prototype.applyLocale = function(code) {
+  App.prototype.applyLocale.call(this, code);
+
+  // Stop the song.
+  this.mainMusicAudio_.pause();
+  this.updateView_();
+
+  // Change the main song.
+  var mainSong = Locale.get(code, 'MUSIC_MAIN_SONG');
+  this.mainMusic_.classList.remove('lumineers');
+  this.mainMusic_.classList.remove('war');
+  this.mainMusic_.classList.remove('vivaldi');
+  this.mainMusic_.classList.add(mainSong);
+  this.mainMusic_.querySelector('.song-name').innerText =
+      Locale.get(code, 'MUSIC_' + mainSong.toUpperCase() + '_SONG_NAME');
+  this.mainMusic_.querySelector('.artist-name').innerText =
+      Locale.get(code, 'MUSIC_' + mainSong.toUpperCase() + '_ARTIST_NAME');
+  this.mainMusic_.querySelector('.music-footer').innerText =
+      Locale.get(code, 'MUSIC_' + mainSong.toUpperCase() + '_FOOTER_MESSAGE');
+  this.mainMusicAudio_.src = 'music-' + mainSong + '.mp3';
 };
 
 MusicApp.prototype.updateView_ = function() {

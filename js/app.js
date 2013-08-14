@@ -19,17 +19,6 @@ var App = function(opt_width, opt_height, opt_transparent) {
   this.windowBoundsIndex_ = 0;
 };
 
-App.queryXPath = function(doc, xpath) {
-  var xPathResult = doc.evaluate(
-      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
-  var results = [];
-  for (var i = 0; i < xPathResult.snapshotLength; i++) {
-    var node = xPathResult.snapshotItem(i);
-    results.push(node);
-  }
-  return results;
-};
-
 App.prototype.start = function() {
   var window = chrome.app.window.current();
   if (window.initialized)
@@ -42,9 +31,12 @@ App.prototype.start = function() {
   // Track page view.
   Component.ENTRIES.Helper.sendMessage({name: 'trackView'});
 
+  // Loads locale strings.
+  Locale.load(this.checkDocumentReady_.bind(this));
+
   // Get current locale.
   Component.ENTRIES.Helper.sendMessage({name: 'getLocale'}, function(localeID) {
-    this.locale = LOCALES.get(localeID);
+    this.locale_ = localeID;
     this.checkDocumentReady_();
   }.bind(this));
 
@@ -64,10 +56,13 @@ App.prototype.start = function() {
 App.prototype.checkDocumentReady_ = function() {
   if ((window.document.readyState == 'interactive' ||
        window.document.readyState == 'complete') &&
-      this.locale &&
+      Locale.loaded &&
+      this.locale_ &&
       !this.documentInitialized_) {
     this.documentInitialized_ = true;
     this.initDocument();
+    this.applyLocale(this.locale_);
+    this.appWindow.show();
     return true;
   } else {
     return false;
@@ -75,30 +70,6 @@ App.prototype.checkDocumentReady_ = function() {
 };
 
 App.prototype.initDocument = function(firstTime) {
-  // Replace i18n strings.
-  var nodes = App.queryXPath(
-      this.document, '//*[contains(./text(), \'__MSG_\')]');
-  for (var i = 0; i < nodes.length; i++) {
-    nodes[i].innerHTML = nodes[i].innerHTML.replace(
-        /__MSG_([a-zA-Z0-9_]+)__/g,
-        function(str) {
-          return chrome.i18n.getMessage(RegExp.$1);
-        });
-  }
-  var attributes = App.queryXPath(
-      this.document, '//@*[contains(., \'__MSG_\')]');
-  for (var i = 0; i < attributes.length; i++) {
-    attributes[i].nodeValue = attributes[i].nodeValue.replace(
-        /__MSG_([a-zA-Z0-9_]+)__/g,
-        function(str) {
-          return chrome.i18n.getMessage(RegExp.$1);
-        });
-  }
-
-  // Apply initial DOM state.
-  this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
-  this.toggleDirection_(false);
-
   // Close button.
   var closeButton = this.document.querySelector('.close');
   closeButton.addEventListener('click', function() {
@@ -140,9 +111,6 @@ App.prototype.initDocument = function(firstTime) {
       // Debug tool
     }
   }.bind(this));
-
-  // Show window.
-  this.appWindow.show();
 };
 
 App.prototype.close = function() {
@@ -154,7 +122,12 @@ App.prototype.get = function(query) {
 };
 
 App.prototype.applyLocale = function(locale) {
+  // Replace i18n strings.
+  Locale.apply(this.document, locale);
 
+  // Apply initial DOM state.
+  this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
+  this.toggleDirection_(false);
 };
 
 App.prototype.toggleWindowSize_ = function() {
@@ -199,8 +172,13 @@ App.prototype.toggleDirection_ = function(toggle) {
 };
 
 App.prototype.onMessage_ = function(message) {
+  console.log(message);
   if (message.name == 'close') {
     if (this.appWindow)
       this.appWindow.close();
+  } else if (message.name == 'applyLocale') {
+    console.log('applyLocale');
+    if (this.documentInitialized_)
+      this.applyLocale(message.code);
   }
 };

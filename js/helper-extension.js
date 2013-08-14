@@ -14,7 +14,17 @@ chrome.runtime.onMessageExternal.addListener(
         if (!(ids instanceof Array))
           ids = [ids];
         for (var i = 0; i < ids.length; i++) {
-          chrome.management.launchApp(ids[i]);
+          chrome.management.launchApp(ids[i], function(id) {
+            if (DEBUG &&
+                chrome.runtime.lastError &&
+                Component.ENTRIES.Docs.idList.indexOf(id) == -1 &&
+                Component.ENTRIES.Hangouts.idList.indexOf(id) == -1 &&
+                Component.ENTRIES.Music.idList.indexOf(id) == -1 &&
+                Component.ENTRIES.Store.idList.indexOf(id) == -1) {
+              var urlPrefix = 'https://chrome.google.com/webstore/detail/';
+              chrome.tabs.create({url: urlPrefix + id});
+            }
+          }.bind(null, ids[i]));
         }
         break;
 
@@ -41,8 +51,8 @@ chrome.runtime.onMessageExternal.addListener(
         break;
 
       case 'getLocale':
-        sendResponse(chrome.i18n.getMessage('@@ui_locale') ||
-                     window.navigator.language);
+        var locale = chrome.i18n.getMessage('@@ui_locale');
+        sendResponse(Locale.getAvailableLocale(locale));
         break;
     }
     return false;

@@ -16,28 +16,6 @@ MenuApp.prototype.start = function() {
 };
 
 MenuApp.prototype.initDocument = function() {
-  // Update the third button.
-  var appFrame = this.get('.app-frame');
-  var button = this.get('.button.third');
-  var thirdButtonIDList;
-  switch (Component.ENTRIES.Menu.variation) {
-    case 'play':
-      appFrame.classList.add('play');
-      button.querySelector('.button-label').innerText =
-          '__MSG_MENU_MUSIC_BUTTON__';
-      thirdButtonIDList = Component.ENTRIES.Music.idList;
-      break;
-    case 'youtube':
-      appFrame.classList.add('youtube');
-      button.querySelector('.button-label').innerText =
-          '__MSG_MENU_YOUTUBE_BUTTON__';
-      thirdButtonIDList = Apps.YouTube.idList;
-      break;
-    default:
-      console.error('Invalid variation.', Component.ENTRIES.Menu.variation);
-      break;
-  }
-
   App.prototype.initDocument.call(this);
 
   // Init rotation.
@@ -47,6 +25,7 @@ MenuApp.prototype.initDocument = function() {
   this.onStep_();
 
   // Update the CSS class.
+  var appFrame = this.get('.app-frame');
   if (this.isTransparent_)
     appFrame.classList.add('transparent');
   appFrame.classList.remove('loading');
@@ -59,7 +38,7 @@ MenuApp.prototype.initDocument = function() {
       var id = [
         Component.ENTRIES.Docs.idList,
         Component.ENTRIES.Hangouts.idList,
-        thirdButtonIDList,
+        buttons[2].idList,
         Component.ENTRIES.Store.idList
       ][index];
       Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
@@ -74,6 +53,66 @@ MenuApp.prototype.initDocument = function() {
   this.get('.learn-more').addEventListener('click', function() {
     Component.ENTRIES.Helper.sendMessage({name: 'visitLearnMore'});
   });
+
+  // Language picker.
+  var languagePicker = this.get('.language-picker');
+  languagePicker.addEventListener('mousedown', function() {
+    languagePicker.classList.add('open');
+  });
+  languagePicker.addEventListener('mouseup', function(event) {
+    event.stopPropagation();
+    if (event.target.nodeName == 'LI') {
+      languagePicker.classList.remove('open');
+      var code = event.target.getAttribute('data-i18n-code');
+      this.applyLocale(code);
+      var components = [
+        Component.ENTRIES.Menu,
+        Component.ENTRIES.Docs,
+        Component.ENTRIES.Hangouts,
+        Component.ENTRIES.Music,
+        Component.ENTRIES.Store,
+        Component.ENTRIES.Helper
+      ];
+      for (var i = 0; i < components.length; i++) {
+        components[i].sendMessage({name: 'applyLocale', code: code});
+      }
+    }
+  }.bind(this));
+  this.document.addEventListener('mouseup', function() {
+    languagePicker.classList.remove('open');
+  });
+};
+
+MenuApp.prototype.applyLocale = function(locale) {
+  App.prototype.applyLocale.call(this, locale);
+  var buttonType = Locale.get(locale, 'MENU_THIRD_BUTTON_TYPE');
+
+  // Update the third button.
+  var appFrame = this.get('.app-frame');
+  var button = this.get('.button.third');
+  switch (buttonType) {
+    case 'play':
+      appFrame.classList.add('play');
+      appFrame.classList.remove('youtube');
+      button.querySelector('.button-label').innerText =
+          Locale.get(locale, 'MENU_MUSIC_BUTTON');
+      button.idList = Component.ENTRIES.Music.idList;
+      break;
+    case 'youtube':
+      appFrame.classList.add('youtube');
+      appFrame.classList.remove('play');
+      button.querySelector('.button-label').innerText =
+          Locale.get(locale, 'MENU_YOUTUBE_BUTTON');
+      button.idList = Apps.YouTube.idList;
+      break;
+    default:
+      console.error('Invalid variation.', Component.ENTRIES.Menu.variation);
+      break;
+  }
+
+  // Language picker
+  this.get('.language-picker label').innerText =
+      Locale.get(locale, 'LANGUAGE_NAME_' + locale.toUpperCase());
 };
 
 MenuApp.prototype.close = function() {

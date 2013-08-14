@@ -1,3 +1,5 @@
+var DEBUG = true;
+
 var Component = function(name, idList, windowID, mainView, isChild) {
   this.name = name;
   this.idList = idList;
@@ -79,17 +81,81 @@ Apps.YouTube = {
   idList: ['pbdihpaifchmclcmkfdgffnnpfbobefh']
 };
 
-LOCALES = {
-  en: {}
-};
-
-LOCALES.get = function(id) {
-  return LOCALES[id] || LOCALES.en;
-};
-
 var extend = function(base, adapter) {
   for (var name in adapter) {
     base[name] = adapter[name];
   }
   return base;
+};
+
+Locale = {loaded: false, messages_: {}};
+
+Locale.LIST = ['en', 'ja'];
+
+Locale.DEFAULT = 'en';
+
+Locale.getAvailableLocale = function(code) {
+  for (var i = 0; i < Locale.LIST.length; i++) {
+    if (code == Locale.LIST[i])
+      return code;
+  }
+  if (code.indexOf('_') == -1)
+    return Locale.DEFAULT;
+  return this.getAvailableLocale(code.split('_', 2)[0]);
+};
+
+Locale.load = function(callback) {
+  for (var i = 0; i < Locale.LIST.length; i++) {
+    var id = Locale.LIST[i];
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange =
+        this.onXHRStateChange_.bind(this, xhr, id, callback);
+    xhr.open('GET', '_locales/' + id + '/messages.json');
+    xhr.send();
+  }
+};
+
+Locale.onXHRStateChange_ = function(xhr, lang, callback) {
+  if (xhr.readyState != 4)
+    return;
+  if (xhr.status == 200)
+    this.messages_[lang] = JSON.parse(xhr.responseText);
+  else
+    this.messages_[lang] = {};
+  // Check if the all languages have already loaded or not.
+  for (var i = 0; i < Locale.LIST.length; i++) {
+    var inLang = Locale.LIST[i];
+    if (this.messages_[inLang]) {
+      if (inLang != Locale.DEFAULT)
+        this.messages_[inLang].__proto__ = this.messages_[Locale.DEFAULT];
+    } else {
+      return;
+    }
+  }
+  Locale.loaded = true;
+  callback();
+};
+
+/**
+ * The id must be one of the Locale.LIST items.
+ */
+Locale.get = function(lang, messageName) {
+  var localeEntry = this.messages_[lang][messageName];
+  if (!localeEntry)
+    console.error('Cannot find the locale string:' + messageName);
+  return localeEntry.message;
+};
+
+Locale.apply = function(document, lang) {
+  var nodes = document.querySelectorAll('[i18n-content]');
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].innerHTML = nodes[i].innerHTML =
+        this.get(lang, nodes[i].getAttribute('i18n-content'));
+  }
+  nodes = document.querySelectorAll('[i18n-attr-name][i18n-attr-value]');
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].setAttribute(
+        nodes[i].getAttribute('i18n-attr-name'),
+        this.get(lang, nodes[i].getAttribute('i18n-attr-value')));
+  }
 };

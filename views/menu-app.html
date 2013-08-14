@@ -13,17 +13,17 @@
       <div class="logo"></div>
       <button class="close"></button>
     </div>
-    <h1 class="message">__MSG_MENU_MESSAGE__</h1>
-    <p class="description">__MSG_MENU_DESCRIPTION__</p>
+    <h1 class="message" i18n-content="MENU_MESSAGE"></h1>
+    <p class="description" i18n-content="MENU_DESCRIPTION"></p>
     <div class="bottom-frame">
       <div class="buttons-layout">
         <div class="docs button">
           <div class="button-icon"></div>
-          <div class="button-label">__MSG_MENU_DOCS_BUTTON__</div>
+          <div class="button-label" i18n-content="MENU_DOCS_BUTTON"></div>
         </div>
         <div class="hangouts button">
           <div class="button-icon"></div>
-          <div class="button-label">__MSG_MENU_HANGOUTS_BUTTON__</div>
+          <div class="button-label" i18n-content="MENU_HANGOUTS_BUTTON"></div>
         </div>
         <!-- The third button is switched by referring to the veriaion. -->
         <div class="third button">
@@ -32,14 +32,36 @@
         </div>
         <div class="store button">
           <div class="button-icon"></div>
-          <div class="button-label">__MSG_MENU_STORE_BUTTON__</div>
+          <div class="button-label" i18n-content="MENU_STORE_BUTTON"></div>
         </div>
         <div class="docs shelf-marker"></div>
         <div class="hangouts shelf-marker"></div>
         <div class="third shelf-marker"></div>
         <div class="store shelf-marker"></div>
       </div>
-      <div class="learn-more">__MSG_MENU_LEARN_MORE__</div>
+      <div class="footer">
+        <span class="learn-more" i18n-content="MENU_LEARN_MORE"></span>
+        <span class="language-picker">
+          <label></label>
+          <menu class="language-picker-menu">
+            <li i18n-content="LANGUAGE_NAME_EN" data-i18n-code='en'></li>
+            <li i18n-content="LANGUAGE_NAME_JA" data-i18n-code='ja'></li>
+            <li data-i18n-code='en'>zh-tw</li>
+            <li data-i18n-code='en'>nl</li>
+            <li data-i18n-code='en'>en-gb</li>
+            <li data-i18n-code='en'>fr</li>
+            <li data-i18n-code='en'>de</li>
+            <li data-i18n-code='en'>it</li>
+            <li data-i18n-code='en'>ms</li>
+            <li data-i18n-code='en'>pt-br</li>
+            <li data-i18n-code='en'>ru</li>
+            <li data-i18n-code='en'>es</li>
+            <li data-i18n-code='en'>sv</li>
+            <li data-i18n-code='en'>fi</li>
+            <li data-i18n-code='en'>Long long long language name</li>
+          </menu>
+        </span>
+      </div>
     </div>
   </div>
 </div>

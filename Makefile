@@ -73,7 +73,7 @@ DOCS_FILES = \
   js/editor.js \
   js/paper-edit-adapter.js \
   js/util.js \
-  third-party/docs-bot-words/words.js \
+  third-party/docs-bot-words/words_en.json \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/docs-app.html
@@ -155,35 +155,29 @@ MUSIC_FILES = \
   js/background.js \
   js/music-app.js \
   js/util.js \
+  third-party/music-covers/music-cover-blake-shelton.jpg \
+  third-party/music-covers/music-cover-ellie-goulding.jpg \
+  third-party/music-covers/music-cover-florence.jpg \
+  third-party/music-covers/music-cover-frank-ocean.jpg \
+  third-party/music-covers/music-cover-imagine-dragons.jpg \
+  third-party/music-covers/music-cover-lumineers.jpg \
+  third-party/music-covers/music-cover-maroon5.jpg \
+  third-party/music-covers/music-cover-mika.jpg \
+  third-party/music-covers/music-cover-muse.png \
+  third-party/music-covers/music-cover-one-republic.jpg \
+  third-party/music-covers/music-cover-tegan-and-sara.png \
+  third-party/music-covers/music-cover-the-doors.png \
+  third-party/music-covers/music-cover-tiesto.jpg \
+  third-party/music-covers/music-cover-vivaldi.png \
+  third-party/music-covers/music-cover-war.png \
+  third-party/music/music-lumineers.mp3 \
+  third-party/music/music-vivaldi.mp3 \
+  third-party/music/music-war.mp3 \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
   third-party/roboto/Roboto-ThinItalic.ttf \
-  third-party/music-covers/music-cover-maroon5.jpg \
-  third-party/music-covers/music-cover-florence.jpg \
-  third-party/music-covers/music-cover-blake-shelton.jpg \
-  third-party/music-covers/music-cover-tiesto.jpg \
-  third-party/music-covers/music-cover-mika.jpg \
-  third-party/music-covers/music-cover-one-republic.jpg \
-  third-party/music-covers/music-cover-muse.png \
-  third-party/music-covers/music-cover-frank-ocean.jpg \
-  third-party/music-covers/music-cover-imagine-dragons.jpg \
-  third-party/music-covers/music-cover-the-doors.png \
-  third-party/music-covers/music-cover-tegan-and-sara.png \
-  third-party/music-covers/music-cover-ellie-goulding.jpg \
   views/music-app.html
-
-MUSIC_FILES_LUMINEERS = \
-  third-party/music/music-lumineers.mp3 \
-  third-party/music-covers/music-cover-lumineers.jpg
-
-MUSIC_FILES_WAR = \
-  third-party/music/music-war.mp3 \
-  third-party/music-covers/music-cover-war.gif
-
-MUSIC_FILES_VIVALDI = \
-  third-party/music/music-vivaldi.mp3 \
-  third-party/music-covers/music-cover-vivaldi.png
 
 STORE_FILES= \
   assets/close-1x.png \
@@ -209,9 +203,8 @@ STORE_FILES= \
   js/store-app.js \
   js/util.js \
   third-party/app-tiles/store-tile-bejeweled.png \
-  third-party/app-tiles/store-tile-cubeslam.png \
-  third-party/app-tiles/store-tile-deezer.png \
-  third-party/app-tiles/store-tile-gmail.png \
+  third-party/app-tiles/store-tile-deezer.jpg \
+  third-party/app-tiles/store-tile-gmail.jpg \
   third-party/app-tiles/store-tile-kindle.png \
   third-party/app-tiles/store-tile-netflix.png \
   third-party/app-tiles/store-tile-pandora.jpg \
@@ -223,9 +216,19 @@ STORE_FILES= \
   third-party/app-tiles/store-tile-spotify.png \
   third-party/app-tiles/store-tile-tweetdeck.png \
   third-party/app-tiles/store-tile-youtube.png \
+  third-party/app-tiles/store-tile-drive.png \
+  third-party/app-tiles/store-tile-new-york-times.jpg \
+  third-party/app-tiles/store-tile-hangouts.jpg \
+  third-party/app-tiles/store-tile-evernote.jpg \
+  third-party/app-tiles/store-tile-play.png \
+  third-party/app-tiles/store-tile-calendar.jpg \
+  third-party/app-tiles/store-tile-angry-birds.jpg \
+  third-party/app-tiles/store-tile-docs.png \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/store-app.html
+#  third-party/app-tiles/store-tile-camera
+#  third-party/app-tiles/store-tile-calculator
 
 HELPER_FILES= \
   js/helper-extension.js \
@@ -244,12 +247,12 @@ HELPER_FILES= \
   third-party/learn-more/open-sans.css \
   third-party/learn-more/chrome_logo_2x.png \
   third-party/learn-more/learn-more.html \
-  third-party/learn-more/learn-more-features-speed.jpg \
+  third-party/learn-more/learn-more-features-speed.png \
   third-party/learn-more/learn-more-features-apps.jpg \
-  third-party/learn-more/learn-more-features-security.jpg \
-  third-party/learn-more/learn-more-printing.png
-#  third-party/learn-more/learn-more-offline.jpg
-#  third-party/learn-more/learn-more-do-more.jpg
+  third-party/learn-more/learn-more-features-security.png \
+  third-party/learn-more/learn-more-printing.png \
+  third-party/learn-more/learn-more-offline.jpg \
+  third-party/learn-more/learn-more-do-more.png
 
 packages: third-party
 	# Menu.app
@@ -267,42 +270,21 @@ packages: third-party
 	cp manifests/hangouts-manifest.json packages/demo-hangouts/manifest.json
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp -r locales/hangouts-locales/* packages/demo-hangouts/_locales
-	# Music.app Lumineers variation.
-	mkdir -p packages/demo-music-lumineers/_locales
-	cp manifests/music-manifest.json \
-	   packages/demo-music-lumineers/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music-lumineers
-	cp ${MUSIC_FILES_LUMINEERS} packages/demo-music-lumineers
-	cp -r locales/music-locales/* packages/demo-music-lumineers/_locales
-	echo "Component.ENTRIES.Music.variation = 'lumineers';" >> \
-	     packages/demo-music-lumineers/util.js
-	# Music.app War variation.
-	mkdir -p packages/demo-music-war/_locales
-	cp manifests/music-manifest.json \
-	   packages/demo-music-war/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music-war
-	cp ${MUSIC_FILES_WAR} packages/demo-music-war
-	cp -r locales/music-locales/* packages/demo-music-war/_locales
-	echo "Component.ENTRIES.Music.variation = 'war';" >> \
-	     packages/demo-music-war/util.js
-	# Music.app Vivaldi variation.
-	mkdir -p packages/demo-music-vivaldi/_locales
-	cp manifests/music-manifest.json \
-	   packages/demo-music-vivaldi/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music-vivaldi
-	cp ${MUSIC_FILES_VIVALDI} packages/demo-music-vivaldi
-	cp -r locales/music-locales/* packages/demo-music-vivaldi/_locales
-	echo "Component.ENTRIES.Music.variation = 'vivaldi';" >> \
-	     packages/demo-music-vivaldi/util.js
+	# Music.app
+	mkdir -p packages/demo-music/_locales
+	cp manifests/music-manifest.json packages/demo-music/manifest.json
+	cp ${MUSIC_FILES} packages/demo-music
+	cp -r locales/music-locales/* packages/demo-music/_locales
 	# Store.app
 	mkdir -p packages/demo-store/_locales
 	cp manifests/store-manifest.json packages/demo-store/manifest.json
 	cp ${STORE_FILES} packages/demo-store
 	cp -r locales/store-locales/* packages/demo-store/_locales
 	# Helper.app
-	mkdir -p packages/demo-helper
+	mkdir -p packages/demo-helper/_locales
 	cp manifests/helper-manifest.json packages/demo-helper/manifest.json
 	cp ${HELPER_FILES} packages/demo-helper
+	cp -r locales/helper-locales/* packages/demo-helper/_locales
 
 third-party:
 	mkdir -p gen/third-party
@@ -315,9 +297,7 @@ third-party:
 	cd gen/third-party && patch -p0 < ../../patches/effects.patch
 
 crx: packages
-	${CHROME} --pack-extension=packages/demo-menu-play \
-		  --pack-extension-key=pem/demo-menu.pem
-	${CHROME} --pack-extension=packages/demo-menu-youtube \
+	${CHROME} --pack-extension=packages/demo-menu \
 		  --pack-extension-key=pem/demo-menu.pem
 	${CHROME} --pack-extension=packages/demo-docs \
 		  --pack-extension-key=pem/demo-docs.pem
@@ -331,10 +311,8 @@ crx: packages
 		  --pack-extension-key=pem/demo-helper.pem
 
 zip: packages
-	scripts/remove-entry packages/demo-menu-play/manifest.json key
-	zip -r packages/demo-menu-play.zip packages/demo-menu-play
-	scripts/remove-entry packages/demo-menu-youtube/manifest.json key
-	zip -r packages/demo-menu-youtube.zip packages/demo-menu-youtube
+	scripts/remove-entry packages/demo-menu/manifest.json key
+	zip -r packages/demo-menu.zip packages/demo-menu
 	scripts/remove-entry packages/demo-docs/manifest.json key
 	zip -r packages/demo-docs.zip packages/demo-docs
 	scripts/remove-entry packages/demo-hangouts/manifest.json key

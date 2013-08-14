@@ -8,6 +8,7 @@
     "storage",
     "https://www.google-analytics.com/"
   ],
+  "default_locale": "en",
   "offline_enabled": true,
   "background": {
     "scripts": [

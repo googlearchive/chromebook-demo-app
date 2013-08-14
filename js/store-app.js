@@ -19,4 +19,16 @@ StoreApp.prototype.initDocument = function() {
   }
 };
 
+StoreApp.prototype.applyLocale = function(lang) {
+  App.prototype.applyLocale.call(this, lang);
+  var disableAppList = Locale.get(lang, 'STORE_DISABLE_APP_LIST').split(' ');
+  var tiles = this.document.querySelectorAll('.app');
+  for (var i = 0; i < tiles.length; i++) {
+    var appID = tiles[i].className.replace('app', '')
+                                  .replace('disable', '')
+                                  .replace(/\s+/g, '');
+    tiles[i].classList.toggle('disable', disableAppList.indexOf(appID) != -1);
+  }
+};
+
 new StoreApp().start();

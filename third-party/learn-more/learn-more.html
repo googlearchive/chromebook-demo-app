@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
   <title></title>
+  <script src="util.js"></script>
   <link href="https://plus.google.com/100585555255542998765" rel="publisher">
   <link href="chrome-32.png" rel="icon" type="image/ico">
   <link href="open-sans.css" rel="stylesheet">
@@ -14,13 +15,18 @@
     overflow-y: scroll;
   }
 
+  .compact {
+    width: 928px;
+  }
+
   #nav a {
     text-align: center;
   }
 
   #hero-carousel {
-    height: 520px;
-    padding-top: 20px;
+    height: 540px;
+    margin-top: 40px;
+    overflow: hidden;
   }
 
   #hero-carousel .marquee-carousel {
@@ -35,20 +41,26 @@
   }
 
   #mdn {
-    margin: 0 0 -24px;
-    height: 24px;
-    text-align: center;
+    position: relative;
     width: 100%;
-    left: 0;
+    height: 24px;
+    margin: 0 0 -24px;
+    text-align: center;
+    top: 30px;
+    -webkit-transition: opacity 0.2s;
+  }
+
+  .loading #mdn {
+    opacity: 0;
   }
 
   .marquee-carousel {
     margin: 80px 0 0px;
-    height: 520px;
+    height: auto;
   }
 
   .marquee {
-    height: 520px;
+    height: auto;
   }
 
   .cover {
@@ -59,12 +71,16 @@
     text-align: center;
   }
 
-  .cover.printing img {
-    height: 400px;
-  }
-
   .cover.active {
     display: block;
+  }
+
+  #sub-section-container {
+    -webkit-transition: opacity 0.2s;
+  }
+
+  .loading #sub-section-container {
+    opacity: 0;
   }
 
   .g-content h2 {
@@ -72,7 +88,8 @@
   }
   </style>
   </head>
-  <body class="" id="grid">
+  <body id="grid">
+    <!-- Header -->
     <div class="compact" id="header">
       <div class="g-section g-tpl-160 g-split">
         <div class="g-unit g-first" id="header-logo">
@@ -88,56 +105,63 @@
           <li class="g-first g-unit features">
             <a href="?features"
                style="width: 136px; text-align: center;"
-               ><span>FEATURES</span></a>
+               ><span i18n-content="LEARN_MORE_NAV_FEATURES"></span></a>
           </li>
           <li class="g-unit offline">
             <a href="?offline"
                id="menu2-menu" role="menuitem"
                style="width: 136px; height: 64px; border-width: 0px;"
-               ><span>OFFLINE</span></a>
+               ><span i18n-content="LEARN_MORE_NAV_OFFLINE"></span></a>
           </li>
           <li class="g-unit printing">
             <a href="?printing"
                id="menu3-menu" role="menuitem"
                style="width: 136px; height: 64px; border-width: 0px;"
-               ><span>PRINTING</span></a>
+               ><span i18n-content="LEARN_MORE_NAV_PRINTING"></span></a>
           </li>
           <li class="g-unit do-more">
             <a href="?do-more"
                id="menu3-menu" role="menuitem"
                style="width: 136px; height: 64px; border-width: 0px;"
-               ><span>DO MORE</span></a>
+               ><span i18n-content="LEARN_MORE_NAV_DO_MORE"></span></a>
           </li>
         </ul>
       </div>
     </div>
-    <div class="" id="main">
+    <!-- Main -->
+    <div class="loading" id="main">
       <div class="compact">
+        <ul class="dot-tabs g-section" id="mdn">
+          <li class=""><a href="#feature-1"></a></li>
+          <li class=""><a href="#feature-2"></a></li>
+          <li class=""><a href="#feature-3"></a></li>
+        </ul>
         <div id="hero-carousel">
-          <ul class="dot-tabs g-section" id="mdn">
-            <li class=""><a href="#feature-1"></a></li>
-            <li class=""><a href="#feature-2"></a></li>
-            <li class=""><a href="#feature-3"></a></li>
-          </ul>
           <div class="marquee-carousel">
             <div class="marquee" style="opacity: 1;">
               <div class="marquee-copy"><h1></h1><p></p></div>
               <div class="cover features-speed">
-                <img src="learn-more-features-speed.jpg">
+                <img src="learn-more-features-speed.png">
               </div>
               <div class="cover features-apps">
                 <img src="learn-more-features-apps.jpg">
               </div>
               <div class="cover features-security">
-                <img src="learn-more-features-security.jpg">
+                <img src="learn-more-features-security.png">
+              </div>
+              <div class="cover offline">
+                <img src="learn-more-offline.jpg">
               </div>
               <div class="cover printing">
                 <img src="learn-more-printing.png">
               </div>
+              <div class="cover do-more">
+                <img src="learn-more-do-more.png">
+              </div>
             </div>
           </div>
         </div>
-        <div class="g-section g-tpl-nest">
+        <div id="sub-section-container" class="g-section g-tpl-nest">
           <div class="g-unit g-first"><div class="g-content"><h2></h2><p></p></div></div>
           <div class="g-unit"><div class="g-content"><h2></h2><p></p></div></div>
           <div class="g-unit"><div class="g-content"><h2></h2><p></p></div></div>
