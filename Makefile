@@ -169,7 +169,7 @@ MUSIC_FILES = \
   third-party/music-covers/music-cover-the-doors.png \
   third-party/music-covers/music-cover-tiesto.jpg \
   third-party/music-covers/music-cover-vivaldi.png \
-  third-party/music-covers/music-cover-war.gif \
+  third-party/music-covers/music-cover-war.png \
   third-party/music/music-lumineers.mp3 \
   third-party/music/music-vivaldi.mp3 \
   third-party/music/music-war.mp3 \

@@ -268,7 +268,7 @@
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_MAIN_SONG": {
-    "message": "vivaldi",
+    "message": "war",
     "description": "This is used by the script. This will not be translated."
   }
 }
