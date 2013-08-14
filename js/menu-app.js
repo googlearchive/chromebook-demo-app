@@ -53,6 +53,23 @@ MenuApp.prototype.initDocument = function() {
   this.get('.learn-more').addEventListener('click', function() {
     Component.ENTRIES.Helper.sendMessage({name: 'visitLearnMore'});
   });
+
+  // Language picker.
+  var languagePicker = this.get('.language-picker');
+  languagePicker.addEventListener('mousedown', function() {
+    languagePicker.classList.add('open');
+  });
+  languagePicker.addEventListener('mouseup', function(event) {
+    event.stopPropagation();
+    if (event.target.nodeName == 'LI') {
+      languagePicker.querySelector('label').innerText =
+          event.target.innerText;
+      languagePicker.classList.remove('open');
+    }
+  });
+  this.document.addEventListener('mouseup', function() {
+    languagePicker.classList.remove('open');
+  });
 };
 
 MenuApp.prototype.applyLocale = function(locale) {
