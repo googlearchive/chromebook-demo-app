@@ -242,5 +242,9 @@
   "STORE_APP_CALCULATOR_DETAIL": {
     "message": "A calculator app for Chrome",
     "description": "The detailed information of calculator."
+  },
+  "STORE_DISABLE_APP_LIST": {
+    "message": "play-uk deezer",
+    "description": "This is used by the script. This will not be translated."
   }
 }

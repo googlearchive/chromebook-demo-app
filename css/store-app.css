@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.app.disable {
+  display: none;
+}
+
 .app.bejeweled {
   background-image: url(store-tile-bejeweled.png);
 }

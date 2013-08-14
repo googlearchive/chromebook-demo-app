@@ -1,3 +1,5 @@
+var DEBUG = true;
+
 var Component = function(name, idList, windowID, mainView, isChild) {
   this.name = name;
   this.idList = idList;
@@ -157,7 +159,6 @@ Locale.get = function(lang, messageName) {
 
 Locale.apply = function(document, lang) {
   var nodes = document.querySelectorAll('[i18n-content]');
-  console.log(nodes.length);
   for (var i = 0; i < nodes.length; i++) {
     nodes[i].innerHTML = nodes[i].innerHTML =
         this.get(lang, nodes[i].getAttribute('i18n-content'));
