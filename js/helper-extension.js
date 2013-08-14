@@ -41,8 +41,8 @@ chrome.runtime.onMessageExternal.addListener(
         break;
 
       case 'getLocale':
-        sendResponse(chrome.i18n.getMessage('@@ui_locale') ||
-                     window.navigator.language);
+        var locale = chrome.i18n.getMessage('@@ui_locale');
+        sendResponse(Locale.getAvailableLocale(locale));
         break;
     }
     return false;

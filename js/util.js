@@ -103,6 +103,16 @@ Locale.LIST = ['en', 'ja'];
 
 Locale.DEFAULT = 'en';
 
+Locale.getAvailableLocale = function(code) {
+  for (var i = 0; i < Locale.LIST.length; i++) {
+    if (code == Locale.LIST[i])
+      return code;
+  }
+  if (code.indexOf('_') == -1)
+    return Locale.DEFAULT;
+  return this.getAvailableLocale(code.split('_', 2)[0]);
+};
+
 Locale.load = function(callback) {
   for (var i = 0; i < Locale.LIST.length; i++) {
     var id = Locale.LIST[i];
@@ -134,9 +144,11 @@ Locale.onXHRStateChange_ = function(xhr, id, callback) {
   callback();
 };
 
+/**
+ * The id must be one of the Locale.LIST items.
+ */
 Locale.get = function(id, messageName) {
-  var messages = this.messages_[id] || this.messages_[Locale.DEFAULT];
-  var localeEntry = messages[messageName];
+  var localeEntry = this.messages_[id][messageName];
   if (!localeEntry)
     console.error('Cannot find the locale string:' + messageName);
   return localeEntry.message;
