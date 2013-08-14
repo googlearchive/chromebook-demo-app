@@ -124,18 +124,19 @@ Locale.load = function(callback) {
   }
 };
 
-Locale.onXHRStateChange_ = function(xhr, id, callback) {
+Locale.onXHRStateChange_ = function(xhr, lang, callback) {
   if (xhr.readyState != 4)
     return;
   if (xhr.status == 200)
-    this.messages_[id] = JSON.parse(xhr.responseText);
+    this.messages_[lang] = JSON.parse(xhr.responseText);
   else
-    this.messages_[id] = {};
+    this.messages_[lang] = {};
+  // Check if the all languages have already loaded or not.
   for (var i = 0; i < Locale.LIST.length; i++) {
-    var inID = Locale.LIST[i];
-    if (this.messages_[inID]) {
-      if (inID != Locale.DEFAULT)
-        this.messages_[inID].__proto__ = this.messages_[Locale.DEFAULT];
+    var inLang = Locale.LIST[i];
+    if (this.messages_[inLang]) {
+      if (inLang != Locale.DEFAULT)
+        this.messages_[inLang].__proto__ = this.messages_[Locale.DEFAULT];
     } else {
       return;
     }
@@ -147,17 +148,24 @@ Locale.onXHRStateChange_ = function(xhr, id, callback) {
 /**
  * The id must be one of the Locale.LIST items.
  */
-Locale.get = function(id, messageName) {
-  var localeEntry = this.messages_[id][messageName];
+Locale.get = function(lang, messageName) {
+  var localeEntry = this.messages_[lang][messageName];
   if (!localeEntry)
     console.error('Cannot find the locale string:' + messageName);
   return localeEntry.message;
 };
 
-Locale.apply = function(document, id) {
-  var nodes = queryXPath(document, '//*[@i18n-content]');
+Locale.apply = function(document, lang) {
+  var nodes = document.querySelectorAll('[i18n-content]');
+  console.log(nodes.length);
   for (var i = 0; i < nodes.length; i++) {
     nodes[i].innerHTML = nodes[i].innerHTML =
-        this.get(id, nodes[i].getAttribute('i18n-content'));
+        this.get(lang, nodes[i].getAttribute('i18n-content'));
+  }
+  nodes = document.querySelectorAll('[i18n-attr-name][i18n-attr-value]');
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].setAttribute(
+        nodes[i].getAttribute('i18n-attr-name'),
+        this.get(lang, nodes[i].getAttribute('i18n-attr-value')));
   }
 };

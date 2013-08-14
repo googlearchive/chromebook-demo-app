@@ -15,81 +15,72 @@
   <div class="app-side">
     <div class="app-side-body">
       <div class="app-icon"></div>
-      <div class="app-copy">
-        __MSG_DOC_COPY__
-      </div>
-      <div class="app-sub-copy" i18n-text>
-        __MSG_DOC_SUB_COPY__
-      </div>
-      <div class="app-description" i18n-text>
-        __MSG_DOC_DESCRIPTION__
-      </div>
+      <div class="app-copy" i18n-content="DOC_COPY"></div>
+      <div class="app-sub-copy" i18n-content="DOC_SUB_COPY"></div>
+      <div class="app-description" i18n-content="DOC_DESCRIPTION"></div>
 
       <div class="sec-header">
         <div class="sec-header-icon group">
         </div>
-        <div class="sec-header-text">
-          __MSG_DOCS_SECTION_GROUP_TITLE__
+        <div class="sec-header-text" i18n-content="DOCS_SECTION_GROUP_TITLE">
         </div>
       </div>
-      <div class="sec-description">
-        __MSG_DOCS_SECTION_GROUP_DESCRIPTION__
-      </div>
+      <div class="sec-description"
+           i18n-content="DOCS_SECTION_GROUP_DESCRIPTION"></div>
 
       <div class="sec-header">
         <div class="sec-header-icon backup">
         </div>
-        <div class="sec-header-text">
-          __MSG_DOCS_SECTION_BACKUP_TITLE__
-        </div>
+        <div class="sec-header-text"
+             i18n-content="DOCS_SECTION_BACKUP_TITLE"></div>
       </div>
-      <div class="sec-description">
-        __MSG_DOCS_SECTION_BACKUP_DESCRIPTION__
-      </div>
+      <div class="sec-description"
+           i18n-content="DOCS_SECTION_BACKUP_DESCRIPTION"></div>
 
       <div class="sec-header">
         <div class="sec-header-icon anywhere">
         </div>
-        <div class="sec-header-text">
-          __MSG_DOCS_SECTION_ANYWHERE_TITLE__
-        </div>
+        <div class="sec-header-text"
+             i18n-content="DOCS_SECTION_ANYWHERE_TITLE"></div>
       </div>
-      <div class="sec-description">
-        __MSG_DOCS_SECTION_ANYWHERE_DESCRIPTION__
-      </div>
+      <div class="sec-description"
+           i18n-content="DOCS_SECTION_ANYWHERE_DESCRIPTION"></div>
 
     </div>
     <div class="app-side-footer">
-      <div class="app-hint-title">__MSG_DOCS_HINT_TITLE__</div>
-      <div class="app-hint-description">__MSG_DOCS_HINT_DESCRIPTION__</div>
+      <div class="app-hint-title" i18n-content="DOCS_HINT_TITLE"></div>
+      <div class="app-hint-description"
+           i18n-content="DOCS_HINT_DESCRIPTION"></div>
     </div>
   </div>
   <div id="docs-main" class="app-main">
     <div class="docs-header">
-      <div class="docs-title">__MSG_DOCS_DOCUMENT_TITLE__</div>
+      <div class="docs-title" i18n-content="DOCS_DOCUMENT_TITLE"></div>
       <div class="space"></div>
       <div class="user-icon charles"></div>
       <div class="user-icon edgar"></div>
       <div class="user-icon fredrick"></div>
       <button class="share balloon-holder">
         <div class="share-icon"></div>
-        <div class="share-label">__MSG_DOCS_BUTTON_SHARE__</div>
-        <div class="balloon triangle-top">__MSG_DOCS_BALLOON_SHARE__</div>
+        <div class="share-label" i18n-content="DOCS_BUTTON_SHARE"></div>
+        <div class="balloon triangle-top"
+             i18n-content="DOCS_BALLOON_SHARE"></div>
       </button>
     </div>
     <div class="docs-menu balloon-holder">
-      <div class="docs-menu-item">__MSG_DOCS_MENU_FILE__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_EDIT__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_VIEW__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_INSERT__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_FORMAT__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_TOOLS__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_TABLE__</div>
-      <div class="docs-menu-item">__MSG_DOCS_MENU_HELP__</div>
-      <div class="balloon triangle-top">__MSG_DOCS_BALLOON_MENU__</div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_FILE"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_EDIT"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_VIEW"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_INSERT"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_FORMAT"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_TOOLS"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_TABLE"></div>
+      <div class="docs-menu-item" i18n-content="DOCS_MENU_HELP"></div>
+      <div class="balloon triangle-top" i18n-content="DOCS_BALLOON_MENU"></div>
     </div>
     <div class="docs-toolbar balloon-holder">
-      <div class="balloon triangle-top">__MSG_DOCS_BALLOON_TOOLBAR__</div>
+      <div class="balloon triangle-top"
+           i18n-content="DOCS_BALLOON_TOOLBAR"></div>
     </div>
     <div class="docs-ruler"></div>
     <div class="paper-scroll-region">
@@ -99,11 +90,14 @@
           <span class="measure-text"></span><span class="measure-cursor">&nbsp;</span>
         </div>
         <div class="cursor charles"
-             data-user-name="__MSG_DOCS_USER_CHARLES__"></div>
+             i18n-attr-name="data-user-name"
+             i18n-attr-value="DOCS_USER_CHARLES"></div>
         <div class="cursor edgar"
-             data-user-name="__MSG_DOCS_USER_EDGAR__"></div>
+             i18n-attr-name="data-user-name"
+             i18n-attr-value="DOCS_USER_EDGAR"></div>
         <div class="cursor fredrick"
-             data-user-name="__MSG_DOCS_USER_FREDRICK__"></div>
+             i18n-attr-name="data-user-name"
+             i18n-attr-value="DOCS_USER_FREDRICK"></div>
       </div>
     </div>
   </div>
