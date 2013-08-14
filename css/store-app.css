@@ -34,7 +34,6 @@
   -webkit-flex: 0 0 auto;
   -webkit-margin-end: -1px;
   margin-bottom: -1px;
-  background-image: url(store-app.png);
   background-color: #f8f8f8;
   cursor: pointer;
 }
@@ -44,19 +43,14 @@
   background-image: url(store-tile-bejeweled.png);
 }
 
-.app.cubeslam {
-  -webkit-order: __MSG_STORE_APP_CUBESLAM_ORDER__;
-  background-image: url(store-tile-cubeslam.png);
-}
-
 .app.deezer {
   -webkit-order: __MSG_STORE_APP_DEEZER_ORDER__;
-  background-image: url(store-tile-deezer.png);
+  background-image: url(store-tile-deezer.jpg);
 }
 
 .app.gmail {
   -webkit-order: __MSG_STORE_APP_GMAIL_ORDER__;
-  background-image: url(store-tile-gmail.png);
+  background-image: url(store-tile-gmail.jpg);
 }
 
 .app.kindle {

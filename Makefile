@@ -203,9 +203,8 @@ STORE_FILES= \
   js/store-app.js \
   js/util.js \
   third-party/app-tiles/store-tile-bejeweled.png \
-  third-party/app-tiles/store-tile-cubeslam.png \
-  third-party/app-tiles/store-tile-deezer.png \
-  third-party/app-tiles/store-tile-gmail.png \
+  third-party/app-tiles/store-tile-deezer.jpg \
+  third-party/app-tiles/store-tile-gmail.jpg \
   third-party/app-tiles/store-tile-kindle.png \
   third-party/app-tiles/store-tile-netflix.png \
   third-party/app-tiles/store-tile-pandora.jpg \
