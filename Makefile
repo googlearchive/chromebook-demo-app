@@ -202,13 +202,23 @@ STORE_FILES= \
   js/background.js \
   js/store-app.js \
   js/util.js \
+  third-party/app-tiles/store-tile-angry-birds.jpg \
   third-party/app-tiles/store-tile-bejeweled.png \
+  third-party/app-tiles/store-tile-calculator.png \
+  third-party/app-tiles/store-tile-calendar.jpg \
+  third-party/app-tiles/store-tile-camera.png \
   third-party/app-tiles/store-tile-deezer.jpg \
+  third-party/app-tiles/store-tile-docs.png \
+  third-party/app-tiles/store-tile-drive.png \
+  third-party/app-tiles/store-tile-evernote.jpg \
   third-party/app-tiles/store-tile-gmail.jpg \
+  third-party/app-tiles/store-tile-hangouts.jpg \
   third-party/app-tiles/store-tile-kindle.png \
   third-party/app-tiles/store-tile-netflix.png \
+  third-party/app-tiles/store-tile-new-york-times.jpg \
   third-party/app-tiles/store-tile-pandora.jpg \
   third-party/app-tiles/store-tile-pixlr.png \
+  third-party/app-tiles/store-tile-play.png \
   third-party/app-tiles/store-tile-plus.png \
   third-party/app-tiles/store-tile-remotedesktop.png \
   third-party/app-tiles/store-tile-sheets.png \
@@ -216,19 +226,9 @@ STORE_FILES= \
   third-party/app-tiles/store-tile-spotify.png \
   third-party/app-tiles/store-tile-tweetdeck.png \
   third-party/app-tiles/store-tile-youtube.png \
-  third-party/app-tiles/store-tile-drive.png \
-  third-party/app-tiles/store-tile-new-york-times.jpg \
-  third-party/app-tiles/store-tile-hangouts.jpg \
-  third-party/app-tiles/store-tile-evernote.jpg \
-  third-party/app-tiles/store-tile-play.png \
-  third-party/app-tiles/store-tile-calendar.jpg \
-  third-party/app-tiles/store-tile-angry-birds.jpg \
-  third-party/app-tiles/store-tile-docs.png \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/store-app.html
-#  third-party/app-tiles/store-tile-camera
-#  third-party/app-tiles/store-tile-calculator
 
 HELPER_FILES= \
   js/helper-extension.js \
