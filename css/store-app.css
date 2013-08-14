@@ -39,73 +39,103 @@
 }
 
 .app.bejeweled {
-  -webkit-order: __MSG_STORE_APP_BEJEWELED_ORDER__;
   background-image: url(store-tile-bejeweled.png);
 }
 
 .app.deezer {
-  -webkit-order: __MSG_STORE_APP_DEEZER_ORDER__;
   background-image: url(store-tile-deezer.jpg);
 }
 
 .app.gmail {
-  -webkit-order: __MSG_STORE_APP_GMAIL_ORDER__;
   background-image: url(store-tile-gmail.jpg);
 }
 
 .app.kindle {
-  -webkit-order: __MSG_STORE_APP_KINDLE_ORDER__;
   background-image: url(store-tile-kindle.png);
 }
 
 .app.netflix {
-  -webkit-order: __MSG_STORE_APP_NETFLIX_ORDER__;
   background-image: url(store-tile-netflix.png);
 }
 
 .app.pandora {
-  -webkit-order: __MSG_STORE_APP_PANDORA_ORDER__;
   background-image: url(store-tile-pandora.jpg);
 }
 
 .app.pixlr {
-  -webkit-order: __MSG_STORE_APP_PIXLR_ORDER__;
   background-image: url(store-tile-pixlr.png);
 }
 
 .app.plus {
-  -webkit-order: __MSG_STORE_APP_PLUS_ORDER__;
   background-image: url(store-tile-plus.png);
 }
 
 .app.remotedesktop {
-  -webkit-order: __MSG_STORE_APP_REMOTEDESKTOP_ORDER__;
   background-image: url(store-tile-remotedesktop.png);
 }
 
 .app.sheets {
-  -webkit-order: __MSG_STORE_APP_SHEETS_ORDER__;
   background-image: url(store-tile-sheets.png);
 }
 
 .app.slides {
-  -webkit-order: __MSG_STORE_APP_SLIDES_ORDER__;
   background-image: url(store-tile-slides.png);
 }
 
 .app.spotify {
-  -webkit-order: __MSG_STORE_APP_SPOTIFY_ORDER__;
   background-image: url(store-tile-spotify.png);
 }
 
 .app.tweetdeck {
-  -webkit-order: __MSG_STORE_APP_TWEETDECK_ORDER__;
   background-image: url(store-tile-tweetdeck.png);
 }
 
 .app.youtube {
-  -webkit-order: __MSG_STORE_APP_YOUTUBE_ORDER__;
   background-image: url(store-tile-youtube.png);
+}
+
+.app.drive {
+  background-image: url(store-tile-drive.png);
+}
+
+.app.new-york-times {
+  background-image: url(store-tile-new-york-times.jpg);
+}
+
+.app.hangouts {
+  background-image: url(store-tile-hangouts.jpg);
+}
+
+.app.evernote {
+  background-image: url(store-tile-evernote.jpg);
+}
+
+.app.play-us {
+  background-image: url(store-tile-play.png);
+}
+
+.app.play-uk {
+  background-image: url(store-tile-play.png);
+}
+
+.app.calendar {
+  background-image: url(store-tile-calendar.jpg);
+}
+
+.app.angry-birds {
+  background-image: url(store-tile-angry-birds.jpg);
+}
+
+.app.camera {
+  background-image: url(store-tile-camera.png);
+}
+
+.app.docs {
+  background-image: url(store-tile-docs.png);
+}
+
+.app.calculator {
+  background-image: url(store-tile-calculator.png);
 }
 
 .app-container {

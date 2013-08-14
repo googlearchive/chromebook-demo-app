@@ -216,9 +216,19 @@ STORE_FILES= \
   third-party/app-tiles/store-tile-spotify.png \
   third-party/app-tiles/store-tile-tweetdeck.png \
   third-party/app-tiles/store-tile-youtube.png \
+  third-party/app-tiles/store-tile-drive.png \
+  third-party/app-tiles/store-tile-new-york-times.jpg \
+  third-party/app-tiles/store-tile-hangouts.jpg \
+  third-party/app-tiles/store-tile-evernote.jpg \
+  third-party/app-tiles/store-tile-play.png \
+  third-party/app-tiles/store-tile-calendar.jpg \
+  third-party/app-tiles/store-tile-angry-birds.jpg \
+  third-party/app-tiles/store-tile-docs.png \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/store-app.html
+#  third-party/app-tiles/store-tile-camera
+#  third-party/app-tiles/store-tile-calculator
 
 HELPER_FILES= \
   js/helper-extension.js \
