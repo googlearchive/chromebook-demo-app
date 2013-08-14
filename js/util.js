@@ -88,17 +88,6 @@ var extend = function(base, adapter) {
   return base;
 };
 
-var queryXPath = function(doc, xpath) {
-  var xPathResult = doc.evaluate(
-      xpath, doc, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
-  var results = [];
-  for (var i = 0; i < xPathResult.snapshotLength; i++) {
-    var node = xPathResult.snapshotItem(i);
-    results.push(node);
-  }
-  return results;
-};
-
 Locale = {loaded: false, messages_: {}};
 
 Locale.LIST = ['en', 'ja'];
