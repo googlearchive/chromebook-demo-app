@@ -247,12 +247,12 @@ HELPER_FILES= \
   third-party/learn-more/open-sans.css \
   third-party/learn-more/chrome_logo_2x.png \
   third-party/learn-more/learn-more.html \
-  third-party/learn-more/learn-more-features-speed.jpg \
+  third-party/learn-more/learn-more-features-speed.png \
   third-party/learn-more/learn-more-features-apps.jpg \
-  third-party/learn-more/learn-more-features-security.jpg \
-  third-party/learn-more/learn-more-printing.png
-#  third-party/learn-more/learn-more-offline.jpg
-#  third-party/learn-more/learn-more-do-more.jpg
+  third-party/learn-more/learn-more-features-security.png \
+  third-party/learn-more/learn-more-printing.png \
+  third-party/learn-more/learn-more-offline.jpg \
+  third-party/learn-more/learn-more-do-more.png
 
 packages: third-party
 	# Menu.app

@@ -146,4 +146,7 @@ menubar.decorate("nav");
 
 // Logo
 new chrm.ui.Logo("logo");
+
+document.querySelector('#main').classList.remove('loading');
+document.querySelector('.marquee-carousel').classList.add('active');
 });
