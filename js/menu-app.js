@@ -62,8 +62,20 @@ MenuApp.prototype.initDocument = function() {
   languagePicker.addEventListener('mouseup', function(event) {
     event.stopPropagation();
     if (event.target.nodeName == 'LI') {
-      this.applyLocale(event.target.getAttribute('data-i18n-code'));
       languagePicker.classList.remove('open');
+      var code = event.target.getAttribute('data-i18n-code');
+      this.applyLocale(code);
+      var components = [
+        Component.ENTRIES.Menu,
+        Component.ENTRIES.Docs,
+        Component.ENTRIES.Hangouts,
+        Component.ENTRIES.Music,
+        Component.ENTRIES.Store,
+        Component.ENTRIES.Helper
+      ];
+      for (var i = 0; i < components.length; i++) {
+        components[i].sendMessage({name: 'applyLocale', code: code});
+      }
     }
   }.bind(this));
   this.document.addEventListener('mouseup', function() {

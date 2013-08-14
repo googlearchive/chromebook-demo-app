@@ -155,35 +155,29 @@ MUSIC_FILES = \
   js/background.js \
   js/music-app.js \
   js/util.js \
+  third-party/music-covers/music-cover-blake-shelton.jpg \
+  third-party/music-covers/music-cover-ellie-goulding.jpg \
+  third-party/music-covers/music-cover-florence.jpg \
+  third-party/music-covers/music-cover-frank-ocean.jpg \
+  third-party/music-covers/music-cover-imagine-dragons.jpg \
+  third-party/music-covers/music-cover-lumineers.jpg \
+  third-party/music-covers/music-cover-maroon5.jpg \
+  third-party/music-covers/music-cover-mika.jpg \
+  third-party/music-covers/music-cover-muse.png \
+  third-party/music-covers/music-cover-one-republic.jpg \
+  third-party/music-covers/music-cover-tegan-and-sara.png \
+  third-party/music-covers/music-cover-the-doors.png \
+  third-party/music-covers/music-cover-tiesto.jpg \
+  third-party/music-covers/music-cover-vivaldi.png \
+  third-party/music-covers/music-cover-war.gif \
+  third-party/music/music-lumineers.mp3 \
+  third-party/music/music-vivaldi.mp3 \
+  third-party/music/music-war.mp3 \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/roboto/Roboto-Light.ttf \
   third-party/roboto/Roboto-ThinItalic.ttf \
-  third-party/music-covers/music-cover-maroon5.jpg \
-  third-party/music-covers/music-cover-florence.jpg \
-  third-party/music-covers/music-cover-blake-shelton.jpg \
-  third-party/music-covers/music-cover-tiesto.jpg \
-  third-party/music-covers/music-cover-mika.jpg \
-  third-party/music-covers/music-cover-one-republic.jpg \
-  third-party/music-covers/music-cover-muse.png \
-  third-party/music-covers/music-cover-frank-ocean.jpg \
-  third-party/music-covers/music-cover-imagine-dragons.jpg \
-  third-party/music-covers/music-cover-the-doors.png \
-  third-party/music-covers/music-cover-tegan-and-sara.png \
-  third-party/music-covers/music-cover-ellie-goulding.jpg \
   views/music-app.html
-
-MUSIC_FILES_LUMINEERS = \
-  third-party/music/music-lumineers.mp3 \
-  third-party/music-covers/music-cover-lumineers.jpg
-
-MUSIC_FILES_WAR = \
-  third-party/music/music-war.mp3 \
-  third-party/music-covers/music-cover-war.gif
-
-MUSIC_FILES_VIVALDI = \
-  third-party/music/music-vivaldi.mp3 \
-  third-party/music-covers/music-cover-vivaldi.png
 
 STORE_FILES= \
   assets/close-1x.png \
@@ -267,33 +261,11 @@ packages: third-party
 	cp manifests/hangouts-manifest.json packages/demo-hangouts/manifest.json
 	cp ${HANGOUTS_FILES} packages/demo-hangouts
 	cp -r locales/hangouts-locales/* packages/demo-hangouts/_locales
-	# Music.app Lumineers variation.
+	# Music.app
 	mkdir -p packages/demo-music/_locales
-	cp manifests/music-manifest.json \
-	   packages/demo-music/manifest.json
+	cp manifests/music-manifest.json packages/demo-music/manifest.json
 	cp ${MUSIC_FILES} packages/demo-music
-	cp ${MUSIC_FILES_LUMINEERS} packages/demo-music
 	cp -r locales/music-locales/* packages/demo-music/_locales
-	echo "Component.ENTRIES.Music.variation = 'lumineers';" >> \
-	     packages/demo-music/util.js
-	# Music.app War variation.
-	mkdir -p packages/demo-music-war/_locales
-	cp manifests/music-manifest.json \
-	   packages/demo-music-war/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music-war
-	cp ${MUSIC_FILES_WAR} packages/demo-music-war
-	cp -r locales/music-locales/* packages/demo-music-war/_locales
-	echo "Component.ENTRIES.Music.variation = 'war';" >> \
-	     packages/demo-music-war/util.js
-	# Music.app Vivaldi variation.
-	mkdir -p packages/demo-music-vivaldi/_locales
-	cp manifests/music-manifest.json \
-	   packages/demo-music-vivaldi/manifest.json
-	cp ${MUSIC_FILES} packages/demo-music-vivaldi
-	cp ${MUSIC_FILES_VIVALDI} packages/demo-music-vivaldi
-	cp -r locales/music-locales/* packages/demo-music-vivaldi/_locales
-	echo "Component.ENTRIES.Music.variation = 'vivaldi';" >> \
-	     packages/demo-music-vivaldi/util.js
 	# Store.app
 	mkdir -p packages/demo-store/_locales
 	cp manifests/store-manifest.json packages/demo-store/manifest.json
@@ -330,10 +302,8 @@ crx: packages
 		  --pack-extension-key=pem/demo-helper.pem
 
 zip: packages
-	scripts/remove-entry packages/demo-menu-play/manifest.json key
-	zip -r packages/demo-menu-play.zip packages/demo-menu-play
-	scripts/remove-entry packages/demo-menu-youtube/manifest.json key
-	zip -r packages/demo-menu-youtube.zip packages/demo-menu-youtube
+	scripts/remove-entry packages/demo-menu/manifest.json key
+	zip -r packages/demo-menu.zip packages/demo-menu
 	scripts/remove-entry packages/demo-docs/manifest.json key
 	zip -r packages/demo-docs.zip packages/demo-docs
 	scripts/remove-entry packages/demo-hangouts/manifest.json key

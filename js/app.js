@@ -61,6 +61,8 @@ App.prototype.checkDocumentReady_ = function() {
       !this.documentInitialized_) {
     this.documentInitialized_ = true;
     this.initDocument();
+    this.applyLocale(this.locale_);
+    this.appWindow.show();
     return true;
   } else {
     return false;
@@ -68,9 +70,6 @@ App.prototype.checkDocumentReady_ = function() {
 };
 
 App.prototype.initDocument = function(firstTime) {
-  // Locale
-  this.applyLocale(this.locale_);
-
   // Close button.
   var closeButton = this.document.querySelector('.close');
   closeButton.addEventListener('click', function() {
@@ -112,9 +111,6 @@ App.prototype.initDocument = function(firstTime) {
       // Debug tool
     }
   }.bind(this));
-
-  // Show window.
-  this.appWindow.show();
 };
 
 App.prototype.close = function() {
@@ -194,8 +190,13 @@ App.prototype.toggleDirection_ = function(toggle) {
 };
 
 App.prototype.onMessage_ = function(message) {
+  console.log(message);
   if (message.name == 'close') {
     if (this.appWindow)
       this.appWindow.close();
+  } else if (message.name == 'applyLocale') {
+    console.log('applyLocale');
+    if (this.documentInitialized_)
+      this.applyLocale(message.code);
   }
 };

@@ -123,10 +123,12 @@ Locale.onXHRStateChange_ = function(xhr, id, callback) {
     this.messages_[id] = {};
   for (var i = 0; i < Locale.LIST.length; i++) {
     var inID = Locale.LIST[i];
-    if (this.messages_[inID])
-      this.messages_[inID].__prototype__ = this.messages_[Locale.DEFAULT];
-    else
+    if (this.messages_[inID]) {
+      if (inID != Locale.DEFAULT)
+        this.messages_[inID].__proto__ = this.messages_[Locale.DEFAULT];
+    } else {
       return;
+    }
   }
   Locale.loaded = true;
   callback();

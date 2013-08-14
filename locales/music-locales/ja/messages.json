@@ -8,7 +8,7 @@
     "description": "A subtitle for Play Music: supports the headline by giving the app name"
   },
   "MUSIC_DESCRIPTION": {
-    "message": "Enjoy an endless collection of music from the web with Google Play Music.",
+    "message": "Google Play Music で 無限の音楽コレクションを楽しむ。",
     "description": "Describes how you can listen to unlimited music with Google Play Music (GPM)"
   },
   "MUSIC_SECTION_UPLOAD_TITLE": {
@@ -268,7 +268,7 @@
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_MAIN_SONG": {
-    "message": "lumineers",
+    "message": "vivaldi",
     "description": "This is used by the script. This will not be translated."
   }
 }
