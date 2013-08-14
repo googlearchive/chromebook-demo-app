@@ -54,6 +54,29 @@ DocsApp.prototype.initDocument = function() {
       this.onStep_.bind(this), DocsApp.ANIMATION_INTERVAL);
 };
 
+DocsApp.prototype.applyLocale = function(lang) {
+  App.prototype.applyLocale.call(this, lang);
+  this.keywords_ = null;
+  this.loadKeywords_(lang);
+};
+
+DocsApp.prototype.loadKeywords_ = function(lang) {
+  // Init the keywords.
+  this.keywords_ = null;
+  // Start loading.
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState != 4)
+      return;
+    if (xhr.status == 200)
+      this.keywords_ = JSON.parse(xhr.responseText);
+    else if (lang != Locale.DEFAULT)
+      this.loadKeywords_(Locale.DEFAULT);
+  }.bind(this);
+  xhr.open('GET', 'words_' + lang + '.json');
+  xhr.send();
+};
+
 DocsApp.prototype.onInput_ = function(e) {
   // Get difference made by input.
   var indexMap = calcSimpleIndexMap(this.lastText_, this.paper_.value);
@@ -199,9 +222,12 @@ DocsApp.prototype.updateCursorPosition_ =
  * @private
  */
 DocsApp.prototype.findBotKeyword_ = function() {
+  // If the keywords haven't loaded yet, just returns null.
+  if (!this.keywords_)
+    return null;
   var paperText = this.paper_.value;
-  for (var i = 0; i < BOT_KEYWORD_MAP.length; i++) {
-    for (var keyword in BOT_KEYWORD_MAP[i]) {
+  for (var i = 0; i < this.keywords_.length; i++) {
+    for (var keyword in this.keywords_[i]) {
       if (this.usedKeyword_[keyword])
         continue;
       // Make regexp to search the word.
@@ -218,7 +244,7 @@ DocsApp.prototype.findBotKeyword_ = function() {
       return {
         keyword: keyword,
         index: index,
-        result: BOT_KEYWORD_MAP[i][keyword]
+        result: this.keywords_[i][keyword]
       };
     }
   }

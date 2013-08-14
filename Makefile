@@ -73,7 +73,7 @@ DOCS_FILES = \
   js/editor.js \
   js/paper-edit-adapter.js \
   js/util.js \
-  third-party/docs-bot-words/words.js \
+  third-party/docs-bot-words/words_en.json \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/docs-app.html
