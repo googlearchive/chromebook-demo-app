@@ -108,7 +108,7 @@ h1, p {
   }
 }
 
-.button, .learn-more {
+.button, .footer {
   position: relative;
   -webkit-animation-fill-mode: backwards;
   -webkit-animation: pop-in 1.0s ease-in-out;
@@ -143,7 +143,7 @@ h1, p {
   -webkit-animation-delay: .7s;
 }
 
-.learn-more {
+.footer {
   -webkit-animation-fill-mode: backwards;
   -webkit-animation-delay: .8s;
 }

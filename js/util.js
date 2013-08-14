@@ -99,7 +99,9 @@ var queryXPath = function(doc, xpath) {
 
 Locale = {loaded: false, messages_: {}};
 
-Locale.LIST = ['en'];
+Locale.LIST = ['en', 'ja'];
+
+Locale.DEFAULT = 'en';
 
 Locale.load = function(callback) {
   for (var i = 0; i < Locale.LIST.length; i++) {
@@ -115,15 +117,15 @@ Locale.load = function(callback) {
 Locale.onXHRStateChange_ = function(xhr, id, callback) {
   if (xhr.readyState != 4)
     return;
-  if (xhr.status == 200) {
+  if (xhr.status == 200)
     this.messages_[id] = JSON.parse(xhr.responseText);
-  } else if (xhr.status == 404)
-    this.messages_[id] = {};
   else
-    this.messages_[id] = null;
+    this.messages_[id] = {};
   for (var i = 0; i < Locale.LIST.length; i++) {
     var inID = Locale.LIST[i];
-    if (!this.messages_[inID])
+    if (this.messages_[inID])
+      this.messages_[inID].__prototype__ = this.messages_[Locale.DEFAULT];
+    else
       return;
   }
   Locale.loaded = true;
@@ -131,7 +133,11 @@ Locale.onXHRStateChange_ = function(xhr, id, callback) {
 };
 
 Locale.get = function(id, messageName) {
-  return (this.messages_[id] || this.messages_.en)[messageName].message;
+  var messages = this.messages_[id] || this.messages_[Locale.DEFAULT];
+  var localeEntry = messages[messageName];
+  if (!localeEntry)
+    console.error('Cannot find the locale string:' + messageName);
+  return localeEntry.message;
 };
 
 Locale.apply = function(document, id) {

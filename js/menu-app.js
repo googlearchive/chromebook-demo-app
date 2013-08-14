@@ -62,11 +62,10 @@ MenuApp.prototype.initDocument = function() {
   languagePicker.addEventListener('mouseup', function(event) {
     event.stopPropagation();
     if (event.target.nodeName == 'LI') {
-      languagePicker.querySelector('label').innerText =
-          event.target.innerText;
+      this.applyLocale(event.target.getAttribute('data-i18n-code'));
       languagePicker.classList.remove('open');
     }
-  });
+  }.bind(this));
   this.document.addEventListener('mouseup', function() {
     languagePicker.classList.remove('open');
   });
@@ -75,6 +74,7 @@ MenuApp.prototype.initDocument = function() {
 MenuApp.prototype.applyLocale = function(locale) {
   App.prototype.applyLocale.call(this, locale);
   var buttonType = Locale.get(locale, 'MENU_THIRD_BUTTON_TYPE');
+
   // Update the third button.
   var appFrame = this.get('.app-frame');
   var button = this.get('.button.third');
@@ -95,6 +95,10 @@ MenuApp.prototype.applyLocale = function(locale) {
       console.error('Invalid variation.', Component.ENTRIES.Menu.variation);
       break;
   }
+
+  // Language picker
+  this.get('.language-picker label').innerText =
+      Locale.get(locale, 'LANGUAGE_NAME_' + locale.toUpperCase());
 };
 
 MenuApp.prototype.close = function() {
