@@ -335,3 +335,7 @@ sup {
 .context-menu-item:active {
   background-color: #ccc;
 }
+
+.no-break {
+  white-space: nowrap;
+}

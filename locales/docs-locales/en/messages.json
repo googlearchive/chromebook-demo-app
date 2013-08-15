@@ -16,7 +16,7 @@
     "description": "Feature headline 1: Headline for working with other people in real time"
   },
   "DOCS_SECTION_GROUP_DESCRIPTION": {
-    "message": "Click ‘Share’, invite people and work together in real time. It’s that easy.",
+    "message": "Click ‘Share’, invite people, and work together in real time. It’s that easy.",
     "description": "Feature description 1: Description describing that to collaborate you would just click share to invite people to the document "
   },
   "DOCS_SECTION_BACKUP_TITLE": {
@@ -32,7 +32,7 @@
     "description": "Feature headline 3: Headline for being able to see your Google Docs on any device"
   },
   "DOCS_SECTION_ANYWHERE_DESCRIPTION": {
-    "message": "Your work is stored safely in Google Drive so you can access it from any computer, tablet or smartphone.",
+    "message": "Your work is stored safely in Google Drive so you can access it from any computer, tablet, or smartphone.",
     "description": "Subtitle headline 3: Descrption that describes that through Google Drive you can see you documents on a phone, computer or tablet device"
   },
   "DOCS_HINT_TITLE": {
@@ -40,7 +40,7 @@
     "description": "Question headline: Addresses user concerns if they are Microsoft Office users"
   },
   "DOCS_HINT_DESCRIPTION": {
-    "message": "Google Docs is built into every Chromebook for free. Chromebooks also work with Microsoft Office<sup>®</sup> documents so you can edit Word and Excel files even when you’re offline.",
+    "message": "Google Docs is built into every Chromebook for free. Chromebooks also work with <span class=\"no-break\">Microsoft Office<sup>®</sup></span> documents so you can edit Word and Excel files even when you’re offline.",
     "description": "Question description: Answers users concerns about Office by describing that Docs is free and built in as well as describing Quickoffice as having the ability to edit Office files even when Offline"
   },
   "DOCS_DOCUMENT_TITLE": {

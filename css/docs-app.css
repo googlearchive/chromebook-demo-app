@@ -154,12 +154,19 @@
   left: -77px;
 }
 
+#docs-app .docs-menu-container {
+  width: 800px;
+  -webkit-flex: none;
+  display: -webkit-flex;
+  -webkit-justify-content: flex-start;
+}
+
 #docs-app .docs-menu {
   display: -webkit-flex;
-  color: #777;
   -webkit-flex: none;
+  color: #777;
   -webkit-justify-content: flex-start;
-  width: 800px;
+  width: auto;
   -webkit-user-select: none;
   cursor: default;
 }
