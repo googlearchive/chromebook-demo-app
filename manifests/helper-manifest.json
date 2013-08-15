@@ -1,6 +1,6 @@
 {
   "name": "Demos.app Extension Helper",
-  "version": "0.0",
+  "version": "0.4",
   "manifest_version": 2,
   "permissions": [
     "management",

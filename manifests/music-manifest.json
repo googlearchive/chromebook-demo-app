@@ -1,6 +1,6 @@
 {
   "name": "Demos.app Music",
-  "version": "0.0",
+  "version": "0.4",
   "manifest_version": 2,
   "icons": {
     "32": "music-icon-32.png",

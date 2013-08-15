@@ -36,6 +36,8 @@ App.prototype.start = function() {
 
   // Get current locale.
   Component.ENTRIES.Helper.sendMessage({name: 'getLocale'}, function(localeID) {
+    if (chrome.runtime.lastError)
+      return;
     this.locale_ = localeID;
     this.checkDocumentReady_();
   }.bind(this));
