@@ -92,7 +92,7 @@
   }
   </style>
   </head>
-  <body id="grid">
+  <body id="grid" class="loading">
     <!-- Header -->
     <div class="compact" id="header">
       <div class="g-section g-tpl-160 g-split">
@@ -105,35 +105,20 @@
                           color-stop(0.5, rgba(0, 0, 0, 0.2)),
                           to(rgb(0, 0, 0)));">
         </div>
-        <ul class="g-unit g-section g-tpl-nest" id="nav" role="menubar">
-          <li class="g-first g-unit features">
-            <a href="?features"
-               style="width: 136px; text-align: center;"
-               ><span i18n-content="LEARN_MORE_NAV_FEATURES"></span></a>
-          </li>
-          <li class="g-unit offline">
-            <a href="?offline"
-               id="menu2-menu" role="menuitem"
-               style="width: 136px; height: 64px; border-width: 0px;"
-               ><span i18n-content="LEARN_MORE_NAV_OFFLINE"></span></a>
-          </li>
-          <li class="g-unit printing">
-            <a href="?printing"
-               id="menu3-menu" role="menuitem"
-               style="width: 136px; height: 64px; border-width: 0px;"
-               ><span i18n-content="LEARN_MORE_NAV_PRINTING"></span></a>
-          </li>
-          <li class="g-unit do-more">
-            <a href="?do-more"
-               id="menu3-menu" role="menuitem"
-               style="width: 136px; height: 64px; border-width: 0px;"
-               ><span i18n-content="LEARN_MORE_NAV_DO_MORE"></span></a>
-          </li>
-        </ul>
+        <div id="nav" role="menubar">
+          <a class="features" href="?features"
+             i18n-content="LEARN_MORE_NAV_FEATURES"></a>
+          <a class="offline"
+             href="?offline" i18n-content="LEARN_MORE_NAV_OFFLINE"></a>
+          <a class="printing"
+             href="?printing" i18n-content="LEARN_MORE_NAV_PRINTING"></a>
+          <a class="do-more"
+             href="?do-more" i18n-content="LEARN_MORE_NAV_DO_MORE"></a>
+        </div>
       </div>
     </div>
     <!-- Main -->
-    <div class="loading" id="main">
+    <div id="main">
       <div class="compact">
         <ul class="dot-tabs g-section" id="mdn">
           <li class=""><a href="#feature-1"></a></li>

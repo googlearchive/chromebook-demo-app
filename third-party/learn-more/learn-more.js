@@ -140,13 +140,11 @@ if (numDots > 1) {
 }
 
 // Navigator
-document.querySelector('#nav li.' + pageName).classList.add('active');
-var menubar=new chrm.ui.MenuBar;
-menubar.decorate("nav");
+document.querySelector('#nav a.' + pageName).classList.add('active');
 
 // Logo
 new chrm.ui.Logo("logo");
 
-document.querySelector('#main').classList.remove('loading');
 document.querySelector('.marquee-carousel').classList.add('active');
+document.querySelector('body').classList.remove('loading');
 });
