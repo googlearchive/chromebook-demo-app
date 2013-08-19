@@ -224,6 +224,10 @@ body {
   margin-top: 13px;
 }
 
+.balloon-holder:active .balloon.triangle-top {
+  -webkit-transform: translate(0, 4px);
+}
+
 .balloon.triangle-top::after {
   background-image: -webkit-image-set(
       url(balloon-triangle-top-1x.png) 1x,
@@ -238,6 +242,10 @@ body {
 .balloon.triangle-bottom {
   bottom: 100%;
   margin-bottom: 13px;
+}
+
+.balloon-holder:active .balloon.triangle-bottom {
+  -webkit-transform: translate(0, -4px);
 }
 
 .balloon.triangle-bottom::after {
@@ -256,9 +264,17 @@ body {
   margin-left: 13px;
 }
 
+[dir=ltr] .balloon-holder:active .balloon.triangle-left {
+  -webkit-transform: translate(4px, 0);
+}
+
 [dir=rtl] .balloon.triangle-left {
   right: 100%;
   margin-right: 13px;
+}
+
+[dir=rtl] .balloon-holder:active .balloon.triangle-left {
+  -webkit-transform: translate(-4px, 0);
 }
 
 .balloon.triangle-left::after {

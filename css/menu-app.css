@@ -88,7 +88,7 @@ h1, p {
 }
 
 .bottom-frame {
-  background-color: #f5f5f5;
+  background-color: #ddd;
   height: 260px;
   border-top: 1px solid rgba(20, 20, 22, .05);
   border-radius: 0 0 5px 5px;
@@ -117,7 +117,7 @@ h1, p {
 .button {
   width: 160px;
   height: 175px;
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   -webkit-margin-start: 32px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;

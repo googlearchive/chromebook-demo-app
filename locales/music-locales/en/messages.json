@@ -68,7 +68,7 @@
     "description": "Instant mixes button"
   },
   "MUSIC_BALLOON_MIXES": {
-    "message": "Google recommended radio based on music you love",
+    "message": "Discover instant mixes based on the music you love",
     "description": "Instant mixes tooltip: Describes google radio and recommend features"
   },
   "MUSIC_SIDE_BUTTON_SHOP": {
@@ -84,7 +84,7 @@
     "description": "Playlist button"
   },
   "MUSIC_BALLOON_PLAYLISTS": {
-    "message": "Easily create and share playlists of songs",
+    "message": "Easily create your own playlists",
     "description": "Playlist tooltip: Describes creating and sharing playlists"
   },
   "MUSIC_LUMINEERS_ARTIST_NAME": {

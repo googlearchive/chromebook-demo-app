@@ -1,8 +1,8 @@
 var DEBUG = true;
 
-var Component = function(name, idList, windowID, mainView, isChild) {
+var Component = function(name, id, windowID, mainView, isChild) {
   this.name = name;
-  this.idList = idList;
+  this.id = id;
   this.windowID = windowID;
   this.mainView = mainView;
   this.isChild = isChild;
@@ -12,55 +12,49 @@ Component.ENTRIES = {};
 
 Component.ENTRIES.Menu = new Component(
     'Menu',
-    ['ejpaejipmgoifefhjkmnghkpaklpeadp',
-     'nhpmmldpbfjofkipjaieeomhnmcgihfm'],
+    'nhpmmldpbfjofkipjaieeomhnmcgihfm',
     'demo-menu-window',
     'menu-app.html',
     false);
 
 Component.ENTRIES.Docs = new Component(
     'Docs',
-    ['hniomhdmdnlgdfieanjadkdjkihjjfpf',
-     'npnjdccdffhdndcbeappiamcehbhjibf'],
+    'npnjdccdffhdndcbeappiamcehbhjibf',
     'demo-docs-window',
     'docs-app.html',
     true);
 
 Component.ENTRIES.Hangouts = new Component(
     'Hangouts',
-    ['bbfdbpldnkjjakidjnngddapfpmkpigp',
-     'cgmlfbhkckbedohgdepgbkflommbfkep'],
+    'cgmlfbhkckbedohgdepgbkflommbfkep',
     'demo-hangouts-window',
     'hangouts-app.html',
     true);
 
 Component.ENTRIES.Music = new Component(
     'Music',
-    ['kahjkkebhajdmaphhlommkhbcononjal',
-     'onbhgdmifjebcabplolilidlpgeknifi'],
+    'onbhgdmifjebcabplolilidlpgeknifi',
     'demo-music-window',
     'music-app.html',
     true);
 
 Component.ENTRIES.Store = new Component(
     'Store',
-    ['niichfgnefmnhfkmchpjjfdelgpillkc',
-     'dhmdaeekeihmajjnmichlhiffffdbpde'],
+    'dhmdaeekeihmajjnmichlhiffffdbpde',
     'demo-store-window',
     'store-app.html',
     true);
 
 Component.ENTRIES.Helper = new Component(
     'Helper',
-    ['dklepamkcpcemiendiebcmkdplnabpjp',
-     'edhhaiphkklkcfcbnlbpbiepchnkgkpn'],
+    'edhhaiphkklkcfcbnlbpbiepchnkgkpn',
     null,
     null,
     false);
 
 Component.get = function(id) {
   for (var name in Component.ENTRIES) {
-    if (Component.ENTRIES[name].idList.indexOf(id) != -1) {
+    if (Component.ENTRIES[name].id == id) {
       return Component.ENTRIES[name];
     }
   }
@@ -73,18 +67,11 @@ Component.current = function() {
 };
 
 Component.prototype.sendMessage = function(message, responseHandler) {
-  for (var i = 0; i < this.idList.length; i++) {
-    if (responseHandler) {
-      chrome.runtime.sendMessage(this.idList[i], message, responseHandler);
-    } else {
-      chrome.runtime.sendMessage(this.idList[i], message);
-    }
+  if (responseHandler) {
+    chrome.runtime.sendMessage(this.id, message, responseHandler);
+  } else {
+    chrome.runtime.sendMessage(this.id, message);
   }
-};
-
-Apps = {};
-Apps.YouTube = {
-  idList: ['pbdihpaifchmclcmkfdgffnnpfbobefh']
 };
 
 var extend = function(base, adapter) {

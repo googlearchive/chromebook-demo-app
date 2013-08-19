@@ -16,7 +16,7 @@
     "description": "Feature headline: large number of apps"
   },
   "STORE_SECTION_THOUSANDS_DESCRIPTION": {
-    "message": "Get free apps for games, music, movies, news, photos and more.",
+    "message": "Get free apps for games, music, movies, news, photos, and more.",
     "description": "Feature subtitle: description for large number and variety of apps"
   },
   "STORE_SECTION_STABILITY_TITLE": {
@@ -48,7 +48,7 @@
     "description": "The title of cubeslam application."
   },
   "STORE_APP_CUBESLAM_DETAIL": {
-    "message": "4.5 Stars",
+    "message": "4.5 stars",
     "description": "The detailed information of cubeslam."
   },
   "STORE_APP_DEEZER_TITLE": {
@@ -56,7 +56,7 @@
     "description": "The title of deezer application."
   },
   "STORE_APP_DEEZER_DETAIL": {
-    "message": "4,000,000+ users",
+    "message": "4 stars",
     "description": "The detailed information of deezer."
   },
   "STORE_APP_GMAIL_TITLE": {
@@ -64,7 +64,7 @@
     "description": "The title of gmail application."
   },
   "STORE_APP_GMAIL_DETAIL": {
-    "message": "10,000,000+ users",
+    "message": "4.5 stars",
     "description": "The detailed information of gmail."
   },
   "STORE_APP_KINDLE_TITLE": {
@@ -72,7 +72,7 @@
     "description": "The title of kindle application."
   },
   "STORE_APP_KINDLE_DETAIL": {
-    "message": "1,000,000+ users",
+    "message": "4.5 stars",
     "description": "The detailed information of kindle."
   },
   "STORE_APP_NETFLIX_TITLE": {
@@ -80,7 +80,7 @@
     "description": "The title of netflix application."
   },
   "STORE_APP_NETFLIX_DETAIL": {
-    "message": "500,000+ users",
+    "message": "4 stars",
     "description": "The detailed information of netflix."
   },
   "STORE_APP_PANDORA_TITLE": {
@@ -104,7 +104,7 @@
     "description": "The title of plus application."
   },
   "STORE_APP_PLUS_DETAIL": {
-    "message": "1,000,000+ users",
+    "message": "4.5 stars",
     "description": "The detailed information of plus."
   },
   "STORE_APP_REMOTEDESKTOP_TITLE": {
@@ -112,11 +112,11 @@
     "description": "The title of remotedesktop application."
   },
   "STORE_APP_REMOTEDESKTOP_DETAIL": {
-    "message": "1,000,000+ users",
+    "message": "4.5 stars",
     "description": "The detailed information of remotedesktop."
   },
   "STORE_APP_SHEETS_TITLE": {
-    "message": "Sheets in Google Drive",
+    "message": "Google Sheets",
     "description": "The title of sheets application."
   },
   "STORE_APP_SHEETS_DETAIL": {
@@ -124,7 +124,7 @@
     "description": "The detailed information of sheets."
   },
   "STORE_APP_SLIDES_TITLE": {
-    "message": "Slides in Google Drive",
+    "message": "Google Slides",
     "description": "The title of slides application."
   },
   "STORE_APP_SLIDES_DETAIL": {
@@ -152,7 +152,7 @@
     "description": "The title of youtube application."
   },
   "STORE_APP_YOUTUBE_DETAIL": {
-    "message": "10,000,000+ users",
+    "message": "4.5 stars",
     "description": "The detailed information of youtube."
   },
   "STORE_APP_DRIVE_TITLE": {
@@ -160,7 +160,7 @@
     "description": "The title of drive application."
   },
   "STORE_APP_DRIVE_DETAIL": {
-    "message": "10,000,000+ users",
+    "message": "4.5 stars",
     "description": "The detailed information of drive."
   },
   "STORE_APP_NEW_YORK_TIMES_TITLE": {
@@ -224,7 +224,7 @@
     "description": "The title of camera application."
   },
   "STORE_APP_CAMERA_DETAIL": {
-    "message": "A camera app for Chrome",
+    "message": "2.5 stars",
     "description": "The detailed information of camera."
   },
   "STORE_APP_DOCS_TITLE": {
@@ -240,7 +240,7 @@
     "description": "The title of calculator application."
   },
   "STORE_APP_CALCULATOR_DETAIL": {
-    "message": "A calculator app for Chrome",
+    "message": "3 stars",
     "description": "The detailed information of calculator."
   },
   "STORE_DISABLE_APP_LIST": {

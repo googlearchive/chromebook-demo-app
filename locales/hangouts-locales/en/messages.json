@@ -20,7 +20,7 @@
     "description": "Feature description: group video chat for free"
   },
   "HANGOUTS_SECTION_NOHASSLE_TITLE": {
-    "message": "No setup required",
+    "message": "No hassles",
     "description": "Feature headline: No hassles with Hangouts"
   },
   "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
@@ -60,7 +60,7 @@
     "description": "Add Apps button"
   },
   "HANGOUTS_BALLOON_ADD": {
-    "message": "Watch YouTube videos, collaborate on documents, and add fun effects to your video call",
+    "message": "Watch YouTube videos, collaborate on documents, and add fun effects to your video chat",
     "description": "Add apps tooltip: Describes applications in hangouts"
   },
   "HANGOUTS_BUTTON_INVITE": {
@@ -68,7 +68,7 @@
     "description": "Invite friends button (add people)"
   },
   "HANGOUTS_BALLOON_INVITE": {
-    "message": "Invite people to your video call with just their email",
+    "message": "Invite people to your video chat with just their email",
     "description": "Invite friends tooltip: Describes how easy it is to add friends"
   },
   "HANGOUTS_BALLOON_PEOPLE": {
