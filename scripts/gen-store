@@ -1,0 +1,42 @@
+IDS = %q[drive
+new-york-times
+hangouts
+evernote
+play-us
+play-uk
+calendar
+angry-birds
+camera
+docs
+calculator
+]
+
+HTML_BLOCK = <<EOB
+      <div class="app $id" data-id="">
+        <div class="app-title" i18n-content="STORE_APP_$ID_TITLE"></div>
+        <div class="app-detail"></div>
+      </div>
+EOB
+
+LOCALE_BLOCK = <<EOB
+  "STORE_APP_$ID_TITLE": {
+    "message": "$id",
+    "description": "The title of $id application."
+  },
+  "STORE_APP_$ID_DETAIL": {
+    "message": "",
+    "description": "The detailed information of $id."
+  },
+EOB
+
+CSS_BLOCK = <<EOB
+.app.$id {
+  background-image: url(store-tile-$id.png);
+}
+
+EOB
+
+IDS.each do |id|
+  id = id.chomp
+  puts CSS_BLOCK.gsub('$id', id).gsub('$ID', id.upcase.gsub('-', '_'))
+end

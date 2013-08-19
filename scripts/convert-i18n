@@ -1,0 +1,4 @@
+str = File.read(ARGV[0])
+puts str.gsub(/>\s*__MSG_([A-Z_0-9]+)__\s*/) {|m|
+  ' i18n-content="%s">' % $1
+}
