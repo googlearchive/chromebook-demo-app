@@ -51,8 +51,13 @@ chrome.runtime.onMessageExternal.addListener(
         break;
 
       case 'getLocale':
-        var locale = chrome.i18n.getMessage('@@ui_locale');
+        var locale = localStorage['locale'] ||
+            chrome.i18n.getMessage('@@ui_locale');
         sendResponse(Locale.getAvailableLocale(locale));
+        break;
+
+      case 'applyLocale':
+        localStorage['locale'] = request.code;
         break;
     }
     return false;
