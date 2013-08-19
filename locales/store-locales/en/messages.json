@@ -116,7 +116,7 @@
     "description": "The detailed information of remotedesktop."
   },
   "STORE_APP_SHEETS_TITLE": {
-    "message": "Sheets in Google Drive",
+    "message": "Google Sheets",
     "description": "The title of sheets application."
   },
   "STORE_APP_SHEETS_DETAIL": {
@@ -124,7 +124,7 @@
     "description": "The detailed information of sheets."
   },
   "STORE_APP_SLIDES_TITLE": {
-    "message": "Slides in Google Drive",
+    "message": "Google Slides",
     "description": "The title of slides application."
   },
   "STORE_APP_SLIDES_DETAIL": {
