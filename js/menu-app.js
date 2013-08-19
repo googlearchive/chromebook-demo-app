@@ -36,10 +36,10 @@ MenuApp.prototype.initDocument = function() {
     // Click - launch the child applications.
     buttons[i].addEventListener('click', function(index) {
       var id = [
-        Component.ENTRIES.Docs.idList,
-        Component.ENTRIES.Hangouts.idList,
-        buttons[2].idList,
-        Component.ENTRIES.Store.idList
+        Component.ENTRIES.Docs.id,
+        Component.ENTRIES.Hangouts.id,
+        buttons[2].id,
+        Component.ENTRIES.Store.id
       ][index];
       Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
     }.bind(this, i));
@@ -96,14 +96,14 @@ MenuApp.prototype.applyLocale = function(locale) {
       appFrame.classList.remove('youtube');
       button.querySelector('.button-label').innerText =
           Locale.get(locale, 'MENU_MUSIC_BUTTON');
-      button.idList = Component.ENTRIES.Music.idList;
+      button.id = Component.ENTRIES.Music.id;
       break;
     case 'youtube':
       appFrame.classList.add('youtube');
       appFrame.classList.remove('play');
       button.querySelector('.button-label').innerText =
           Locale.get(locale, 'MENU_YOUTUBE_BUTTON');
-      button.idList = Apps.YouTube.idList;
+      button.id = 'pbdihpaifchmclcmkfdgffnnpfbobefh' /* Youtube app ID */;
       break;
     default:
       console.error('Invalid variation.', Component.ENTRIES.Menu.variation);

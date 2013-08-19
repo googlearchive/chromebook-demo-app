@@ -17,10 +17,10 @@ chrome.runtime.onMessageExternal.addListener(
           chrome.management.launchApp(ids[i], function(id) {
             if (DEBUG &&
                 chrome.runtime.lastError &&
-                Component.ENTRIES.Docs.idList.indexOf(id) == -1 &&
-                Component.ENTRIES.Hangouts.idList.indexOf(id) == -1 &&
-                Component.ENTRIES.Music.idList.indexOf(id) == -1 &&
-                Component.ENTRIES.Store.idList.indexOf(id) == -1) {
+                Component.ENTRIES.Docs.id != id &&
+                Component.ENTRIES.Hangouts.id != id &&
+                Component.ENTRIES.Music.id != id &&
+                Component.ENTRIES.Store.id != id) {
               var urlPrefix = 'https://chrome.google.com/webstore/detail/';
               chrome.tabs.create({url: urlPrefix + id});
             }
