@@ -12,48 +12,42 @@ Component.ENTRIES = {};
 
 Component.ENTRIES.Menu = new Component(
     'Menu',
-    ['ejpaejipmgoifefhjkmnghkpaklpeadp',
-     'nhpmmldpbfjofkipjaieeomhnmcgihfm'],
+    ['nhpmmldpbfjofkipjaieeomhnmcgihfm'],
     'demo-menu-window',
     'menu-app.html',
     false);
 
 Component.ENTRIES.Docs = new Component(
     'Docs',
-    ['hniomhdmdnlgdfieanjadkdjkihjjfpf',
-     'npnjdccdffhdndcbeappiamcehbhjibf'],
+    ['npnjdccdffhdndcbeappiamcehbhjibf'],
     'demo-docs-window',
     'docs-app.html',
     true);
 
 Component.ENTRIES.Hangouts = new Component(
     'Hangouts',
-    ['bbfdbpldnkjjakidjnngddapfpmkpigp',
-     'cgmlfbhkckbedohgdepgbkflommbfkep'],
+    ['cgmlfbhkckbedohgdepgbkflommbfkep'],
     'demo-hangouts-window',
     'hangouts-app.html',
     true);
 
 Component.ENTRIES.Music = new Component(
     'Music',
-    ['kahjkkebhajdmaphhlommkhbcononjal',
-     'onbhgdmifjebcabplolilidlpgeknifi'],
+    ['onbhgdmifjebcabplolilidlpgeknifi'],
     'demo-music-window',
     'music-app.html',
     true);
 
 Component.ENTRIES.Store = new Component(
     'Store',
-    ['niichfgnefmnhfkmchpjjfdelgpillkc',
-     'dhmdaeekeihmajjnmichlhiffffdbpde'],
+    ['dhmdaeekeihmajjnmichlhiffffdbpde'],
     'demo-store-window',
     'store-app.html',
     true);
 
 Component.ENTRIES.Helper = new Component(
     'Helper',
-    ['dklepamkcpcemiendiebcmkdplnabpjp',
-     'edhhaiphkklkcfcbnlbpbiepchnkgkpn'],
+    ['edhhaiphkklkcfcbnlbpbiepchnkgkpn'],
     null,
     null,
     false);
