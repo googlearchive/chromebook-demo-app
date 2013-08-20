@@ -297,6 +297,7 @@ third-party:
 	cd gen/third-party && patch -p0 < ../../patches/effects.patch
 
 crx: packages
+	scripts/rewrite-id
 	${CHROME} --pack-extension=packages/demo-menu \
 		  --pack-extension-key=pem/demo-menu.pem
 	${CHROME} --pack-extension=packages/demo-docs \

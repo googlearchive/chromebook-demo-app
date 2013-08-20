@@ -1,0 +1,15 @@
+#!/usr/bin/ruby1.9.1
+
+components = %w[menu docs hangouts music store helper]
+components.each do |c|
+  open('packages/demo-%s/util.js' % c, 'a') do |f|
+    f.puts <<EOB
+Component.ENTRIES.Menu.id = 'ejpaejipmgoifefhjkmnghkpaklpeadp';
+Component.ENTRIES.Docs.id = 'hniomhdmdnlgdfieanjadkdjkihjjfpf';
+Component.ENTRIES.Hangouts.id = 'bbfdbpldnkjjakidjnngddapfpmkpigp;
+Component.ENTRIES.Music.id = 'kahjkkebhajdmaphhlommkhbcononjal;
+Component.ENTRIES.Store.id = 'niichfgnefmnhfkmchpjjfdelgpillkc;
+Component.ENTRIES.Helper.id = 'dklepamkcpcemiendiebcmkdplnabpjp;
+EOB
+  end
+end
