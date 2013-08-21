@@ -10,15 +10,13 @@
     "128": "menu-icon-128.png"
   },
   "permissions": [
-    "storage",
-    "experimental"
+    "storage"
   ],
   "app": {
     "background": {
       "scripts": [
         "util.js",
-        "background.js",
-        "downloader.js"
+        "background.js"
       ]
     }
   },
