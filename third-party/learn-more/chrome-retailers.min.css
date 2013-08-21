@@ -50,9 +50,10 @@
 
 body {
   overflow-y: scroll;
-  /** For debug */
-  height: 762px;
-  border-bottom: 2px dashed red;
+}
+
+h1 {
+  font-size: 36px;
 }
 
 .compact {
@@ -64,8 +65,8 @@ body {
 }
 
 #hero-carousel {
-  height: 540px;
-  margin-top: 32px;
+  height: 480px;
+  margin-top: 24px;
   overflow: hidden;
 }
 
@@ -86,7 +87,7 @@ body {
   height: 24px;
   margin: 0 0 -24px;
   text-align: center;
-  top: 560px;
+  top: 510px;
   -webkit-transition: opacity 0.2s;
 }
 
