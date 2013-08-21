@@ -29,13 +29,13 @@ MENU_FILES = \
   js/util.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
-  third-party/sample-files/"1995 Field Notes.docx" \
-  third-party/sample-files/"Chromebook Backup.mov" \
-  third-party/sample-files/Arches.png \
-  third-party/sample-files/Night.png \
-  third-party/sample-files/Song.mp3 \
   views/downloader.html \
   views/menu-app.html
+#  third-party/sample-files/"1995 Field Notes.docx" \
+#  third-party/sample-files/"Chromebook Backup.mov" \
+#  third-party/sample-files/Arches.png \
+#  third-party/sample-files/Night.png \
+#  third-party/sample-files/Song.mp3 \
 
 DOCS_FILES = \
   assets/balloon-triangle-top-1x.png \
