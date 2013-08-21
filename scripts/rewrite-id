@@ -6,10 +6,10 @@ components.each do |c|
     f.puts <<EOB
 Component.ENTRIES.Menu.id = 'ejpaejipmgoifefhjkmnghkpaklpeadp';
 Component.ENTRIES.Docs.id = 'hniomhdmdnlgdfieanjadkdjkihjjfpf';
-Component.ENTRIES.Hangouts.id = 'bbfdbpldnkjjakidjnngddapfpmkpigp;
-Component.ENTRIES.Music.id = 'kahjkkebhajdmaphhlommkhbcononjal;
-Component.ENTRIES.Store.id = 'niichfgnefmnhfkmchpjjfdelgpillkc;
-Component.ENTRIES.Helper.id = 'dklepamkcpcemiendiebcmkdplnabpjp;
+Component.ENTRIES.Hangouts.id = 'bbfdbpldnkjjakidjnngddapfpmkpigp';
+Component.ENTRIES.Music.id = 'kahjkkebhajdmaphhlommkhbcononjal';
+Component.ENTRIES.Store.id = 'niichfgnefmnhfkmchpjjfdelgpillkc';
+Component.ENTRIES.Helper.id = 'dklepamkcpcemiendiebcmkdplnabpjp';
 EOB
   end
 end
