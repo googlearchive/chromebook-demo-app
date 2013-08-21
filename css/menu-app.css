@@ -91,6 +91,9 @@ h1, p {
   background-color: #ddd;
   height: 260px;
   border-top: 1px solid rgba(20, 20, 22, .05);
+}
+
+.transparent .bottom-frame {
   border-radius: 0 0 5px 5px;
 }
 
