@@ -4,125 +4,34 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
-  <title></title>
+  <title>Chromebook</title>
   <script src="util.js"></script>
   <link href="https://plus.google.com/100585555255542998765" rel="publisher">
   <link href="chrome-32.png" rel="icon" type="image/ico">
   <link href="open-sans.css" rel="stylesheet">
   <link href="chrome-retailers.min.css" rel="stylesheet">
-  <style>
-  body {
-    overflow-y: scroll;
-  }
-
-  .compact {
-    width: 928px;
-  }
-
-  #nav a {
-    text-align: center;
-  }
-
-  #hero-carousel {
-    height: 540px;
-    margin-top: 40px;
-    overflow: hidden;
-  }
-
-  #hero-carousel .marquee-carousel {
-    -webkit-transition: none;
-    opacity: 0;
-    margin-top: 20px;
-  }
-
-  #hero-carousel .marquee-carousel.active {
-    -webkit-transition: opacity 2.0s;
-    opacity: 1;
-  }
-
-  #mdn {
-    position: relative;
-    width: 100%;
-    height: 24px;
-    margin: 0 0 -24px;
-    text-align: center;
-    top: 30px;
-    -webkit-transition: opacity 0.2s;
-  }
-
-  #mdn li {
-    display: none;
-  }
-
-  #mdn li.active {
-    display: inline-block;
-  }
-
-  .loading #mdn {
-    opacity: 0;
-  }
-
-  .marquee-carousel {
-    margin: 80px 0 0px;
-    height: auto;
-  }
-
-  .marquee {
-    height: auto;
-  }
-
-  .cover {
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
-    display: none;
-    text-align: center;
-  }
-
-  .cover.active {
-    display: block;
-  }
-
-  #sub-section-container {
-    -webkit-transition: opacity 0.2s;
-  }
-
-  .loading #sub-section-container {
-    opacity: 0;
-  }
-
-  .g-content h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-  .g-content p {
-    text-align: center;
-  }
-  </style>
   </head>
   <body id="grid" class="loading">
     <!-- Header -->
     <div class="compact" id="header">
-      <div class="g-section g-tpl-160 g-split">
-        <div class="g-unit g-first" id="header-logo">
-          <img alt="Chrome" data-g-event="nav-logo" data-g-label="-home"
-               id="logo" src="chrome_logo_2x.png"
-               style="-webkit-mask: -webkit-gradient(
-                          radial, 17 17, 123, 17 17, 138,
-                          from(rgb(0, 0, 0)),
-                          color-stop(0.5, rgba(0, 0, 0, 0.2)),
-                          to(rgb(0, 0, 0)));">
-        </div>
-        <div id="nav" role="menubar">
-          <a class="features" href="?features"
-             i18n-content="LEARN_MORE_NAV_FEATURES"></a>
-          <a class="offline"
-             href="?offline" i18n-content="LEARN_MORE_NAV_OFFLINE"></a>
-          <a class="printing"
-             href="?printing" i18n-content="LEARN_MORE_NAV_PRINTING"></a>
-          <a class="do-more"
-             href="?do-more" i18n-content="LEARN_MORE_NAV_DO_MORE"></a>
-        </div>
+      <div id="logo"></div>
+
+        <!--img alt="chromebook" data-g-event="nav-logo" data-g-label="-home"
+             id="logo" src="chrome-logo-1x.png"
+             style="-webkit-mask: -webkit-gradient(
+                        radial, 17 17, 123, 17 17, 138,
+                        from(rgb(0, 0, 0)),
+                        color-stop(0.5, rgba(0, 0, 0, 0.2)),
+                        to(rgb(0, 0, 0)));"-->
+      <div id="nav" role="menubar">
+        <a class="features" href="?features"
+           i18n-content="LEARN_MORE_NAV_FEATURES"></a>
+        <a class="offline"
+           href="?offline" i18n-content="LEARN_MORE_NAV_OFFLINE"></a>
+        <a class="printing"
+           href="?printing" i18n-content="LEARN_MORE_NAV_PRINTING"></a>
+        <a class="do-more"
+           href="?do-more" i18n-content="LEARN_MORE_NAV_DO_MORE"></a>
       </div>
     </div>
     <!-- Main -->

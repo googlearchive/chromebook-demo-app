@@ -167,3 +167,40 @@ Locale.apply = function(document, lang) {
         this.get(lang, nodes[i].getAttribute('i18n-attr-value')));
   }
 };
+
+var Logo = function(element) {
+  this.element_ = element;
+  this.intervalID_ = null;
+};
+
+Logo.prototype.start = function() {
+  this.element_.addEventListener('mouseover', this.onMouseOver_.bind(this));
+};
+
+Logo.prototype.onMouseOver_ = function(event) {
+  if (this.intervalID_ != null)
+    return;
+  this.count_ = 0;
+  this.intervalID_ = setInterval(Logo.prototype.onStep_.bind(this), 25);
+};
+
+Logo.NUM_FRAMES = 40;
+
+Logo.prototype.onStep_ = function(event) {
+  if (this.count_ > Logo.NUM_FRAMES) {
+    this.element_.style.webkitMask = '';
+    clearInterval(this.intervalID_);
+    this.intervalID_ = null;
+    return;
+  }
+  var size = (1 - Math.cos(this.count_ * Math.PI / 2 / Logo.NUM_FRAMES)) * 165;
+  var gradient = '-webkit-radial-gradient(' + [
+    '16px 15px',
+    'circle',
+    'rgb(0, 0, 0) ' + size + 'px',
+    'rgba(0, 0, 0, 0) ' + (size + 5) + 'px',
+    'rgb(0, 0, 0) ' + (size + 10) + 'px'
+  ].join(', ')+ ')';
+  this.element_.style.webkitMask = gradient;
+  this.count_++;
+};

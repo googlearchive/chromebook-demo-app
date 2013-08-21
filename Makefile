@@ -245,7 +245,8 @@ HELPER_FILES= \
   third-party/learn-more/chrome-retailers.min.css \
   third-party/learn-more/dot.png \
   third-party/learn-more/open-sans.css \
-  third-party/learn-more/chrome_logo_2x.png \
+  third-party/learn-more/chrome-logo-1x.png \
+  third-party/learn-more/chrome-logo-2x.png \
   third-party/learn-more/learn-more.html \
   third-party/learn-more/learn-more-features-speed.png \
   third-party/learn-more/learn-more-features-apps.jpg \

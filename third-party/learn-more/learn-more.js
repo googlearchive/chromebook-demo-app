@@ -46,8 +46,9 @@ LearnMore.prototype.start = function() {
   // Initialize the navigator.
   document.querySelector('#nav a.' + this.pageName_).classList.add('active');
 
-  // Initialize the logo.
-  new chrm.ui.Logo("logo");
+  // Logo
+  this.logo_ = new Logo(document.querySelector('#logo'));
+  this.logo_.start();
 
   // Sets the locale.
   this.locale_ = 'en';
