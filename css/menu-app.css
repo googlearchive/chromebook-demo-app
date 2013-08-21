@@ -292,7 +292,7 @@ h1, p {
   content: '';
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background-color: white;
   z-index: 1;
   top: 0;
