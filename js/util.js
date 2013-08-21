@@ -6,6 +6,13 @@ var Component = function(name, id, windowID, mainView, isChild) {
   this.windowID = windowID;
   this.mainView = mainView;
   this.isChild = isChild;
+  this.windowParams = {
+    id: id,
+    resizable: false,
+    frame: 'none',
+    hidden: true,
+    state: 'maximized'
+  };
 };
 
 Component.ENTRIES = {};
@@ -16,6 +23,14 @@ Component.ENTRIES.Menu = new Component(
     'demo-menu-window',
     'menu-app.html',
     false);
+
+Component.ENTRIES.Menu.windowParams.state = 'normal';
+Component.ENTRIES.Menu.windowParams.bounds = {
+  left: ~~((screen.availWidth - 800) / 2 + screen.availLeft),
+  top: ~~((screen.availHeight - 600) / 2 + screen.availTop),
+  width: 800,
+  height: 600
+};
 
 Component.ENTRIES.Docs = new Component(
     'Docs',

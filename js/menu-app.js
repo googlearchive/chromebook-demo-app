@@ -1,10 +1,5 @@
 var MenuApp = function() {
-  this.chromeVersion_ =
-      parseInt(navigator.appVersion.match(/Chrome\/([0-9]+)/)[1]);
-  this.isTransparent_ = this.chromeVersion_ >= 28;
-  var width = this.isTransparent_ ? 0 : 800;
-  var height = this.isTransparent_ ? 0 : 600;
-  App.call(this, width, height, this.isTransparent_);
+  App.call(this);
 };
 
 MenuApp.prototype = {
@@ -26,7 +21,7 @@ MenuApp.prototype.initDocument = function() {
 
   // Update the CSS class.
   var appFrame = this.get('.app-frame');
-  if (this.isTransparent_)
+  if (Component.ENTRIES.Menu.windowParams.transparentBackground)
     appFrame.classList.add('transparent');
   appFrame.classList.remove('loading');
 

@@ -7,13 +7,14 @@ var makeCenterBounds = function(width, height) {
   };
 };
 
-var App = function(opt_width, opt_height, opt_transparent) {
-  this.transparent_ = !!opt_transparent;
+var App = function() {
+  var initialBounds = Component.current().windowParams.state == 'maximized' ?
+      makeCenterBounds(screen.availWidth, screen.availHeight) :
+      Component.current().windowParams.bounds;
   this.windowBoundsList_ = [
-    makeCenterBounds(opt_width || screen.availWidth,
-                     opt_height || screen.availHeight),
-    makeCenterBounds(1366, 720),
-    makeCenterBounds(1280, 802),
+    initialBounds,
+    makeCenterBounds(1366, 720), /* Sumsung */
+    makeCenterBounds(1280, 802), /* Pixel */
     makeCenterBounds(300, 300)
   ];
   this.windowBoundsIndex_ = 0;
@@ -44,7 +45,11 @@ App.prototype.start = function() {
   this.appWindow = window;
   this.window = window.contentWindow;
   this.windowBoundsIndex_ = 0;
-  if (!Component.current().isChild)
+  // If the state is normal, window size may be different because of last state
+  // that is bounded with window id.
+  // If the state is maximize, we don't change the bounds to avoid the window
+  // from restoring the maximize state.
+  if (Component.current().windowParams.state == 'normal')
     this.toggleWindowSize_();
 
   // Init the document.
@@ -134,7 +139,6 @@ App.prototype.toggleWindowSize_ = function() {
   var bounds = this.windowBoundsList_[this.windowBoundsIndex_];
   this.appWindow.restore();
   this.appWindow.setBounds(bounds);
-  this.lastBounds_ = bounds;
   this.windowBoundsIndex_++;
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
 };
