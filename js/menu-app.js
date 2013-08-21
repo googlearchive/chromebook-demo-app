@@ -25,6 +25,10 @@ MenuApp.prototype.initDocument = function() {
     appFrame.classList.add('transparent');
   appFrame.classList.remove('loading');
 
+  // Logo
+  this.logo_ = new Logo(this.get('.logo'));
+  this.logo_.start();
+
   // Child application buttons.
   var buttons = this.document.querySelectorAll('.button');
   for (var i = 0; i < buttons.length; i++) {
