@@ -52,7 +52,6 @@ LearnMore.prototype.start = function() {
 
   // Sets the locale.
   this.locale_ = Locale.getAvailableLocale(navigator.language);
-  console.log(this.locale_);
   if (this.locale_ != 'en' &&
       this.locale_ != 'en-us')
     document.querySelector('#nav .do-more').style.display = 'none';
