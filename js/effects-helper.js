@@ -33,11 +33,6 @@ var defineHandlers = [
             context.translate(-glassesImage.width / 2, 0);
             context.drawImage(glassesImage, 0, 0);
             context.restore();
-            context.save();
-            context.scale(-1, 1);
-            context.translate(-canvas.width, 0);
-            context.drawImage(canvas, 0, 0, canvas.width, canvas.height);
-            context.restore();
           }
         }
       });

@@ -1,48 +1,12 @@
-*** effects.orig.js	2013-08-21 17:53:02.626714534 +0900
---- effects.js	2013-08-21 18:22:30.983746108 +0900
-***************
-*** 11,20 ****
-      draw = function(canvas, element, effect) {
-        var ctx;
-        ctx = canvas.getContext("2d");
-        webgl.draw(texture);
-        effect(webgl, element);
-        webgl.update();
-!       return ctx.drawImage(webgl, 0, 0, webgl.width, webgl.height);
-      };
-      simple = function(canvas, element, x, y, width, height) {
-        var ctx;
---- 11,25 ----
-      draw = function(canvas, element, effect) {
-        var ctx;
-        ctx = canvas.getContext("2d");
-+       ctx.save();
-+       ctx.scale(-1, 1);
-+       ctx.translate(-webgl.width, 0);
-        webgl.draw(texture);
-        effect(webgl, element);
-        webgl.update();
-!       var result = ctx.drawImage(webgl, 0, 0, webgl.width, webgl.height);
-!       ctx.restore();
-!       return result;
-      };
-      simple = function(canvas, element, x, y, width, height) {
-        var ctx;
-***************
-*** 333,339 ****
-              return draw(canvas, element, effect);
-            }
-          }
-!       ]
-      };
-    });
-  
---- 338,345 ----
-              return draw(canvas, element, effect);
-            }
-          }
-!       ],
-!       draw: draw
-      };
-    });
-  
+--- effects.js	2013-07-12 15:29:35.539889369 -0700
++++ effects.patched.js	2013-07-12 16:13:00.222520079 -0700
+@@ -333,7 +333,8 @@
+             return draw(canvas, element, effect);
+           }
+         }
+-      ]
++      ],
++      draw: draw
+     };
+   });
+ 
