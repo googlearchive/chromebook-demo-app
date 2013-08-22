@@ -21,33 +21,29 @@ h1, p {
 #menu-app {
   width: 100%;
   height: 100%;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  background-color: black;
 }
 
 #menu-app.transparent {
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
 }
 
 #menu-window {
-  width: 100%;
-  height: 100%;
+  width: 800px;
+  height: 600px;
   background-color: white;
   display: -webkit-flex;
   -webkit-flex-direction: column;
   overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 #menu-app.loading #menu-window {
   display: none;
-}
-
-#menu-app.transparent #menu-window {
-  width: 800px;
-  height: 600px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .menu-header {
@@ -91,9 +87,6 @@ h1, p {
   background-color: #ddd;
   height: 260px;
   border-top: 1px solid rgba(20, 20, 22, .05);
-}
-
-.transparent .bottom-frame {
   border-radius: 0 0 5px 5px;
 }
 
@@ -320,10 +313,6 @@ h1, p {
   bottom: 0;
   -webkit-transition-property: height;
   -webkit-transition-duration: 200ms;
-}
-
-#menu-app:not(.transparent) .shelf-marker {
-  display: none;
 }
 
 .docs.shelf-marker {
