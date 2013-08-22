@@ -1,4 +1,14 @@
+var appWindow = null;
+
 chrome.app.runtime.onLaunched.addListener(function(event) {
+  if (appWindow) {
+    if (!(appWindow instanceof String)) {
+      appWindow.show();
+      appWindow.drawAttention();
+    }
+    return;
+  }
+  appWindow = 'creating';
   // If it is a child app, Close the other child apps.
   var current = Component.current();
   if (current.isChild) {
@@ -8,5 +18,11 @@ chrome.app.runtime.onLaunched.addListener(function(event) {
         component.sendMessage({name: 'close'});
     }
   }
-  chrome.app.window.create(current.mainView, current.windowParams);
+  chrome.app.window.create(
+      current.mainView, current.windowParams, function(inAppWindow) {
+    appWindow = inAppWindow;
+    appWindow.onClosed.addListener(function() {
+      appWindow = null;
+    });
+  });
 });

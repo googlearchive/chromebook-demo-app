@@ -7,7 +7,6 @@ var Component = function(name, id, windowID, mainView, isChild) {
   this.mainView = mainView;
   this.isChild = isChild;
   this.windowParams = {
-    id: id,
     resizable: false,
     frame: 'none',
     hidden: true,
