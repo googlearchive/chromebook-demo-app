@@ -110,8 +110,13 @@ HangoutsApp.prototype.updateEffectButtonFocus_ = function() {
 HangoutsApp.prototype.renderFrame_ = function() {
   if (!this.videoInitialized_)
     return;
+  this.canvasContext_.save();
+  this.canvasContext_.scale(-1, 1);
+  this.canvasContext_.translate(-this.canvas_.width, 0);
   this.canvasContext_.drawImage(
       this.videoSource_, 0, 0, this.canvas_.width, this.canvas_.height);
+  this.canvasContext_.restore();
+
   var effect = this.effects_.data[this.effectIndex_];
   if (effect.tracks && this.frame_ % this.frequency_ == 0)
     this.track_ = this.tracker_.track(this.canvas_);
