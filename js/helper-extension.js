@@ -47,7 +47,7 @@ chrome.runtime.onMessageExternal.addListener(
       case 'showLicencePage':
         chrome.windows.create({url: 'licence.html',
                                type: 'popup',
-                               width: 290, height: 120});
+                               width: 290, height: 240});
         break;
 
       case 'getLocale':
