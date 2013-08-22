@@ -10,9 +10,9 @@ var defineHandlers = [
     Effects.defineAdditionalEffects = function(effects) {
       var glassesImage = new Image();
       glassesImage.src = 'scuba-mask.png';
-      var scaleRate = 5;
-      var offsetRateX = 0.5;
-      var offsetRateY = -0.5;
+      var scaleRate = 1;
+      var offsetRateX = 0.6;
+      var offsetRateY = 0.4;
       effects.data.push({
         id: 'glasses',
         name: 'Glasses',
@@ -26,11 +26,11 @@ var defineHandlers = [
                           element.width / track.trackWidth);
             context.translate(face.x + face.width * offsetRateX,
                               face.y + face.height * offsetRateY);
-            context.scale(face.width * scaleRate, face.width * scaleRate);
-            context.scale(track.trackWidth / element.width,
-                          track.trackWidth / element.width);
-            context.scale(1 / glassesImage.width, 1 / glassesImage.width);
-            context.translate(-glassesImage.width / 2, 0);
+            context.scale(
+                face.width * scaleRate / glassesImage.width,
+                face.width * scaleRate / glassesImage.width);
+            context.translate(
+                -glassesImage.width / 2, -glassesImage.height / 2);
             context.drawImage(glassesImage, 0, 0);
             context.restore();
           }
