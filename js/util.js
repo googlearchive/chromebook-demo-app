@@ -98,18 +98,21 @@ var extend = function(base, adapter) {
 
 Locale = {loaded: false, messages_: {}};
 
-Locale.LIST = ['en', 'ja'];
+Locale.LIST = [
+    'da', 'de', 'en', 'en-gb', 'es', 'es-419', 'fr', 'it', 'ja', 'ko', 'ms',
+    'nl', 'pt', 'ru', 'sv', 'zh', 'zh-tw', 'fi'];
 
 Locale.DEFAULT = 'en';
 
 Locale.getAvailableLocale = function(code) {
+  code = code.toLowerCase().replace(/_/g, '-');
   for (var i = 0; i < Locale.LIST.length; i++) {
     if (code == Locale.LIST[i])
       return code;
   }
-  if (code.indexOf('_') == -1)
+  if (code.indexOf('-') == -1)
     return Locale.DEFAULT;
-  return this.getAvailableLocale(code.split('_', 2)[0]);
+  return this.getAvailableLocale(code.split('-', 2)[0]);
 };
 
 Locale.load = function(callback) {

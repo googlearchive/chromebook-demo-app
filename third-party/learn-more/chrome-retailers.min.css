@@ -60,6 +60,10 @@ h1 {
   width: 928px;
 }
 
+.loading #nav {
+  display: none;
+}
+
 #nav a {
   text-align: center;
 }

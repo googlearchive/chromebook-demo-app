@@ -51,7 +51,10 @@ LearnMore.prototype.start = function() {
   this.logo_.start();
 
   // Sets the locale.
-  this.locale_ = 'en';
+  this.locale_ = Locale.getAvailableLocale(navigator.language);
+  console.log(this.locale_);
+  if (this.locale_.indexOf('en-us') != 0)
+    document.querySelector('#nav .do-more').style.display = 'none';
 
   // Dot handler.
   var dotLinks = document.querySelectorAll('#mdn li a');
