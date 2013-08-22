@@ -1,3 +1,5 @@
+'use strict';
+
 var service;
 var tracker;
 
@@ -51,13 +53,11 @@ chrome.runtime.onMessageExternal.addListener(
         break;
 
       case 'getLocale':
-        var locale = localStorage['locale'] ||
-            chrome.i18n.getMessage('@@ui_locale');
-        sendResponse(Locale.getAvailableLocale(locale));
+        sendResponse(Locale.loadCurrentLocale());
         break;
 
       case 'applyLocale':
-        localStorage['locale'] = request.code;
+        Locale.saveCurrentLocale(request.code);
         break;
     }
     return false;

@@ -1,4 +1,10 @@
+'use strict';
+
 var LearnMore = function() {
+  this.locale_ = null;
+  this.pageName_ = null;
+  this.logo_ = null;
+  Object.seal(this);
 };
 
 LearnMore.PAGES = (function() {
@@ -50,12 +56,6 @@ LearnMore.prototype.start = function() {
   this.logo_ = new Logo(document.querySelector('#logo'));
   this.logo_.start();
 
-  // Sets the locale.
-  this.locale_ = Locale.getAvailableLocale(navigator.language);
-  if (this.locale_ != 'en' &&
-      this.locale_ != 'en-us')
-    document.querySelector('#nav .do-more').style.display = 'none';
-
   // Dot handler.
   var dotLinks = document.querySelectorAll('#mdn li a');
   for (var i = 0; i < dotLinks.length; i++) {
@@ -68,13 +68,17 @@ LearnMore.prototype.start = function() {
   // Set subpage.
   this.updateSubPage_(LearnMore.PAGES[this.pageName_][0]);
 
+  // Sets the locale.
+  this.locale_ = Locale.loadCurrentLocale();
+  chrome.runtime.onMessageExternal.addListener(function(message) {
+    if (message.name == 'applyLocale') {
+      this.locale_ = message.code;
+      this.applyLocale_();
+    }
+  }.bind(this));
+
   // Load the locale strings.
   Locale.load(this.applyLocale_.bind(this));
-
-  // Remove the loading state.
-  document.querySelector('body').classList.remove('loading');
-  document.querySelector(
-      '#hero-carousel .marquee-carousel').classList.add('active');
 };
 
 LearnMore.prototype.updateSubPage_ = function(page) {
@@ -143,9 +147,16 @@ LearnMore.prototype.updateSubPage_ = function(page) {
 };
 
 LearnMore.prototype.applyLocale_ = function() {
-  if (!Locale.loaded)
+  if (!Locale.loaded || !this.locale_)
     return;
   Locale.apply(document, this.locale_);
+  document.querySelector('#nav .do-more').style.display =
+      this.locale_ != 'en' && this.locale_ != 'en-us' ? 'none' : '';
+
+  // Remove the loading state.
+  document.querySelector('body').classList.remove('loading');
+  document.querySelector(
+      '#hero-carousel .marquee-carousel').classList.add('active');
 };
 
 new LearnMore().start();

@@ -95,6 +95,20 @@ Locale.LIST = [
 
 Locale.DEFAULT = 'en';
 
+/**
+ * Load the current locale from the local strage.
+ * This should be called in the helper extension.
+ */
+Locale.loadCurrentLocale = function() {
+  var rawLocale = localStorage['locale'] ||
+      chrome.i18n.getMessage('@@ui_locale');
+  return this.getAvailableLocale(rawLocale);
+};
+
+Locale.saveCurrentLocale = function(code) {
+  localStorage['locale'] = code;
+};
+
 Locale.getAvailableLocale = function(code) {
   code = code.toLowerCase().replace(/_/g, '-');
   for (var i = 0; i < Locale.LIST.length; i++) {
