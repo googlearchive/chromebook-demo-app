@@ -1,0 +1,21 @@
+*** track.old.js	2013-08-22 12:34:43.721862786 +0900
+--- track.js	2013-08-22 12:34:14.571915243 +0900
+***************
+*** 8,15 ****
+      cache = {};
+      return pub = {
+        init: function(x, y, width, height) {
+!         backCanvas.width = 120 * 1.2;
+!         backCanvas.height = 90 * 1.2;
+          return cache.comp = [
+            {
+              x: x,
+--- 8,15 ----
+      cache = {};
+      return pub = {
+        init: function(x, y, width, height) {
+!         backCanvas.width = 160;
+!         backCanvas.height = 90;
+          return cache.comp = [
+            {
+              x: x,

@@ -296,6 +296,7 @@ third-party:
 	  third-party/chrome-cam/src/chrome/scripts/effects/effects.coffee \
 	  third-party/chrome-cam/src/chrome/scripts/face/track.coffee
 	cd gen/third-party && patch -p0 < ../../patches/effects.patch
+	cd gen/third-party && patch -p0 < ../../patches/track.patch
 
 crx: packages
 	scripts/rewrite-id
