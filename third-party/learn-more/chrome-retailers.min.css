@@ -85,6 +85,10 @@ h1 {
   opacity: 1;
 }
 
+.loading #hero-carousel .marquee-carousel {
+  opacity: 0;
+}
+
 #mdn {
   position: relative;
   width: 100%;

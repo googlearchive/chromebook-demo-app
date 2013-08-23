@@ -133,14 +133,12 @@ LearnMore.prototype.updateSubPage_ = function(page) {
   }
 
   // Transition animation.
-  if (Locale.loaded) {
+  document.querySelector(
+      '#hero-carousel .marquee-carousel').classList.remove('active');
+  setTimeout(function() {
     document.querySelector(
-        '#hero-carousel .marquee-carousel').classList.remove('active');
-    setTimeout(function() {
-      document.querySelector(
-          '#hero-carousel .marquee-carousel').classList.add('active');
-    }, 0);
-  }
+        '#hero-carousel .marquee-carousel').classList.add('active');
+  }, 0);
 
   // Apply locale.
   this.applyLocale_();
@@ -155,8 +153,6 @@ LearnMore.prototype.applyLocale_ = function() {
 
   // Remove the loading state.
   document.querySelector('body').classList.remove('loading');
-  document.querySelector(
-      '#hero-carousel .marquee-carousel').classList.add('active');
 };
 
 new LearnMore().start();
