@@ -1,3 +1,32 @@
+var LANGUAGE_PICKER_CLIENT_IDS = Object.freeze([
+  Component.ENTRIES.Docs.id,
+  Component.ENTRIES.Hangouts.id,
+  Component.ENTRIES.Music.id,
+  Component.ENTRIES.Store.id,
+  Component.ENTRIES.Helper.id,
+  'bjdhhokmhgelphffoafoejjmlfblpdha',
+  'kkkbcoabfhgekpnddfkaphobhinociem',
+  'kgimkbnclbekdkabkpjhpakhhalfanda',
+  'pbdihpaifchmclcmkfdgffnnpfbobefh',
+  'cdjikkcakjcdjemakobkmijmikhkegcj',
+  'hdmobeajeoanbanmdlabnbnlopepchip',
+  'fgjnkhlabjcaajddbaenilcmpcidahll',
+  'ebkhfdfghngbimnpgelagnfacdafhaba',
+  'nifkmgcdokhkjghdlgflonppnefddien',
+  'diehajhcjifpahdplfdkhiboknagmfii',
+  'mdhnphfgagkpdhndljccoackjjhghlif',
+  'adlphlfdhhjenpgimjochcpelbijkich',
+  'cgmlfbhkckbedohgdepgbkflommbfkep',
+  'iddohohhpmajlkbejjjcfednjnhlnenk',
+  'piahpgmnafifnloeaipmchljlfamnmmf',
+  'mdelndfaabnbpmglgekmkmenagdlbjoh',
+  'fpgfohogebplgnamlafljlcidjedbdeb',
+  'ehcabepphndocfmgbdkbjibfodelmpbb',
+  'hfhhnacclhffhdffklopdkcgdhifgngh',
+  'npnjdccdffhdndcbeappiamcehbhjibf',
+  'joodangkbfjnajiiifokapkpmhfnpleo'
+]);
+
 var MenuApp = function() {
   App.call(this);
 };
@@ -64,16 +93,9 @@ MenuApp.prototype.initDocument = function() {
       languagePicker.classList.remove('open');
       var code = event.target.getAttribute('data-i18n-code');
       this.applyLocale(code);
-      var components = [
-        Component.ENTRIES.Menu,
-        Component.ENTRIES.Docs,
-        Component.ENTRIES.Hangouts,
-        Component.ENTRIES.Music,
-        Component.ENTRIES.Store,
-        Component.ENTRIES.Helper
-      ];
-      for (var i = 0; i < components.length; i++) {
-        components[i].sendMessage({name: 'applyLocale', code: code});
+      for (var i = 0; i < LANGUAGE_PICKER_CLIENT_IDS.length; i++) {
+        chrome.runtime.sendMessage(
+            LANGUAGE_PICKER_CLIENT_IDS[i], {name: 'applyLocale', code: code});
       }
     }
   }.bind(this));
