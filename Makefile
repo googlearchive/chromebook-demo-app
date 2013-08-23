@@ -29,6 +29,7 @@ MENU_FILES = \
   js/screensaver.js \
   js/screensaver-client.js \
   js/util.js \
+  js/auto-launch.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   third-party/screensaver/screensaver.html \
