@@ -1,3 +1,5 @@
+'strict mode';
+
 var DEBUG = true;
 
 var Component = function(name, id, windowID, mainView, isChild) {
@@ -64,7 +66,6 @@ Component.get = function(id) {
       return Component.ENTRIES[name];
     }
   }
-  console.error('Cannot find the current component.');
   return null;
 };
 

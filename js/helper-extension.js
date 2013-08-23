@@ -7,9 +7,8 @@ chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
     // If the message comes from an unknown extension, just ignore it.
     var senderComponent = Component.get(sender.id);
-    if (!senderComponent)
+    if (!senderComponent && request.name != 'getLocale')
       return false;
-    var senderName = senderComponent.name;
     switch (request.name) {
       case 'launch':
         var ids = request.id;
@@ -43,7 +42,7 @@ chrome.runtime.onMessageExternal.addListener(
       case 'trackView':
         service = service || analytics.getService('Chromebook Retail Demo');
         tracker = tracker || service.getTracker('UA-42807255-2');
-        tracker.sendAppView(senderName);
+        tracker.sendAppView(senderComponent.name);
         break;
 
       case 'showLicencePage':

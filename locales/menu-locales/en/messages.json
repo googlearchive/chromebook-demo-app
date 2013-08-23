@@ -39,6 +39,9 @@
     "message": "English"
   },
   "LANGUAGE_NAME_JA": {
-    "message": "Japanese"
+    "message": "日本語"
+  },
+  "LANGUAGE_NAME_FR": {
+    "message": "Français"
   }
 }

@@ -110,8 +110,8 @@ MenuApp.prototype.applyLocale = function(locale) {
   }
 
   // Language picker
-  this.get('.language-picker label').innerText =
-      Locale.get(locale, 'LANGUAGE_NAME_' + locale.toUpperCase());
+  this.get('.language-picker label').innerText = Locale.get(
+      locale, 'LANGUAGE_NAME_' + locale.toUpperCase().replace(/-/g, '_'));
 };
 
 MenuApp.prototype.close = function() {
