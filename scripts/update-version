@@ -4,6 +4,6 @@ components = %w[menu docs hangouts music store helper]
 components.each do |c|
   name = 'manifests/%s-manifest.json' % c
   manifest = File.read(name)
-  manifest.sub!(/"version": ".+?"/, '"version": "%s"' % ARGV[0])
+  manifest.sub!(/"version": ".*?"/, '"version": "%s"' % ARGV[0])
   File.write(name, manifest)
 end

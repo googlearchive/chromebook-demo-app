@@ -26,9 +26,13 @@ MENU_FILES = \
   js/background.js \
   js/downloader.js \
   js/menu-app.js \
+  js/screensaver.js \
+  js/screensaver-client.js \
   js/util.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
+  third-party/screensaver/screensaver.html \
+  third-party/screensaver/screensaver-video.webm \
   views/downloader.html \
   views/menu-app.html
 #  third-party/sample-files/"1995 Field Notes.docx" \

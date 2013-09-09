@@ -10,13 +10,16 @@
     "128": "menu-icon-128.png"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "idle",
+    "power"
   ],
   "app": {
     "background": {
       "scripts": [
         "util.js",
-        "background.js"
+        "background.js",
+        "screensaver.js"
       ]
     }
   },

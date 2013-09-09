@@ -1,6 +1,6 @@
 var appWindow = null;
 
-chrome.app.runtime.onLaunched.addListener(function(event) {
+var launch = function(event) {
   if (appWindow) {
     if (!(appWindow instanceof String)) {
       appWindow.show();
@@ -14,7 +14,7 @@ chrome.app.runtime.onLaunched.addListener(function(event) {
   if (current.isChild) {
     for (var name in Component.ENTRIES) {
       var component = Component.ENTRIES[name];
-      if (component != Component.current() && component.isChild)
+      if (component != Component.current() && component && component.isChild)
         component.sendMessage({name: 'close'});
     }
   }
@@ -25,4 +25,6 @@ chrome.app.runtime.onLaunched.addListener(function(event) {
       appWindow = null;
     });
   });
-});
+};
+
+chrome.app.runtime.onLaunched.addListener(launch);
