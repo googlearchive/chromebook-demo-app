@@ -1,0 +1,162 @@
+{
+  "LEARN_MORE_NAV_FEATURES": {
+    "message": "FUNKTIONER",
+    "description": "Link to an overview page of Chromebooks’ core features and benefits"
+  },
+  "LEARN_MORE_NAV_OFFLINE": {
+    "message": "OFFLINE",
+    "description": "Link to a page explaining Chromebook devices’ offline capabilities"
+  },
+  "LEARN_MORE_NAV_PRINTING": {
+    "message": "SKRIVA UT",
+    "description": "Link to a page explaining Chromebook’s printing capabilities"
+  },
+  "LEARN_MORE_NAV_DO_MORE": {
+    "message": "JOBBA MER",
+    "description": "Link to a page highlighting additional Chromebook features"
+  },
+  "LEARN_MORE_FEATURES_SPEED_TITLE": {
+    "message": "Redo när du är redo",
+    "description": "Summarizes the idea that, when you use a Chromebook, you won’t have to wait for the device to start working"
+  },
+  "LEARN_MORE_FEATURES_SPEED_DESCRIPTION": {
+    "message": "Chromebook startar på några sekunder, så du kan börja spela, roa dig eller jobba direkt (om du nu måste jobba).",
+    "description": "Explains that Chromebooks have very short startup time from cold boot, meaning that users can quickly start accomplishing desired tasks"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_TITLE": {
+    "message": "Snabb från start till slut",
+    "description": "Summarizes that Chromebooks have very short startup time and do not slow down over time"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_DESCRIPTION": {
+    "message": "Chromebook startar på mindre än 10 sekunder och till skillnad från andra datorer blir den inte långsammare med tiden.",
+    "description": "Explains 2 key differentiating benefits of Chromebooks: they have very short bootup time and stay fast even after continued use"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_TITLE": {
+    "message": "Surfa snabbare",
+    "description": "Summarizes that when you use a Chromebook, you can surf the internet faster"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_DESCRIPTION": {
+    "message": "Tack vare inbyggda funktioner som Chrome Instant surfar du supersnabbt på webben.",
+    "description": "Explains that the Chrome Instant features is included with your Chromebook, which enables very fast web surfing"
+  },
+  "LEARN_MORE_FEATURES_APPS_TITLE": {
+    "message": "Mindre #$$%!, mer :)",
+    "description": "Summarizes that Chromebooks are easy and simple, leading to reduced hassles and more enjoyment of the things that you want from a computer"
+  },
+  "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
+    "message": "I Chromebook finns det inbyggda appar, så du kan börja använda den direkt.",
+    "description": "Explains that many applications are already included and pre-installed on the Chromebook, meaning that brand new Chromebooks include many programs that users need"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
+    "message": "Ingen komplicerad programvara",
+    "description": "Summarizes that applications on Chromebooks are easier to use than applications on other computers"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
+    "message": "Dokument, Hangouts och Play Musik följer med Chromebook utan kostnad. Lägg till nya appar direkt från Chrome Web Store.",
+    "description": "Lists Google applications that are pre-installed in the Chromebook at no additional cost. Additionally, more applications can be added to the Chromebook using the Chrome Web Store."
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
+    "message": "Uppdateras automatiskt",
+    "description": "Summarizes that Chromebook stays updated automatically, ensuring that it always runs the latest Operating System"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
+    "message": "Chromebook uppdateras automatiskt, så du slipper irriterande popupfönster.",
+    "description": "Explains that Chromebooks don’t need to be manually updated and that the process happens automatically in the background, without the need for user intervention"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_TITLE": {
+    "message": "Ger dig sinnesfrid",
+    "description": "Summarizes that, when you use a Chromebook, you don’t need to worry about viruses or losing your files due to system malfunctions"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_DESCRIPTION": {
+    "message": "Virusskydd finns inbyggt och dina filer säkerhetskopieras på webben.",
+    "description": "Explains that all Chromebooks are protected from viruses automatically, and that files are stored safely in the cloud when connected to the internet"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_TITLE": {
+    "message": "Flera säkerhetslager",
+    "description": "Summarizes that Chromebooks employ more than 1 method of protecting the device from issues like viruses"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_DESCRIPTION": {
+    "message": "Tack vare virusskydd och andra säkerhetsfunktioner skyddas du från virus, skadlig programvara och andra otäckheter som kan drabba datorn.",
+    "description": "Explains that Chromebooks are protected from many common security issues due to additional layers of security"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_TITLE": {
+    "message": "Dina filer skyddas",
+    "description": "Summarizes that documents and files are secure when using a Chromebook"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_DESCRIPTION": {
+    "message": "Med Google Drive, som är en webbaserad fillagringstjänst, kan du säkerhetskopiera dina filer och få åtkomst till dem överallt.",
+    "description": "Explains a key benefit of Google Drive, Google’s online file storage service -- files are stored online so they can be securely accessed from different devices and from different locations"
+  },
+  "LEARN_MORE_OFFLINE_TITLE": {
+    "message": "Fungerar offline",
+    "description": "Summarizes that Chromebooks are functional even when they are not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_DESCRIPTION": {
+    "message": "Med Chromebook kan du jobba även om du inte är ansluten till webben.",
+    "description": "Explains that Chromebooks can help the user accomplish tasks even when the Chromebook is not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
+    "message": "Dina favoritappar finns inbyggda",
+    "description": "Summarizes that many great applications are pre-installed in the Chromebook"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
+    "message": "Tack vare appar som Google Dokument, offline Gmail, en mediespelare och ett fotoredigeringsverktyg kan du fortsätta jobba när du är på språng.",
+    "description": "Lists examples of applications that help the user accomplish tasks even when the Chromebook is offline, for example when the user is traveling"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
+    "message": "Hämta fler i Chrome Web Store",
+    "description": "Summarizes that additional applications can be found on the Chrome Web Store"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
+    "message": "I Chrome Web Store hittar du många fler offlineappar.",
+    "description": "Explains that more applications can be found for the Chromebook, free of charge, from the Chrome Web Store"
+  },
+  "LEARN_MORE_PRINTING_TITLE": {
+    "message": "Skriv ut utan kablar",
+    "description": "Summarizes that Chromebooks can print wirelessly"
+  },
+  "LEARN_MORE_PRINTING_DESCRIPTION": {
+    "message": "Med Chromebook kan du skriva ut via molnanslutna skrivare.",
+    "description": "Explains that Chromebooks can print without cables by using a cloud-connected printer"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_TITLE": {
+    "message": "Google Cloud Print",
+    "description": "States the name of Google’s printing solution, Google Cloud Print"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
+    "message": "Cloud Print används via webben, så du kan skriva ut med din Chromebook oavsett om du är i samma rum som skrivaren eller om du är på språng.",
+    "description": ""
+  },
+  "LEARN_MORE_PRINTING_SECTION2_TITLE": {
+    "message": "Fungerar med traditionella skrivare",
+    "description": "Summarizes that Chromebooks can also print using printers that are not Cloud Ready (i.e., a conventional printer)"
+  },
+  "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
+    "message": "Molnanpassade skrivare kan användas direkt, men om du har en PC eller Mac och en traditionell skrivare kan du ansluta den så att den fungerar med din Chromebook.",
+    "description": "Explains that Chromebooks have the ability to print"
+  },
+  "LEARN_MORE_DO_MORE_TITLE": {
+    "message": "Chromecast",
+    "description": "States the name of Google’s web streaming product for televisions, Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_DESCRIPTION": {
+    "message": "Skicka din favoritunderhållning på webben från din Chromebook till tv:n. För 35 USD.",
+    "description": "Explains that Chromecast allows users to display online content from the Chromebook on a television and that it only costs $$35"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
+    "message": "Luta er tillbaka och titta tillsammans",
+    "description": "Summarizes that you can watch your television content with other people while relaxing comfortably"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
+    "message": "Titta på filmer och lyssna på musik från webben på din tv.",
+    "description": "Explains that many different forms of web content can be viewed on your television using Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
+    "message": "Skicka webben till tv:n",
+    "description": "Summarizes that content from the internet can be displayed on your television"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
+    "message": "Skicka en flik i webbläsaren Chrome från Chromebook till tv:n där hemma (beta).",
+    "description": "Explains that content from the Chrome browser can be displayed on your television using a Chromebook. The ‘(beta)’ refers to the fact that this feature is still under development."
+  }
+}

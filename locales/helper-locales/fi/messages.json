@@ -1,0 +1,162 @@
+{
+  "LEARN_MORE_NAV_FEATURES": {
+    "message": "OMINAISUUDET",
+    "description": "Link to an overview page of Chromebooks’ core features and benefits"
+  },
+  "LEARN_MORE_NAV_OFFLINE": {
+    "message": "OFFLINE-TILA",
+    "description": "Link to a page explaining Chromebook devices’ offline capabilities"
+  },
+  "LEARN_MORE_NAV_PRINTING": {
+    "message": "TULOSTUS",
+    "description": "Link to a page explaining Chromebook’s printing capabilities"
+  },
+  "LEARN_MORE_NAV_DO_MORE": {
+    "message": "TEE ENEMMÄN",
+    "description": "Link to a page highlighting additional Chromebook features"
+  },
+  "LEARN_MORE_FEATURES_SPEED_TITLE": {
+    "message": "Valmis heti kun sinä olet",
+    "description": "Summarizes the idea that, when you use a Chromebook, you won’t have to wait for the device to start working"
+  },
+  "LEARN_MORE_FEATURES_SPEED_DESCRIPTION": {
+    "message": "Chromebook käynnistyy hetkessä, joten voit heti aloittaa pelaamisen, nauttimisen tai työskentelyn (jos on pakko).",
+    "description": "Explains that Chromebooks have very short startup time from cold boot, meaning that users can quickly start accomplishing desired tasks"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_TITLE": {
+    "message": "Pysyy nopeana alusta asti",
+    "description": "Summarizes that Chromebooks have very short startup time and do not slow down over time"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_DESCRIPTION": {
+    "message": "Chromebook käynnistyy alle 10 sekunnissa ja, toisin kuin muut tietokoneet, ei hidastu ajan myötä.",
+    "description": "Explains 2 key differentiating benefits of Chromebooks: they have very short bootup time and stay fast even after continued use"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_TITLE": {
+    "message": "Selaa nettiä nopeammin",
+    "description": "Summarizes that when you use a Chromebook, you can surf the internet faster"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_DESCRIPTION": {
+    "message": "Selaa nettiä valonnopeudella sisäänrakennetun Chrome Instantin avulla.",
+    "description": "Explains that the Chrome Instant features is included with your Chromebook, which enables very fast web surfing"
+  },
+  "LEARN_MORE_FEATURES_APPS_TITLE": {
+    "message": "Vähemmän #$$%!, enemmän :)",
+    "description": "Summarizes that Chromebooks are easy and simple, leading to reduced hassles and more enjoyment of the things that you want from a computer"
+  },
+  "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
+    "message": "Chromebookiin on asennettu valmiiksi sovelluksia, joten se toimii heti pakkauksesta poistamisen jälkeen.",
+    "description": "Explains that many applications are already included and pre-installed on the Chromebook, meaning that brand new Chromebooks include many programs that users need"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
+    "message": "Ei monimutkaisia ohjelmistoja",
+    "description": "Summarizes that applications on Chromebooks are easier to use than applications on other computers"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
+    "message": "Dokumentit, Hangouts ja Play-musiikki tulevat ilmaiseksi Chromebookin mukana. Lisää uusia sovelluksia suoraan Chrome Web Storesta.",
+    "description": "Lists Google applications that are pre-installed in the Chromebook at no additional cost. Additionally, more applications can be added to the Chromebook using the Chrome Web Store."
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
+    "message": "Pysyy tuoreena itsestään",
+    "description": "Summarizes that Chromebook stays updated automatically, ensuring that it always runs the latest Operating System"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
+    "message": "Chromebook päivittää itsensä automaattisesti, joten sinun ei tarvitse katsella ärsyttäviä ponnahdusikkunoita.",
+    "description": "Explains that Chromebooks don’t need to be manually updated and that the process happens automatically in the background, without the need for user intervention"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_TITLE": {
+    "message": "Antaa mielenrauhan",
+    "description": "Summarizes that, when you use a Chromebook, you don’t need to worry about viruses or losing your files due to system malfunctions"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_DESCRIPTION": {
+    "message": "Virustorjunta on sisäänrakennettuna ja tiedostosi varmuuskopioidaan verkkoon.",
+    "description": "Explains that all Chromebooks are protected from viruses automatically, and that files are stored safely in the cloud when connected to the internet"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_TITLE": {
+    "message": "Useita tietoturvakerroksia",
+    "description": "Summarizes that Chromebooks employ more than 1 method of protecting the device from issues like viruses"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_DESCRIPTION": {
+    "message": "Virustorjunta ja muut tietoturvaominaisuudet suojelevat sinua viruksilta, haittaohjelmilta ja muilta tietokonepöpöiltä.",
+    "description": "Explains that Chromebooks are protected from many common security issues due to additional layers of security"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_TITLE": {
+    "message": "Pitää tiedostot turvassa",
+    "description": "Summarizes that documents and files are secure when using a Chromebook"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_DESCRIPTION": {
+    "message": "Tiedostojen tallennuspalvelu Google Driven avulla voit varmuuskopioida tiedostosi ja käyttää niitä missä tahansa.",
+    "description": "Explains a key benefit of Google Drive, Google’s online file storage service -- files are stored online so they can be securely accessed from different devices and from different locations"
+  },
+  "LEARN_MORE_OFFLINE_TITLE": {
+    "message": "Toimii myös offline-tilassa",
+    "description": "Summarizes that Chromebooks are functional even when they are not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_DESCRIPTION": {
+    "message": "Chromebookin avulla saat hommia tehtyä, vaikka et olisi yhteydessä verkkoon.",
+    "description": "Explains that Chromebooks can help the user accomplish tasks even when the Chromebook is not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
+    "message": "Suosikkisovelluksesi sisäänrakennettuina",
+    "description": "Summarizes that many great applications are pre-installed in the Chromebook"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
+    "message": "Sovellukset, kuten Google-dokumentit, offline-Gmail, mediasoitin ja kuvanmuokkausohjelma, pitävät sinut tuotteliaana liikkeellä ollessasi.",
+    "description": "Lists examples of applications that help the user accomplish tasks even when the Chromebook is offline, for example when the user is traveling"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
+    "message": "Hanki lisää Chrome Web Storesta",
+    "description": "Summarizes that additional applications can be found on the Chrome Web Store"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
+    "message": "Löydät lisää ilmaisia offline-sovelluksia Chrome Web Storesta.",
+    "description": "Explains that more applications can be found for the Chromebook, free of charge, from the Chrome Web Store"
+  },
+  "LEARN_MORE_PRINTING_TITLE": {
+    "message": "Tulosta langattomasti",
+    "description": "Summarizes that Chromebooks can print wirelessly"
+  },
+  "LEARN_MORE_PRINTING_DESCRIPTION": {
+    "message": "Chromebookillasi voit tulostaa langattomasti mihin tahansa pilveen yhdistettyyn tulostimeen.",
+    "description": "Explains that Chromebooks can print without cables by using a cloud-connected printer"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_TITLE": {
+    "message": "Google Cloud Print",
+    "description": "States the name of Google’s printing solution, Google Cloud Print"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
+    "message": "Cloud Print toimii verkossa, joten voit tulostaa Chromebookista, olitpa samassa huoneessa tulostimen kanssa tai liikkeellä.",
+    "description": ""
+  },
+  "LEARN_MORE_PRINTING_SECTION2_TITLE": {
+    "message": "Toimii perinteisten tulostimien kanssa",
+    "description": "Summarizes that Chromebooks can also print using printers that are not Cloud Ready (i.e., a conventional printer)"
+  },
+  "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
+    "message": "Pilvipalvelua tukevat tulostimet toimivat heti, mutta jos omistat PC:n tai Macin ja perinteisen tulostimen, voit yhdistää sen toimimaan yhdessä Chromebookisi kanssa.",
+    "description": "Explains that Chromebooks have the ability to print"
+  },
+  "LEARN_MORE_DO_MORE_TITLE": {
+    "message": "Chromecast",
+    "description": "States the name of Google’s web streaming product for televisions, Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_DESCRIPTION": {
+    "message": "Lähetä suosikkiverkkoviihteesi Chromebookista TV:seen 35 dollarin hintaan.",
+    "description": "Explains that Chromecast allows users to display online content from the Chromebook on a television and that it only costs $$35"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
+    "message": "Istu rennosti ja katso yhdessä",
+    "description": "Summarizes that you can watch your television content with other people while relaxing comfortably"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
+    "message": "Nauti verkkoelokuvista, -musiikista ynnä muusta TV:si kautta.",
+    "description": "Explains that many different forms of web content can be viewed on your television using Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
+    "message": "Luo verkko TV:seen",
+    "description": "Summarizes that content from the internet can be displayed on your television"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
+    "message": "Lähetä Chrome-selaimen välilehti Chromebookista kotitelevisioosi (beta).",
+    "description": "Explains that content from the Chrome browser can be displayed on your television using a Chromebook. The ‘(beta)’ refers to the fact that this feature is still under development."
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "LEARN_MORE_NAV_FEATURES": {
+    "message": "ВОЗМОЖНОСТИ",
+    "description": "Link to an overview page of Chromebooks’ core features and benefits"
+  },
+  "LEARN_MORE_NAV_OFFLINE": {
+    "message": "ОФЛАЙН",
+    "description": "Link to a page explaining Chromebook devices’ offline capabilities"
+  },
+  "LEARN_MORE_NAV_PRINTING": {
+    "message": "ПЕЧАТЬ",
+    "description": "Link to a page explaining Chromebook’s printing capabilities"
+  },
+  "LEARN_MORE_NAV_DO_MORE": {
+    "message": "БОЛЬШЕ ВОЗМОЖНОСТЕЙ",
+    "description": "Link to a page highlighting additional Chromebook features"
+  },
+  "LEARN_MORE_FEATURES_SPEED_TITLE": {
+    "message": "Всегда готов",
+    "description": "Summarizes the idea that, when you use a Chromebook, you won’t have to wait for the device to start working"
+  },
+  "LEARN_MORE_FEATURES_SPEED_DESCRIPTION": {
+    "message": "Запуск Chromebook происходит в считанные секунды, а значит игры, развлечения и работу можно начать сразу.",
+    "description": "Explains that Chromebooks have very short startup time from cold boot, meaning that users can quickly start accomplishing desired tasks"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_TITLE": {
+    "message": "Быстрый запуск",
+    "description": "Summarizes that Chromebooks have very short startup time and do not slow down over time"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_DESCRIPTION": {
+    "message": "Chromebook загружается менее чем за 10 секунд и, в отличие от других компьютеров, не замедлятся со временем.",
+    "description": "Explains 2 key differentiating benefits of Chromebooks: they have very short bootup time and stay fast even after continued use"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_TITLE": {
+    "message": "Работает быстрее",
+    "description": "Summarizes that when you use a Chromebook, you can surf the internet faster"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_DESCRIPTION": {
+    "message": "Благодаря встроенной функции Живого поиска в Chrome просматривать страницы можно гораздо быстрее.",
+    "description": "Explains that the Chrome Instant features is included with your Chromebook, which enables very fast web surfing"
+  },
+  "LEARN_MORE_FEATURES_APPS_TITLE": {
+    "message": "Меньше #$$%!, больше :)",
+    "description": "Summarizes that Chromebooks are easy and simple, leading to reduced hassles and more enjoyment of the things that you want from a computer"
+  },
+  "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
+    "message": "В Chromebook приложения встроены, поэтому он всегда готов к работе.",
+    "description": "Explains that many applications are already included and pre-installed on the Chromebook, meaning that brand new Chromebooks include many programs that users need"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
+    "message": "Нет сложного ПО",
+    "description": "Summarizes that applications on Chromebooks are easier to use than applications on other computers"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
+    "message": "На Chromebook уже установлены бесплатные приложения: Документы, Hangouts и Play Музыка. Вы также можете добавлять новые из Интернет-магазина Chrome.",
+    "description": "Lists Google applications that are pre-installed in the Chromebook at no additional cost. Additionally, more applications can be added to the Chromebook using the Chrome Web Store."
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
+    "message": "Автоматическое обновление",
+    "description": "Summarizes that Chromebook stays updated automatically, ensuring that it always runs the latest Operating System"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
+    "message": "Обновление ПО на Chromebook происходит автоматически – никаких всплывающих окон.",
+    "description": "Explains that Chromebooks don’t need to be manually updated and that the process happens automatically in the background, without the need for user intervention"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_TITLE": {
+    "message": "Уверенность и безопасность",
+    "description": "Summarizes that, when you use a Chromebook, you don’t need to worry about viruses or losing your files due to system malfunctions"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_DESCRIPTION": {
+    "message": "Компьютеры оснащены встроенной антивирусной защитой, а все ваши файлы надежно резервируются в Интернете.",
+    "description": "Explains that all Chromebooks are protected from viruses automatically, and that files are stored safely in the cloud when connected to the internet"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_TITLE": {
+    "message": "Многоуровневая защита",
+    "description": "Summarizes that Chromebooks employ more than 1 method of protecting the device from issues like viruses"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_DESCRIPTION": {
+    "message": "Антивирусное ПО и другие функции безопасности обеспечивают надежную защиту от вирусов, вредоносных программ и прочих угроз.",
+    "description": "Explains that Chromebooks are protected from many common security issues due to additional layers of security"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_TITLE": {
+    "message": "Надежное хранение файлов",
+    "description": "Summarizes that documents and files are secure when using a Chromebook"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_DESCRIPTION": {
+    "message": "Google Диск, служба хранения файлов в Интернете, обеспечивает резервирование сохраненных данных и доступ к ним с любого устройства.",
+    "description": "Explains a key benefit of Google Drive, Google’s online file storage service -- files are stored online so they can be securely accessed from different devices and from different locations"
+  },
+  "LEARN_MORE_OFFLINE_TITLE": {
+    "message": "Поддержка автономного режима",
+    "description": "Summarizes that Chromebooks are functional even when they are not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_DESCRIPTION": {
+    "message": "На компьютерах Chromebook можно выполнять самые разные задачи даже без подключения к Интернету.",
+    "description": "Explains that Chromebooks can help the user accomplish tasks even when the Chromebook is not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
+    "message": "Встроенные любимые приложения",
+    "description": "Summarizes that many great applications are pre-installed in the Chromebook"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
+    "message": "Google Документы, Gmail Офлайн, медиапроигрыватель и редактор фотографий позволяют выполнять необходимые задачи везде – даже в дороге.",
+    "description": "Lists examples of applications that help the user accomplish tasks even when the Chromebook is offline, for example when the user is traveling"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
+    "message": "Приложения из Интернет-магазина Chrome",
+    "description": "Summarizes that additional applications can be found on the Chrome Web Store"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
+    "message": "В Интернет-магазине Chrome можно найти бесплатные офлайн-приложения.",
+    "description": "Explains that more applications can be found for the Chromebook, free of charge, from the Chrome Web Store"
+  },
+  "LEARN_MORE_PRINTING_TITLE": {
+    "message": "Виртуальная печать",
+    "description": "Summarizes that Chromebooks can print wirelessly"
+  },
+  "LEARN_MORE_PRINTING_DESCRIPTION": {
+    "message": "С компьютера Chromebook можно удаленно печатать документы на любом принтере с поддержкой облачной печати.",
+    "description": "Explains that Chromebooks can print without cables by using a cloud-connected printer"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_TITLE": {
+    "message": "Виртуальный принтер Google",
+    "description": "States the name of Google’s printing solution, Google Cloud Print"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
+    "message": "Поскольку для печати используется Интернет, Виртуальный принтер работает, где бы вы ни находились – в одной комнате с принтером или в дороге.",
+    "description": ""
+  },
+  "LEARN_MORE_PRINTING_SECTION2_TITLE": {
+    "message": "Поддержка обычных принтеров",
+    "description": "Summarizes that Chromebooks can also print using printers that are not Cloud Ready (i.e., a conventional printer)"
+  },
+  "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
+    "message": "Принтеры с поддержкой облачной печати – это обычные принтеры, но их можно подключить к Chromebook и отправлять задания печати через Интернет.",
+    "description": "Explains that Chromebooks have the ability to print"
+  },
+  "LEARN_MORE_DO_MORE_TITLE": {
+    "message": "Chromecast",
+    "description": "States the name of Google’s web streaming product for televisions, Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_DESCRIPTION": {
+    "message": "Любимые фильмы, музыку и игры можно отправлять с Chromebook на телевизор. Всего за 35 долларов США.",
+    "description": "Explains that Chromecast allows users to display online content from the Chromebook on a television and that it only costs $$35"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
+    "message": "Комфортный совместный просмотр",
+    "description": "Summarizes that you can watch your television content with other people while relaxing comfortably"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
+    "message": "Фильмы, музыка, развлечения из Интернета – все это теперь в телевизоре.",
+    "description": "Explains that many different forms of web content can be viewed on your television using Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
+    "message": "Трансляция контента на телевизоре",
+    "description": "Summarizes that content from the internet can be displayed on your television"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
+    "message": "Вкладку, открытую в браузере Chrome на Chromebook, можно просматривать на домашнем телевизоре (функция на этапе разработки).",
+    "description": "Explains that content from the Chrome browser can be displayed on your television using a Chromebook. The ‘(beta)’ refers to the fact that this feature is still under development."
+  }
+}

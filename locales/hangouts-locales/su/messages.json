@@ -1,0 +1,82 @@
+{
+  "HANGOUTS_COPY": {
+    "message": "Håll kontakten",
+    "description": "App headline for hangouts: You can keep in touch with friends using hangouts"
+  },
+  "HANGOUTS_SUB_COPY": {
+    "message": "med Hangouts i Google+",
+    "description": "A subtitle for Hangouts: supports the headline by giving the app name"
+  },
+  "HANGOUTS_DESCRIPTION": {
+    "message": "Prata med vänner och familj direkt. Ingen installation, ingen konfiguration, inget krångel.",
+    "description": "Description of Hangouts: Its very easy to talk to people using hangouts, doesn't even need an install"
+  },
+  "HANGOUTS_SECTION_GROUP_TITLE": {
+    "message": "Gruppvideochatt",
+    "description": "Feature headline: Headline for group video chat feature"
+  },
+  "HANGOUTS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Videochatta gratis med upp till nio vänner samtidigt.",
+    "description": "Feature description: group video chat for free"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_TITLE": {
+    "message": "Inget krångel",
+    "description": "Feature headline: No hassles with Hangouts"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
+    "message": "Logga in på din Chromebook och sätt igång. Ingen konfiguration behövs.",
+    "description": "Feature description: how easy it is to use hangouts on Chromebook as it doesn't need setup"
+  },
+  "HANGOUTS_SECTION_FUN_TITLE": {
+    "message": "Det är en fest",
+    "description": "Feature headline: describes fun features of Google Hangouts"
+  },
+  "HANGOUTS_SECTION_FUN_DESCRIPTION": {
+    "message": "Liva upp videokonferenser med effekter, humörsymboler och YouTube-videoklipp.",
+    "description": "Feature description: describes how you can have a lot of fun with Hangouts"
+  },
+  "HANGOUTS_HINT_TITLE": {
+    "message": "Hur gör jag om jag använder Skype<sup>®</sup>?",
+    "description": "Question headline: Addresses user concerns if they are Skype users"
+  },
+  "HANGOUTS_HINT_DESCRIPTION": {
+    "message": "Hangouts är ett lättanvänt alternativ till Skype<sup>®</sup>. Ingen konfiguration krävs. Videochatta gratis med upp till nio personer.",
+    "description": "Question description: Describes that hangouts can be used instead of Skype on a chromebook "
+  },
+  "HANGOUTS_BUTTON_EFFECTS": {
+    "message": "Effekter",
+    "description": "Google Effects button"
+  },
+  "HANGOUTS_BUTTON_SCREENSHARE": {
+    "message": "Dela skärmen",
+    "description": "Screensharing button"
+  },
+  "HANGOUTS_BALLOON_SCREENSHARE": {
+    "message": "Visa din skärm för andra med ett enda klick",
+    "description": "Screensharing tooltip: Describes screensharing feature"
+  },
+  "HANGOUTS_BUTTON_ADD": {
+    "message": "Lägg till appar",
+    "description": "Add Apps button"
+  },
+  "HANGOUTS_BALLOON_ADD": {
+    "message": "Titta på YouTube-videoklipp, arbeta tillsammans med dokument och lägg till roliga effekter i din videochatt.",
+    "description": "Add apps tooltip: Describes applications in hangouts"
+  },
+  "HANGOUTS_BUTTON_INVITE": {
+    "message": "Bjud in personer",
+    "description": "Invite friends button (add people)"
+  },
+  "HANGOUTS_BALLOON_INVITE": {
+    "message": "Bjud in andra till din videochatt med hjälp av deras e-postadresser",
+    "description": "Invite friends tooltip: Describes how easy it is to add friends"
+  },
+  "HANGOUTS_BALLOON_PEOPLE": {
+    "message": "Lägg till upp till nio personer i din videochatt utan att installera någon komplicerad programvara",
+    "description": "Chat area tooltip: describes group video feature by which you can hangout with 9 people for free"
+  },
+  "HANGOUTS_SHOW_LICENCE": {
+    "message": "Visa licensinformation",
+    "description": "Menu string in the context menu."
+  }
+}

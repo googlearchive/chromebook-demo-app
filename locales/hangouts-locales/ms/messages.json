@@ -1,0 +1,82 @@
+{
+  "HANGOUTS_COPY": {
+    "message": "Sentiasa berhubung",
+    "description": "App headline for hangouts: You can keep in touch with friends using hangouts"
+  },
+  "HANGOUTS_SUB_COPY": {
+    "message": "melalui Hangouts Google+",
+    "description": "A subtitle for Hangouts: supports the headline by giving the app name"
+  },
+  "HANGOUTS_DESCRIPTION": {
+    "message": "Berbual dengan rakan dan keluarga anda, terus selepas dikeluarkan daripada kotak. Tiada pemasangan, tiada persediaan, tidak perlu bersusah-payah.",
+    "description": "Description of Hangouts: Its very easy to talk to people using hangouts, doesn't even need an install"
+  },
+  "HANGOUTS_SECTION_GROUP_TITLE": {
+    "message": "Sembang video berkumpulan",
+    "description": "Feature headline: Headline for group video chat feature"
+  },
+  "HANGOUTS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Sembang video secara percuma dengan sehingga 9 orang rakan anda serentak.",
+    "description": "Feature description: group video chat for free"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_TITLE": {
+    "message": "Tidak perlu bersusah-payah",
+    "description": "Feature headline: No hassles with Hangouts"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
+    "message": "Log masuk ke Chromebook anda dan anda sudah bersedia untuk menggunakannya. Tiada persediaan diperlukan.",
+    "description": "Feature description: how easy it is to use hangouts on Chromebook as it doesn't need setup"
+  },
+  "HANGOUTS_SECTION_FUN_TITLE": {
+    "message": "Masa untuk berparti",
+    "description": "Feature headline: describes fun features of Google Hangouts"
+  },
+  "HANGOUTS_SECTION_FUN_DESCRIPTION": {
+    "message": "Hidupkan persidangan video menggunakan kesan, emoji dan video YouTube.",
+    "description": "Feature description: describes how you can have a lot of fun with Hangouts"
+  },
+  "HANGOUTS_HINT_TITLE": {
+    "message": "Bagaimana jika saya menggunakan Skype <sup>® /sup>?",
+    "description": "Question headline: Addresses user concerns if they are Skype users"
+  },
+  "HANGOUTS_HINT_DESCRIPTION": {
+    "message": "Hangouts merupakan alternatif mudah kepada Skype <sup>®</sup>. Tiada persediaan diperlukan. Sembang video dengan sehingga 9 orang secara percuma.",
+    "description": "Question description: Describes that hangouts can be used instead of Skype on a chromebook "
+  },
+  "HANGOUTS_BUTTON_EFFECTS": {
+    "message": "Kesan",
+    "description": "Google Effects button"
+  },
+  "HANGOUTS_BUTTON_SCREENSHARE": {
+    "message": "Kongsi skrin",
+    "description": "Screensharing button"
+  },
+  "HANGOUTS_BALLOON_SCREENSHARE": {
+    "message": "Hanya satu klik untuk menunjukkan kepada orang lain paparan pada skrin anda",
+    "description": "Screensharing tooltip: Describes screensharing feature"
+  },
+  "HANGOUTS_BUTTON_ADD": {
+    "message": "Tambah apl",
+    "description": "Add Apps button"
+  },
+  "HANGOUTS_BALLOON_ADD": {
+    "message": "Tonton video YouTube, bekerjasama dalam dokumen dan tambah kesan yang menyeronokkan pada sembang video anda",
+    "description": "Add apps tooltip: Describes applications in hangouts"
+  },
+  "HANGOUTS_BUTTON_INVITE": {
+    "message": "Jemput orang",
+    "description": "Invite friends button (add people)"
+  },
+  "HANGOUTS_BALLOON_INVITE": {
+    "message": "Jemput orang menyertai sembang video anda hanya melalui e-mel mereka",
+    "description": "Invite friends tooltip: Describes how easy it is to add friends"
+  },
+  "HANGOUTS_BALLOON_PEOPLE": {
+    "message": "Tambah sehingga 9 orang pada sembang video anda tanpa memasang sebarang perisian yang rumit",
+    "description": "Chat area tooltip: describes group video feature by which you can hangout with 9 people for free"
+  },
+  "HANGOUTS_SHOW_LICENCE": {
+    "message": "Paparkan maklumat lesen",
+    "description": "Menu string in the context menu."
+  }
+}

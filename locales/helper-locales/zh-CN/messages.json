@@ -1,0 +1,162 @@
+{
+  "LEARN_MORE_NAV_FEATURES": {
+    "message": "功能",
+    "description": "Link to an overview page of Chromebooks’ core features and benefits"
+  },
+  "LEARN_MORE_NAV_OFFLINE": {
+    "message": "离线",
+    "description": "Link to a page explaining Chromebook devices’ offline capabilities"
+  },
+  "LEARN_MORE_NAV_PRINTING": {
+    "message": "打印",
+    "description": "Link to a page explaining Chromebook’s printing capabilities"
+  },
+  "LEARN_MORE_NAV_DO_MORE": {
+    "message": "更多功能",
+    "description": "Link to a page highlighting additional Chromebook features"
+  },
+  "LEARN_MORE_FEATURES_SPEED_TITLE": {
+    "message": "无需等待，随时使用",
+    "description": "Summarizes the idea that, when you use a Chromebook, you won’t have to wait for the device to start working"
+  },
+  "LEARN_MORE_FEATURES_SPEED_DESCRIPTION": {
+    "message": "Chromebook 只需几秒钟即可完成启动，因此，必要时，您可立即开始工作和娱乐。",
+    "description": "Explains that Chromebooks have very short startup time from cold boot, meaning that users can quickly start accomplishing desired tasks"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_TITLE": {
+    "message": "启动速度快，且不会变慢",
+    "description": "Summarizes that Chromebooks have very short startup time and do not slow down over time"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_DESCRIPTION": {
+    "message": "Chromebook 可在10秒钟内完成启动，而且与其他计算机不同的是，它不会随安装的应用增多而变慢。",
+    "description": "Explains 2 key differentiating benefits of Chromebooks: they have very short bootup time and stay fast even after continued use"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_TITLE": {
+    "message": "浏览速度更快",
+    "description": "Summarizes that when you use a Chromebook, you can surf the internet faster"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_DESCRIPTION": {
+    "message": "内置了 Chrome 即搜即得等功能，网络浏览速度极快。",
+    "description": "Explains that the Chrome Instant features is included with your Chromebook, which enables very fast web surfing"
+  },
+  "LEARN_MORE_FEATURES_APPS_TITLE": {
+    "message": "少了麻烦，用得舒心",
+    "description": "Summarizes that Chromebooks are easy and simple, leading to reduced hassles and more enjoyment of the things that you want from a computer"
+  },
+  "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
+    "message": "Chromebook 拥有众多内置应用，开箱即可使用。",
+    "description": "Explains that many applications are already included and pre-installed on the Chromebook, meaning that brand new Chromebooks include many programs that users need"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
+    "message": "没有复杂的软件",
+    "description": "Summarizes that applications on Chromebooks are easier to use than applications on other computers"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
+    "message": "Chromebook 免费随附 Google 文档、环聊和 Play 音乐。您还可以从 Chrome 网上应用店直接添加新应用。",
+    "description": "Lists Google applications that are pre-installed in the Chromebook at no additional cost. Additionally, more applications can be added to the Chromebook using the Chrome Web Store."
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
+    "message": "自动更新",
+    "description": "Summarizes that Chromebook stays updated automatically, ensuring that it always runs the latest Operating System"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
+    "message": "Chromebook 会自动更新，因此不会出现烦人的弹出式窗口。",
+    "description": "Explains that Chromebooks don’t need to be manually updated and that the process happens automatically in the background, without the need for user intervention"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_TITLE": {
+    "message": "无后顾之忧",
+    "description": "Summarizes that, when you use a Chromebook, you don’t need to worry about viruses or losing your files due to system malfunctions"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_DESCRIPTION": {
+    "message": "内置病毒防护功能，您的文件会安全地在线备份。",
+    "description": "Explains that all Chromebooks are protected from viruses automatically, and that files are stored safely in the cloud when connected to the internet"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_TITLE": {
+    "message": "多重安全保障",
+    "description": "Summarizes that Chromebooks employ more than 1 method of protecting the device from issues like viruses"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_DESCRIPTION": {
+    "message": "病毒防护和其他安全功能可让您免受病毒、恶意软件和其他计算机垃圾的侵扰。",
+    "description": "Explains that Chromebooks are protected from many common security issues due to additional layers of security"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_TITLE": {
+    "message": "可确保文件安全",
+    "description": "Summarizes that documents and files are secure when using a Chromebook"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_DESCRIPTION": {
+    "message": "Google 云端硬盘是一款在线文件存储服务。您可以使用该服务备份自己的文件，并从任何位置访问这些文件。",
+    "description": "Explains a key benefit of Google Drive, Google’s online file storage service -- files are stored online so they can be securely accessed from different devices and from different locations"
+  },
+  "LEARN_MORE_OFFLINE_TITLE": {
+    "message": "离线工作",
+    "description": "Summarizes that Chromebooks are functional even when they are not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_DESCRIPTION": {
+    "message": "即使未连接到网络，Chromebook 也能帮助您完成工作。",
+    "description": "Explains that Chromebooks can help the user accomplish tasks even when the Chromebook is not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
+    "message": "内置了您喜爱的众多应用",
+    "description": "Summarizes that many great applications are pre-installed in the Chromebook"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
+    "message": "借助 Google 文档、离线版 Gmail、媒体播放器和照片编辑器等应用，随时随地开展工作。",
+    "description": "Lists examples of applications that help the user accomplish tasks even when the Chromebook is offline, for example when the user is traveling"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
+    "message": "Chrome 网上应用店还有更多应用供您选择",
+    "description": "Summarizes that additional applications can be found on the Chrome Web Store"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
+    "message": "您可以在 Chrome 网上应用店中找到更多免费的离线应用。",
+    "description": "Explains that more applications can be found for the Chromebook, free of charge, from the Chrome Web Store"
+  },
+  "LEARN_MORE_PRINTING_TITLE": {
+    "message": "无线打印",
+    "description": "Summarizes that Chromebooks can print wirelessly"
+  },
+  "LEARN_MORE_PRINTING_DESCRIPTION": {
+    "message": "您的 Chromebook 可将内容无线发送到任何云端打印机进行打印。",
+    "description": "Explains that Chromebooks can print without cables by using a cloud-connected printer"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_TITLE": {
+    "message": "Google 云打印",
+    "description": "States the name of Google’s printing solution, Google Cloud Print"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
+    "message": "云打印通过网络进行，因此，您随时随地都可以使用 Chromebook 进行打印，身边有没有打印机并不重要。",
+    "description": ""
+  },
+  "LEARN_MORE_PRINTING_SECTION2_TITLE": {
+    "message": "支持传统打印机",
+    "description": "Summarizes that Chromebooks can also print using printers that are not Cloud Ready (i.e., a conventional printer)"
+  },
+  "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
+    "message": "云端打印机开箱即可使用。但是如果您拥有 PC 或 Mac，并且有一台传统打印机，那么您可以将它连接到 Chromebook 进行打印。",
+    "description": "Explains that Chromebooks have the ability to print"
+  },
+  "LEARN_MORE_DO_MORE_TITLE": {
+    "message": "Chromecast",
+    "description": "States the name of Google’s web streaming product for televisions, Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_DESCRIPTION": {
+    "message": "将您喜爱的在线娱乐内容从 Chromebook 发送到电视中。只需35美元。",
+    "description": "Explains that Chromecast allows users to display online content from the Chromebook on a television and that it only costs $$35"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
+    "message": "与亲友围坐在一起观看电视",
+    "description": "Summarizes that you can watch your television content with other people while relaxing comfortably"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
+    "message": "在电视上欣赏在线电影、音乐等内容。",
+    "description": "Explains that many different forms of web content can be viewed on your television using Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
+    "message": "将网络内容投射到电视上",
+    "description": "Summarizes that content from the internet can be displayed on your television"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
+    "message": "将 Chromebook 上的 Chrome 浏览器标签页投射到家中的电视上（测试版）。",
+    "description": "Explains that content from the Chrome browser can be displayed on your television using a Chromebook. The ‘(beta)’ refers to the fact that this feature is still under development."
+  }
+}

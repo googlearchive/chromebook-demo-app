@@ -1,0 +1,82 @@
+{
+  "HANGOUTS_COPY": {
+    "message": "Pysy yhteydessä",
+    "description": "App headline for hangouts: You can keep in touch with friends using hangouts"
+  },
+  "HANGOUTS_SUB_COPY": {
+    "message": "Google+ Hangouts -palvelun avulla",
+    "description": "A subtitle for Hangouts: supports the headline by giving the app name"
+  },
+  "HANGOUTS_DESCRIPTION": {
+    "message": "Juttele perheen ja kavereiden kanssa suoraan netissä. Ei asentamista, ei määrittämistä, ei vaivaa.",
+    "description": "Description of Hangouts: Its very easy to talk to people using hangouts, doesn't even need an install"
+  },
+  "HANGOUTS_SECTION_GROUP_TITLE": {
+    "message": "Ryhmävideopuhelu",
+    "description": "Feature headline: Headline for group video chat feature"
+  },
+  "HANGOUTS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Osallistu videopuheluun ilmaiseksi jopa yhdeksän ystäväsi kanssa kerralla.",
+    "description": "Feature description: group video chat for free"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_TITLE": {
+    "message": "Vaivaton",
+    "description": "Feature headline: No hassles with Hangouts"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
+    "message": "Sinun ei tarvitse kuin kirjautua sisään Chromebookiin, niin olet valmis. Asennusta ei tarvita.",
+    "description": "Feature description: how easy it is to use hangouts on Chromebook as it doesn't need setup"
+  },
+  "HANGOUTS_SECTION_FUN_TITLE": {
+    "message": "Hupia kaikille",
+    "description": "Feature headline: describes fun features of Google Hangouts"
+  },
+  "HANGOUTS_SECTION_FUN_DESCRIPTION": {
+    "message": "Tuo videoneuvotteluihin eloa tehosteiden, emojien ja YouTube-videoiden avulla.",
+    "description": "Feature description: describes how you can have a lot of fun with Hangouts"
+  },
+  "HANGOUTS_HINT_TITLE": {
+    "message": "Entä jos käytän Skypeä<sup>®</sup>?",
+    "description": "Question headline: Addresses user concerns if they are Skype users"
+  },
+  "HANGOUTS_HINT_DESCRIPTION": {
+    "message": "Hangouts on helppo vaihtoehto Skypelle<sup>®</sup>. Asennusta ei tarvita. Videopuhelut jopa yhdeksän ihmisen kanssa yhtä aikaa ovat ilmaisia.",
+    "description": "Question description: Describes that hangouts can be used instead of Skype on a chromebook "
+  },
+  "HANGOUTS_BUTTON_EFFECTS": {
+    "message": "Tehosteet",
+    "description": "Google Effects button"
+  },
+  "HANGOUTS_BUTTON_SCREENSHARE": {
+    "message": "Näytön jakaminen",
+    "description": "Screensharing button"
+  },
+  "HANGOUTS_BALLOON_SCREENSHARE": {
+    "message": "Voit jakaa näyttösi muille yhdellä klikkauksella.",
+    "description": "Screensharing tooltip: Describes screensharing feature"
+  },
+  "HANGOUTS_BUTTON_ADD": {
+    "message": "Lisää sovelluksia",
+    "description": "Add Apps button"
+  },
+  "HANGOUTS_BALLOON_ADD": {
+    "message": "Katso YouTube-videoita, tee yhteistyötä dokumenttien parissa ja lisää hauskoja tehosteita videopuheluusi.",
+    "description": "Add apps tooltip: Describes applications in hangouts"
+  },
+  "HANGOUTS_BUTTON_INVITE": {
+    "message": "Kutsu ihmisiä",
+    "description": "Invite friends button (add people)"
+  },
+  "HANGOUTS_BALLOON_INVITE": {
+    "message": "Kutsu ihmisiä videopuheluun sähköpostiosoitteen avulla.",
+    "description": "Invite friends tooltip: Describes how easy it is to add friends"
+  },
+  "HANGOUTS_BALLOON_PEOPLE": {
+    "message": "Lisää jopa yhdeksän ihmistä videopuheluusi asentamatta yhtään ohjelmistoa.",
+    "description": "Chat area tooltip: describes group video feature by which you can hangout with 9 people for free"
+  },
+  "HANGOUTS_SHOW_LICENCE": {
+    "message": "Näytä käyttöluvan tiedot",
+    "description": "Menu string in the context menu."
+  }
+}

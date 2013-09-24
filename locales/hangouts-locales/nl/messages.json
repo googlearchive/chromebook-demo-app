@@ -1,0 +1,82 @@
+{
+  "HANGOUTS_COPY": {
+    "message": "In contact blijven",
+    "description": "App headline for hangouts: You can keep in touch with friends using hangouts"
+  },
+  "HANGOUTS_SUB_COPY": {
+    "message": "met Google+ Hangouts",
+    "description": "A subtitle for Hangouts: supports the headline by giving the app name"
+  },
+  "HANGOUTS_DESCRIPTION": {
+    "message": "Je kunt onmiddellijk met je vrienden en familie praten. Geen installatie, geen instellingen, geen gedoe.",
+    "description": "Description of Hangouts: Its very easy to talk to people using hangouts, doesn't even need an install"
+  },
+  "HANGOUTS_SECTION_GROUP_TITLE": {
+    "message": "Groepsvideochat",
+    "description": "Feature headline: Headline for group video chat feature"
+  },
+  "HANGOUTS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Videochat gratis met tot wel negen vrienden tegelijk.",
+    "description": "Feature description: group video chat for free"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_TITLE": {
+    "message": "Geen gedoe",
+    "description": "Feature headline: No hassles with Hangouts"
+  },
+  "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
+    "message": "Log in bij je Chromebook en je kunt beginnen. Geen instellingen vereist.",
+    "description": "Feature description: how easy it is to use hangouts on Chromebook as it doesn't need setup"
+  },
+  "HANGOUTS_SECTION_FUN_TITLE": {
+    "message": "Het is een groot feest",
+    "description": "Feature headline: describes fun features of Google Hangouts"
+  },
+  "HANGOUTS_SECTION_FUN_DESCRIPTION": {
+    "message": "Breng videovergaderingen tot leven met effecten, emoji's en YouTube-video's.",
+    "description": "Feature description: describes how you can have a lot of fun with Hangouts"
+  },
+  "HANGOUTS_HINT_TITLE": {
+    "message": "Wat als ik Skype<sup>®</sup> gebruik?",
+    "description": "Question headline: Addresses user concerns if they are Skype users"
+  },
+  "HANGOUTS_HINT_DESCRIPTION": {
+    "message": "Hangouts is een gemakkelijk alternatief voor Skype<sup>®</sup>. Geen instellingen vereist. Videochat gratis met tot wel negen mensen.",
+    "description": "Question description: Describes that hangouts can be used instead of Skype on a chromebook "
+  },
+  "HANGOUTS_BUTTON_EFFECTS": {
+    "message": "Effecten",
+    "description": "Google Effects button"
+  },
+  "HANGOUTS_BUTTON_SCREENSHARE": {
+    "message": "Scherm delen",
+    "description": "Screensharing button"
+  },
+  "HANGOUTS_BALLOON_SCREENSHARE": {
+    "message": "Met één klik kun je anderen laten zien wat er op je scherm staat",
+    "description": "Screensharing tooltip: Describes screensharing feature"
+  },
+  "HANGOUTS_BUTTON_ADD": {
+    "message": "Apps toevoegen",
+    "description": "Add Apps button"
+  },
+  "HANGOUTS_BALLOON_ADD": {
+    "message": "Bekijk YouTube-video's, werk samen aan documenten en voeg leuke effecten toe aan je videochat",
+    "description": "Add apps tooltip: Describes applications in hangouts"
+  },
+  "HANGOUTS_BUTTON_INVITE": {
+    "message": "Mensen uitnodigen",
+    "description": "Invite friends button (add people)"
+  },
+  "HANGOUTS_BALLOON_INVITE": {
+    "message": "Nodig mensen via hun e-mailadres uit voor je videochat",
+    "description": "Invite friends tooltip: Describes how easy it is to add friends"
+  },
+  "HANGOUTS_BALLOON_PEOPLE": {
+    "message": "Voeg tot wel negen mensen toe aan je videochat zonder ingewikkelde software te installeren",
+    "description": "Chat area tooltip: describes group video feature by which you can hangout with 9 people for free"
+  },
+  "HANGOUTS_SHOW_LICENCE": {
+    "message": "Licentiegegevens weergeven",
+    "description": "Menu string in the context menu."
+  }
+}

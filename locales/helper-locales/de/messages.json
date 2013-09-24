@@ -1,0 +1,162 @@
+{
+  "LEARN_MORE_NAV_FEATURES": {
+    "message": "CIRI",
+    "description": "Link to an overview page of Chromebooks’ core features and benefits"
+  },
+  "LEARN_MORE_NAV_OFFLINE": {
+    "message": "LUAR TALIAN",
+    "description": "Link to a page explaining Chromebook devices’ offline capabilities"
+  },
+  "LEARN_MORE_NAV_PRINTING": {
+    "message": "CETAKAN",
+    "description": "Link to a page explaining Chromebook’s printing capabilities"
+  },
+  "LEARN_MORE_NAV_DO_MORE": {
+    "message": "LAKUKAN LEBIH BANYAK LAGI",
+    "description": "Link to a page highlighting additional Chromebook features"
+  },
+  "LEARN_MORE_FEATURES_SPEED_TITLE": {
+    "message": "Sedia pada bila-bila masa",
+    "description": "Summarizes the idea that, when you use a Chromebook, you won’t have to wait for the device to start working"
+  },
+  "LEARN_MORE_FEATURES_SPEED_DESCRIPTION": {
+    "message": "Chromebook bermula dalam beberapa saat, jadi anda boleh terus bermain, berseronok atau bekerja (jika anda terpaksa).",
+    "description": "Explains that Chromebooks have very short startup time from cold boot, meaning that users can quickly start accomplishing desired tasks"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_TITLE": {
+    "message": "Bermula pantas, kekal pantas",
+    "description": "Summarizes that Chromebooks have very short startup time and do not slow down over time"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION1_DESCRIPTION": {
+    "message": "Chromebook but sepenuhnya dalam kurang daripada 10 saat dan tidak seperti komputer lain, tidak pernah akan menjadi perlahan.",
+    "description": "Explains 2 key differentiating benefits of Chromebooks: they have very short bootup time and stay fast even after continued use"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_TITLE": {
+    "message": "Semak imbas lebih pantas",
+    "description": "Summarizes that when you use a Chromebook, you can surf the internet faster"
+  },
+  "LEARN_MORE_FEATURES_SPEED_SECTION2_DESCRIPTION": {
+    "message": "Semak imbas sepantas kilat dengan ciri seperti Chrome Semerta yang terbina sekali.",
+    "description": "Explains that the Chrome Instant features is included with your Chromebook, which enables very fast web surfing"
+  },
+  "LEARN_MORE_FEATURES_APPS_TITLE": {
+    "message": "Kurang itu lebih bagus :)",
+    "description": "Summarizes that Chromebooks are easy and simple, leading to reduced hassles and more enjoyment of the things that you want from a computer"
+  },
+  "LEARN_MORE_FEATURES_APPS_DESCRIPTION": {
+    "message": "Chromebook mengandungi apl yang terbina sekali supaya boleh terus digunakan sebaik sahaja dikeluarkan daripada kotak.",
+    "description": "Explains that many applications are already included and pre-installed on the Chromebook, meaning that brand new Chromebooks include many programs that users need"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_TITLE": {
+    "message": "Tiada perisian yang rumit",
+    "description": "Summarizes that applications on Chromebooks are easier to use than applications on other computers"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION1_DESCRIPTION": {
+    "message": "Dokumen, Hangouts dan Muzik Play disertakan secara percuma dengan Chromebook anda. Tambahkan apl terus dari Kedai Web Chrome.",
+    "description": "Lists Google applications that are pre-installed in the Chromebook at no additional cost. Additionally, more applications can be added to the Chromebook using the Chrome Web Store."
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_TITLE": {
+    "message": "Sentiasa mengemas kini dengan sendiri",
+    "description": "Summarizes that Chromebook stays updated automatically, ensuring that it always runs the latest Operating System"
+  },
+  "LEARN_MORE_FEATURES_APPS_SECTION2_DESCRIPTION": {
+    "message": "Chromebook mengemas kini sendiri secara automatik, jadi tiada pop timbul yang mengganggu.",
+    "description": "Explains that Chromebooks don’t need to be manually updated and that the process happens automatically in the background, without the need for user intervention"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_TITLE": {
+    "message": "Memberi anda ketenangan fikiran",
+    "description": "Summarizes that, when you use a Chromebook, you don’t need to worry about viruses or losing your files due to system malfunctions"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_DESCRIPTION": {
+    "message": "Perlindungan virus dibina sekali dan fail anda disandarkan dalam talian dengan selamat.",
+    "description": "Explains that all Chromebooks are protected from viruses automatically, and that files are stored safely in the cloud when connected to the internet"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_TITLE": {
+    "message": "Berbilang lapisan keselamatan",
+    "description": "Summarizes that Chromebooks employ more than 1 method of protecting the device from issues like viruses"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION1_DESCRIPTION": {
+    "message": "Perlindungan virus dan ciri keselamatan lain menjamin keselamatan anda daripada virus, perisian hasad dan kandungan jahat lain pada komputer.",
+    "description": "Explains that Chromebooks are protected from many common security issues due to additional layers of security"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_TITLE": {
+    "message": "Memastikan fail anda selamat",
+    "description": "Summarizes that documents and files are secure when using a Chromebook"
+  },
+  "LEARN_MORE_FEATURES_SECURITY_SECTION2_DESCRIPTION": {
+    "message": "Anda boleh menyandarkan fail anda dan mengaksesnya dari mana-mana sahaja melalui Google Drive, iaitu perkhidmatan penyimpanan fail dalam talian.",
+    "description": "Explains a key benefit of Google Drive, Google’s online file storage service -- files are stored online so they can be securely accessed from different devices and from different locations"
+  },
+  "LEARN_MORE_OFFLINE_TITLE": {
+    "message": "Bekerja di luar talian",
+    "description": "Summarizes that Chromebooks are functional even when they are not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_DESCRIPTION": {
+    "message": "Chromebook membantu anda menyelesaikan tugas walaupun anda tidak disambungkan ke web.",
+    "description": "Explains that Chromebooks can help the user accomplish tasks even when the Chromebook is not connected to the internet"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_TITLE": {
+    "message": "Apl kegemaran anda terbina sekali",
+    "description": "Summarizes that many great applications are pre-installed in the Chromebook"
+  },
+  "LEARN_MORE_OFFLINE_SECTION1_DESCRIPTION": {
+    "message": "Apl seperti Dokumen Google, Gmail Luar Talian, alat main media dan editor foto memastikan anda sentiasa produktif semasa bergerak.",
+    "description": "Lists examples of applications that help the user accomplish tasks even when the Chromebook is offline, for example when the user is traveling"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_TITLE": {
+    "message": "Dapatkan lebih banyak lagi di Kedai Web Chrome",
+    "description": "Summarizes that additional applications can be found on the Chrome Web Store"
+  },
+  "LEARN_MORE_OFFLINE_SECTION2_DESCRIPTION": {
+    "message": "Anda boleh mendapatkan lebih banyak apl luar talian percuma di Kedai Web Chrome.",
+    "description": "Explains that more applications can be found for the Chromebook, free of charge, from the Chrome Web Store"
+  },
+  "LEARN_MORE_PRINTING_TITLE": {
+    "message": "Cetak tanpa wayar",
+    "description": "Summarizes that Chromebooks can print wirelessly"
+  },
+  "LEARN_MORE_PRINTING_DESCRIPTION": {
+    "message": "Chromebook anda boleh mencetak tanpa wayar pada sebarang pencetak yang disambungkan ke awan.",
+    "description": "Explains that Chromebooks can print without cables by using a cloud-connected printer"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_TITLE": {
+    "message": "Cetakan Awan Google",
+    "description": "States the name of Google’s printing solution, Google Cloud Print"
+  },
+  "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
+    "message": "Cetakan Awan berfungsi melalui web, jadi Chromebook anda boleh mencetak sama ada anda berada di dalam bilik yang sama dengan pencetak anda atau semasa bergerak.",
+    "description": ""
+  },
+  "LEARN_MORE_PRINTING_SECTION2_TITLE": {
+    "message": "Berfungsi dengan pencetak biasa",
+    "description": "Summarizes that Chromebooks can also print using printers that are not Cloud Ready (i.e., a conventional printer)"
+  },
+  "LEARN_MORE_PRINTING_SECTION2_DESCRIPTION": {
+    "message": "Pencetak Sedia awan terus berfungsi sebaik sahaja dikeluarkan daripada kotak, tetapi jika anda memiliki PC atau Mac dan pencetak biasa, anda boleh menyambungkannya agar dapat berfungsi dengan Chromebook anda.",
+    "description": "Explains that Chromebooks have the ability to print"
+  },
+  "LEARN_MORE_DO_MORE_TITLE": {
+    "message": "Chromecast",
+    "description": "States the name of Google’s web streaming product for televisions, Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_DESCRIPTION": {
+    "message": "Hantar hiburan dalam talian kegemaran anda dari Chromebook anda ke TV anda, hanya untuk $$35.",
+    "description": "Explains that Chromecast allows users to display online content from the Chromebook on a television and that it only costs $$35"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_TITLE": {
+    "message": "Bersantai dan menonton bersama-sama",
+    "description": "Summarizes that you can watch your television content with other people while relaxing comfortably"
+  },
+  "LEARN_MORE_DO_MORE_SECTION1_DESCRIPTION": {
+    "message": "Nikmati filem, muzik dan banyak lagi bahan dalam talian pada TV anda.",
+    "description": "Explains that many different forms of web content can be viewed on your television using Chromecast"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_TITLE": {
+    "message": "Pancarkan web pada TV anda",
+    "description": "Summarizes that content from the internet can be displayed on your television"
+  },
+  "LEARN_MORE_DO_MORE_SECTION2_DESCRIPTION": {
+    "message": "Pancarkan tab penyemak imbas Chrome dari Chromebook anda ke TV di rumah anda (beta).",
+    "description": "Explains that content from the Chrome browser can be displayed on your television using a Chromebook. The ‘(beta)’ refers to the fact that this feature is still under development."
+  }
+}

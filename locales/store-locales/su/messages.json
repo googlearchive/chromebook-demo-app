@@ -1,0 +1,250 @@
+{
+  "STORE_COPY": {
+    "message": "Hämta fler appar",
+    "description": "App headline for Chrome web store"
+  },
+  "STORE_SUB_COPY_DESCRIPTION": {
+    "message": "med Chrome Web Store",
+    "description": "App subtitle for chrome web store with app name"
+  },
+  "STORE_DESCRIPTION": {
+    "message": "Jobba, spela spel eller upptäck något nytt med appar från Chrome Web Store.",
+    "description": "App description for Chrome web store"
+  },
+  "STORE_SECTION_THOUSANDS_TITLE": {
+    "message": "Tusentals appar",
+    "description": "Feature headline: large number of apps"
+  },
+  "STORE_SECTION_THOUSANDS_DESCRIPTION": {
+    "message": "Hämta gratisappar för bland annat spel, musik, film, nyheter och foton.",
+    "description": "Feature subtitle: description for large number and variety of apps"
+  },
+  "STORE_SECTION_STABILITY_TITLE": {
+    "message": "Offline och online",
+    "description": "Feature headline: you can get offline and online apps"
+  },
+  "STORE_SECTION_STABILITY_DESCRIPTION": {
+    "message": "Hitta appar som fungerar både hemma och på morgonpendeln.",
+    "description": "Feature subtitle: describing the offline and online app functionalities and where you can use them"
+  },
+  "STORE_SECTION_INSTALL_TITLE": {
+    "message": "Lägg till med ett klick",
+    "description": "Feature headline: one click install"
+  },
+  "STORE_SECTION_INSTALL_DESCRIPTION": {
+    "message": "Du behöver aldrig installera komplicerad programvara när du använder Chromebook. Det är bara att klicka på Lägg till i Chrome.",
+    "description": "Feature subtitle: the description of the one click install feature"
+  },
+  "STORE_APP_BEJEWELED_TITLE": {
+    "message": "Bejeweled",
+    "description": "The title of bejeweled application."
+  },
+  "STORE_APP_BEJEWELED_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of bejeweled."
+  },
+  "STORE_APP_CUBESLAM_TITLE": {
+    "message": "Cube Slam",
+    "description": "The title of cubeslam application."
+  },
+  "STORE_APP_CUBESLAM_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of cubeslam."
+  },
+  "STORE_APP_DEEZER_TITLE": {
+    "message": "Deezer",
+    "description": "The title of deezer application."
+  },
+  "STORE_APP_DEEZER_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of deezer."
+  },
+  "STORE_APP_GMAIL_TITLE": {
+    "message": "Gmail",
+    "description": "The title of gmail application."
+  },
+  "STORE_APP_GMAIL_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of gmail."
+  },
+  "STORE_APP_KINDLE_TITLE": {
+    "message": "Kindle Cloud Reader",
+    "description": "The title of kindle application."
+  },
+  "STORE_APP_KINDLE_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of kindle."
+  },
+  "STORE_APP_NETFLIX_TITLE": {
+    "message": "Netflix",
+    "description": "The title of netflix application."
+  },
+  "STORE_APP_NETFLIX_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of netflix."
+  },
+  "STORE_APP_PANDORA_TITLE": {
+    "message": "Pandora",
+    "description": "The title of pandora application."
+  },
+  "STORE_APP_PANDORA_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of pandora."
+  },
+  "STORE_APP_PIXLR_TITLE": {
+    "message": "Pixlr",
+    "description": "The title of pixlr application."
+  },
+  "STORE_APP_PIXLR_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of pixlr."
+  },
+  "STORE_APP_PLUS_TITLE": {
+    "message": "Google+",
+    "description": "The title of plus application."
+  },
+  "STORE_APP_PLUS_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of plus."
+  },
+  "STORE_APP_REMOTEDESKTOP_TITLE": {
+    "message": "Chrome Remote Desktop",
+    "description": "The title of remotedesktop application."
+  },
+  "STORE_APP_REMOTEDESKTOP_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of remotedesktop."
+  },
+  "STORE_APP_SHEETS_TITLE": {
+    "message": "Google Kalkylark",
+    "description": "The title of sheets application."
+  },
+  "STORE_APP_SHEETS_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of sheets."
+  },
+  "STORE_APP_SLIDES_TITLE": {
+    "message": "Google Presentationer",
+    "description": "The title of slides application."
+  },
+  "STORE_APP_SLIDES_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of slides."
+  },
+  "STORE_APP_SPOTIFY_TITLE": {
+    "message": "Spotify",
+    "description": "The title of spotify application."
+  },
+  "STORE_APP_SPOTIFY_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of spotify."
+  },
+  "STORE_APP_TWEETDECK_TITLE": {
+    "message": "TweetDeck",
+    "description": "The title of tweetdeck application."
+  },
+  "STORE_APP_TWEETDECK_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of tweetdeck."
+  },
+  "STORE_APP_YOUTUBE_TITLE": {
+    "message": "YouTube",
+    "description": "The title of youtube application."
+  },
+  "STORE_APP_YOUTUBE_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of youtube."
+  },
+  "STORE_APP_DRIVE_TITLE": {
+    "message": "Google Drive",
+    "description": "The title of drive application."
+  },
+  "STORE_APP_DRIVE_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of drive."
+  },
+  "STORE_APP_NEW_YORK_TIMES_TITLE": {
+    "message": "New York Times",
+    "description": "The title of new-york-times application."
+  },
+  "STORE_APP_NEW_YORK_TIMES_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of new-york-times."
+  },
+  "STORE_APP_HANGOUTS_TITLE": {
+    "message": "Hangouts",
+    "description": "The title of hangouts application."
+  },
+  "STORE_APP_HANGOUTS_DETAIL": {
+    "message": "4 stjärnor",
+    "description": "The detailed information of hangouts."
+  },
+  "STORE_APP_EVERNOTE_TITLE": {
+    "message": "Evernote",
+    "description": "The title of evernote application."
+  },
+  "STORE_APP_EVERNOTE_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of evernote."
+  },
+  "STORE_APP_PLAY_US_TITLE": {
+    "message": "Google Play",
+    "description": "The title of play-us application."
+  },
+  "STORE_APP_PLAY_US_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of play-us."
+  },
+  "STORE_APP_PLAY_UK_TITLE": {
+    "message": "Google Play",
+    "description": "The title of play-uk application."
+  },
+  "STORE_APP_PLAY_UK_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of play-uk."
+  },
+  "STORE_APP_CALENDAR_TITLE": {
+    "message": "Google Kalender",
+    "description": "The title of calendar application."
+  },
+  "STORE_APP_CALENDAR_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of calendar."
+  },
+  "STORE_APP_ANGRY_BIRDS_TITLE": {
+    "message": "Angry Birds",
+    "description": "The title of angry-birds application."
+  },
+  "STORE_APP_ANGRY_BIRDS_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of angry-birds."
+  },
+  "STORE_APP_CAMERA_TITLE": {
+    "message": "Kamera",
+    "description": "The title of camera application."
+  },
+  "STORE_APP_CAMERA_DETAIL": {
+    "message": "2,5 stjärnor",
+    "description": "The detailed information of camera."
+  },
+  "STORE_APP_DOCS_TITLE": {
+    "message": "Google Dokument",
+    "description": "The title of docs application."
+  },
+  "STORE_APP_DOCS_DETAIL": {
+    "message": "4,5 stjärnor",
+    "description": "The detailed information of docs."
+  },
+  "STORE_APP_CALCULATOR_TITLE": {
+    "message": "Kalkylator",
+    "description": "The title of calculator application."
+  },
+  "STORE_APP_CALCULATOR_DETAIL": {
+    "message": "3 stjärnor",
+    "description": "The detailed information of calculator."
+  },
+  "STORE_DISABLE_APP_LIST": {
+    "message": "play-uk deezer",
+    "description": "This is used by the script. This will not be translated."
+  }
+}

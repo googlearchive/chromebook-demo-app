@@ -1,0 +1,47 @@
+{
+  "MENU_MESSAGE": {
+    "message": "Låt oss presentera Chromebook, en ny sorts dator från Google",
+    "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
+  },
+  "MENU_DESCRIPTION": {
+    "message": "Startar på några sekunder. Enkel att lära sig. Levereras med dina favoritappar från Google. Byggd för att användas varje dag och perfekt att dela med andra.",
+    "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
+  },
+  "MENU_DOCS_BUTTON": {
+    "message": "Jobba effektivt",
+    "description": "App headline for Docs: You can do all your work with Google Docs (link to Docs app)"
+  },
+  "MENU_HANGOUTS_BUTTON": {
+    "message": "Håll kontakten",
+    "description": "App headline for Hangouts: You can stay connected to all your friends with Google+ Hangouts (link to Hangouts app)"
+  },
+  "MENU_MUSIC_BUTTON": {
+    "message": "Lyssna på musik",
+    "description": "App headline for Google Play: You can listen to music with Google Play Music (link to Google Play Music app)"
+  },
+  "MENU_YOUTUBE_BUTTON": {
+    "message": "Videoklipp och musik",
+    "description": "App headline for Youtube (alternative to Google Play): You can enjoy videos and music with YouTube (link to YouTube app)"
+  },
+  "MENU_STORE_BUTTON": {
+    "message": "Hämta fler appar",
+    "description": "App headline for Webstore: You can get more applications (and do more things) through the Chrome web store (link to Chrome Web store app)"
+  },
+  "MENU_LEARN_MORE": {
+    "message": "Läs mer",
+    "description": "Subtitle for learning more about Chrome: this is a link to an offline HTML page with more content about Chromebook features (link to Chrome with HTML page preloaded)"
+  },
+  "MENU_THIRD_BUTTON_TYPE": {
+    "message": "play",
+    "description": "This is used by the script. This will not be translated."
+  },
+  "LANGUAGE_NAME_EN": {
+    "message": "English"
+  },
+  "LANGUAGE_NAME_JA": {
+    "message": "日本語"
+  },
+  "LANGUAGE_NAME_FR": {
+    "message": "Français"
+  }
+}

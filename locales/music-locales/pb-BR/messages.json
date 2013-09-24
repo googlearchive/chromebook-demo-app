@@ -1,0 +1,274 @@
+{
+  "MUSIC_COPY": {
+    "message": "Escute música",
+    "description": "App headline for play music: Listen to music with Google Play Music all access"
+  },
+  "MUSIC_SUB_COPY": {
+    "message": "com o Google Play Música",
+    "description": "A subtitle for Play Music: supports the headline by giving the app name"
+  },
+  "MUSIC_DESCRIPTION": {
+    "message": "Desfrute de uma infinita coleção de música na Web com o Google Play Música.",
+    "description": "Describes how you can listen to unlimited music with Google Play Music (GPM)"
+  },
+  "MUSIC_SECTION_UPLOAD_TITLE": {
+    "message": "Liberte sua coleção",
+    "description": "Feature headline: Describes the uploading feature of google play"
+  },
+  "MUSIC_SECTION_UPLOAD_DESCRIPTION": {
+    "message": "Traga gratuitamente até 20.000 músicas da sua biblioteca do iTunes<sup>®</sup> ou de qualquer pasta de música para o Google Play.",
+    "description": "Feature description: Describes the features of the upload/music manager feature."
+  },
+  "MUSIC_SECTION_ANYWHERE_TITLE": {
+    "message": "Acesse em qualquer lugar",
+    "description": "Feature headline: multiple devices"
+  },
+  "MUSIC_SECTION_ANYWHERE_DESCRIPTION": {
+    "message": "O Google Play mantém sua biblioteca de música atualizada automaticamente no seu telefone, tablet e Chromebook.",
+    "description": "Feature description: can be used on multiple different devices which are kept in sync."
+  },
+  "MUSIC_SECTION_UNLIMITED_TITLE": {
+    "message": "Músicas ilimitadas",
+    "description": "Feature headline: All Access headline"
+  },
+  "MUSIC_SECTION_UNLIMITED_DESCRIPTION": {
+    "message": "Use o Acesso ilimitado ao Google Play Música para ouvir milhões de músicas, criar rádios personalizadas e \"pular\" as músicas que quiser.",
+    "description": "Feature description: Describes what you can do with Play Music All Access"
+  },
+  "MUSIC_HINT_TITLE": {
+    "message": "E se eu usar o iTunes<sup>®</sup>?",
+    "description": "Question headline: Addresses concenrs for iTunes users"
+  },
+  "MUSIC_HINT_DESCRIPTION": {
+    "message": "O Google Play Música é uma alternativa baseada na nuvem ao iTunes<sup>®</sup>. Faça upload de até 20.000 músicas usando gratuitamente o Gerenciador de Música do Google.",
+    "description": "Question description: Describes google play music as an alternate to iTunes and says you can upload songs to it via music manager"
+  },
+  "MUSIC_MEESAGE_BAR": {
+    "message": "Ouça agora",
+    "description": "Listen now section of Google Play Music"
+  },
+  "MUSIC_SIDE_BUTTON_UPLOAD": {
+    "message": "Fazer upload de música",
+    "description": "Upload button"
+  },
+  "MUSIC_BALLOON_UPLOAD": {
+    "message": "Faça upload de até 20.000 músicas gratuitamente com o Gerenciador de Música",
+    "description": "Upload tooltip: Short description of music manager"
+  },
+  "MUSIC_SIDE_BUTTON_LIBRARY": {
+    "message": "Minha coleção",
+    "description": "My Library button"
+  },
+  "MUSIC_BALLOON_LIBRARY": {
+    "message": "Ouça todas as músicas que você comprou e enviou",
+    "description": "My Library tooltip: Description of the library section of Google Play Music"
+  },
+  "MUSIC_SIDE_BUTTON_MIXES": {
+    "message": "Instant mix",
+    "description": "Instant mixes button"
+  },
+  "MUSIC_BALLOON_MIXES": {
+    "message": "Descubra instant mixes com base nas músicas que você adora",
+    "description": "Instant mixes tooltip: Describes google radio and recommend features"
+  },
+  "MUSIC_SIDE_BUTTON_SHOP": {
+    "message": "Loja",
+    "description": "Shop button"
+  },
+  "MUSIC_BALLOON_SHOP": {
+    "message": "Descubra novas músicas e compre-as diretamente na Play Store",
+    "description": "Shop tooltip: describes buying music from the play store"
+  },
+  "MUSIC_SIDE_BUTTON_PLAYLISTS": {
+    "message": "Playlists",
+    "description": "Playlist button"
+  },
+  "MUSIC_BALLOON_PLAYLISTS": {
+    "message": "Crie facilmente suas próprias playlists",
+    "description": "Playlist tooltip: Describes creating and sharing playlists"
+  },
+  "MUSIC_LUMINEERS_ARTIST_NAME": {
+    "message": "Lumineers",
+    "description": "Artist name."
+  },
+  "MUSIC_LUMINEERS_SONG_NAME": {
+    "message": "Flowers in your hair",
+    "description": "Song name"
+  },
+  "MUSIC_LUMINEERS_FOOTER_MESSAGE": {
+    "message": "Reproduzidas recentemente",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_WAR_ARTIST_NAME": {
+    "message": "Good old war",
+    "description": "Artist name."
+  },
+  "MUSIC_WAR_SONG_NAME": {
+    "message": "Calling me names",
+    "description": "Song name"
+  },
+  "MUSIC_WAR_FOOTER_MESSAGE": {
+    "message": "Reproduzidas recentemente",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_VIVALDI_ARTIST_NAME": {
+    "message": "Vivaldi",
+    "description": "Artist name."
+  },
+  "MUSIC_VIVALDI_SONG_NAME": {
+    "message": "I. Allegro",
+    "description": "Song name"
+  },
+  "MUSIC_VIVALDI_FOOTER_MESSAGE": {
+    "message": "Reproduzidas recentemente",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_MAROON5_ARTIST_NAME": {
+    "message": "Maroon 5",
+    "description": "Artist name."
+  },
+  "MUSIC_MAROON5_SONG_NAME": {
+    "message": " Overexposed",
+    "description": "Song name."
+  },
+  "MUSIC_MAROON5_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": "Subtitle for music thats recommended for you"
+  },
+  "MUSIC_FLORENCE_ARTIST_NAME": {
+    "message": "Florence + the Machine",
+    "description": "Artist name."
+  },
+  "MUSIC_FLORENCE_SONG_NAME": {
+    "message": "Ceremonials",
+    "description": "Song name."
+  },
+  "MUSIC_FLORENCE_FOOTER_MESSAGE": {
+    "message": "Reproduzidas recentemente",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_BLAKE_SHELTON_ARTIST_NAME": {
+    "message": "Blake Shelton",
+    "description": "Artist name."
+  },
+  "MUSIC_BLAKE_SHELTON_SONG_NAME": {
+    "message": "Based on a True Story",
+    "description": "Song name."
+  },
+  "MUSIC_BLAKE_SHELTON_FOOTER_MESSAGE": {
+    "message": "Adicionadas recentemente à minha coleção",
+    "description": "subtitle for music that you have added to your library or bought"
+  },
+  "MUSIC_TIESTO_ARTIST_NAME": {
+    "message": "Tiësto",
+    "description": "Artist name."
+  },
+  "MUSIC_TIESTO_SONG_NAME": {
+    "message": "Club Life Miami",
+    "description": "Song name."
+  },
+  "MUSIC_TIESTO_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": ""
+  },
+  "MUSIC_MIKA_ARTIST_NAME": {
+    "message": "Mika",
+    "description": "Artist name."
+  },
+  "MUSIC_MIKA_SONG_NAME": {
+    "message": "The Origin of Love",
+    "description": "Song name."
+  },
+  "MUSIC_MIKA_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_ONE_REPUBLIC_ARTIST_NAME": {
+    "message": "One Republic",
+    "description": "Artist name."
+  },
+  "MUSIC_ONE_REPUBLIC_SONG_NAME": {
+    "message": "Native",
+    "description": "Song name."
+  },
+  "MUSIC_ONE_REPUBLIC_FOOTER_MESSAGE": {
+    "message": "Novo lançamento recomendado",
+    "description": ""
+  },
+  "MUSIC_MUSE_ARTIST_NAME": {
+    "message": "Muse",
+    "description": "Artist name."
+  },
+  "MUSIC_MUSE_SONG_NAME": {
+    "message": "The 2nd Law",
+    "description": "Song name."
+  },
+  "MUSIC_MUSE_FOOTER_MESSAGE": {
+    "message": "Com base no histórico de músicas ouvidas",
+    "description": ""
+  },
+  "MUSIC_FRANK_OCEAN_ARTIST_NAME": {
+    "message": "Frank Ocean",
+    "description": "Artist name."
+  },
+  "MUSIC_FRANK_OCEAN_SONG_NAME": {
+    "message": "Channel Orange",
+    "description": "Song name."
+  },
+  "MUSIC_FRANK_OCEAN_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_IMAGINE_DRAGONS_ARTIST_NAME": {
+    "message": "Imagine Dragons",
+    "description": "Artist name."
+  },
+  "MUSIC_IMAGINE_DRAGONS_SONG_NAME": {
+    "message": "Night Visions",
+    "description": "Song name."
+  },
+  "MUSIC_IMAGINE_DRAGONS_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_THE_DOORS_ARTIST_NAME": {
+    "message": "The doors",
+    "description": "Artist name."
+  },
+  "MUSIC_THE_DOORS_SONG_NAME": {
+    "message": "The Doors",
+    "description": "Song name."
+  },
+  "MUSIC_THE_DOORS_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_TEGAN_AND_SARA_ARTIST_NAME": {
+    "message": "Tegan + Sara",
+    "description": "Artist name."
+  },
+  "MUSIC_TEGAN_AND_SARA_SONG_NAME": {
+    "message": "Heartthrob",
+    "description": "Song name."
+  },
+  "MUSIC_TEGAN_AND_SARA_FOOTER_MESSAGE": {
+    "message": "Com base no histórico de músicas ouvidas",
+    "description": ""
+  },
+  "MUSIC_ELLIE_GOULDING_ARTIST_NAME": {
+    "message": "Ellie Goulding",
+    "description": "Artist name."
+  },
+  "MUSIC_ELLIE_GOULDING_SONG_NAME": {
+    "message": "Halcyon",
+    "description": "Song name."
+  },
+  "MUSIC_ELLIE_GOULDING_FOOTER_MESSAGE": {
+    "message": "Recomendadas para você",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_MAIN_SONG": {
+    "message": "Lumineers",
+    "description": "This is used by the script. This will not be translated."
+  }
+}

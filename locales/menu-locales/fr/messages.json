@@ -1,0 +1,47 @@
+{
+  "MENU_MESSAGE": {
+    "message": "Découvrez le Chromebook, un nouveau type d'ordinateur conçu par Google",
+    "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
+  },
+  "MENU_DESCRIPTION": {
+    "message": "Le Chromebook démarre en quelques secondes. Sa prise en main est facile. Il contient déjà vos applications Google préférées. Il a été conçu pour un usage quotidien et pour être partagé avec d'autres utilisateurs.",
+    "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
+  },
+  "MENU_DOCS_BUTTON": {
+    "message": "Travailler efficacement",
+    "description": "App headline for Docs: You can do all your work with Google Docs (link to Docs app)"
+  },
+  "MENU_HANGOUTS_BUTTON": {
+    "message": "Rester en contact",
+    "description": "App headline for Hangouts: You can stay connected to all your friends with Google+ Hangouts (link to Hangouts app)"
+  },
+  "MENU_MUSIC_BUTTON": {
+    "message": "Écouter de la musique",
+    "description": "App headline for Google Play: You can listen to music with Google Play Music (link to Google Play Music app)"
+  },
+  "MENU_YOUTUBE_BUTTON": {
+    "message": "Vidéos et musique",
+    "description": "App headline for Youtube (alternative to Google Play): You can enjoy videos and music with YouTube (link to YouTube app)"
+  },
+  "MENU_STORE_BUTTON": {
+    "message": "Plus d'applications",
+    "description": "App headline for Webstore: You can get more applications (and do more things) through the Chrome web store (link to Chrome Web store app)"
+  },
+  "MENU_LEARN_MORE": {
+    "message": "En savoir plus",
+    "description": "Subtitle for learning more about Chrome: this is a link to an offline HTML page with more content about Chromebook features (link to Chrome with HTML page preloaded)"
+  },
+  "MENU_THIRD_BUTTON_TYPE": {
+    "message": "play",
+    "description": "This is used by the script. This will not be translated."
+  },
+  "LANGUAGE_NAME_EN": {
+    "message": "English"
+  },
+  "LANGUAGE_NAME_JA": {
+    "message": "日本語"
+  },
+  "LANGUAGE_NAME_FR": {
+    "message": "Français"
+  }
+}

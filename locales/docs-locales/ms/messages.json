@@ -1,0 +1,114 @@
+{
+  "DOC_COPY": {
+    "message": "Selesaikan tugas",
+    "description": "App headline for Docs: You can do all your work with Google Docs"
+  },
+  "DOC_SUB_COPY": {
+    "message": "menggunakan Dokumen Google",
+    "description": "Subtitle for Docs: supports the headline by giving the app"
+  },
+  "DOC_DESCRIPTION": {
+    "message": "Buat dokumen, hamparan dan penyampaian yang anda boleh usahakan dalam dan luar talian.",
+    "description": "Description for docs: High level overview of what google docs is"
+  },
+  "DOCS_SECTION_GROUP_TITLE": {
+    "message": "Bekerjasama",
+    "description": "Feature headline 1: Headline for working with other people in real time"
+  },
+  "DOCS_SECTION_GROUP_DESCRIPTION": {
+    "message": "Klik 'Kongsi', jemput orang dan bekerja bersama-sama dalam masa nyata. Semuanya amat mudah.",
+    "description": "Feature description 1: Description describing that to collaborate you would just click share to invite people to the document "
+  },
+  "DOCS_SECTION_BACKUP_TITLE": {
+    "message": "Autosimpan",
+    "description": "Feature headline 2: Headline for Google Docs automatically saving your document"
+  },
+  "DOCS_SECTION_BACKUP_DESCRIPTION": {
+    "message": "Anda tidak perlu bimbang tentang kehilangan kerja anda lagi dengan sandaran automatik ke Google Drive.",
+    "description": "Feature description 2: Description describing that with Google Docs auto saving you never have to save or worry about saving"
+  },
+  "DOCS_SECTION_ANYWHERE_TITLE": {
+    "message": "Akses di mana-mana sahaja",
+    "description": "Feature headline 3: Headline for being able to see your Google Docs on any device"
+  },
+  "DOCS_SECTION_ANYWHERE_DESCRIPTION": {
+    "message": "Kerja anda disimpan dengan selamat di Google Drive supaya anda boleh mengaksesnya dari mana-mana komputer, tablet atau telefon pintar.",
+    "description": "Subtitle headline 3: Descrption that describes that through Google Drive you can see you documents on a phone, computer or tablet device"
+  },
+  "DOCS_HINT_TITLE": {
+    "message": "Bagaimana jika saya menggunakan Microsoft Office <sup>® /sup>?",
+    "description": "Question headline: Addresses user concerns if they are Microsoft Office users"
+  },
+  "DOCS_HINT_DESCRIPTION": {
+    "message": "Dokumen Google dibina sekali dalam setiap Chromebook secara percuma. Chromebook turut berfungsi dengan dokumen <span class=\"no-break\">Microsoft Office<sup>®</sup></ span> supaya anda boleh mengedit fail Word dan Excel walaupun apabila anda berada di luar talian.",
+    "description": "Question description: Answers users concerns about Office by describing that Docs is free and built in as well as describing Quickoffice as having the ability to edit Office files even when Offline"
+  },
+  "DOCS_DOCUMENT_TITLE": {
+    "message": "Selamat datang ke Dokumen Google",
+    "description": "Fake document name: The name of the fake document welcomes the user to Google docs in a friendly manner"
+  },
+  "DOCS_BUTTON_SHARE": {
+    "message": "Kongsi",
+    "description": "Share button: Same as docs UI"
+  },
+  "DOCS_BALLOON_SHARE": {
+    "message": "Bekerja bersama orang lain dalam masa nyata, masukkan ulasan dan pantau perubahan menggunakan sejarah semakan",
+    "description": "Share tooltp: Describes sharing features for Google Docs "
+  },
+  "DOCS_MENU_FILE": {
+    "message": "Fail",
+    "description": "UI Element: File (dropdown for Save As.., etc)"
+  },
+  "DOCS_MENU_EDIT": {
+    "message": "Edit",
+    "description": "UI Element: Edit (dropdown for  copy, paste, ..etc)"
+  },
+  "DOCS_MENU_VIEW": {
+    "message": "Lihat",
+    "description": "UI Element: View (dropdown for  full screen, print layout, etc..)"
+  },
+  "DOCS_MENU_INSERT": {
+    "message": "Masukkan",
+    "description": "UI Element: Insert (dropdown for  images, drawings, etc)"
+  },
+  "DOCS_MENU_FORMAT": {
+    "message": "Format",
+    "description": "UI Element: Format (dropdown for bold, italic, underline, etc)"
+  },
+  "DOCS_MENU_TOOLS": {
+    "message": "Alat",
+    "description": "UI Element: Tools (dropdown for Spelling, research, scripts, etc)"
+  },
+  "DOCS_MENU_TABLE": {
+    "message": "Jadual",
+    "description": "UI Element: Table (dropdown for table options)"
+  },
+  "DOCS_MENU_HELP": {
+    "message": "Bantuan",
+    "description": "UI Element: Help (dropdown for help) "
+  },
+  "DOCS_BALLOON_MENU": {
+    "message": "Cetak, eksport, kongsi dan urus dokumen anda di awan",
+    "description": "Main menu tooltip: Explains how you can manage your document with docs"
+  },
+  "DOCS_BALLOON_TOOLBAR": {
+    "message": "Buat jadual, laraskan teks dan tukar warna fon mengikut cita rasa anda",
+    "description": "Toolbar tooltip: Explains toolbar options"
+  },
+  "DOCS_STARTING_MESSAGE": {
+    "message": "Enjit, enjit semut....",
+    "description": "Starting string is meant to be something playful that the user would like to complete. Like a common phrase (eg: Roses are...red)"
+  },
+  "DOCS_USER_CHARLES": {
+    "message": "Charles",
+    "description": "Meant to be Charles Dickens"
+  },
+  "DOCS_USER_EDGAR": {
+    "message": "Edgar",
+    "description": "Meant to be Edgar Alan Poe"
+  },
+  "DOCS_USER_FREDRICK": {
+    "message": "Fredrick",
+    "description": "Meant to be Fredrick Nietsche"
+  }
+}

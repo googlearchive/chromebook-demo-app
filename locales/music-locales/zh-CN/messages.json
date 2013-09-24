@@ -1,0 +1,274 @@
+{
+  "MUSIC_COPY": {
+    "message": "欣赏音乐",
+    "description": "App headline for play music: Listen to music with Google Play Music all access"
+  },
+  "MUSIC_SUB_COPY": {
+    "message": "使用 Google Play 音乐",
+    "description": "A subtitle for Play Music: supports the headline by giving the app name"
+  },
+  "MUSIC_DESCRIPTION": {
+    "message": "使用 Google Play 音乐，畅享网络上的无限量音乐资源。",
+    "description": "Describes how you can listen to unlimited music with Google Play Music (GPM)"
+  },
+  "MUSIC_SECTION_UPLOAD_TITLE": {
+    "message": "自由掌控自己的音乐收藏",
+    "description": "Feature headline: Describes the uploading feature of google play"
+  },
+  "MUSIC_SECTION_UPLOAD_DESCRIPTION": {
+    "message": "从 iTunes<sup>®</sup> 音乐库或任何音乐文件夹向 Google Play 免费上传多达2万首歌曲。",
+    "description": "Feature description: Describes the features of the upload/music manager feature."
+  },
+  "MUSIC_SECTION_ANYWHERE_TITLE": {
+    "message": "可从任意位置进行访问",
+    "description": "Feature headline: multiple devices"
+  },
+  "MUSIC_SECTION_ANYWHERE_DESCRIPTION": {
+    "message": "Google Play 可跨手机、平板电脑和 Chromebook 自动更新您的音乐库。",
+    "description": "Feature description: can be used on multiple different devices which are kept in sync."
+  },
+  "MUSIC_SECTION_UNLIMITED_TITLE": {
+    "message": "无限音乐，任您畅享",
+    "description": "Feature headline: All Access headline"
+  },
+  "MUSIC_SECTION_UNLIMITED_DESCRIPTION": {
+    "message": "订阅 Google Play 音乐无限听，即可无限畅听数百万首歌曲、创建定制电台，并随心掌控电台的播放曲目。",
+    "description": "Feature description: Describes what you can do with Play Music All Access"
+  },
+  "MUSIC_HINT_TITLE": {
+    "message": "如果我使用的是 iTunes<sup>®</sup>，该怎么办？",
+    "description": "Question headline: Addresses concenrs for iTunes users"
+  },
+  "MUSIC_HINT_DESCRIPTION": {
+    "message": "Google Play 音乐基于云端，与 iTunes<sup>®</sup> 属于同类应用。您可以使用 Google 音乐管理器免费上传多达2万首歌曲。",
+    "description": "Question description: Describes google play music as an alternate to iTunes and says you can upload songs to it via music manager"
+  },
+  "MUSIC_MEESAGE_BAR": {
+    "message": "立即欣赏",
+    "description": "Listen now section of Google Play Music"
+  },
+  "MUSIC_SIDE_BUTTON_UPLOAD": {
+    "message": "上传音乐",
+    "description": "Upload button"
+  },
+  "MUSIC_BALLOON_UPLOAD": {
+    "message": "使用音乐管理器免费上传多达2万首歌曲",
+    "description": "Upload tooltip: Short description of music manager"
+  },
+  "MUSIC_SIDE_BUTTON_LIBRARY": {
+    "message": "我的乐库",
+    "description": "My Library button"
+  },
+  "MUSIC_BALLOON_LIBRARY": {
+    "message": "收听您购买和上传的所有音乐",
+    "description": "My Library tooltip: Description of the library section of Google Play Music"
+  },
+  "MUSIC_SIDE_BUTTON_MIXES": {
+    "message": "速成合辑",
+    "description": "Instant mixes button"
+  },
+  "MUSIC_BALLOON_MIXES": {
+    "message": "根据您喜爱的音乐寻找速成合辑",
+    "description": "Instant mixes tooltip: Describes google radio and recommend features"
+  },
+  "MUSIC_SIDE_BUTTON_SHOP": {
+    "message": "购买",
+    "description": "Shop button"
+  },
+  "MUSIC_BALLOON_SHOP": {
+    "message": "寻找新的音乐，然后直接从 Play 商店购买",
+    "description": "Shop tooltip: describes buying music from the play store"
+  },
+  "MUSIC_SIDE_BUTTON_PLAYLISTS": {
+    "message": "播放列表",
+    "description": "Playlist button"
+  },
+  "MUSIC_BALLOON_PLAYLISTS": {
+    "message": "轻松创建您自己的播放列表",
+    "description": "Playlist tooltip: Describes creating and sharing playlists"
+  },
+  "MUSIC_LUMINEERS_ARTIST_NAME": {
+    "message": "Lumineers",
+    "description": "Artist name."
+  },
+  "MUSIC_LUMINEERS_SONG_NAME": {
+    "message": "Flowers in your hair",
+    "description": "Song name"
+  },
+  "MUSIC_LUMINEERS_FOOTER_MESSAGE": {
+    "message": "最近播放",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_WAR_ARTIST_NAME": {
+    "message": "Good old war",
+    "description": "Artist name."
+  },
+  "MUSIC_WAR_SONG_NAME": {
+    "message": "Calling me names",
+    "description": "Song name"
+  },
+  "MUSIC_WAR_FOOTER_MESSAGE": {
+    "message": "最近播放",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_VIVALDI_ARTIST_NAME": {
+    "message": "Vivaldi",
+    "description": "Artist name."
+  },
+  "MUSIC_VIVALDI_SONG_NAME": {
+    "message": "I. Allegro",
+    "description": "Song name"
+  },
+  "MUSIC_VIVALDI_FOOTER_MESSAGE": {
+    "message": "最近播放",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_MAROON5_ARTIST_NAME": {
+    "message": "Maroon 5",
+    "description": "Artist name."
+  },
+  "MUSIC_MAROON5_SONG_NAME": {
+    "message": "Overexposed",
+    "description": "Song name."
+  },
+  "MUSIC_MAROON5_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": "Subtitle for music thats recommended for you"
+  },
+  "MUSIC_FLORENCE_ARTIST_NAME": {
+    "message": "Florence + the Machine",
+    "description": "Artist name."
+  },
+  "MUSIC_FLORENCE_SONG_NAME": {
+    "message": "Ceremonials",
+    "description": "Song name."
+  },
+  "MUSIC_FLORENCE_FOOTER_MESSAGE": {
+    "message": "最近播放",
+    "description": "Subtitle for a recently played song"
+  },
+  "MUSIC_BLAKE_SHELTON_ARTIST_NAME": {
+    "message": "Blake Shelton",
+    "description": "Artist name."
+  },
+  "MUSIC_BLAKE_SHELTON_SONG_NAME": {
+    "message": "Based on a True Story",
+    "description": "Song name."
+  },
+  "MUSIC_BLAKE_SHELTON_FOOTER_MESSAGE": {
+    "message": "最近添加到我的乐库",
+    "description": "subtitle for music that you have added to your library or bought"
+  },
+  "MUSIC_TIESTO_ARTIST_NAME": {
+    "message": "Tiësto",
+    "description": "Artist name."
+  },
+  "MUSIC_TIESTO_SONG_NAME": {
+    "message": "Club Life Miami",
+    "description": "Song name."
+  },
+  "MUSIC_TIESTO_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": ""
+  },
+  "MUSIC_MIKA_ARTIST_NAME": {
+    "message": "Mika",
+    "description": "Artist name."
+  },
+  "MUSIC_MIKA_SONG_NAME": {
+    "message": "The Origin of Love",
+    "description": "Song name."
+  },
+  "MUSIC_MIKA_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_ONE_REPUBLIC_ARTIST_NAME": {
+    "message": "One Republic",
+    "description": "Artist name."
+  },
+  "MUSIC_ONE_REPUBLIC_SONG_NAME": {
+    "message": "Native",
+    "description": "Song name."
+  },
+  "MUSIC_ONE_REPUBLIC_FOOTER_MESSAGE": {
+    "message": "新歌推荐",
+    "description": ""
+  },
+  "MUSIC_MUSE_ARTIST_NAME": {
+    "message": "Muse",
+    "description": "Artist name."
+  },
+  "MUSIC_MUSE_SONG_NAME": {
+    "message": "The 2nd Law",
+    "description": "Song name."
+  },
+  "MUSIC_MUSE_FOOTER_MESSAGE": {
+    "message": "根据您的收听记录",
+    "description": ""
+  },
+  "MUSIC_FRANK_OCEAN_ARTIST_NAME": {
+    "message": "Frank Ocean",
+    "description": "Artist name."
+  },
+  "MUSIC_FRANK_OCEAN_SONG_NAME": {
+    "message": "Channel Orange",
+    "description": "Song name."
+  },
+  "MUSIC_FRANK_OCEAN_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_IMAGINE_DRAGONS_ARTIST_NAME": {
+    "message": "Imagine Dragons",
+    "description": "Artist name."
+  },
+  "MUSIC_IMAGINE_DRAGONS_SONG_NAME": {
+    "message": "Night Visions",
+    "description": "Song name."
+  },
+  "MUSIC_IMAGINE_DRAGONS_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_THE_DOORS_ARTIST_NAME": {
+    "message": "The doors",
+    "description": "Artist name."
+  },
+  "MUSIC_THE_DOORS_SONG_NAME": {
+    "message": "The Doors",
+    "description": "Song name."
+  },
+  "MUSIC_THE_DOORS_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_TEGAN_AND_SARA_ARTIST_NAME": {
+    "message": "Tegan + Sara",
+    "description": "Artist name."
+  },
+  "MUSIC_TEGAN_AND_SARA_SONG_NAME": {
+    "message": "Heartthrob",
+    "description": "Song name."
+  },
+  "MUSIC_TEGAN_AND_SARA_FOOTER_MESSAGE": {
+    "message": "根据您的收听记录",
+    "description": ""
+  },
+  "MUSIC_ELLIE_GOULDING_ARTIST_NAME": {
+    "message": "Ellie Goulding",
+    "description": "Artist name."
+  },
+  "MUSIC_ELLIE_GOULDING_SONG_NAME": {
+    "message": "Halcyon",
+    "description": "Song name."
+  },
+  "MUSIC_ELLIE_GOULDING_FOOTER_MESSAGE": {
+    "message": "为您推荐",
+    "description": "subtitle for music that is recommended for you by Google"
+  },
+  "MUSIC_MAIN_SONG": {
+    "message": "lumineers",
+    "description": "This is used by the script. This will not be translated."
+  }
+}
