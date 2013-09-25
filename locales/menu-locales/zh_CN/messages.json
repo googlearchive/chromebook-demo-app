@@ -4,7 +4,7 @@
     "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
   },
   "MENU_DESCRIPTION": {
-    "message": "只需几秒钟即可完成启动。使用起来非常简单。随附有您喜爱的 Google 应用。非常适合日常使用；若要与他人共享设备，它无疑是理想之选。",
+    "message": "只需几秒钟即可完成启动。使用起来非常简单。随附有您喜爱的 Google 应用。<br>非常适合日常使用；若要与他人共享设备，它无疑是理想之选。",
     "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
   },
   "MENU_DOCS_BUTTON": {

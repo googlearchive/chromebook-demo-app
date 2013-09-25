@@ -36,7 +36,7 @@
     "description": "Subtitle headline 3: Descrption that describes that through Google Drive you can see you documents on a phone, computer or tablet device"
   },
   "DOCS_HINT_TITLE": {
-    "message": "Bagaimana jika saya menggunakan Microsoft Office <sup>® /sup>?",
+    "message": "Bagaimana jika saya menggunakan Microsoft Office <sup>®</sup>?",
     "description": "Question headline: Addresses user concerns if they are Microsoft Office users"
   },
   "DOCS_HINT_DESCRIPTION": {
