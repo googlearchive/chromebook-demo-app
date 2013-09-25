@@ -4,7 +4,7 @@
     "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
   },
   "MENU_DESCRIPTION": {
-    "message": "Загружается в считанные секунды. Не требует специальных\nзнаний и навыков. Поставляется с установленными приложениями\nGoogle. Идеально подходит для выполнения повседневных задач \nи совместной работы.",
+    "message": "Загружается в считанные секунды. Не требует специальных<br>знаний и навыков. Поставляется с установленными приложениями<br>Google. Идеально подходит для выполнения повседневных задач <br>и совместной работы.",
     "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
   },
   "MENU_DOCS_BUTTON": {
