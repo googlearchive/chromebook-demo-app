@@ -34,14 +34,5 @@
   "MENU_THIRD_BUTTON_TYPE": {
     "message": "toista",
     "description": "This is used by the script. This will not be translated."
-  },
-  "LANGUAGE_NAME_EN": {
-    "message": "englanti"
-  },
-  "LANGUAGE_NAME_JA": {
-    "message": "日本語"
-  },
-  "LANGUAGE_NAME_FR": {
-    "message": "Français"
   }
 }

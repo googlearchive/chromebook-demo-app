@@ -1,47 +1,38 @@
 {
   "MENU_MESSAGE": {
-    "message": "Conheça o Chromebook, o novo tipo de computador do Google",
+    "message": "Meet Chromebook, a new type of computer from Google",
     "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
   },
   "MENU_DESCRIPTION": {
-    "message": "O Chromebook é iniciado em segundos. Você não precisa aprender nada complicado. Ele vem com seus aplicativos favoritos do Google. Projetado para o uso diário e perfeito para compartilhamentos.",
+    "message": "Boots in seconds. Nothing complicated to learn. Comes with your favourite\n Google apps. Built for everyday use and perfect for sharing with others.",
     "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
   },
   "MENU_DOCS_BUTTON": {
-    "message": "Faça seu trabalho",
+    "message": "Get work done",
     "description": "App headline for Docs: You can do all your work with Google Docs (link to Docs app)"
   },
   "MENU_HANGOUTS_BUTTON": {
-    "message": "Mantenha contato",
+    "message": "Keep in touch",
     "description": "App headline for Hangouts: You can stay connected to all your friends with Google+ Hangouts (link to Hangouts app)"
   },
   "MENU_MUSIC_BUTTON": {
-    "message": "Escute música",
+    "message": "Listen to music",
     "description": "App headline for Google Play: You can listen to music with Google Play Music (link to Google Play Music app)"
   },
   "MENU_YOUTUBE_BUTTON": {
-    "message": "Vídeos e música",
+    "message": "Videos and Music",
     "description": "App headline for Youtube (alternative to Google Play): You can enjoy videos and music with YouTube (link to YouTube app)"
   },
   "MENU_STORE_BUTTON": {
-    "message": "Acesse mais aplicativos",
+    "message": "Get more apps",
     "description": "App headline for Webstore: You can get more applications (and do more things) through the Chrome web store (link to Chrome Web store app)"
   },
   "MENU_LEARN_MORE": {
-    "message": "Saiba mais",
+    "message": "Learn more",
     "description": "Subtitle for learning more about Chrome: this is a link to an offline HTML page with more content about Chromebook features (link to Chrome with HTML page preloaded)"
   },
   "MENU_THIRD_BUTTON_TYPE": {
-    "message": "reproduzir",
+    "message": "play",
     "description": "This is used by the script. This will not be translated."
-  },
-  "LANGUAGE_NAME_EN": {
-    "message": "Inglês"
-  },
-  "LANGUAGE_NAME_JA": {
-    "message": "日本語"
-  },
-  "LANGUAGE_NAME_FR": {
-    "message": "Français"
   }
 }

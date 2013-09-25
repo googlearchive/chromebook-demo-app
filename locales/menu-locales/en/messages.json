@@ -38,10 +38,34 @@
   "LANGUAGE_NAME_EN": {
     "message": "English"
   },
-  "LANGUAGE_NAME_JA": {
-    "message": "日本語"
+  "LANGUAGE_NAME_ZH_CN": {
+    "message": "中文"
+  },
+  "LANGUAGE_NAME_NL": {
+    "message": "Nederlands"
+  },
+  "LANGUAGE_NAME_EN_GB": {
+    "message": "English (UK)"
+  },
+  "LANGUAGE_NAME_FI": {
+    "message": "Suomi"
   },
   "LANGUAGE_NAME_FR": {
     "message": "Français"
+  },
+  "LANGUAGE_NAME_DE": {
+    "message": "Deutsch"
+  },
+  "LANGUAGE_NAME_MS": {
+    "message": "Bahasa Melayu"
+  },
+  "LANGUAGE_NAME_PT_BR": {
+    "message": "Português"
+  },
+  "LANGUAGE_NAME_RU": {
+    "message": "Русский"
+  },
+  "LANGUAGE_NAME_SV": {
+    "message": "Svenska"
   }
 }
