@@ -25,12 +25,7 @@
 }
 
 #docs-app .app-side-footer {
-  height: 48px;
   background-color: #2a70e8;
-}
-
-#docs-app .app-side-footer:hover {
-  height: 168px;
 }
 
 /**

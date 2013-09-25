@@ -110,20 +110,19 @@ body {
 }
 
 .app-frame .app-side-footer {
-  background-color: #f1f1f1;
-  padding: 24px;
-  height: 26px;
   -webkit-flex: none;
-  overflow: hidden;
-  -webkit-transition-property: height;
   -webkit-transition-duration: 0.2s;
+  -webkit-transition-property: bottom;
   -webkit-transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1.0);
-  position: relative;
+  background-color: #f1f1f1;
+  bottom: 0;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+  padding: 24px;
   z-index: 1;
-}
-
-.app-frame .app-side-footer:hover {
-  height: 108px;
+  position: relative;
+  margin-bottom: -159px;
 }
 
 .app-frame .app-hint-title {
@@ -136,6 +135,10 @@ body {
   opacity: 0;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 0.2s;
+}
+
+.app-frame .app-side-footer:hover {
+  bottom: 159px;
 }
 
 .app-frame .app-side-footer:hover .app-hint-description {
