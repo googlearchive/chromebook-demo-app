@@ -91,8 +91,8 @@ var extend = function(base, adapter) {
 Locale = {loaded: false, messages_: {}};
 
 Locale.LIST = [
-    'da', 'de', 'en', 'en-gb', 'es', 'es-419', 'fr', 'it', 'ja', 'ko', 'ms',
-    'nl', 'pt', 'ru', 'sv', 'zh', 'zh-tw', 'fi'];
+    'de', 'en', 'en_GB', 'fi', 'fr', 'ms', 'nl', 'pt_BR', 'ru',
+    'sv', 'zh_CN'];
 
 Locale.DEFAULT = 'en';
 
@@ -103,22 +103,47 @@ Locale.DEFAULT = 'en';
 Locale.loadCurrentLocale = function() {
   var rawLocale = localStorage['locale'] ||
       chrome.i18n.getMessage('@@ui_locale');
+  console.log(chrome.i18n.getMessage('@@ui_locale'));
   return this.getAvailableLocale(rawLocale);
 };
+
+console.log(chrome.i18n.getMessage('@@ui_locale'));
 
 Locale.saveCurrentLocale = function(code) {
   localStorage['locale'] = code;
 };
 
+/**
+ * Format the code and return the most properly locale.
+ */
 Locale.getAvailableLocale = function(code) {
-  code = code.toLowerCase().replace(/_/g, '-');
-  for (var i = 0; i < Locale.LIST.length; i++) {
-    if (code == Locale.LIST[i])
-      return code;
-  }
-  if (code.indexOf('-') == -1)
+  // Refuse an invalid format.
+  if (!/^[a-zA-Z]+([\-_][a-zA-Z0-9]+])?$/.test(code))
     return Locale.DEFAULT;
-  return this.getAvailableLocale(code.split('-', 2)[0]);
+
+  // Normalize the format.
+  var components = code.split(/[\-_]/);
+  components[0] = components[0].toLowerCase();
+  if (components[1])
+    components[1] = components[1].toUpperCase();
+  code = components.join('_');
+
+  // Check if the code is included in the support list.
+  if (Locale.LIST.indexOf(code) != -1)
+    return code;
+
+  // Check if there is the language code without a country.
+  if (components.length == 2 && Locale.LIST.indexOf(components[0]) != -1)
+    return components[0];
+
+  // Check if there is the same language code with a different country.
+  for (var i = 0; i < Locale.LIST.length; i++) {
+    if (Locale.LIST[i].indexOf(components[0]) == 0)
+      return Locale.LIST[i];
+  }
+
+  // Return the default country.
+  return Locale.DEFAULT;
 };
 
 Locale.load = function(callback) {

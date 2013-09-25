@@ -127,6 +127,8 @@ App.prototype.get = function(query) {
 };
 
 App.prototype.applyLocale = function(locale) {
+  console.debug('applyLocale', locale);
+
   // Replace i18n strings.
   Locale.apply(this.document, locale);
 
