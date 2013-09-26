@@ -50,6 +50,17 @@ MusicApp.prototype.applyLocale = function(code) {
   this.mainMusicAudio_.src = 'music-' + mainSong + '.mp3';
 };
 
+MusicApp.prototype.updateLayout = function(opt_height) {
+  App.prototype.updateLayout.call(this, opt_height);
+  var balloons = this.document.querySelectorAll('.side-button .balloon');
+  for (var i = 0; i < balloons.length; i++) {
+    var balloon = balloons[i];
+    var balloonHeight = balloon.getBoundingClientRect().height;
+    var parentHeight = balloon.parentNode.getBoundingClientRect().height;
+    balloon.style.top = ~~((parentHeight - balloonHeight) / 2) + 'px';
+  }
+};
+
 MusicApp.prototype.updateView_ = function() {
   if (this.mainMusicAudio_.paused)
     this.mainMusic_.classList.remove('play');
