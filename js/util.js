@@ -91,8 +91,8 @@ var extend = function(base, adapter) {
 Locale = {loaded: false, messages_: {}};
 
 Locale.LIST = [
-    'de', 'en', 'en_GB', 'fi', 'fr', 'ms', 'nl', 'pt_BR', 'ru',
-    'sv', 'zh_CN'];
+    'de', 'en', 'en_GB', 'en_CA', 'fi', 'fr', 'fr_CA', 'ms', 'nl', 'pt_BR',
+    'ru', 'sv', 'zh_CN'];
 
 Locale.DEFAULT = 'en';
 
@@ -157,19 +157,36 @@ Locale.load = function(callback) {
 Locale.onXHRStateChange_ = function(xhr, lang, callback) {
   if (xhr.readyState != 4)
     return;
+
+  // Store the loaded messages.
   if (xhr.status == 200)
     this.messages_[lang] = JSON.parse(xhr.responseText);
   else
     this.messages_[lang] = {};
+
   // Check if the all languages have already loaded or not.
   for (var i = 0; i < Locale.LIST.length; i++) {
     var inLang = Locale.LIST[i];
-    if (this.messages_[inLang]) {
-      if (inLang != Locale.DEFAULT)
-        this.messages_[inLang].__proto__ = this.messages_[Locale.DEFAULT];
-    } else {
+    if (!this.messages_[inLang])
       return;
+  }
+
+  // Set fallback target.
+  for (var i = 0; i < Locale.LIST.length; i++) {
+    if (Locale.LIST[i] == Locale.DEFAULT)
+      continue;
+    var component = Locale.LIST[i].split('_');
+    if (component.length == 2) {
+      // Find language.
+      var index = Locale.LIST.indexOf(component[0]);
+      if (index != -1) {
+        this.messages_[Locale.LIST[i]].__proto__ =
+            this.messages_[Locale.LIST[index]];
+        continue;
+      }
     }
+    this.messages_[Locale.LIST[i]].__proto__ =
+        this.messages_[Locale.DEFAULT];
   }
   Locale.loaded = true;
   callback();

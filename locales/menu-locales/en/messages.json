@@ -39,19 +39,25 @@
     "message": "English"
   },
   "LANGUAGE_NAME_ZH_CN": {
-    "message": "中文"
+    "message": "中文 (简体中文)"
   },
   "LANGUAGE_NAME_NL": {
     "message": "Nederlands"
   },
   "LANGUAGE_NAME_EN_GB": {
-    "message": "English (UK)"
+    "message": "English (United Kingdom)"
+  },
+  "LANGUAGE_NAME_EN_CA": {
+    "message": "English (Canada)"
   },
   "LANGUAGE_NAME_FI": {
     "message": "Suomi"
   },
   "LANGUAGE_NAME_FR": {
     "message": "Français"
+  },
+  "LANGUAGE_NAME_FR_CA": {
+    "message": "Français (Canada)"
   },
   "LANGUAGE_NAME_DE": {
     "message": "Deutsch"
@@ -60,7 +66,7 @@
     "message": "Bahasa Melayu"
   },
   "LANGUAGE_NAME_PT_BR": {
-    "message": "Português"
+    "message": "Português (Brasil)"
   },
   "LANGUAGE_NAME_RU": {
     "message": "Русский"
