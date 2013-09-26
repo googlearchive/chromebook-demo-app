@@ -112,18 +112,20 @@
 }
 
 #docs-app .share {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -webkit-margin-end: 0;
   -webkit-margin-start: 5px;
-  box-sizing: border-box;
-  border: 1px solid rgba(206,206,206,0.3);
-  border-radius: 2px;
-  padding: 0 8px;
-  height: 35px;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  width: 96px;
-  display: -webkit-flex;
   background-color: #f1f1f1;
+  border-radius: 2px;
+  border: 1px solid rgba(206,206,206,0.3);
+  box-sizing: border-box;
+  height: 35px;
+  margin-bottom: -1px;
+  margin-top: -1px;
   outline: none;
+  padding: 0 8px;
+  line-height: 33px;
 }
 
 #docs-app .share-icon {
@@ -132,17 +134,15 @@
       url(docs-share-2x.png) 2x);
   width: 32px;
   height: 32px;
-  -webkit-flex: none;
-  -webkit-margin-end: 2px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 #docs-app .share-label {
   font-family: 'Arial';
   font-size: 13px;
   color: #777;
-  line-height: 31px;
-  text-align: center;
-  -webkit-flex: none;
+  -webkit-padding-end: 6px;
 }
 
 #docs-app .share .balloon {
