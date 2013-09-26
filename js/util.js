@@ -103,11 +103,8 @@ Locale.DEFAULT = 'en';
 Locale.loadCurrentLocale = function() {
   var rawLocale = localStorage['locale'] ||
       chrome.i18n.getMessage('@@ui_locale');
-  console.log(chrome.i18n.getMessage('@@ui_locale'));
   return this.getAvailableLocale(rawLocale);
 };
-
-console.log(chrome.i18n.getMessage('@@ui_locale'));
 
 Locale.saveCurrentLocale = function(code) {
   localStorage['locale'] = code;
@@ -118,7 +115,7 @@ Locale.saveCurrentLocale = function(code) {
  */
 Locale.getAvailableLocale = function(code) {
   // Refuse an invalid format.
-  if (!/^[a-zA-Z]+([\-_][a-zA-Z0-9]+])?$/.test(code))
+  if (!/^[a-zA-Z]+([\-_][a-zA-Z0-9]+)?$/.test(code))
     return Locale.DEFAULT;
 
   // Normalize the format.
