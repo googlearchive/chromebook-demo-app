@@ -239,12 +239,10 @@ App.prototype.toggleDirection_ = function(toggle) {
 };
 
 App.prototype.onMessage_ = function(message) {
-  console.log(message);
   if (message.name == 'close') {
     if (this.appWindow)
       this.appWindow.close();
   } else if (message.name == 'applyLocale') {
-    console.log('applyLocale');
     if (this.documentInitialized_)
       this.applyLocale(message.code);
   }
