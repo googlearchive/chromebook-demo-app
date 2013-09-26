@@ -61,6 +61,16 @@ DocsApp.prototype.applyLocale = function(lang) {
   this.loadKeywords_(lang);
 };
 
+DocsApp.prototype.updateLayout = function(opt_height) {
+  App.prototype.updateLayout.call(this, opt_height);
+  var buttonWidth = this.get('.share').getBoundingClientRect().width;
+  var balloonWidth = this.get('.share .balloon').getBoundingClientRect().width;
+  this.get('#dynamic-styles').innerText +=
+      '#docs-app .share .balloon {' +
+      '  left: ' + ~~((buttonWidth - balloonWidth) / 2) + 'px;' +
+      '}';
+};
+
 DocsApp.prototype.loadKeywords_ = function(lang) {
   // Init the keywords.
   this.keywords_ = null;

@@ -140,10 +140,10 @@ App.prototype.applyLocale = function(locale) {
   this.toggleDirection_(false);
 
   // If the application has the side view, layout it.
-  this.updateLayout_();
+  this.updateLayout();
 };
 
-App.prototype.updateLayout_ = function(opt_height) {
+App.prototype.updateLayout = function(opt_height) {
   if (!this.get('.app-side'))
     return;
   // Add dynamic styles.
@@ -203,7 +203,7 @@ App.prototype.toggleWindowSize_ = function() {
   this.appWindow.setBounds(bounds);
   this.windowBoundsIndex_++;
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
-  this.updateLayout_(bounds.height);
+  this.updateLayout(bounds.height);
 };
 
 App.prototype.toggleDirection_ = function(toggle) {
