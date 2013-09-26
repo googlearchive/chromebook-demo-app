@@ -30,7 +30,8 @@ DocsApp.prototype.initDocument = function() {
 
   // Added the start up editing.
   this.cursors_[0].editor =
-      new Editor(0, '', chrome.i18n.getMessage('DOCS_STARTING_MESSAGE'));
+      new Editor(0, '', Locale.get(this.initialLocale,
+                                   'DOCS_STARTING_MESSAGE'));
 
   // Init variables.
   this.paper_.innerText = '';

@@ -8,6 +8,11 @@ var makeCenterBounds = function(width, height) {
 };
 
 var App = function() {
+  /**
+   * Initial locale.
+   */
+  this.initialLocale = null;
+
   var initialBounds = Component.current().windowParams.state == 'maximized' ?
       makeCenterBounds(screen.availWidth, screen.availHeight) :
       Component.current().windowParams.bounds;
@@ -37,7 +42,7 @@ App.prototype.start = function() {
 
   // Get current locale.
   Component.ENTRIES.Helper.sendMessage({name: 'getLocale'}, function(localeID) {
-    this.locale_ = chrome.runtime.lastError ? Locale.DEFAULT : localeID;
+    this.initialLocale = chrome.runtime.lastError ? Locale.DEFAULT : localeID;
     this.checkDocumentReady_();
   }.bind(this));
 
@@ -62,11 +67,11 @@ App.prototype.checkDocumentReady_ = function() {
   if ((window.document.readyState == 'interactive' ||
        window.document.readyState == 'complete') &&
       Locale.loaded &&
-      this.locale_ &&
+      this.initialLocale &&
       !this.documentInitialized_) {
     this.documentInitialized_ = true;
     this.initDocument();
-    this.applyLocale(this.locale_);
+    this.applyLocale(this.initialLocale);
     this.appWindow.show();
     return true;
   } else {
