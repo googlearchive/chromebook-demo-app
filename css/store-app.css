@@ -150,11 +150,12 @@
 }
 
 .app-title {
-  font-family: 'OpenSans-Regular', Arial;
+  font: 13px/13px 'OpenSans-Regular', Arial;
   font-weight: bold;
-  font-size: 13px;
-  line-height: 100%;
   margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .app-detail {
