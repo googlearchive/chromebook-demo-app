@@ -40,7 +40,7 @@
     "description": "Question headline: Addresses user concerns if they are Microsoft Office users"
   },
   "DOCS_HINT_DESCRIPTION": {
-    "message": "Dokumen Google dibina sekali dalam setiap Chromebook secara percuma. Chromebook turut berfungsi dengan dokumen <span class=\"no-break\">Microsoft Office<sup>®</sup></ span> supaya anda boleh mengedit fail Word dan Excel walaupun apabila anda berada di luar talian.",
+    "message": "Dokumen Google dibina sekali dalam setiap Chromebook secara percuma. Chromebook turut berfungsi dengan dokumen <span class=\"no-break\">Microsoft Office<sup>®</sup></span> supaya anda boleh mengedit fail Word dan Excel walaupun apabila anda berada di luar talian.",
     "description": "Question description: Answers users concerns about Office by describing that Docs is free and built in as well as describing Quickoffice as having the ability to edit Office files even when Offline"
   },
   "DOCS_DOCUMENT_TITLE": {

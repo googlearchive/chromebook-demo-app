@@ -44,6 +44,7 @@ body {
   width: 280px;
   display: -webkit-flex;
   -webkit-flex-flow: column;
+  -webkit-justify-content: space-between;
   -webkit-border-end: solid 1px #e4e4e4;
   -webkit-flex: none;
   overflow: hidden;
@@ -51,7 +52,7 @@ body {
 
 .app-frame .app-side-body {
   padding: 40px 20px 0 20px;
-  -webkit-flex: auto;
+  -webkit-flex: none;
 }
 
 .app-frame .app-icon {
@@ -74,31 +75,21 @@ body {
 }
 
 .app-frame .app-sub-copy {
-  font-family: 'OpenSans-Regular', sans-serif;
+  font: 13px/24px 'OpenSans-Regular', sans-serif;
   text-align: center;
-  font-size: 13px;
-  line-height: 24px;
   color: #999;
 }
 
 .app-frame .app-description,
 .app-frame .sec-description,
 .app-frame .app-hint-description {
-  font-family: 'OpenSans-Regular', sans-serif;
-  font-size: 13px;
-  line-height: 20px;
+  font: 13px/20px 'OpenSans-Regular', sans-serif;
   color: #777;
-}
-
-.app-frame .app-description {
-  margin-top: 24px;
 }
 
 .app-frame .sec-header {
   display: -webkit-flex;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 25px;
 }
 
 .app-frame .sec-header-icon {
@@ -112,7 +103,7 @@ body {
 .app-frame .app-side-footer {
   -webkit-flex: none;
   -webkit-transition-duration: 0.2s;
-  -webkit-transition-property: bottom;
+  -webkit-transition-property: bottom; /* The bottom is set by JavaScript. */
   -webkit-transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1.0);
   background-color: #f1f1f1;
   bottom: 0;
@@ -122,23 +113,18 @@ body {
   padding: 24px;
   z-index: 1;
   position: relative;
-  margin-bottom: -159px;
 }
 
 .app-frame .app-hint-title {
   color: white;
-  margin-bottom: 18px;
 }
 
 .app-frame .app-hint-description {
+  padding-top: 18px;
   color: white;
   opacity: 0;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 0.2s;
-}
-
-.app-frame .app-side-footer:hover {
-  bottom: 159px;
 }
 
 .app-frame .app-side-footer:hover .app-hint-description {

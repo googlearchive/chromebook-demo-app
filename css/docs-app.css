@@ -346,14 +346,3 @@
 #docs-app .cursor.fredrick::after {
   background-color: #9e69af;
 }
-
-/**
- * For small monitors
- */
-
-@media all and (max-height: 820px) {
-  .app-frame .sec-header {
-    margin-top: 24px;
-    margin-bottom: 12px;
-  }
-}

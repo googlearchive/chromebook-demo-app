@@ -36,7 +36,7 @@
     "description": "Feature description: Describes what you can do with Play Music All Access"
   },
   "MUSIC_HINT_TITLE": {
-    "message": "Bagaimana jika saya menggunakan iTunes <sup>® /sup>?",
+    "message": "Bagaimana jika saya menggunakan iTunes <sup>®</sup>?",
     "description": "Question headline: Addresses concenrs for iTunes users"
   },
   "MUSIC_HINT_DESCRIPTION": {

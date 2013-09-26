@@ -46,10 +46,6 @@
   background-color: #facf0c;
 }
 
-#music-app .app-side-footer:hover {
-  height: 124px;
-}
-
 #music-app .app-hint-title {
   color: black;
 }
@@ -308,22 +304,4 @@
 
 #music-app .music.main .music-footer {
   font-size: 13px;
-}
-
-/**
- * For small monitors
- */
-
-@media all and (max-height: 820px) {
-  .app-frame .sec-header {
-    margin-top: 36px;
-    margin-bottom: 18px;
-  }
-}
-
-@media all and (max-height: 780px) {
-  .app-frame .sec-header {
-    margin-top: 24px;
-    margin-bottom: 12px;
-  }
 }

@@ -127,14 +127,69 @@ App.prototype.get = function(query) {
 };
 
 App.prototype.applyLocale = function(locale) {
-  console.debug('applyLocale', locale);
-
   // Replace i18n strings.
   Locale.apply(this.document, locale);
 
   // Apply initial DOM state.
   this.get('html').setAttribute('dir', chrome.i18n.getMessage("@@bidi_dir"));
   this.toggleDirection_(false);
+
+  // If the application has the side view, layout it.
+  this.updateLayout_();
+};
+
+App.prototype.updateLayout_ = function(opt_height) {
+  if (!this.get('.app-side'))
+    return;
+  // Add dynamic styles.
+  var dynamicStyle = this.get('#dynamic-styles');
+  if (!dynamicStyle) {
+    dynamicStyle = this.document.createElement('style');
+    dynamicStyle.id = 'dynamic-styles';
+    dynamicStyle.margin = 0;
+    this.document.head.appendChild(dynamicStyle);
+  }
+
+  // Obtains height and margin values.
+  var footerElement = this.get('.app-side-footer');
+  for (var i = 0; i < 2; i++) {
+    dynamicStyle.innerText = i == 0 ?
+        '' :
+        '.app-frame .app-copy,' +
+        '.app-frame .sec-header-text,' +
+        '.app-frame .app-hint-title {' +
+            'font-size: 18px;' +
+            'line-height: 20px;' +
+        '}';
+    var sideHeight =
+        opt_height || this.get('.app-side').getBoundingClientRect().height;
+    var bodyHeight = this.get('.app-side-body').getBoundingClientRect().height;
+    var hintDescriptionHeight =  footerElement ?
+        this.get('.app-hint-description').getBoundingClientRect().height : 0;
+    var footerHeight = footerElement ?
+        footerElement.getBoundingClientRect().height - hintDescriptionHeight :
+        0;
+    var margin = Math.min(
+        25, Math.max(~~((sideHeight - bodyHeight - footerHeight) / 12), 0));
+
+    // If margin is too small, retry with small font.
+    if (margin >= 8)
+      break;
+  }
+
+  dynamicStyle.margin = margin;
+  dynamicStyle.innerText +=
+      '.app-frame .app-description,' +
+      '.app-frame .sec-description {' +
+      '  margin-top: ' + margin + 'px;' +
+      '  margin-bottom: ' + (margin * 2) + 'px;' +
+      '}' +
+      '.app-frame .app-side-footer {' +
+      '  margin-bottom: ' + (-hintDescriptionHeight) + 'px;' +
+      '}' +
+      '.app-frame .app-side-footer:hover {' +
+      '  bottom: ' + hintDescriptionHeight + 'px;' +
+      '}';
 };
 
 App.prototype.toggleWindowSize_ = function() {
@@ -143,6 +198,7 @@ App.prototype.toggleWindowSize_ = function() {
   this.appWindow.setBounds(bounds);
   this.windowBoundsIndex_++;
   this.windowBoundsIndex_ %= this.windowBoundsList_.length;
+  this.updateLayout_(bounds.height);
 };
 
 App.prototype.toggleDirection_ = function(toggle) {
