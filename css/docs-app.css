@@ -151,10 +151,11 @@
 }
 
 #docs-app .docs-menu-container {
-  width: 800px;
   -webkit-flex: none;
-  display: -webkit-flex;
   -webkit-justify-content: flex-start;
+  display: -webkit-flex;
+  margin-top: 4px;
+  width: 800px;
 }
 
 #docs-app .docs-menu {
