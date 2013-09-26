@@ -54,10 +54,14 @@
   color: black;
 }
 
+#music-app #music-main {
+  display: flex;
+  justify-content: center;
+}
+
 #music-app .message-bar {
   margin: 40px auto 0;
   height: 40px;
-  width: 840px;
   background-color: white;
   font-family: 'Roboto-Light', sans-serif;
   font-size: 18px;
@@ -69,12 +73,16 @@
 
 #music-app .music-main-body {
   display: -webkit-flex;
-  margin: 40px auto;
-  width: 840px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+#music-app #scrolled-contents {
+  overflow-y: visible;
 }
 
 #music-app .side-button-container {
-  width: 130px;
+  width: auto;
   -webkit-margin-end: 40px;
   -webkit-flex: none;
 }
@@ -117,6 +125,7 @@
   width: 680px;
   -webkit-flex: none;
   margin-bottom: -10px;
+  -webkit-margin-end: -10px;
 }
 
 #music-app .music-container::after {
