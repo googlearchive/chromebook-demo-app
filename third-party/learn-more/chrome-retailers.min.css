@@ -5,7 +5,7 @@
   display: -webkit-flex;
   border: 0 none transparent;
   border-bottom: 1px solid #e8e8e8;
-  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 #logo {
@@ -13,32 +13,33 @@
       url(chrome-logo-1x.png) 1x, url(chrome-logo-2x.png) 2x);
   width: 165px;
   height: 29px;
-  -webkit-align-self: center;
+  align-self: center;
 }
 
 #nav {
-  -webkit-align-items: flex-end;
-  display: -webkit-flex;
+  align-items: flex-end;
+  display: flex;
   font-size: 12px;
 }
 
 #nav a {
-  -webkit-flex: none;
-  color: #333;
-  display: block;
-  font-weight: 600;
-  height: 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  width: 96px;
   border-bottom: 0 solid #39c;
   box-sizing: border-box;
-  -webkit-transition: border-width 0.2s linear;
+  color: #333;
+  display: block;
+  flex: 0 0 auto;
+  font-weight: 600;
+  height: 25px;
+  padding: 0 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-width 0.2s linear;
+  white-space: nowrap;
+  width: auto;
 }
 
 .loading #nav a {
-  -webkit-transition: border-width 0 linear;
+  transition: border-width 0 linear;
 }
 
 #nav a:hover,
