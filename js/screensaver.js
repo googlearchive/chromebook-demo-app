@@ -4,7 +4,7 @@ var Screensaver = function() {
 
 Screensaver.prototype.start = function() {
   chrome.power.requestKeepAwake('display');
-  chrome.idle.setDetectionInterval(15);
+  chrome.idle.setDetectionInterval(60 * 5);
   chrome.idle.onStateChanged.addListener(this.onIdleStateChange_.bind(this));
 };
 
