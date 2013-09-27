@@ -39,9 +39,7 @@ LearnMore.PAGES = (function() {
     ],
     'offline': [makePage('offline', 2)],
     'printing': [makePage('printing', 2)],
-    'do-more': [
-      makePage('do-more', 2)
-    ]
+    'do-more': [makePage('do-more', 2)]
   };
 })();
 
