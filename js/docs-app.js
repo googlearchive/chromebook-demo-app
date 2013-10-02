@@ -79,10 +79,36 @@ DocsApp.prototype.loadKeywords_ = function(lang) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState != 4)
       return;
-    if (xhr.status == 200)
-      this.keywords_ = JSON.parse(xhr.responseText);
-    else if (lang != Locale.DEFAULT)
-      this.loadKeywords_(Locale.DEFAULT);
+    if (xhr.status == 200) {
+      var json = JSON.parse(xhr.responseText);
+      var keywords = {};
+      var keywordsArray = [];
+      for (var name in json) {
+        var components = name.split('_');
+        var id = components[3] + '_' + components[5];
+        if (!keywords[id]) {
+          keywords[id] = {
+            priority: ~~components[3],
+            sequence: ~~components[5]
+          };
+          keywordsArray.push(keywords[id]);
+        }
+        keywords[id][components[4].toLowerCase()] = json[name].message;
+      }
+      this.keywords_ = [];
+      for (var i = 0; i < keywordsArray.length; i++) {
+        this.keywords_[keywordsArray[i].priority] =
+            this.keywords_[keywordsArray[i].priority] || [];
+        this.keywords_[keywordsArray[i].priority][keywordsArray[i].keyword] =
+            keywordsArray[i].result;
+      }
+    } else if (lang != Locale.DEFAULT) {
+      var component = lang.split('_');
+      if (component.length == 2)
+        this.loadKeywords_(component[0]);
+      else
+        this.loadKeywords_(Locale.DEFAULT);
+    }
   }.bind(this);
   xhr.open('GET', 'words_' + lang + '.json');
   xhr.send();
@@ -239,6 +265,7 @@ DocsApp.prototype.findBotKeyword_ = function() {
   var paperText = this.paper_.value;
   for (var i = 0; i < this.keywords_.length; i++) {
     for (var keyword in this.keywords_[i]) {
+        console.debug(keyword);
       if (this.usedKeyword_[keyword])
         continue;
       // Make regexp to search the word.

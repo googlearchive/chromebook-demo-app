@@ -77,7 +77,17 @@ DOCS_FILES = \
   js/editor.js \
   js/paper-edit-adapter.js \
   js/util.js \
+  third-party/docs-bot-words/words_de.json \
+  third-party/docs-bot-words/words_en_GB.json \
   third-party/docs-bot-words/words_en.json \
+  third-party/docs-bot-words/words_fi.json \
+  third-party/docs-bot-words/words_fr.json \
+  third-party/docs-bot-words/words_ms.json \
+  third-party/docs-bot-words/words_nl.json \
+  third-party/docs-bot-words/words_pt_BR.json \
+  third-party/docs-bot-words/words_ru.json \
+  third-party/docs-bot-words/words_sv.json \
+  third-party/docs-bot-words/words_zh_CN.json \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
   views/docs-app.html
