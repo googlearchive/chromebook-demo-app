@@ -232,7 +232,6 @@ h1, p {
   border-bottom-color: #facf0c;
 }
 
-.button:hover .button-label,
 .button:focus .button-label {
   border-bottom-width: 4px;
 }
@@ -360,13 +359,9 @@ h1, p {
   background-color: #facf0c;
 }
 
-.docs.button:hover ~ .docs.shelf-marker,
-.docs.button.focus ~ .docs.shelf-marker,
-.hangouts.button:hover ~ .hangouts.shelf-marker,
-.hangouts.button.focus ~ .hangouts.shelf-marker,
-.third.button:hover ~ .third.shelf-marker,
-.third.button.focus ~ .third.shelf-marker,
-.store.button:hover ~ .store.shelf-marker,
-.store.button.focus ~ .store.shelf-marker {
+.docs.button:focus ~ .docs.shelf-marker,
+.hangouts.button:focus ~ .hangouts.shelf-marker,
+.third.button:focus ~ .third.shelf-marker,
+.store.button:focus ~ .store.shelf-marker {
   height: 4px;
 }
