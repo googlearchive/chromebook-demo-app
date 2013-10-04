@@ -27,6 +27,47 @@ var LANGUAGE_PICKER_CLIENT_IDS = Object.freeze([
   'joodangkbfjnajiiifokapkpmhfnpleo'
 ]);
 
+var LanguagePicker = function(element, selectCallback) {
+  this.element_ = element;
+  this.selectCallback_ = selectCallback;
+  Object.freeze(this);
+
+  element.addEventListener('mousedown', this.onMouseDown_.bind(this));
+  element.addEventListener('keydown', this.onKeyDown_.bind(this));
+  element.addEventListener('blur', this.onBlur_.bind(this));
+  element.ownerDocument.addEventListener('mouseup', this.onMouseUp_.bind(this));
+};
+
+LanguagePicker.prototype.onMouseDown_ = function() {
+  this.element_.classList.add('open');
+};
+
+LanguagePicker.prototype.onBlur_ = function() {
+  this.element_.classList.remove('open');
+};
+
+LanguagePicker.prototype.onMouseUp_ = function(event) {
+  event.stopPropagation();
+  if (event.target.nodeName == 'LI') {
+    element.classList.remove('open');
+    this.selectCallback_(event.target.getAttribute('data-i18n-code'));
+  }
+};
+
+LanguagePicker.prototype.onKeyDown_ = function(event) {
+  switch (event.keyCode) {
+    case 13: /* Enter */
+      this.element_.classList.add('open');
+      break;
+    case 27: /* ESC */
+      if (this.element_.classList.contains('open')) {
+        this.element_.classList.remove('open');
+        event.stopPropagation();
+      }
+      break;
+  }
+};
+
 var MenuApp = function() {
   App.call(this);
 };
@@ -83,25 +124,15 @@ MenuApp.prototype.initDocument = function() {
   });
 
   // Language picker.
-  var languagePicker = this.get('.language-picker');
-  languagePicker.addEventListener('mousedown', function() {
-    languagePicker.classList.add('open');
-  });
-  languagePicker.addEventListener('mouseup', function(event) {
-    event.stopPropagation();
-    if (event.target.nodeName == 'LI') {
-      languagePicker.classList.remove('open');
-      var code = event.target.getAttribute('data-i18n-code');
-      this.applyLocale(code);
-      for (var i = 0; i < LANGUAGE_PICKER_CLIENT_IDS.length; i++) {
-        chrome.runtime.sendMessage(
-            LANGUAGE_PICKER_CLIENT_IDS[i], {name: 'applyLocale', code: code});
-      }
-    }
-  }.bind(this));
-  this.document.addEventListener('mouseup', function() {
-    languagePicker.classList.remove('open');
-  });
+  var languagePicker = new LanguagePicker(
+      this.get('.language-picker'),
+      function(code) {
+        this.applyLocale(code);
+        for (var i = 0; i < LANGUAGE_PICKER_CLIENT_IDS.length; i++) {
+          chrome.runtime.sendMessage(
+              LANGUAGE_PICKER_CLIENT_IDS[i], {name: 'applyLocale', code: code});
+        }
+      }.bind(this));
 };
 
 MenuApp.prototype.applyLocale = function(locale) {
@@ -144,10 +175,17 @@ MenuApp.prototype.close = function() {
   App.prototype.close.call(this);
 };
 
-MenuApp.prototype.onHover_ = function(f) {
+MenuApp.prototype.onHover_ = function(f, event) {
+  // Rotation.
   this.inHover_ = f;
   this.rotationCounter_ = 0;
   this.onStep_();
+
+  // Focus.
+  if (f)
+    event.target.focus();
+  else
+    event.target.blur();
 };
 
 MenuApp.prototype.onStep_ = function() {
@@ -160,8 +198,8 @@ MenuApp.prototype.onStep_ = function() {
   ];
   var step = ~~(this.rotationCounter_ / 2) - 5;
   var target = step < 0 || (step % 5) >= 3 ? -1 : ~~(step / 5) % buttons.length;
-  for (var i = 0; i < buttons.length; i++) {
-    this.get(buttons[i]).classList.toggle('rotated', target == i);
+  if (target != -1) {
+    // this.get(buttons[target]).focus();
   }
   this.rotationCounter_ = this.inHover_ ? 0 : this.rotationCounter_ + 1;
 };

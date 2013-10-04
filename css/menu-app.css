@@ -113,10 +113,13 @@ h1, p {
   width: 160px;
   height: 173px;
   background-color: #eee;
+  border-style: none;
   border-top: 2px solid white;
   -webkit-margin-start: 32px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  padding: 0;
+  outline: none;
 }
 
 .button:active {
@@ -157,7 +160,7 @@ h1, p {
 
 .button-icon {
   width: 160px;
-  height: 123px;
+  height: 121px;
   background-size: 64px 64px;
   background-position: center;
   background-repeat: no-repeat;
@@ -235,7 +238,7 @@ h1, p {
 }
 
 .button:hover .button-label,
-.button.rotated .button-label {
+.button:focus .button-label {
   border-bottom-width: 4px;
 }
 
@@ -247,13 +250,16 @@ h1, p {
 
 .learn-more,
 .language-picker {
-  font: 18px 'OpenSans-Light', sans-serif;
+  -webkit-flex: none;
+  -webkit-user-select: none;
+  background: transparent;
+  border: none;
   color: #8c8c8c;
   cursor: pointer;
-  text-align: center;
-  -webkit-flex: none;
+  font: 18px 'OpenSans-Light', sans-serif;
+  outline: none;
   padding: 4px 8px;
-  -webkit-user-select: none;
+  text-align: center;
 }
 
 .language-picker {
@@ -308,7 +314,9 @@ h1, p {
 }
 
 .learn-more:hover,
+.learn-more:focus,
 .language-picker:hover,
+.language-picker:focus,
 .language-picker-menu li:hover {
   color: #4388ed;
 }
@@ -353,12 +361,12 @@ h1, p {
 }
 
 .docs.button:hover ~ .docs.shelf-marker,
-.docs.button.rotated ~ .docs.shelf-marker,
+.docs.button.focus ~ .docs.shelf-marker,
 .hangouts.button:hover ~ .hangouts.shelf-marker,
-.hangouts.button.rotated ~ .hangouts.shelf-marker,
+.hangouts.button.focus ~ .hangouts.shelf-marker,
 .third.button:hover ~ .third.shelf-marker,
-.third.button.rotated ~ .third.shelf-marker,
+.third.button.focus ~ .third.shelf-marker,
 .store.button:hover ~ .store.shelf-marker,
-.store.button.rotated ~ .store.shelf-marker {
+.store.button.focus ~ .store.shelf-marker {
   height: 4px;
 }

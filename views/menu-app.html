@@ -11,37 +11,38 @@
   <div id="menu-window">
     <div class="menu-header">
       <div class="logo"></div>
-      <button class="close"></button>
+      <button class="close" tabindex="-1"></button>
     </div>
     <h1 class="message" i18n-content="MENU_MESSAGE"></h1>
     <p class="description" i18n-content="MENU_DESCRIPTION"></p>
     <div class="bottom-frame">
       <div class="buttons-layout">
-        <div class="docs button">
+        <button class="docs button" tabindex="1">
           <div class="button-icon"></div>
           <div class="button-label" i18n-content="MENU_DOCS_BUTTON"></div>
-        </div>
-        <div class="hangouts button">
+        </button>
+        <button class="hangouts button" tabindex="2">
           <div class="button-icon"></div>
           <div class="button-label" i18n-content="MENU_HANGOUTS_BUTTON"></div>
-        </div>
+        </button>
         <!-- The third button is switched by referring to the veriaion. -->
-        <div class="third button">
+        <button class="third button" tabindex="3">
           <div class="button-icon"></div>
           <div class="button-label"></div>
-        </div>
-        <div class="store button">
+        </button>
+        <button class="store button" tabindex="4">
           <div class="button-icon"></div>
           <div class="button-label" i18n-content="MENU_STORE_BUTTON"></div>
-        </div>
+        </button>
         <div class="docs shelf-marker"></div>
         <div class="hangouts shelf-marker"></div>
         <div class="third shelf-marker"></div>
         <div class="store shelf-marker"></div>
       </div>
       <div class="footer">
-        <span class="learn-more" i18n-content="MENU_LEARN_MORE"></span>
-        <span class="language-picker">
+        <button class="learn-more" i18n-content="MENU_LEARN_MORE" tabindex="5">
+        </button>
+        <button class="language-picker" tabindex="6">
           <label></label>
           <menu class="language-picker-menu">
             <li i18n-content="LANGUAGE_NAME_MS" data-i18n-code='ms'></li>
@@ -58,7 +59,7 @@
             <li i18n-content="LANGUAGE_NAME_RU" data-i18n-code='ru'></li>
             <li i18n-content="LANGUAGE_NAME_ZH_CN" data-i18n-code='zh_CN'></li>
           </menu>
-        </span>
+        </button>
       </div>
     </div>
   </div>
