@@ -167,11 +167,12 @@ MenuApp.prototype.initDocument = function() {
   this.rotationID_ = setInterval(this.onStep_.bind(this), 500);
   this.onStep_();
 
-  // Update the CSS class.
+  // Init document.
   var appFrame = this.get('.app-frame');
   if (Component.ENTRIES.Menu.windowParams.transparentBackground)
     appFrame.classList.add('transparent');
   appFrame.classList.remove('loading');
+  document.addEventListener('keydown', this.onKeyDown_.bind(this));
 
   // Logo
   this.logo_ = new Logo(this.get('.logo'));
@@ -269,6 +270,11 @@ MenuApp.prototype.onHover_ = function(f, event) {
     event.target.blur();
 };
 
+MenuApp.prototype.onFocus_ = function() {
+  this.rotationCounter_ = 0;
+  this.onStep_();
+};
+
 MenuApp.prototype.onStep_ = function() {
   // Rotate the highlight bars.
   var buttons = [
@@ -280,9 +286,16 @@ MenuApp.prototype.onStep_ = function() {
   var step = ~~(this.rotationCounter_ / 2) - 5;
   var target = step < 0 || (step % 5) >= 3 ? -1 : ~~(step / 5) % buttons.length;
   if (target != -1) {
-    // this.get(buttons[target]).focus();
+    this.get(buttons[target]).focus();
   }
   this.rotationCounter_ = this.inHover_ ? 0 : this.rotationCounter_ + 1;
+};
+
+MenuApp.prototype.onKeyDown_ = function(event) {
+  if (event.keyCode == 9) {
+    this.rotationCounter_ = 0;
+    this.onStep_();
+  }
 };
 
 new MenuApp().start();
