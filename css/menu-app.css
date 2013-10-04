@@ -9,11 +9,6 @@ h1, p {
   font-weight: normal;
 }
 
-* {
-  -webkit-user-select: none;
-  cursor: default;
-}
-
 /**
  * Element
  */
@@ -271,11 +266,14 @@ h1, p {
   box-shadow: 0 0 2px 1px rgba(206, 206, 206, 0.75);
 }
 
+.language-picker label {
+  cursor: pointer;
+}
+
 .language-picker-menu {
   position: absolute;
   right: 0;
   bottom: 100%;
-  /* width: 120px; */
   background-color: #fff;
   margin: 0;
   display: none;
@@ -313,12 +311,14 @@ h1, p {
   white-space: nowrap;
 }
 
-.learn-more:hover,
 .learn-more:focus,
-.language-picker:hover,
 .language-picker:focus,
-.language-picker-menu li:hover {
+.language-picker-menu li.selected {
   color: #4388ed;
+}
+
+.language-picker-menu li.selected {
+  background-color: #eef8ff;
 }
 
 .shelf-marker {

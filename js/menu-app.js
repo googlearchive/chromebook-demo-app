@@ -34,12 +34,41 @@ var LanguagePicker = function(element, selectCallback) {
 
   element.addEventListener('mousedown', this.onMouseDown_.bind(this));
   element.addEventListener('keydown', this.onKeyDown_.bind(this));
+  element.addEventListener('mouseover', this.onMouseOver_.bind(this));
+  element.addEventListener('mouseout', this.onMouseOut_.bind(this));
   element.addEventListener('blur', this.onBlur_.bind(this));
+  element.addEventListener('mousemove', this.onMouseMove_.bind(this));
   element.ownerDocument.addEventListener('mouseup', this.onMouseUp_.bind(this));
+};
+
+LanguagePicker.prototype = {
+  get items_() {
+    return this.element_.querySelectorAll('li');
+  },
+  get opened_() {
+    return this.element_.classList.contains('open');
+  },
+  get selectedIndex_() {
+    var items = this.items_;
+    var selected = this.element_.querySelector('li.selected');
+    for (var i = 0; i < items.length; i++)
+      if (items[i] == selected)
+        return i;
+    return -1;
+  }
 };
 
 LanguagePicker.prototype.onMouseDown_ = function() {
   this.element_.classList.add('open');
+};
+
+LanguagePicker.prototype.onMouseOver_ = function() {
+  this.element_.focus();
+};
+
+LanguagePicker.prototype.onMouseOut_ = function(event) {
+  if (!this.opened_)
+    this.element_.blur();
 };
 
 LanguagePicker.prototype.onBlur_ = function() {
@@ -48,24 +77,73 @@ LanguagePicker.prototype.onBlur_ = function() {
 
 LanguagePicker.prototype.onMouseUp_ = function(event) {
   event.stopPropagation();
+  if (event.target.nodeName == 'LI')
+    this.commit_();
+};
+
+LanguagePicker.prototype.onMouseMove_ = function(event) {
   if (event.target.nodeName == 'LI') {
-    element.classList.remove('open');
-    this.selectCallback_(event.target.getAttribute('data-i18n-code'));
+    var items = this.items_;
+    for (var i = 0; i < items.length; i++)
+      if (items[i] == event.target)
+        this.select_(i);
   }
 };
 
 LanguagePicker.prototype.onKeyDown_ = function(event) {
   switch (event.keyCode) {
     case 13: /* Enter */
-      this.element_.classList.add('open');
+      if (this.opened_)
+        this.commit_();
+      else
+        this.open_();
       break;
+
     case 27: /* ESC */
-      if (this.element_.classList.contains('open')) {
-        this.element_.classList.remove('open');
+      if (this.isOpened_()) {
+        this.close_();
         event.stopPropagation();
       }
       break;
+
+    case 38: /* Up */
+    case 40: /* Down */
+      if (!this.element_.classList.contains('open') &
+          event.keyCode == 38) {
+        this.open_();
+      } else {
+        var delta = event.keyCode == 38 ? -1 : 1;
+        var index = this.selectedIndex_;
+        this.select_(Math.max(0, Math.min(index + delta,
+                                          this.items_.length - 1)));
+      }
+      break;
   }
+};
+
+LanguagePicker.prototype.isOpened_ = function() {
+  return this.element_.classList.contains('open');
+};
+
+LanguagePicker.prototype.open_ = function() {
+  this.element_.classList.add('open');
+  this.select_(0);
+};
+
+LanguagePicker.prototype.close_ = function() {
+  this.element_.classList.remove('open');
+};
+
+LanguagePicker.prototype.select_ = function(index) {
+  var items = this.items_;
+  for (var i = 0; i < items.length; i++)
+    items[i].classList.toggle('selected', i == index);
+};
+
+LanguagePicker.prototype.commit_ = function() {
+  this.close_();
+  this.selectCallback_(
+      this.items_[this.selectedIndex_].getAttribute('data-i18n-code'));
 };
 
 var MenuApp = function() {
@@ -119,9 +197,12 @@ MenuApp.prototype.initDocument = function() {
   }
 
   // Learn more link.
-  this.get('.learn-more').addEventListener('click', function() {
+  var learnMore = this.get('.learn-more');
+  learnMore.addEventListener('click', function() {
     Component.ENTRIES.Helper.sendMessage({name: 'visitLearnMore'});
   });
+  learnMore.addEventListener('mouseover', function() { learnMore.focus(); });
+  learnMore.addEventListener('mouseout', function() { learnMore.blur(); });
 
   // Language picker.
   var languagePicker = new LanguagePicker(
