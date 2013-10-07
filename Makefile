@@ -30,10 +30,10 @@ MENU_FILES = \
   js/auto-launch.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
-  third-party/screensaver/screensaver.html \
-  third-party/screensaver/screensaver-video.webm \
   views/downloader.html \
   views/menu-app.html
+#  third-party/screensaver/screensaver.html \
+#  third-party/screensaver/screensaver-video.webm \
 #  js/screensaver.js \
 #  js/screensaver-client.js \
 #  third-party/sample-files/"1995 Field Notes.docx" \
