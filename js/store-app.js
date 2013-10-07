@@ -20,9 +20,10 @@ StoreApp.prototype.initDocument = function() {
       event.preventDefault();
     }.bind(this, apps[i]));
     apps[i].addEventListener('keydown', function(app, event) {
-      if (event.keyCode == 13) {
+      if (event.keyCode == 13 || event.keyCode == 32) {
         var id = app.getAttribute('data-id');
         Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
+        event.preventDefault();
       }
     }.bind(this, apps[i]));
   }
