@@ -197,6 +197,7 @@ body {
   position: absolute;
   text-align: center;
   z-index: 1;
+  outline: none;
 }
 
 .balloon::after {
@@ -205,7 +206,8 @@ body {
   position: absolute;
 }
 
-.balloon-holder:hover .balloon {
+.balloon-holder:hover .balloon,
+.balloon-holder .balloon:focus {
   opacity: 1;
 }
 
