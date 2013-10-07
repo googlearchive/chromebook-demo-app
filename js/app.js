@@ -29,8 +29,8 @@ var Sidebar = function(element) {
 };
 
 Sidebar.prototype.getChildStyleValue_ = function(selector, property) {
-  return parseInt(
-      getComputedStyle(this.element_.querySelector(selector))[property]);
+  var element = this.element_.querySelector(selector);
+  return element ? parseInt(getComputedStyle(element)[property]) : 0;
 };
 
 Sidebar.prototype.layout = function(opt_height) {
@@ -43,9 +43,10 @@ Sidebar.prototype.layout = function(opt_height) {
     }
     var marginHeight = wholeHeight - this.usedHeight_ - textHeight;
     var marginUnit = ~~Math.min(25, Math.max(marginHeight / 12, 0));
-    var hintTitleHeight = this.hintTitle_.getBoundingClientRect().height;
-    var hintDescriptionHeight =
-        this.hintDescription_.getBoundingClientRect().height;
+    var hintTitleHeight = this.hintTitle_ ?
+        this.hintTitle_.getBoundingClientRect().height : 0;
+    var hintDescriptionHeight = this.hintDescription_ ?
+        this.hintDescription_.getBoundingClientRect().height : 0;
     if (marginUnit > 8 || small)
       break;
   }

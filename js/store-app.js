@@ -16,6 +16,15 @@ StoreApp.prototype.initDocument = function() {
       var id = app.getAttribute('data-id');
       Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
     }.bind(this, apps[i]));
+    apps[i].addEventListener('mousedown', function(app, event) {
+      event.preventDefault();
+    }.bind(this, apps[i]));
+    apps[i].addEventListener('keydown', function(app, event) {
+      if (event.keyCode == 13) {
+        var id = app.getAttribute('data-id');
+        Component.ENTRIES.Helper.sendMessage({name: 'launch', id: id});
+      }
+    }.bind(this, apps[i]));
   }
 };
 

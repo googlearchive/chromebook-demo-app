@@ -36,6 +36,15 @@
   margin-bottom: -1px;
   background-color: #f8f8f8;
   cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.app:focus {
+  -webkit-transform: translateY(-1px);
+  background-color: white;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .app.disable {
