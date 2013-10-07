@@ -177,13 +177,13 @@ MUSIC_FILES = \
   third-party/music-covers/music-cover-lumineers.jpg \
   third-party/music-covers/music-cover-maroon5.jpg \
   third-party/music-covers/music-cover-mika.jpg \
-  third-party/music-covers/music-cover-muse.png \
+  third-party/music-covers/music-cover-muse.jpg \
   third-party/music-covers/music-cover-one-republic.jpg \
-  third-party/music-covers/music-cover-tegan-and-sara.png \
-  third-party/music-covers/music-cover-the-doors.png \
+  third-party/music-covers/music-cover-tegan-and-sara.jpg \
+  third-party/music-covers/music-cover-the-doors.jpg \
   third-party/music-covers/music-cover-tiesto.jpg \
-  third-party/music-covers/music-cover-vivaldi.png \
-  third-party/music-covers/music-cover-war.png \
+  third-party/music-covers/music-cover-vivaldi.jpg \
+  third-party/music-covers/music-cover-war.jpg \
   third-party/music/music-lumineers.mp3 \
   third-party/music/music-vivaldi.mp3 \
   third-party/music/music-war.mp3 \

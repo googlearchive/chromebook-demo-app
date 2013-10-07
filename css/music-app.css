@@ -166,11 +166,11 @@
 }
 
 .music.war .album-cover {
-  background-image: url(music-cover-war.png);
+  background-image: url(music-cover-war.jpg);
 }
 
 .music.vivaldi .album-cover {
-  background-image: url(music-cover-vivaldi.png);
+  background-image: url(music-cover-vivaldi.jpg);
 }
 
 .music.maroon5 .album-cover {
@@ -198,7 +198,7 @@
 }
 
 .music.muse .album-cover {
-  background-image: url(music-cover-muse.png);
+  background-image: url(music-cover-muse.jpg);
 }
 
 .music.frank-ocean .album-cover {
@@ -210,11 +210,11 @@
 }
 
 .music.the-doors .album-cover {
-  background-image: url(music-cover-the-doors.png);
+  background-image: url(music-cover-the-doors.jpg);
 }
 
 .music.tegan-and-sara .album-cover {
-  background-image: url(music-cover-tegan-and-sara.png);
+  background-image: url(music-cover-tegan-and-sara.jpg);
 }
 
 .music.ellie-goulding .album-cover {
