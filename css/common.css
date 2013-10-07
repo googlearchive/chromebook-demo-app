@@ -46,13 +46,13 @@ body {
   -webkit-flex-flow: column;
   -webkit-justify-content: space-between;
   -webkit-border-end: solid 1px #e4e4e4;
-  -webkit-flex: none;
+  flex: none;
   overflow: hidden;
 }
 
 .app-frame .app-side-body {
   padding: 40px 20px 0 20px;
-  -webkit-flex: none;
+  flex: 0 1 auto;
 }
 
 .app-frame .app-icon {
@@ -106,14 +106,9 @@ body {
 }
 
 .app-frame .app-side-footer {
-  -webkit-flex: none;
-  -webkit-transition-duration: 0.2s;
-  -webkit-transition-property: bottom; /* The bottom is set by JavaScript. */
-  -webkit-transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1.0);
+  flex: none;
+  transition: height 200ms cubic-bezier(0, 0.5, 0.5, 1.0);
   background-color: #f1f1f1;
-  bottom: 0;
-  box-sizing: border-box;
-  height: auto;
   overflow: hidden;
   padding: 24px;
   z-index: 1;
@@ -128,8 +123,7 @@ body {
   padding-top: 18px;
   color: white;
   opacity: 0;
-  -webkit-transition-property: opacity;
-  -webkit-transition-duration: 0.2s;
+  transition: opacity 200ms;
 }
 
 .app-frame .app-side-footer:hover .app-hint-description {

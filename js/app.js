@@ -13,39 +13,39 @@ var Sidebar = function(element) {
   // Element.
   this.document_ = element.ownerDocument;
   this.element_ = element;
+  this.texts_ = this.element_.querySelectorAll(
+      ':-webkit-any(.app-copy, .app-sub-copy, .app-description, .sec-header,' +
+      '.sec-description, .app-hint-title)');
+  this.hintTitle_ = this.element_.querySelector('.app-hint-title');
+  this.hintDescription_ = this.element_.querySelector('.app-hint-description');
   this.dynamicStyle_ = this.document_.querySelector('#dynamic-styles');
 
   // Compute constant style values.
-  this.usedHeight_ = 0;
-  var heightUsages = [
-    {selector: '.app-side-body', property: 'paddingTop'},
-    {selector: '.app-icon', property: 'height'},
-    {selector: '.app-side-footer', property: 'paddingTop'},
-    {selector: '.app-side-footer', property: 'paddingBottom'}
-  ];
-  for (var i = 0; i < heightUsages.length; i++) {
-    var style = getComputedStyle(
-        this.element_.querySelector(heightUsages[i].selector));
-    this.usedHeight_ += parseInt(style[heightUsages[i].property]);
-  }
+  this.usedHeight_ =
+      this.getChildStyleValue_('.app-side-body', 'paddingTop') +
+      this.getChildStyleValue_('.app-icon', 'height') +
+      this.getChildStyleValue_('.app-side-footer', 'paddingTop') +
+      this.getChildStyleValue_('.app-side-footer', 'paddingBottom');
+};
+
+Sidebar.prototype.getChildStyleValue_ = function(selector, property) {
+  return parseInt(
+      getComputedStyle(this.element_.querySelector(selector))[property]);
 };
 
 Sidebar.prototype.layout = function(opt_height) {
   var wholeHeight = (opt_height || screen.availHeight);
-  var selector =
-    ':-webkit-any(.app-copy, .app-sub-copy, .app-description, .sec-header,' +
-    '.sec-description, .app-hint-title)';
-  var texts = this.element_.querySelectorAll(selector);
   for (var small = false; true; small = !small) {
-    var textHeight = 0;
     this.element_.classList.toggle('small', small);
-    for (var i = 0; i < texts.length; i++) {
-      textHeight += texts[i].getBoundingClientRect().height;
+    var textHeight = 0;
+    for (var i = 0; i < this.texts_.length; i++) {
+      textHeight += this.texts_[i].getBoundingClientRect().height;
     }
-    var hintDescriptionHeight = this.element_.
-        querySelector('.app-hint-description').getBoundingClientRect().height;
     var marginHeight = wholeHeight - this.usedHeight_ - textHeight;
     var marginUnit = ~~Math.min(25, Math.max(marginHeight / 12, 0));
+    var hintTitleHeight = this.hintTitle_.getBoundingClientRect().height;
+    var hintDescriptionHeight =
+        this.hintDescription_.getBoundingClientRect().height;
     if (marginUnit > 8 || small)
       break;
   }
@@ -56,10 +56,10 @@ Sidebar.prototype.layout = function(opt_height) {
       '  margin-bottom: ' + (marginUnit * 2) + 'px;' +
       '}' +
       '.app-frame .app-side-footer {' +
-      '  margin-bottom: ' + (-hintDescriptionHeight) + 'px;' +
+      '  height: ' + hintTitleHeight + 'px;' +
       '}' +
       '.app-frame .app-side-footer:hover {' +
-      '  bottom: ' + hintDescriptionHeight + 'px;' +
+      '  height: ' + (hintTitleHeight + hintDescriptionHeight) + 'px;' +
       '}';
 };
 
