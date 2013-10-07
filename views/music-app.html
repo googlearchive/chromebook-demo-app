@@ -7,7 +7,7 @@
 <script src="music-app.js"></script>
 
 <div id="music-app" class="app-frame">
-  <button class="close"></button>
+  <button class="close" tabindex="-1"></button>
   <div class="app-side">
     <div class="app-side-body">
       <div class="app-icon"></div>
@@ -40,7 +40,7 @@
            i18n-content="MUSIC_SECTION_UNLIMITED_DESCRIPTION"></div>
     </div>
 
-    <div class="app-side-footer">
+    <div class="app-side-footer" tabindex="1">
       <div class="app-hint-title" i18n-content="MUSIC_HINT_TITLE"></div>
       <div class="app-hint-description"
            i18n-content="MUSIC_HINT_DESCRIPTION"></div>
@@ -51,27 +51,27 @@
       <div class="message-bar" i18n-content="MUSIC_MEESAGE_BAR"></div>
       <div class="music-main-body">
         <div class="side-button-container">
-          <button class="side-button selected balloon-holder">
+          <button class="side-button selected balloon-holder" tabindex="-1">
             <span i18n-content="MUSIC_SIDE_BUTTON_UPLOAD"></span>
             <div class="balloon triangle-left"
                  i18n-content="MUSIC_BALLOON_UPLOAD"></div>
           </button>
-          <button class="side-button balloon-holder">
+          <button class="side-button balloon-holder" tabindex="-1">
             <span i18n-content="MUSIC_SIDE_BUTTON_LIBRARY"></span>
             <div class="balloon triangle-left"
                  i18n-content="MUSIC_BALLOON_LIBRARY"></div>
           </button>
-          <button class="side-button balloon-holder">
+          <button class="side-button balloon-holder" tabindex="-1">
             <span i18n-content="MUSIC_SIDE_BUTTON_MIXES"></span>
             <div class="balloon triangle-left"
                  i18n-content="MUSIC_BALLOON_MIXES"></div>
           </button>
-          <button class="side-button balloon-holder">
+          <button class="side-button balloon-holder" tabindex="-1">
             <span i18n-content="MUSIC_SIDE_BUTTON_SHOP"></span>
             <div class="balloon triangle-left"
                  i18n-content="MUSIC_BALLOON_SHOP"></div>
           </button>
-          <button class="side-button balloon-holder">
+          <button class="side-button balloon-holder" tabindex="-1">
             <span i18n-content="MUSIC_SIDE_BUTTON_PLAYLISTS"></span>
             <div class="balloon triangle-left"
                  i18n-content="MUSIC_BALLOON_PLAYLISTS"></div>
@@ -81,7 +81,7 @@
           <div class="main music">
             <audio class="main-music-audio"></audio>
             <div class="album-cover">
-              <button class="play-control"></button>
+              <button class="play-control" tabindex="2"></button>
               <div class="equalizer"></div>
             </div>
             <div class="song-name"
