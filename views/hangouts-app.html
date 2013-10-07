@@ -13,7 +13,7 @@
 <script src="hangouts-app.js"></script>
 
 <div id="hangouts-app" class="app-frame">
-  <button class="close"></button>
+  <button class="close" tabindex="-1"></button>
   <div class="app-side">
     <div class="app-side-body">
       <div class="app-icon"></div>
@@ -49,7 +49,7 @@
            i18n-content="HANGOUTS_SECTION_FUN_DESCRIPTION"></div>
     </div>
 
-    <div class="app-side-footer">
+    <div class="app-side-footer" tabindex="1">
       <div class="app-hint-title" i18n-content="HANGOUTS_HINT_TITLE"></div>
       <div class="app-hint-description"
            i18n-content="HANGOUTS_HINT_DESCRIPTION"></div>
@@ -57,25 +57,25 @@
   </div>
   <div id="hangouts-main" class="app-main">
     <div class="button-container">
-      <button class="effects button">
+      <button class="effects button" tabindex="2">
         <div class="button-icon"></div>
         <div class="button-label" i18n-content="HANGOUTS_BUTTON_EFFECTS"></div>
       </button>
-      <button class="screenshare button balloon-holder">
+      <button class="screenshare button balloon-holder" tabindex="-1">
         <div class="button-icon"></div>
         <div class="button-label"
              i18n-content="HANGOUTS_BUTTON_SCREENSHARE"></div>
         <div class="balloon triangle-top"
              i18n-content="HANGOUTS_BALLOON_SCREENSHARE"></div>
       </button>
-      <button class="add button balloon-holder">
+      <button class="add button balloon-holder" tabindex="-1">
         <div class="button-icon"></div>
         <div class="button-label" i18n-content="HANGOUTS_BUTTON_ADD"></div>
         <div class="balloon triangle-top"
              i18n-content="HANGOUTS_BALLOON_ADD"></div>
       </button>
       <div class="space"></div>
-      <button class="invite button balloon-holder">
+      <button class="invite button balloon-holder" tabindex="-1">
         <div class="button-icon"></div>
         <div class="button-label" i18n-content="HANGOUTS_BUTTON_INVITE"></div>
         <div class="balloon triangle-top"
