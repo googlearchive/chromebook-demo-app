@@ -7,7 +7,9 @@ chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
     // If the message comes from an unknown extension, just ignore it.
     var senderComponent = Component.get(sender.id);
-    if (!senderComponent && request.name != 'getLocale')
+    if (!senderComponent &&
+        request.name != 'getLocale' &&
+        request.name != 'applyLocale')
       return false;
     switch (request.name) {
       case 'launch':
