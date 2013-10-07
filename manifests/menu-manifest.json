@@ -19,7 +19,6 @@
       "scripts": [
         "util.js",
         "background.js",
-        "screensaver.js",
         "auto-launch.js"
       ]
     }
