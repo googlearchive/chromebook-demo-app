@@ -36,9 +36,10 @@ var LanguagePicker = function(element, selectCallback) {
   element.addEventListener('keydown', this.onKeyDown_.bind(this));
   element.addEventListener('mouseover', this.onMouseOver_.bind(this));
   element.addEventListener('mouseout', this.onMouseOut_.bind(this));
-  element.addEventListener('blur', this.onBlur_.bind(this));
   element.addEventListener('mousemove', this.onMouseMove_.bind(this));
-  element.ownerDocument.addEventListener('mouseup', this.onMouseUp_.bind(this));
+  element.addEventListener('mouseup', this.onMouseUp_.bind(this));
+  element.ownerDocument.addEventListener('mouseup',
+                                         this.onGlobalMouseUp_.bind(this));
 };
 
 LanguagePicker.prototype = {
@@ -58,8 +59,9 @@ LanguagePicker.prototype = {
   }
 };
 
-LanguagePicker.prototype.onMouseDown_ = function() {
-  this.element_.classList.add('open');
+LanguagePicker.prototype.onMouseDown_ = function(event) {
+  if (event.target.nodeName == 'LABEL')
+    this.element_.classList.toggle('open');
 };
 
 LanguagePicker.prototype.onMouseOver_ = function() {
@@ -71,14 +73,14 @@ LanguagePicker.prototype.onMouseOut_ = function(event) {
     this.element_.blur();
 };
 
-LanguagePicker.prototype.onBlur_ = function() {
-  this.element_.classList.remove('open');
-};
-
 LanguagePicker.prototype.onMouseUp_ = function(event) {
   event.stopPropagation();
   if (event.target.nodeName == 'LI')
     this.commit_();
+};
+
+LanguagePicker.prototype.onGlobalMouseUp_ = function(event) {
+  this.element_.classList.remove('open');
 };
 
 LanguagePicker.prototype.onMouseMove_ = function(event) {
@@ -117,6 +119,10 @@ LanguagePicker.prototype.onKeyDown_ = function(event) {
         this.select_(Math.max(0, Math.min(index + delta,
                                           this.items_.length - 1)));
       }
+      break;
+
+    case 9: /* Tab */
+      this.element_.classList.remove('open');
       break;
   }
 };
@@ -202,12 +208,16 @@ MenuApp.prototype.initDocument = function() {
   learnMore.addEventListener('click', function() {
     Component.ENTRIES.Helper.sendMessage({name: 'visitLearnMore'});
   });
-  learnMore.addEventListener('mouseover', function() { learnMore.focus(); });
+  learnMore.addEventListener('mouseover', function() {
+    learnMore.focus();
+    this.rotationCounter_ = 0;
+  }.bind(this));
   learnMore.addEventListener('mouseout', function() { learnMore.blur(); });
 
   // Language picker.
+  var LanguagePickerElement = this.get('.language-picker');
   var languagePicker = new LanguagePicker(
-      this.get('.language-picker'),
+      LanguagePickerElement,
       function(code) {
         this.applyLocale(code);
         for (var i = 0; i < LANGUAGE_PICKER_CLIENT_IDS.length; i++) {
@@ -215,6 +225,9 @@ MenuApp.prototype.initDocument = function() {
               LANGUAGE_PICKER_CLIENT_IDS[i], {name: 'applyLocale', code: code});
         }
       }.bind(this));
+  LanguagePickerElement.addEventListener('focus', function() {
+    this.rotationCounter_ = 0;
+  }.bind(this));
 };
 
 MenuApp.prototype.applyLocale = function(locale) {
