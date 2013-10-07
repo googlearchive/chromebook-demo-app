@@ -10,7 +10,7 @@
 <script src="docs-app.js"></script>
 
 <div id="docs-app" class="app-frame">
-  <button class="close"></button>
+  <button class="close" tabindex="-1"></button>
   <div class="app-side">
     <div class="app-side-body">
       <div class="app-icon"></div>
@@ -46,7 +46,7 @@
            i18n-content="DOCS_SECTION_ANYWHERE_DESCRIPTION"></div>
     </div>
 
-    <div class="app-side-footer">
+    <div class="app-side-footer" tabindex="1">
       <div class="app-hint-title" i18n-content="DOCS_HINT_TITLE"></div>
       <div class="app-hint-description"
            i18n-content="DOCS_HINT_DESCRIPTION"></div>
@@ -59,7 +59,7 @@
       <div class="user-icon charles"></div>
       <div class="user-icon edgar"></div>
       <div class="user-icon fredrick"></div>
-      <button class="share balloon-holder">
+      <button class="share balloon-holder" tabindex="-1">
         <div class="share-icon"></div>
         <span class="share-label" i18n-content="DOCS_BUTTON_SHARE"></span>
         <div class="balloon triangle-top"
@@ -86,7 +86,7 @@
     <div class="docs-ruler"></div>
     <div class="paper-scroll-region">
       <div class="paper-container">
-        <textarea class="paper"></textarea>
+        <textarea class="paper" tabindex="2"></textarea>
         <div class="measure">
           <span class="measure-text"></span><span class="measure-cursor">&nbsp;</span>
         </div>

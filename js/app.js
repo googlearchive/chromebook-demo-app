@@ -58,6 +58,7 @@ Sidebar.prototype.layout = function(opt_height) {
       '.app-frame .app-side-footer {' +
       '  height: ' + hintTitleHeight + 'px;' +
       '}' +
+      '.app-frame .app-side-footer:focus,' +
       '.app-frame .app-side-footer:hover {' +
       '  height: ' + (hintTitleHeight + hintDescriptionHeight) + 'px;' +
       '}';

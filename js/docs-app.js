@@ -225,10 +225,12 @@ DocsApp.prototype.onStep_ = function() {
 DocsApp.prototype.updateCursorPosition_ =
     function(indexMap, editor, selectionStart, selectionEnd) {
   // Update the real cursor.
+  var activeElement = this.document.activeElement;
   if (selectionStart != null)
     this.paper_.selectionStart = indexMap.map(selectionStart);
   if (selectionEnd != null)
     this.paper_.selectionEnd = indexMap.map(selectionEnd);
+  activeElement.focus();
 
   // Update the fake cursors and editros.
   for (var i = 0; i < this.cursors_.length; i++) {

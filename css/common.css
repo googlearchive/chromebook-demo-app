@@ -110,6 +110,7 @@ body {
   transition: height 200ms cubic-bezier(0, 0.5, 0.5, 1.0);
   background-color: #f1f1f1;
   overflow: hidden;
+  outline: none;
   padding: 24px;
   z-index: 1;
   position: relative;
@@ -126,6 +127,7 @@ body {
   transition: opacity 200ms;
 }
 
+.app-frame .app-side-footer:focus .app-hint-description,
 .app-frame .app-side-footer:hover .app-hint-description {
   opacity: 1;
 }
