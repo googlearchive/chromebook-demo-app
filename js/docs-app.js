@@ -265,7 +265,6 @@ DocsApp.prototype.findBotKeyword_ = function() {
   var paperText = this.paper_.value;
   for (var i = 0; i < this.keywords_.length; i++) {
     for (var keyword in this.keywords_[i]) {
-        console.debug(keyword);
       if (this.usedKeyword_[keyword])
         continue;
       // Make regexp to search the word.
