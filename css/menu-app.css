@@ -256,6 +256,10 @@ h1, p {
   text-align: center;
 }
 
+.learn-more {
+  text-decoration: none;
+}
+
 .language-picker {
   position: relative;
 }

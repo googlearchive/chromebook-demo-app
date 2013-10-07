@@ -137,7 +137,8 @@ HANGOUTS_FILES = \
   third-party/google-plus/scuba-mask.png \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
-  views/hangouts-app.html
+  views/hangouts-app.html \
+  views/licence.html
 
 MUSIC_FILES = \
   assets/balloon-triangle-left-1x.png \

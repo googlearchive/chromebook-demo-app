@@ -17,17 +17,7 @@ chrome.runtime.onMessageExternal.addListener(
         if (!(ids instanceof Array))
           ids = [ids];
         for (var i = 0; i < ids.length; i++) {
-          chrome.management.launchApp(ids[i], function(id) {
-            if (DEBUG &&
-                chrome.runtime.lastError &&
-                Component.ENTRIES.Docs.id != id &&
-                Component.ENTRIES.Hangouts.id != id &&
-                Component.ENTRIES.Music.id != id &&
-                Component.ENTRIES.Store.id != id) {
-              var urlPrefix = 'https://chrome.google.com/webstore/detail/';
-              chrome.tabs.create({url: urlPrefix + id});
-            }
-          }.bind(null, ids[i]));
+          chrome.management.launchApp(ids[i]);
         }
         break;
 
@@ -45,12 +35,6 @@ chrome.runtime.onMessageExternal.addListener(
         service = service || analytics.getService('Chromebook Retail Demo');
         tracker = tracker || service.getTracker('UA-42807255-2');
         tracker.sendAppView(senderComponent.name);
-        break;
-
-      case 'showLicencePage':
-        chrome.windows.create({url: 'licence.html',
-                               type: 'popup',
-                               width: 290, height: 240});
         break;
 
       case 'getLocale':

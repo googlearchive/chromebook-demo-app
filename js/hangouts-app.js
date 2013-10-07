@@ -77,7 +77,10 @@ HangoutsApp.prototype.initDocument = function() {
 
   // Licence page.
   this.get('.licence.context-menu-item').addEventListener('click', function() {
-    Component.ENTRIES.Helper.sendMessage({name: 'showLicencePage'});
+    chrome.app.window.create('licence.html', {
+      resizable: false,
+      bounds: {width: 320, height: 180}
+    });
   });
 
   // Init camera.
