@@ -1,3 +1,5 @@
+'use strict';
+
 var makeCenterBounds = function(width, height) {
   return {
     left: ~~((screen.availWidth - width) / 2 + screen.availLeft),
@@ -5,6 +7,60 @@ var makeCenterBounds = function(width, height) {
     width: width,
     height: height
   };
+};
+
+var Sidebar = function(element) {
+  // Element.
+  this.document_ = element.ownerDocument;
+  this.element_ = element;
+  this.dynamicStyle_ = this.document_.querySelector('#dynamic-styles');
+
+  // Compute constant style values.
+  this.usedHeight_ = 0;
+  var heightUsages = [
+    {selector: '.app-side-body', property: 'paddingTop'},
+    {selector: '.app-icon', property: 'height'},
+    {selector: '.app-side-footer', property: 'paddingTop'},
+    {selector: '.app-side-footer', property: 'paddingBottom'}
+  ];
+  for (var i = 0; i < heightUsages.length; i++) {
+    var style = getComputedStyle(
+        this.element_.querySelector(heightUsages[i].selector));
+    this.usedHeight_ += parseInt(style[heightUsages[i].property]);
+  }
+};
+
+Sidebar.prototype.layout = function(opt_height) {
+  var wholeHeight = (opt_height || screen.availHeight);
+  var selector =
+    ':-webkit-any(.app-copy, .app-sub-copy, .app-description, .sec-header,' +
+    '.sec-description, .app-hint-title)';
+  var texts = this.element_.querySelectorAll(selector);
+  for (var small = false; true; small = !small) {
+    var textHeight = 0;
+    this.element_.classList.toggle('small', small);
+    for (var i = 0; i < texts.length; i++) {
+      textHeight += texts[i].getBoundingClientRect().height;
+    }
+    var hintDescriptionHeight = this.element_.
+        querySelector('.app-hint-description').getBoundingClientRect().height;
+    var marginHeight = wholeHeight - this.usedHeight_ - textHeight;
+    var marginUnit = ~~Math.min(25, Math.max(marginHeight / 12, 0));
+    if (marginUnit > 8 || small)
+      break;
+  }
+  this.dynamicStyle_.innerText +=
+      '.app-frame .app-description,' +
+      '.app-frame .sec-description {' +
+      '  margin-top: ' + marginUnit + 'px;' +
+      '  margin-bottom: ' + (marginUnit * 2) + 'px;' +
+      '}' +
+      '.app-frame .app-side-footer {' +
+      '  margin-bottom: ' + (-hintDescriptionHeight) + 'px;' +
+      '}' +
+      '.app-frame .app-side-footer:hover {' +
+      '  bottom: ' + hintDescriptionHeight + 'px;' +
+      '}';
 };
 
 var App = function() {
@@ -86,7 +142,16 @@ App.prototype.initDocument = function(firstTime) {
     this.close();
   }.bind(this));
 
-  var body = this.document.getElementsByTagName('body')[0];
+  // Document
+  var body = this.document.body;
+  this.dynamicStyle_ = this.document.createElement('style');
+  this.dynamicStyle_.id = 'dynamic-styles';
+  this.document.head.appendChild(this.dynamicStyle_);
+
+  // Sidebar
+  var sidebarElement = this.document.querySelector('.app-side');
+  if (sidebarElement)
+    this.sidebar_ = new Sidebar(sidebarElement);
 
   // Licence page.
   var menu = this.get('#context-menu');
@@ -140,61 +205,14 @@ App.prototype.applyLocale = function(locale) {
   this.toggleDirection_(false);
 
   // If the application has the side view, layout it.
-  this.updateLayout();
+  this.updateLayout(this.appWindow.getBounds().height);
 };
 
 App.prototype.updateLayout = function(opt_height) {
-  if (!this.get('.app-side'))
-    return;
-  // Add dynamic styles.
-  var dynamicStyle = this.get('#dynamic-styles');
-  if (!dynamicStyle) {
-    dynamicStyle = this.document.createElement('style');
-    dynamicStyle.id = 'dynamic-styles';
-    dynamicStyle.margin = 0;
-    this.document.head.appendChild(dynamicStyle);
-  }
-
-  // Obtains height and margin values.
-  var footerElement = this.get('.app-side-footer');
-  for (var i = 0; i < 2; i++) {
-    dynamicStyle.innerText = i == 0 ?
-        '' :
-        '.app-frame .app-copy,' +
-        '.app-frame .sec-header-text,' +
-        '.app-frame .app-hint-title {' +
-            'font-size: 18px;' +
-            'line-height: 20px;' +
-        '}';
-    var sideHeight =
-        opt_height || this.get('.app-side').getBoundingClientRect().height;
-    var bodyHeight = this.get('.app-side-body').getBoundingClientRect().height;
-    var hintDescriptionHeight =  footerElement ?
-        this.get('.app-hint-description').getBoundingClientRect().height : 0;
-    var footerHeight = footerElement ?
-        footerElement.getBoundingClientRect().height - hintDescriptionHeight :
-        0;
-    var margin = Math.min(
-        25, Math.max(~~((sideHeight - bodyHeight - footerHeight) / 12), 0));
-
-    // If margin is too small, retry with small font.
-    if (margin >= 8)
-      break;
-  }
-
-  dynamicStyle.margin = margin;
-  dynamicStyle.innerText +=
-      '.app-frame .app-description,' +
-      '.app-frame .sec-description {' +
-      '  margin-top: ' + margin + 'px;' +
-      '  margin-bottom: ' + (margin * 2) + 'px;' +
-      '}' +
-      '.app-frame .app-side-footer {' +
-      '  margin-bottom: ' + (-hintDescriptionHeight) + 'px;' +
-      '}' +
-      '.app-frame .app-side-footer:hover {' +
-      '  bottom: ' + hintDescriptionHeight + 'px;' +
-      '}';
+  this.dynamicStyle_.innerText = '';
+  if (this.sidebar_)
+    this.sidebar_.layout(opt_height);
+  return;
 };
 
 App.prototype.toggleWindowSize_ = function() {

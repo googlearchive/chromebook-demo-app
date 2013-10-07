@@ -64,10 +64,15 @@ body {
 }
 
 .app-frame .app-copy,
-.app-frame .app-sub-copy,
 .app-frame .sec-header-text,
 .app-frame .app-hint-title {
   font: 22px/24px 'OpenSans-Light', sans-serif;
+}
+
+.app-frame .app-side.small .app-copy,
+.app-frame .app-side.small .sec-header-text,
+.app-frame .app-side.small .app-hint-title {
+  font: 18px/20px 'OpenSans-Light', sans-serif;
 }
 
 .app-frame .app-copy {
