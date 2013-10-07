@@ -249,7 +249,6 @@ STORE_FILES= \
 HELPER_FILES= \
   js/helper-extension.js \
   js/util.js \
-  views/licence.html \
   third-party/platform-analytics/google-analytics-bundle.js \
   third-party/open-sans/OpenSans-Light.ttf \
   third-party/open-sans/OpenSans-Regular.ttf \
