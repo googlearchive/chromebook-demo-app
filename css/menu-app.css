@@ -334,32 +334,32 @@ h1, p {
 }
 
 .docs.shelf-marker {
-  left: 60px;
+  left: 106px;
   background-color: #2a70e8;
 }
 
 .hangouts.shelf-marker {
-  left: 112px;
+  left: 160px;
   background-color: #50aa38;
 }
 
 .play .third.shelf-marker {
-  left: 164px;
+  left: 214px;
   background-color: #facf0c;
 }
 
 .youtube .third.shelf-marker {
-  left: 164px;
+  left: 214px;
   background-color: #e14b40;
 }
 
 .play .store.shelf-marker {
-  left: 216px;
+  left: 268px;
   background-color: #e14b40;
 }
 
 .youtube .store.shelf-marker {
-  left: 216px;
+  left: 268px;
   background-color: #facf0c;
 }
 
