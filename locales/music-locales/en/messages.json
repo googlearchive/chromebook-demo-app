@@ -28,11 +28,11 @@
     "description": "Feature description: can be used on multiple different devices which are kept in sync."
   },
   "MUSIC_SECTION_UNLIMITED_TITLE": {
-    "message": "Unlimited music",
+    "message": "Get 60 days of free unlimited music",
     "description": "Feature headline: All Access headline"
   },
   "MUSIC_SECTION_UNLIMITED_DESCRIPTION": {
-    "message": "Get Google Play Music All Access to listen to millions of songs, create custom radio and skip as much as you want.",
+    "message": "Play millions of songs, instantly. Kick back and enjoy custom radio from any song, album, artist or genre – with no skip limits – and easily discover the music you'll love next.",
     "description": "Feature description: Describes what you can do with Play Music All Access"
   },
   "MUSIC_HINT_TITLE": {
