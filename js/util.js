@@ -91,8 +91,8 @@ var extend = function(base, adapter) {
 Locale = {loaded: false, messages_: {}};
 
 Locale.LIST = [
-    'de', 'en', 'en_GB', 'en_CA', 'fi', 'fr', 'fr_CA', 'ms', 'nl', 'pt_BR',
-    'ru', 'sv', 'zh_CN'];
+    'de', 'en', 'en_AU', 'en_GB', 'en_CA', 'fi', 'fr', 'fr_CA', 'ms', 'nl',
+    'pt_BR', 'ru', 'sv', 'zh_CN'];
 
 Locale.DEFAULT = 'en';
 
