@@ -182,18 +182,16 @@ App.prototype.initDocument = function(opt_additionalSpace) {
     // Closing
     if (e.keyCode == 27) {
       this.close();
-    } else if (e.ctrlKey && e.keyCode == 83) {
+    } else if (DEBUG && e.ctrlKey && e.keyCode == 83) {
       this.toggleWindowSize_();
-    } else if (e.ctrlKey && e.keyCode == 68) {
+    } else if (DEBUG && e.ctrlKey && e.keyCode == 68) {
       this.toggleDirection_(true);
-    } else if (e.ctrlKey && e.keyCode == 67) {
+    } else if (DEBUG && e.ctrlKey && e.keyCode == 67) {
       chrome.storage.local.clear();
-    } else if (e.ctrlKey && e.keyCode == 82) {
+    } else if (DEBUG && e.ctrlKey && e.keyCode == 82) {
       chrome.runtime.reload();
-    } else if (e.ctrlKey && e.keyCode == 77) {
+    } else if (DEBUG && e.ctrlKey && e.keyCode == 77) {
       this.appWindow.maximize();
-    } else if (e.ctrlKey && e.keyCode == 73) {
-      // Debug tool
     }
   }.bind(this));
 };
