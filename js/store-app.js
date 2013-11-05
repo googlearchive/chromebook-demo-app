@@ -13,8 +13,7 @@ StoreApp.prototype.initDocument = function() {
   // the get more app button's height.
   var additonalSpace =
       parseInt(getComputedStyle(this.get('.app-side-body')).paddingTop) +
-      moreAppsButton.getBoundingClientRect().height;
-  console.log(additonalSpace);
+      (moreAppsButton.getBoundingClientRect().height || 47);
   App.prototype.initDocument.call(this, additonalSpace);
 
   // App tiles.

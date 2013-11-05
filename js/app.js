@@ -194,6 +194,11 @@ App.prototype.initDocument = function(opt_additionalSpace) {
       this.appWindow.maximize();
     }
   }.bind(this));
+
+  // Network state.
+  this.updateOnlineClass_();
+  window.addEventListener("offline", this.updateOnlineClass_.bind(this));
+  window.addEventListener("online", this.updateOnlineClass_.bind(this));
 };
 
 App.prototype.close = function() {
@@ -272,4 +277,8 @@ App.prototype.onMessage_ = function(message) {
     if (this.documentInitialized_)
       this.applyLocale(message.code);
   }
+};
+
+App.prototype.updateOnlineClass_ = function() {
+  this.get('body').classList.toggle('online', window.navigator.onLine);
 };
