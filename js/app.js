@@ -9,7 +9,11 @@ var makeCenterBounds = function(width, height) {
   };
 };
 
-var Sidebar = function(element) {
+/**
+ * @constructor
+ * @param {number=} opt_additionalSpace Additional space.
+ */
+var Sidebar = function(element, opt_additionalSpace) {
   // Element.
   this.document_ = element.ownerDocument;
   this.element_ = element;
@@ -25,7 +29,8 @@ var Sidebar = function(element) {
       this.getChildStyleValue_('.app-side-body', 'paddingTop') +
       this.getChildStyleValue_('.app-icon', 'height') +
       this.getChildStyleValue_('.app-side-footer', 'paddingTop') +
-      this.getChildStyleValue_('.app-side-footer', 'paddingBottom');
+      this.getChildStyleValue_('.app-side-footer', 'paddingBottom') +
+      (opt_additionalSpace || 0);
 };
 
 Sidebar.prototype.getChildStyleValue_ = function(selector, property) {
@@ -137,7 +142,10 @@ App.prototype.checkDocumentReady_ = function() {
   }
 };
 
-App.prototype.initDocument = function(firstTime) {
+/**
+ * @param {number=} opt_additionalSpace Additional space.
+ */
+App.prototype.initDocument = function(opt_additionalSpace) {
   // Close button.
   var closeButton = this.document.querySelector('.close');
   closeButton.addEventListener('click', function() {
@@ -153,7 +161,7 @@ App.prototype.initDocument = function(firstTime) {
   // Sidebar
   var sidebarElement = this.document.querySelector('.app-side');
   if (sidebarElement)
-    this.sidebar_ = new Sidebar(sidebarElement);
+    this.sidebar_ = new Sidebar(sidebarElement, opt_additionalSpace);
 
   // Licence page.
   var menu = this.get('#context-menu');

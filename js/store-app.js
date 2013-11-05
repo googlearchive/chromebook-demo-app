@@ -7,7 +7,15 @@ StoreApp.prototype = {
 };
 
 StoreApp.prototype.initDocument = function() {
-  App.prototype.initDocument.call(this);
+  var moreAppsButton = this.get('#more-apps-button');
+
+  // Padding bottom which should be the same value with the padding top and
+  // the get more app button's height.
+  var additonalSpace =
+      parseInt(getComputedStyle(this.get('.app-side-body')).paddingTop) +
+      moreAppsButton.getBoundingClientRect().height;
+  console.log(additonalSpace);
+  App.prototype.initDocument.call(this, additonalSpace);
 
   // App tiles.
   var apps = this.document.querySelectorAll('.app');
