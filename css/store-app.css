@@ -24,6 +24,29 @@
       url(store-section-install-2x.png) 2x);
 }
 
+#more-apps-button {
+  align-self: center;
+  background: url(store-more-apps-button.png) no-repeat;
+  border-style: none;
+  color: white;
+  display: none;
+  font-size: 14px;
+  height: 47px;
+  margin: auto;
+  padding: 0 36px 0 2px;
+  position: relative;
+  right: 12px;
+  width: 163px;
+}
+
+#more-apps-button:focus {
+  outline: thin black dotted;
+}
+
+.online #more-apps-button {
+  display: block;
+}
+
 .app {
   width: 220px;
   padding: 8px;

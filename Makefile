@@ -203,6 +203,7 @@ STORE_FILES= \
   assets/store-icon-48.png \
   assets/store-icon-64.png \
   assets/store-icon-96.png \
+  assets/store-more-apps-button.png \
   assets/store-section-install-1x.png \
   assets/store-section-install-2x.png \
   assets/store-section-stability-1x.png \
