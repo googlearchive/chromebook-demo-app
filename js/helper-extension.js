@@ -3,6 +3,18 @@
 var service;
 var tracker;
 
+function visit(url) {
+  var params = {url: url};
+  chrome.tabs.create(params, function(tab) {
+    if (tab) {
+      chrome.windows.update(tab.windowId, {focused: true});
+      return;
+    }
+    // Fallback for the case that there is no window.
+    chrome.windows.create(params);
+  });
+};
+
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
     // If the message comes from an unknown extension, just ignore it.
@@ -22,13 +34,11 @@ chrome.runtime.onMessageExternal.addListener(
         break;
 
       case 'visitLearnMore':
-        var params = {url: 'learn-more.html'};
-        chrome.tabs.create(params, function(tab) {
-          if (tab)
-            return;
-          // Fallback for the case that there is no window.
-          chrome.windows.create(params);
-        });
+        visit('learn-more.html');
+        break;
+
+      case 'visitStore':
+        visit('https://chrome.google.com/webstore/category/apps');
         break;
 
       case 'trackView':

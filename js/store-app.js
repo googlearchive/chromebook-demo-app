@@ -34,6 +34,11 @@ StoreApp.prototype.initDocument = function() {
       }
     }.bind(this, apps[i]));
   }
+
+  // More apps button.
+  moreAppsButton.addEventListener('click', function() {
+    Component.ENTRIES.Helper.sendMessage({name: 'visitStore'});
+  }.bind(this));
 };
 
 StoreApp.prototype.applyLocale = function(lang) {
