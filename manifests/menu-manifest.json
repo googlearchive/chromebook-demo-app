@@ -1,6 +1,6 @@
 {
   "name": "Demo",
-  "version": "1.6",
+  "version": "1.7",
   "manifest_version": 2,
   "default_locale": "en",
   "offline_enabled": true,
