@@ -1,5 +1,7 @@
 var StoreApp = function() {
   App.call(this);
+  this.lang_ = 'en';
+  this.apps_ = [];
 };
 
 StoreApp.prototype = {
@@ -17,6 +19,11 @@ StoreApp.prototype.initDocument = function() {
   App.prototype.initDocument.call(this, additonalSpace);
 
   // App tiles.
+  Component.ENTRIES.Helper.sendMessage({name: 'getPackApps'}, function(apps) {
+    this.apps_ = chrome.runtime.lastError ? Component.PACKS.slice() : apps;
+    this.updateApps();
+  }.bind(this));
+
   var apps = this.document.querySelectorAll('.app');
   for (var i = 0; i < apps.length; i++) {
     apps[i].addEventListener('click', function(app) {
@@ -43,13 +50,22 @@ StoreApp.prototype.initDocument = function() {
 
 StoreApp.prototype.applyLocale = function(lang) {
   App.prototype.applyLocale.call(this, lang);
-  var disableAppList = Locale.get(lang, 'STORE_DISABLE_APP_LIST').split(' ');
+  this.lang_ = lang;
+  this.updateApps();
+};
+
+StoreApp.prototype.updateApps = function() {
+  var disableAppList = Locale.get(
+      this.lang_, 'STORE_DISABLE_APP_LIST').split(' ');
   var tiles = this.document.querySelectorAll('.app');
   for (var i = 0; i < tiles.length; i++) {
     var appID = tiles[i].className.replace('app', '')
                                   .replace('disable', '')
                                   .replace(/\s+/g, '');
-    tiles[i].classList.toggle('disable', disableAppList.indexOf(appID) != -1);
+    tiles[i].classList.toggle(
+        'active',
+        this.apps_.indexOf(tiles[i].getAttribute('data-id')) != -1 &&
+        disableAppList.indexOf(appID) == -1);
   }
 };
 

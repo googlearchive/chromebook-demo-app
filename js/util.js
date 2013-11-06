@@ -60,6 +60,34 @@ Component.ENTRIES.Helper = new Component(
     null,
     false);
 
+Component.PACKS = Object.freeze([
+  'adlphlfdhhjenpgimjochcpelbijkich',
+  'bjdhhokmhgelphffoafoejjmlfblpdha',
+  'cdjikkcakjcdjemakobkmijmikhkegcj',
+  'cgefhjmlaifaamhhoojmpcnihlbddeki',
+  'cgmlfbhkckbedohgdepgbkflommbfkep',
+  'dgohlccohkojjgkkfholmobjjoledflp',
+  'diehajhcjifpahdplfdkhiboknagmfii',
+  'ebkhfdfghngbimnpgelagnfacdafhaba',
+  'ehcabepphndocfmgbdkbjibfodelmpbb',
+  'fgjnkhlabjcaajddbaenilcmpcidahll',
+  'fpgfohogebplgnamlafljlcidjedbdeb',
+  'hdmobeajeoanbanmdlabnbnlopepchip',
+  'hfhhnacclhffhdffklopdkcgdhifgngh',
+  'iddohohhpmajlkbejjjcfednjnhlnenk',
+  'jeabmjjifhfcejonjjhccaeigpnnjaak',
+  'joodangkbfjnajiiifokapkpmhfnpleo',
+  'kgimkbnclbekdkabkpjhpakhhalfanda',
+  'kkkbcoabfhgekpnddfkaphobhinociem',
+  'kpjjigggmcjinapdeipapdcnmnjealll',
+  'mdelndfaabnbpmglgekmkmenagdlbjoh',
+  'mdhnphfgagkpdhndljccoackjjhghlif',
+  'nifkmgcdokhkjghdlgflonppnefddien',
+  'npnjdccdffhdndcbeappiamcehbhjibf',
+  'pbdihpaifchmclcmkfdgffnnpfbobefh',
+  'piahpgmnafifnloeaipmchljlfamnmmf'
+]);
+
 Component.get = function(id) {
   for (var name in Component.ENTRIES) {
     if (Component.ENTRIES[name].id == id) {

@@ -33,6 +33,17 @@ chrome.runtime.onMessageExternal.addListener(
         }
         break;
 
+      case 'getPackApps':
+        var packs = [];
+        chrome.management.getAll(function(extensions) {
+          for (var i = 0; i < extensions.length; i++) {
+            if (Component.PACKS.indexOf(extensions[i].id) != -1)
+              packs.push(extensions[i].id);
+          }
+          sendResponse(packs);
+        });
+        return true;
+
       case 'visitLearnMore':
         visit('learn-more.html');
         break;

@@ -3,33 +3,8 @@ var LANGUAGE_PICKER_CLIENT_IDS = Object.freeze([
   Component.ENTRIES.Hangouts.id,
   Component.ENTRIES.Music.id,
   Component.ENTRIES.Store.id,
-  Component.ENTRIES.Helper.id,
-  'adlphlfdhhjenpgimjochcpelbijkich',
-  'bjdhhokmhgelphffoafoejjmlfblpdha',
-  'cdjikkcakjcdjemakobkmijmikhkegcj',
-  'cgefhjmlaifaamhhoojmpcnihlbddeki',
-  'cgmlfbhkckbedohgdepgbkflommbfkep',
-  'dgohlccohkojjgkkfholmobjjoledflp',
-  'diehajhcjifpahdplfdkhiboknagmfii',
-  'ebkhfdfghngbimnpgelagnfacdafhaba',
-  'ehcabepphndocfmgbdkbjibfodelmpbb',
-  'fgjnkhlabjcaajddbaenilcmpcidahll',
-  'fpgfohogebplgnamlafljlcidjedbdeb',
-  'hdmobeajeoanbanmdlabnbnlopepchip',
-  'hfhhnacclhffhdffklopdkcgdhifgngh',
-  'iddohohhpmajlkbejjjcfednjnhlnenk',
-  'jeabmjjifhfcejonjjhccaeigpnnjaak',
-  'joodangkbfjnajiiifokapkpmhfnpleo',
-  'kgimkbnclbekdkabkpjhpakhhalfanda',
-  'kkkbcoabfhgekpnddfkaphobhinociem',
-  'kpjjigggmcjinapdeipapdcnmnjealll',
-  'mdelndfaabnbpmglgekmkmenagdlbjoh',
-  'mdhnphfgagkpdhndljccoackjjhghlif',
-  'nifkmgcdokhkjghdlgflonppnefddien',
-  'npnjdccdffhdndcbeappiamcehbhjibf',
-  'pbdihpaifchmclcmkfdgffnnpfbobefh',
-  'piahpgmnafifnloeaipmchljlfamnmmf'
-]);
+  Component.ENTRIES.Helper.id
+].concat(Object.PACKS));
 
 var LanguagePicker = function(element, selectCallback) {
   this.element_ = element;

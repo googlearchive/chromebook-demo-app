@@ -61,6 +61,7 @@
   cursor: pointer;
   position: relative;
   outline: none;
+  display: none;
 }
 
 .app:focus {
@@ -70,8 +71,8 @@
   z-index: 1;
 }
 
-.app.disable {
-  display: none;
+.app.active {
+  display: block;
 }
 
 .app.bejeweled {
