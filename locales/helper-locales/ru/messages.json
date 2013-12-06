@@ -1,4 +1,4 @@
-{c
+{
   "LEARN_MORE_NAV_FEATURES": {
     "message": "ВОЗМОЖНОСТИ",
     "description": "Link to an overview page of Chromebooks’ core features and benefits"
@@ -124,7 +124,7 @@
     "description": "States the name of Google’s printing solution, Google Cloud Print"
   },
   "LEARN_MORE_PRINTING_SECTION1_DESCRIPTION": {
-    "message": "Поскольку для отправки данных на печать используется Интернет, Виртуальный принтер работает, где бы вы ни находились – в одной комнате с принтером или на другом материке.»,
+    "message": "Поскольку для отправки данных на печать используется Интернет, Виртуальный принтер работает, где бы вы ни находились – в одной комнате с принтером или на другом материке.",
     "description": ""
   },
   "LEARN_MORE_PRINTING_SECTION2_TITLE": {

@@ -120,7 +120,7 @@
     "description": "Song name"
   },
   "MUSIC_VIVALDI_FOOTER_MESSAGE": {
-    "message": "Недавно прослушанное,
+    "message": "Недавно прослушанное",
     "description": "Subtitle for a recently played song"
   },
   "MUSIC_MAROON5_ARTIST_NAME": {
