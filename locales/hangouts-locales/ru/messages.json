@@ -8,7 +8,7 @@
     "description": "A subtitle for Hangouts: supports the headline by giving the app name"
   },
   "HANGOUTS_DESCRIPTION": {
-    "message": "Всегда на связи с родными и друзьями. Никакой установки и настройки – никаких проблем.",
+    "message": "Будьте всегда на связи с родными и друзьями! Приложение уже установлено, дополнительная настройка не требуется.",
     "description": "Description of Hangouts: Its very easy to talk to people using hangouts, doesn't even need an install"
   },
   "HANGOUTS_SECTION_GROUP_TITLE": {
@@ -20,19 +20,19 @@
     "description": "Feature description: group video chat for free"
   },
   "HANGOUTS_SECTION_NOHASSLE_TITLE": {
-    "message": "Нет проблем",
+    "message": "Всегда под рукой",
     "description": "Feature headline: No hassles with Hangouts"
   },
   "HANGOUTS_SECTION_NOHASSLE_DESCRIPTION": {
-    "message": "Приложение не требует настройки – достаточно войти в аккаунт на устройстве Chromebook.",
+    "message": "Чтобы воспользоваться приложением Hangouts, нужно всего лишь войти в свой аккаунт на Chromebook.",
     "description": "Feature description: how easy it is to use hangouts on Chromebook as it doesn't need setup"
   },
   "HANGOUTS_SECTION_FUN_TITLE": {
-    "message": "Веселое общение",
+    "message": "Скучно не будет",
     "description": "Feature headline: describes fun features of Google Hangouts"
   },
   "HANGOUTS_SECTION_FUN_DESCRIPTION": {
-    "message": "При общении в видеочате можно использовать спецэффекты, эмодзи и видеоролики YouTube.",
+    "message": "Во время видеочата можно использовать различные спецэффекты, отправлять собеседникам смайлики и смотреть вместе с ними ролики на YouTube.",
     "description": "Feature description: describes how you can have a lot of fun with Hangouts"
   },
   "HANGOUTS_HINT_TITLE": {

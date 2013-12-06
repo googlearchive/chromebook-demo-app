@@ -1,6 +1,6 @@
 {
   "STORE_COPY": {
-    "message": "Другие приложения",
+    "message": «Больше приложений",
     "description": "App headline for Chrome web store"
   },
   "STORE_SUB_COPY_DESCRIPTION": {
@@ -8,7 +8,7 @@
     "description": "App subtitle for chrome web store with app name"
   },
   "STORE_DESCRIPTION": {
-    "message": "Приложения для работы, игры, развлечения и многое другое – в Интернет-магазине Chrome.",
+    "message": "Приложения на любой вкус – в Интернет-магазине Chrome.",
     "description": "App description for Chrome web store"
   },
   "STORE_SECTION_THOUSANDS_TITLE": {
@@ -16,7 +16,7 @@
     "description": "Feature headline: large number of apps"
   },
   "STORE_SECTION_THOUSANDS_DESCRIPTION": {
-    "message": "Бесплатные приложения для развлечения, прослушивания музыки, просмотра фильмов и новостей, редактирования фотографий и многое другое.",
+    "message": "Вам доступны бесплатные приложения для прослушивания музыки, просмотра фильмов и новостей, редактирования фотографий и многого другого.",
     "description": "Feature subtitle: description for large number and variety of apps"
   },
   "STORE_SECTION_STABILITY_TITLE": {
@@ -24,15 +24,15 @@
     "description": "Feature headline: you can get offline and online apps"
   },
   "STORE_SECTION_STABILITY_DESCRIPTION": {
-    "message": "Приложения, с которыми можно работать дома и по пути на работу.",
+    "message": "Использовать многие приложения можно как дома или в офисе, так и в дороге, не имея доступа к Интернету.",
     "description": "Feature subtitle: describing the offline and online app functionalities and where you can use them"
   },
   "STORE_SECTION_INSTALL_TITLE": {
-    "message": "Добавление одним щелчком мыши",
+    "message": "Быстрая установка",
     "description": "Feature headline: one click install"
   },
   "STORE_SECTION_INSTALL_DESCRIPTION": {
-    "message": "Чтобы добавить приложение на Chromebook, не нужно устанавливать специальные программы. Просто нажмите \"Добавить в Chrome\".",
+    "message": "Чтобы добавить приложение на Chromebook, не нужно предпринимать никаких усилий. Просто нажмите \"Добавить в Chrome\".",
     "description": "Feature subtitle: the description of the one click install feature"
   },
   "STORE_APP_BEJEWELED_TITLE": {

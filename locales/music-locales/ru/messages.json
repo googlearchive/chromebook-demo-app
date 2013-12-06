@@ -8,7 +8,7 @@
     "description": "A subtitle for Play Music: supports the headline by giving the app name"
   },
   "MUSIC_DESCRIPTION": {
-    "message": "Бесчисленные коллекции музыки из Интернета в приложении \"Google Play Музыка\".",
+    "message": "Бесконечное количество новых и любимых песен в приложении \"Google Play Музыка\".",
     "description": "Describes how you can listen to unlimited music with Google Play Music (GPM)"
   },
   "MUSIC_SECTION_UPLOAD_TITLE": {
@@ -20,11 +20,11 @@
     "description": "Feature description: Describes the features of the upload/music manager feature."
   },
   "MUSIC_SECTION_ANYWHERE_TITLE": {
-    "message": "Доступ с любого устройства",
+    "message": "Удобный доступ",
     "description": "Feature headline: multiple devices"
   },
   "MUSIC_SECTION_ANYWHERE_DESCRIPTION": {
-    "message": "Google Play автоматически синхронизирует фонотеки, сохраненные на телефоне, планшетном ПК и устройстве Chromebook.",
+    "message": "Google Play автоматически синхронизирует фонотеки, сохраненные на телефоне, планшете и устройстве Chromebook.",
     "description": "Feature description: can be used on multiple different devices which are kept in sync."
   },
   "MUSIC_SECTION_UNLIMITED_TITLE": {
@@ -32,7 +32,7 @@
     "description": "Feature headline: All Access headline"
   },
   "MUSIC_SECTION_UNLIMITED_DESCRIPTION": {
-    "message": "С помощью сервиса \"Google Play Music All Access\" вы можете прослушивать миллионы песен и любимые радиоканалы так, как вы хотите.",
+    "message": "С помощью сервиса \"Google Play Music All Access\" вы можете слушать миллионы песен и любимые радиоканалы.",
     "description": "Feature description: Describes what you can do with Play Music All Access"
   },
   "MUSIC_HINT_TITLE": {
@@ -40,7 +40,7 @@
     "description": "Question headline: Addresses concenrs for iTunes users"
   },
   "MUSIC_HINT_DESCRIPTION": {
-    "message": "Google Play Музыка – виртуальная альтернатива iTunes<sup>®</sup>. С помощью Google Менеджера загрузки можно бесплатно загрузить до 20 тысяч треков.",
+    "message": "Google Play Музыка – виртуальная альтернатива iTunes<sup>®</sup>. С помощью Google Менеджера загрузки можно бесплатно скачать до 20 тысяч треков.",
     "description": "Question description: Describes google play music as an alternate to iTunes and says you can upload songs to it via music manager"
   },
   "MUSIC_MEESAGE_BAR": {
@@ -52,7 +52,7 @@
     "description": "Upload button"
   },
   "MUSIC_BALLOON_UPLOAD": {
-    "message": "С помощью Google Менеджера загрузки можно бесплатно загрузить до 20 тысяч треков.",
+    "message": "С помощью Google Менеджера загрузки можно бесплатно скачать до 20 тысяч треков.",
     "description": "Upload tooltip: Short description of music manager"
   },
   "MUSIC_SIDE_BUTTON_LIBRARY": {
@@ -96,7 +96,7 @@
     "description": "Song name"
   },
   "MUSIC_LUMINEERS_FOOTER_MESSAGE": {
-    "message": "Недавние игры",
+    "message": "Недавно прослушанное",
     "description": "Subtitle for a recently played song"
   },
   "MUSIC_WAR_ARTIST_NAME": {
@@ -108,7 +108,7 @@
     "description": "Song name"
   },
   "MUSIC_WAR_FOOTER_MESSAGE": {
-    "message": "Недавние игры",
+    "message": "Недавно прослушанное",
     "description": "Subtitle for a recently played song"
   },
   "MUSIC_VIVALDI_ARTIST_NAME": {
@@ -120,7 +120,7 @@
     "description": "Song name"
   },
   "MUSIC_VIVALDI_FOOTER_MESSAGE": {
-    "message": "Недавние игры",
+    "message": "Недавно прослушанное,
     "description": "Subtitle for a recently played song"
   },
   "MUSIC_MAROON5_ARTIST_NAME": {
@@ -132,7 +132,7 @@
     "description": "Song name."
   },
   "MUSIC_MAROON5_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": "Subtitle for music thats recommended for you"
   },
   "MUSIC_FLORENCE_ARTIST_NAME": {
@@ -144,7 +144,7 @@
     "description": "Song name."
   },
   "MUSIC_FLORENCE_FOOTER_MESSAGE": {
-    "message": "Недавние игры",
+    "message": "Недавно прослушанное",
     "description": "Subtitle for a recently played song"
   },
   "MUSIC_BLAKE_SHELTON_ARTIST_NAME": {
@@ -156,7 +156,7 @@
     "description": "Song name."
   },
   "MUSIC_BLAKE_SHELTON_FOOTER_MESSAGE": {
-    "message": "Недавно добавленные в Мою фонотеку",
+    "message": "Недавно добавленное в Мою фонотеку",
     "description": "subtitle for music that you have added to your library or bought"
   },
   "MUSIC_TIESTO_ARTIST_NAME": {
@@ -168,7 +168,7 @@
     "description": "Song name."
   },
   "MUSIC_TIESTO_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": ""
   },
   "MUSIC_MIKA_ARTIST_NAME": {
@@ -180,7 +180,7 @@
     "description": "Song name."
   },
   "MUSIC_MIKA_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_ONE_REPUBLIC_ARTIST_NAME": {
@@ -216,7 +216,7 @@
     "description": "Song name."
   },
   "MUSIC_FRANK_OCEAN_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_IMAGINE_DRAGONS_ARTIST_NAME": {
@@ -228,7 +228,7 @@
     "description": "Song name."
   },
   "MUSIC_IMAGINE_DRAGONS_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_THE_DOORS_ARTIST_NAME": {
@@ -240,7 +240,7 @@
     "description": "Song name."
   },
   "MUSIC_THE_DOORS_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_TEGAN_AND_SARA_ARTIST_NAME": {
@@ -264,7 +264,7 @@
     "description": "Song name."
   },
   "MUSIC_ELLIE_GOULDING_FOOTER_MESSAGE": {
-    "message": "Рекомендуем",
+    "message": "Рекомендуемое",
     "description": "subtitle for music that is recommended for you by Google"
   },
   "MUSIC_MAIN_SONG": {

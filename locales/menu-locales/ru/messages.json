@@ -1,22 +1,22 @@
-{
+		{
   "MENU_MESSAGE": {
-    "message": "Знакомьтесь с Chromebook – принципиально новым компьютером от Google",
+    "message": "Chromebook – принципиально новый компьютер от Google",
     "description": "Intro headline: Introduction to Chromebook introducing it as a computer by Google"
   },
   "MENU_DESCRIPTION": {
-    "message": "Загружается в считанные секунды. Не требует специальных<br>знаний и навыков. Поставляется с установленными приложениями<br>Google. Идеально подходит для выполнения повседневных задач <br>и совместной работы.",
+    "message": "Загружается в считанные секунды. Прост<br>в использовании. Поставляется с предустановленными приложениями<br>Google. Идеально подходит для выполнения повседневных задач <br>и совместной работы.",
     "description": "Intro subtitle, main features of Chromebook: It starts up very fast, is easy to learn and comes with your favorite Google apps. Its perfect for you to use every day and you can easily share it with other users if you have to."
   },
   "MENU_DOCS_BUTTON": {
-    "message": "Выполнение рабочих задач",
+    "message": "Работа",
     "description": "App headline for Docs: You can do all your work with Google Docs (link to Docs app)"
   },
   "MENU_HANGOUTS_BUTTON": {
-    "message": "Общение без границ",
+    "message": "Общение",
     "description": "App headline for Hangouts: You can stay connected to all your friends with Google+ Hangouts (link to Hangouts app)"
   },
   "MENU_MUSIC_BUTTON": {
-    "message": "Прослушивание музыки",
+    "message": "Музыка",
     "description": "App headline for Google Play: You can listen to music with Google Play Music (link to Google Play Music app)"
   },
   "MENU_YOUTUBE_BUTTON": {
@@ -24,7 +24,7 @@
     "description": "App headline for Youtube (alternative to Google Play): You can enjoy videos and music with YouTube (link to YouTube app)"
   },
   "MENU_STORE_BUTTON": {
-    "message": "Другие приложения",
+    "message": "Прочее",
     "description": "App headline for Webstore: You can get more applications (and do more things) through the Chrome web store (link to Chrome Web store app)"
   },
   "MENU_LEARN_MORE": {
